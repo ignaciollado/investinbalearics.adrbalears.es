@@ -1,6 +1,6 @@
 # Investinbalearics
 
-Portal dirigido al potencial inversor o potencial emprendedor
+Portal dirigido al potencial inversor o potencial emprendedor que esté buscando un sitio donde desarrollar su proyecto empresarial.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.3.
 
