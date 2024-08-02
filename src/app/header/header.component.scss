@@ -1,0 +1,125 @@
+header {
+  background-color: #d5d5d5;
+  display: grid;
+  grid-template-areas: "navLogo navLangSede" "navLogo navBottom";
+  grid-template-columns: 9% 91%;
+  margin-top: .5rem;
+  margin-bottom: 3rem;
+}
+
+.offcanvas-header {
+  background-color: #019ee5;
+  color: #fff;
+}
+
+.offcanvas-body {
+  background-color: #ec9e37;
+  color: #fff;
+}
+
+.btn-close {
+  color: #fff;
+}
+
+.mobile-menu-button {
+  grid-area: mobileMenu;
+  display: none;
+  padding-right: .2rem;
+  text-align: right;
+}
+
+.nav-bar-left-logo {
+  grid-area: navLogo;
+  background-color: #fff;
+}
+
+.nav-bar-top {
+  grid-area: navLangSede;
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: flex-end;
+}
+
+.nav-bar-bottom{
+  grid-area: navBottom;
+  display: grid;
+  justify-content: flex-end;
+}
+
+.nav-bar-top-language {
+  display: grid;
+  grid-template-columns: auto auto;
+  padding: .25rem;
+  gap: .25rem;
+  text-align: center;
+}
+
+.button-header-menu {
+  background-color: #003747;
+  border-radius: 0;
+  margin-right: .5rem;
+  color: #fff;
+}
+
+button:hover {
+  background-color: #0098CB;
+  color: #fff;
+}
+
+.emprender-header {
+  color: #fff!important;
+  background-color: #6b9da7;
+  padding: 4px 4px 4px 8px;
+}
+.conectar-header {
+  color: #fff!important;
+  background-color: #71b796;
+  padding: 4px 4px 4px 8px;
+}
+.proyectar-header {
+  color: #fff!important;
+  background-color: #ed7448;
+  padding: 4px 4px 4px 8px;
+}
+.emprender-header:hover, .conectar-header:hover, .projectar-header:hover {
+  cursor: default;
+}
+
+h5 {
+  margin-bottom:0;
+}
+
+@media screen and (max-width: 795px) {
+ header {
+    grid-template-areas: "navLogo mobileMenu" "navLogo navLangSede";
+    margin-bottom: 1rem;
+    grid-template-columns: 20% 80%;
+    margin-top: 0;
+  } 
+  .button-header-menu{
+    margin-right: 0;
+  }
+  .nav-bar-bottom {
+    display: none;
+  }
+  .mobile-menu-button {
+    display: block;
+    margin: 0;
+  }
+  div button:hover {
+    color: #fff;
+    border-color: #033747;
+ }
+
+ a img {
+  width: 110px;
+ }
+ 
+}
+
+@media screen and (max-width: 400px) {
+  .button-header-menu {
+    font-size: .7rem;
+    margin-right: .2rem;
+  }
+}
