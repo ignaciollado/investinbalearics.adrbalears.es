@@ -38,4 +38,13 @@ Styling SCSS method is used.
 
 Bootstrap was added using: npm install bootstrap.
 
+npm i @ng-bootstrap/ng-bootstrap --force
+
 ## Multilanguage (englis, spanish, català)
+
+npm i @ngx-translate/http-loader --force
+npm i @ngx-translate/core
+
+## Vanilla cookie consent
+
+npm i vanilla-cookieconsent --force
