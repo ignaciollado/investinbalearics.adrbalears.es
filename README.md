@@ -1,4 +1,4 @@
-# Investinbalearics
+# InvestinbalearicsAdrbalearsEs
 
 Portal dirigido al potencial inversor o potencial emprendedor que esté buscando un sitio donde desarrollar su proyecto empresarial.
 
@@ -39,4 +39,3 @@ Styling SCSS method is used.
 Bootstrap was added using: npm install bootstrap.
 
 ## Multilanguage (englis, spanish, català)
-
