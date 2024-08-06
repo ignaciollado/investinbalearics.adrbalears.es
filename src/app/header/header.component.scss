@@ -40,7 +40,7 @@ header {
   justify-content: flex-end;
 }
 
-.nav-bar-bottom{
+.nav-bar-bottom {
   grid-area: navBottom;
   display: grid;
   justify-content: flex-end;
@@ -48,7 +48,7 @@ header {
 
 .nav-bar-top-language {
   display: grid;
-  grid-template-columns: auto auto;
+  grid-template-columns: auto auto auto;
   padding: .25rem;
   gap: .25rem;
   text-align: center;
@@ -61,7 +61,7 @@ header {
   color: #fff;
 }
 
-button:hover {
+li:hover, button:hover {
   background-color: #0098CB;
   color: #fff;
 }

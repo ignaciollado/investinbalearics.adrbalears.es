@@ -4,6 +4,7 @@ import { BodyComponent } from './body/body.component';
 
 
 const routes: Routes = [
+  
   { path: '*', component: BodyComponent },
   { path: '', component: BodyComponent },
 ];

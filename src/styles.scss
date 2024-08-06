@@ -1,5 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
-@import 'bootstrap/dist/css/bootstrap.css';
+/* @import "bootstrap/scss/bootstrap"; */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
 
 * {
@@ -35,6 +35,7 @@ html {
   line-height: 1.5rem;
   font-size: 14px;
   color: #000;
+  max-width: 1260px;
 }
 
 a {

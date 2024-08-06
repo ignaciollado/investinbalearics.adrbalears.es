@@ -1,0 +1,88 @@
+footer {
+  z-index: +9999;
+  background-color: #fff;
+  opacity: 1;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+  grid-template-areas: "logoBottom localizacionBottom socialMedia textosLegales";
+  text-align: left;
+  margin-bottom: .5rem;
+  margin-top: 4rem;
+}
+
+a:visited {
+  color: #0098CB;
+}
+
+a:hover {
+  color: #003747;
+}
+
+.logo-adr-balears {
+  grid-area: logoBottom;
+}
+
+.localizacion-adr-balears {
+  grid-area: localizacionBottom;
+  padding-left: 3rem;
+}
+
+.bi{
+  font-size: 2rem;
+  height: auto;
+  width: 2rem;
+}
+
+.bi::before{
+  prefix: '\F8DB';
+}
+
+.social-media {
+  grid-area: socialMedia;
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  padding-left: 0;
+  color: red;
+
+}
+
+.textos-legales {
+  grid-area: textosLegales;
+  display: grid;
+  padding-left: 5rem;
+}
+
+.logo-feder-izq, .logo-feder, .logo-feder-dcha {
+  margin-top: 2rem;
+}
+
+.logoFeder {
+  margin-bottom: 1rem;
+  padding-left: 3rem;
+  width: 50%;
+}
+
+@media screen and (max-width: 795px) {
+  footer{
+    grid-template-columns: 100%;
+    grid-template-areas: "logoBottom" "localizacionBottom" "socialMedia" "textosLegales";
+    text-align: center;
+  }
+  .localizacion-adr-balears {
+    margin-top: 2rem;
+  }
+  .social-media {
+    margin-top: 3rem;
+  }
+  .textos-legales {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    padding-left: 0;
+  }
+  .logoFeder {
+    padding-left: 0;
+    width: 30%;
+  }
+  
+}
