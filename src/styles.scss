@@ -1,4 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
+@import 'bootstrap/dist/css/bootstrap.css';
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
 
 * {
@@ -52,4 +53,58 @@ a:visited {
 
 a:hover {
   color: #003747!important;
+}
+
+.adrbalears {
+  color:  #003747!important;
+  background-color: #fff;
+}
+
+.emprendre{
+  color:  #6b9da7!important;
+  background-color: #fff;
+}
+.connectar{
+  color:  #71b796!important;
+  background-color: #fff;
+}
+.projectar{
+  color:  #ed7448!important;
+  background-color: #fff;
+}
+
+.adrbalears:hover {
+  background-color:  #003747!important;
+  color: #fff!important;
+}
+
+.emprendre:hover {
+  background-color: #0098CB!important;
+  color: #fff!important;
+}
+.connectar:hover {
+  background-color:  #71b796!important;
+  color: #fff!important;
+}
+.projectar:hover {
+  background-color:  #ed7448!important;
+  color: #fff!important;
+}
+.emprendre-bck {
+  background-color:  #6b9da7!important;
+}
+.connectar-bck {
+  background-color:  #71b796!important;
+}
+.projectar-bck {
+  background-color:  #ed7448!important;
+}
+img {
+  max-width: 1320px;
+}
+
+@media (min-width: 1200px) {
+  .h1, h1 {
+    font-size: 2rem!important;
+  }
 }
