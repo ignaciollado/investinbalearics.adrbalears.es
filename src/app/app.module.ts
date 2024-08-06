@@ -11,6 +11,10 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { BodyComponent } from './body/body.component';
 import { FooterComponent } from './footer/footer.component';
+import { SimpleTextViewerComponent } from './simple-text-viewer/simple-text-viewer.component';
+import { WellFormattedLinkPipe } from './Pipes/well-formatted-link.pipe';
+import { NotFoundComponent } from './error-pages/not-found/not-found.component';
+import { InternalServerComponent } from './error-pages/internal-server/internal-server.component';
 
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(http: HttpClient) {
@@ -23,7 +27,11 @@ export function HttpLoaderFactory(http: HttpClient) {
     AppComponent,
     HeaderComponent,
     BodyComponent,
-    FooterComponent
+    FooterComponent,
+    SimpleTextViewerComponent,
+    WellFormattedLinkPipe,
+    NotFoundComponent,
+    InternalServerComponent
   ],
   imports: [
     BrowserModule,

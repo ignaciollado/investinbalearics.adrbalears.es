@@ -44,7 +44,7 @@ a {
   font-size:100%;
   vertical-align: baseline;
   background: transparent;
-  text-decoration: none!important;
+  text-decoration: underline!important;
   color: #003747!important;
 }
 
@@ -53,7 +53,8 @@ a:visited {
 }
 
 a:hover {
-  color: #0098cb!important;
+  transition: color 1s ease,  padding 0.8s linear!important;
+  color: #ed7448!important;
 }
 
 .adrbalears {

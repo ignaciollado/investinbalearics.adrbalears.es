@@ -1,5 +1,5 @@
 header {
-  background-color: #d5d5d5;
+  background-color: #003747;
   display: grid;
   grid-template-areas: "navLogo navLangSede" "navLogo navBottom";
   grid-template-columns: 9% 91%;
@@ -54,16 +54,17 @@ header {
   text-align: center;
 }
 
-.button-header-menu {
-  background-color: #ed7448;
+button, .button-header-menu {
+  background-color: transparent;
   border-radius: 0;
   margin-right: .5rem;
   color: #fff;
+  font-weight: 400;
 }
 
 li:hover, button:hover {
-  background-color: #0098CB;
-  color: #fff;
+  transition: color 1s ease,  padding 0.8s linear;
+  color: #ed7448;
 }
 
 .emprender-header {
