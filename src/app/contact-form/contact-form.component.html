@@ -1,0 +1,29 @@
+<h2>Invest In Balearics contact-form </h2>
+
+<form class="form" [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+  <div class="row">
+    <div class="col mb-3">
+      <div class="form-group">
+        <label for="contactName">Your name</label>
+        <input type="text"class="form-control" id="contactName" aria-describedby="nameHelp" placeholder="Enter your name" formControlName="contactName"
+        [ngClass]="{ 'is-invalid': f['contactName'].errors }">
+      </div>
+      <div class="form-group">
+        <label for="contactEmail">Email address</label>
+        <input type="email" class="form-control" id="contactEmail" aria-describedby="emailHelp" placeholder="Enter email" formControlName="contactEmail" [ngClass]="{ 'is-invalid': f['contactEmail'].errors }">
+        <small class="form-text text-muted">We'll never share your email with anyone else.</small>
+      </div>
+      <div class="form-group">
+        <label for="theQuestion">Your question</label>
+        <textarea class="form-control" rows="3" id="theQuestion" formControlName="theQuestion" [ngClass]="{ 'is-invalid': f['theQuestion'].errors }"></textarea>
+      </div>
+      <div class="form-group form-check">
+        <input type="checkbox" class="form-check-input" formControlName="acceptTerms" [ngClass]="{ 'is-invalid': f['acceptTerms'].errors }">
+        <label class="form-check-label" for="exampleCheck1">Accept terms and conditions</label>
+      </div>
+    </div>
+  </div>
+  <div class="text-right">
+    <button type="submit" class="btn btn-primary" [disabled]="!contactForm.valid">Submit</button>
+  </div>
+</form>

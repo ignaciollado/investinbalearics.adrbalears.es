@@ -15,6 +15,7 @@ import { SimpleTextViewerComponent } from './simple-text-viewer/simple-text-view
 import { WellFormattedLinkPipe } from './Pipes/well-formatted-link.pipe';
 import { NotFoundComponent } from './error-pages/not-found/not-found.component';
 import { InternalServerComponent } from './error-pages/internal-server/internal-server.component';
+import { ContactFormComponent } from './contact-form/contact-form.component';
 
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(http: HttpClient) {
@@ -31,7 +32,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     SimpleTextViewerComponent,
     WellFormattedLinkPipe,
     NotFoundComponent,
-    InternalServerComponent
+    InternalServerComponent,
+    ContactFormComponent
   ],
   imports: [
     BrowserModule,

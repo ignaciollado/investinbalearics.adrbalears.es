@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrl: './body.component.scss'
 })
 export class BodyComponent {
-
+  
+  
+  
+  ngOnInit(): void {
+    console.log ("Welcome to the Invest In Balearics platform from the ADR Balears")
+  }
 }

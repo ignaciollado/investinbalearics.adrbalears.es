@@ -14,6 +14,8 @@
     <div class="nav-bar-top-sede-elect">
       <button *ngIf="currentLang === 'es-ES'" class="btn button-header-menu" (click)="sedeElectronica()">{{'Sede electrónica' | translate}}</button>
       <button *ngIf="currentLang === 'ca-ES'" class="btn button-header-menu" (click)="sedeElectronica()">{{'Seu electrònica' | translate}}</button>
+      <button *ngIf="currentLang === 'en-EN'" class="btn button-header-menu" (click)="sedeElectronica()">{{"Electronic transactions" | translate}}</button> 
+
     </div>
   </nav>
 
@@ -24,8 +26,10 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-md-0">
           <li class='nav-item btn button-header-menu'>
-              <button *ngIf="currentLang === 'es-ES'" ngbDropdownItem routerLink="quienes-somos-invest-balearics/3278">{{'Quienes somos' | translate}}</button>
-              <button *ngIf="currentLang === 'ca-ES'" ngbDropdownItem routerLink="qui-som-invest-balearics/3280">{{'Qui som' | translate}}</button>
+            <button *ngIf="currentLang === 'es-ES'" ngbDropdownItem routerLink="quienes-somos-invest-balearics/3278">{{'Quienes somos' | translate}}</button>
+            <button *ngIf="currentLang === 'ca-ES'" ngbDropdownItem routerLink="qui-som-invest-balearics/3281">{{'Qui som' | translate}}</button>
+            <button *ngIf="currentLang === 'en-EN'" ngbDropdownItem routerLink="quienes-somos-invest-balearics/3278">{{"Who we are" | translate}}</button> 
+
           </li>
 <!--           <li class="nav-item">
             <div ngbDropdown class="d-inline-block">
@@ -48,7 +52,8 @@
           </li> -->
           <li class='nav-item btn button-header-menu'>
             <button *ngIf="currentLang === 'es-ES'" ngbDropdownItem routerLink="baleares-una-apuesta-ganadora/3279">{{'Baleares, una apuesta ganadora' | translate}}</button>
-            <button *ngIf="currentLang === 'ca-ES'" ngbDropdownItem routerLink="about-adr-balears">{{'Balears, una aposta guanyadora' | translate}}</button>
+            <button *ngIf="currentLang === 'ca-ES'" ngbDropdownItem routerLink="balears-una-aposta-guanyadora/3280">{{'Balears, una aposta guanyadora' | translate}}</button>
+            <button *ngIf="currentLang === 'en-EN'" ngbDropdownItem routerLink="baleares-una-apuesta-ganadora/3279">{{"Balearic Islands, a winning bet" | translate}}</button> 
           </li>
 
           <!--           <li class="nav-item">
@@ -101,11 +106,18 @@
           </li> -->
 
           <li class='nav-item btn button-header-menu'>
-            <button *ngIf="currentLang === 'es-ES'" ngbDropdownItem routerLink="about-adr-balears">{{'Ecosistema inversor (Quien es quien)' | translate}}</button>
-            <button *ngIf="currentLang === 'ca-ES'" ngbDropdownItem routerLink="about-adr-balears">{{'Ecosistema inversor (Qui ès qui)' | translate}}</button>
+            <button *ngIf="currentLang === 'es-ES'" ngbDropdownItem routerLink="ecosistema-inversor/3282">{{'Ecosistema inversor (Quien es quien)' | translate}}</button>
+            <button *ngIf="currentLang === 'ca-ES'" ngbDropdownItem routerLink="ecosistema-inversor/3283">{{'Ecosistema inversor (Qui ès qui)' | translate}}</button>
+            <button *ngIf="currentLang === 'en-EN'" ngbDropdownItem routerLink="ecosistema-inversor/3282">{{"Investors ecosystem (Who's who)" | translate}}</button>           
+          </li>
+
+          <li class='nav-item btn button-header-menu'>
+            <button *ngIf="currentLang === 'es-ES'" ngbDropdownItem routerLink="servicios-inversor-emprendedor/3284">{{'Servicios' | translate}}</button>
+            <button *ngIf="currentLang === 'ca-ES'" ngbDropdownItem routerLink="serveis-inversor-emprenedor/3285">{{'Serveis' | translate}}</button>
+            <button *ngIf="currentLang === 'en-EN'" ngbDropdownItem routerLink="servicios-inversor-emprendedor/3284">{{'Services' | translate}}</button>
           </li>
           
-          <li class="nav-item">
+          <!-- <li class="nav-item">
             <div ngbDropdown class="d-inline-block">
               <button *ngIf="currentLang === 'es-ES'" class="btn button-header-menu" id="dropDownADRBalears" ngbDropdownToggle>Servicios</button>
               <button *ngIf="currentLang === 'ca-ES'" class="btn button-header-menu" id="dropDownADRBalears" ngbDropdownToggle>Serveis</button>
@@ -124,36 +136,25 @@
               </div>
             </div>
           </li>
+ -->
+          <li class='nav-item btn button-header-menu'>
+            <button *ngIf="currentLang === 'es-ES'" ngbDropdownItem routerLink="sectores-e-industrias/3286">{{'Sectores e industrias' | translate}}</button>
+            <button *ngIf="currentLang === 'ca-ES'" ngbDropdownItem routerLink="sectors-i-industries/3287">{{'Sectors i indústries' | translate}}</button>
+            <button *ngIf="currentLang === 'en-EN'" ngbDropdownItem routerLink="sectores-e-industrias/3286">{{'Sectors & industries' | translate}}</button>
+          </li>
 
           <li class='nav-item btn button-header-menu'>
-            <button *ngIf="currentLang === 'es-ES'" ngbDropdownItem routerLink="about-adr-balears">{{'Sectores e industrias' | translate}}</button>
-            <button *ngIf="currentLang === 'ca-ES'" ngbDropdownItem routerLink="about-adr-balears">{{'Sectors i indústries' | translate}}</button>
+            <button *ngIf="currentLang === 'es-ES'" ngbDropdownItem routerLink="talento/3288">{{'Talento' | translate}}</button>
+            <button *ngIf="currentLang === 'ca-ES'" ngbDropdownItem routerLink="talent/3289">{{'Talent' | translate}}</button>
+            <button *ngIf="currentLang === 'en-EN'" ngbDropdownItem routerLink="talento/3288">{{'Talent' | translate}}</button>
           </li>
 
-          <li class='nav-item btn button-header-menu'>
-            <button *ngIf="currentLang === 'es-ES'" ngbDropdownItem routerLink="about-adr-balears">{{'Talento' | translate}}</button>
-            <button *ngIf="currentLang === 'ca-ES'" ngbDropdownItem routerLink="about-adr-balears">{{'Talent' | translate}}</button>
-          </li>
+    <!--       <li class='nav-item btn button-header-menu'>
+            <button *ngIf="currentLang === 'es-ES'" ngbDropdownItem routerLink="contact-invest-in-balearics">{{'Contacta' | translate}}</button>
+            <button *ngIf="currentLang === 'ca-ES'" ngbDropdownItem routerLink="contact-invest-in-balearics">{{'Contacta' | translate}}</button>
+            <button *ngIf="currentLang === 'en-EN'" ngbDropdownItem routerLink="contact-invest-in-balearics">{{'Contact us' | translate}}</button>
+          </li> -->
 
-          <li class="nav-item">
-            <div ngbDropdown class="d-inline-block">
-              <button class="btn button-header-menu" id="dropDownADRBalears" ngbDropdownToggle>Contacta</button>
-              <div ngbDropdownMenu aria-labelledby="dropDownADRBalears">
-                <button *ngIf="currentLang === 'es-ES'" ngbDropdownItem routerLink="contact-adr-balears">Solicitar asesoramiento</button>
-                <button *ngIf="currentLang === 'ca-ES'" ngbDropdownItem routerLink="contact-adr-balears">Sol·licitar assessorament</button>
-
-                <button *ngIf="currentLang === 'es-ES'" ngbDropdownItem routerLink="contact-adr-balears">Solicitar ayudas</button>
-                <button *ngIf="currentLang === 'ca-ES'" ngbDropdownItem routerLink="contact-adr-balears">Sol·licitar ajudes</button>
-
-                <button *ngIf="currentLang === 'es-ES'" ngbDropdownItem routerLink="contact-adr-balears">Solicitar formaciones</button>
-                <button *ngIf="currentLang === 'ca-ES'" ngbDropdownItem routerLink="contact-adr-balears">Sol·licitar formacions</button>
-
-                <button *ngIf="currentLang === 'es-ES'" ngbDropdownItem routerLink="contact-adr-balears">Pedir cita</button>
-                <button *ngIf="currentLang === 'ca-ES'" ngbDropdownItem routerLink="contact-adr-balears">Demanar cita</button>
-
-              </div>
-            </div>
-          </li>
         </ul>
       </div>
   </nav>

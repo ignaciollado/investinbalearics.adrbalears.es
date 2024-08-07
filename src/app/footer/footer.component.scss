@@ -11,12 +11,9 @@ footer {
   margin-top: 4rem;
 }
 
-a:visited {
-  color: #0098CB;
-}
-
 a:hover {
-  color: #003747;
+  transition: color 1s ease,  padding 0.8s linear;
+  color: #ed7448;
 }
 
 .logo-adr-balears {

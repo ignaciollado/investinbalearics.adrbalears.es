@@ -45,7 +45,7 @@ ngAfterViewInit(): void {
       language: {
           default: this.currentLang,
           translations: {
-            en: {
+            'en-EN': {
                 consentModal: {
                     title: 'We use cookies',
                     description: 'Cookie modal description',

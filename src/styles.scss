@@ -35,7 +35,12 @@ html {
   line-height: 1.5rem;
   font-size: 14px;
   color: #000;
-  max-width: 1260px;
+  max-width: 1320px;
+}
+
+p {
+  margin-top: 2rem!important;
+  font-size: 1.3rem;
 }
 
 a {
@@ -44,8 +49,8 @@ a {
   font-size:100%;
   vertical-align: baseline;
   background: transparent;
-  text-decoration: underline!important;
-  color: #003747!important;
+  text-decoration: underline;
+  color: #003747;
 }
 
 a:visited {
@@ -53,53 +58,53 @@ a:visited {
 }
 
 a:hover {
-  transition: color 1s ease,  padding 0.8s linear!important;
-  color: #ed7448!important;
+  transition: color 1s ease,  padding 0.8s linear;
+  color: #ed7448;
 }
 
 .adrbalears {
-  color:  #003747!important;
+  color:  #003747;
   background-color: #fff;
 }
 
 .emprendre{
-  color:  #6b9da7!important;
+  color:  #6b9da7;
   background-color: #fff;
 }
 .connectar{
-  color:  #71b796!important;
+  color:  #71b796;
   background-color: #fff;
 }
 .projectar{
-  color:  #ed7448!important;
+  color:  #ed7448;
   background-color: #fff;
 }
 
 .adrbalears:hover {
-  background-color:  #003747!important;
-  color: #fff!important;
+  background-color:  #003747;
+  color: #fff;
 }
 
 .emprendre:hover {
-  background-color: #0098CB!important;
-  color: #fff!important;
+  background-color: #0098CB;
+  color: #fff;
 }
 .connectar:hover {
-  background-color:  #71b796!important;
-  color: #fff!important;
+  background-color:  #71b796;
+  color: #fff;
 }
 .projectar:hover {
-  background-color:  #ed7448!important;
-  color: #fff!important;
+  background-color:  #ed7448;
+  color: #fff;
 }
 .emprendre-bck {
-  background-color:  #6b9da7!important;
+  background-color:  #6b9da7;
 }
 .connectar-bck {
-  background-color:  #71b796!important;
+  background-color:  #71b796;
 }
 .projectar-bck {
-  background-color:  #ed7448!important;
+  background-color:  #ed7448;
 }
 img {
   max-width: 1320px;
