@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import { genericMailDTO } from '../Models/generic-data.dto';
-
 import { Observable } from 'rxjs';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 
@@ -8,7 +7,8 @@ const URL_API_SEND = 'https://tramits.idi.es/public/assets/utils/enviaCorreoElec
 
 const httpOptions = {
   headers: new HttpHeaders({
-    'Content-Type': 'text/plain' /* la única forma de evitar errores de CORS ha sido añadiendo esta cabecera */
+    'Content-Type': 'text/plain', /* la única forma de evitar errores de CORS ha sido añadiendo esta cabecera */
+    'observe': 'response'
   })
 };
 
@@ -28,6 +28,8 @@ export class MessageService {
     const subject: string = formData.subject
     const body: string = bodyText
     const projectContact: string = project
+
+    console.log (JSON.stringify(formData))
 
     return this.http
       .get<genericMailDTO[]>(`${URL_API_SEND}?${email}/${requester}/${requester}/${subject}/${body}/${projectContact}`, httpOptions)

@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
-import { FormBuilder, FormGroup, FormControl, Validators, AbstractControl } from '@angular/forms'
+import { FormBuilder, FormGroup, Validators, AbstractControl } from '@angular/forms'
+import { genericMailDTO } from '../Models/generic-data.dto';
+import { MessageService } from '../services/message.service';
 
 @Component({
   selector: 'app-contact-form',
@@ -9,8 +11,12 @@ import { FormBuilder, FormGroup, FormControl, Validators, AbstractControl } from
 
 export class ContactFormComponent {
   contactForm: FormGroup
-
-  constructor(private formBuilder: FormBuilder) { }
+  formData: genericMailDTO
+  submitted: boolean = false
+  
+  constructor(private formBuilder: FormBuilder, private sendMail: MessageService) { 
+    this.formData = new genericMailDTO('', '', '', '', '')
+  }
 
   ngOnInit() {
     this.contactForm = this.formBuilder.group({
@@ -26,8 +32,14 @@ export class ContactFormComponent {
   }
 
   onSubmit() {
-    console.log(this.contactForm.value)
-    this.contactForm.reset();
+    this.submitted = true
+    this.formData = this.contactForm.value
+    this.sendMail.sendMail(this.formData, `M'agradaria que em contactessin per a rebre assessorament per Invest In Balearics`, '')
+    .subscribe((sendMailResult:any) => {
+      console.log ("La respuesta: ", sendMailResult.status, sendMailResult.statusText)
+      this.submitted = false
+      this.contactForm.reset()
+    })
   }
 
 

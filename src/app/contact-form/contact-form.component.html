@@ -18,12 +18,17 @@
         <textarea class="form-control" rows="3" id="theQuestion" formControlName="theQuestion" [ngClass]="{ 'is-invalid': f['theQuestion'].errors }"></textarea>
       </div>
       <div class="form-group form-check">
-        <input type="checkbox" class="form-check-input" formControlName="acceptTerms" [ngClass]="{ 'is-invalid': f['acceptTerms'].errors }">
+        <input type="checkbox" class="form-check-input" formControlName="acceptTerms" [ngClass]="{ 'is-invalid': f['acceptTerms'].errors?.['required'] }">
         <label class="form-check-label" for="exampleCheck1">Accept terms and conditions</label>
       </div>
     </div>
   </div>
-  <div class="text-right">
-    <button type="submit" class="btn btn-primary" [disabled]="!contactForm.valid">Submit</button>
+  <div class="d-grid gap-2">
+    <button type="submit" class="btn btn-primary btn-lg" [disabled]="!contactForm.valid">Submit</button>
+  </div>
+  <div class="text-center" *ngIf ="contactForm.valid && submitted">
+    <div class="spinner-border" role="status">
+      <span class="visually-hidden">Loading...</span>
+    </div>
   </div>
 </form>

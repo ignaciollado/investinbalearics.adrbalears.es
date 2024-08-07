@@ -57,9 +57,11 @@ header {
 button, .button-header-menu {
   background-color: transparent;
   border-radius: 0;
-  margin-right: .5rem;
-  color: #fff;
+  margin-right: .2rem;
+  color: #ed7448;
   font-weight: 400;
+  font-size: 1.1rem;
+  
 }
 
 li {
@@ -68,7 +70,7 @@ li {
 
 li:hover, button:hover {
   transition: color 1s ease,  padding 0.8s linear;
-  color: #ed7448;
+  color: #fff;
 }
 
 .emprender-header {
@@ -94,12 +96,13 @@ h5 {
   margin-bottom:0;
 }
 
-@media screen and (max-width: 1150px) {
+@media screen and (max-width: 1190px) {
  header {
     grid-template-areas: "navLogo mobileMenu" "navLogo navLangSede";
     margin-bottom: 1rem;
     grid-template-columns: 10% 88%;
     margin-top: 0;
+    font-size: 1.5rem;
   } 
   .button-header-menu{
     margin-right: 0;
@@ -114,12 +117,10 @@ h5 {
   div button:hover {
     color: #fff;
     border-color: #033747;
- }
-
- a img {
-  width: 110px;
- }
- 
+  }
+/*   a img {
+    width: 110px;
+  } */
 }
 
 @media screen and (max-width: 400px) {
