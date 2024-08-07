@@ -110,8 +110,14 @@ img {
   max-width: 1320px;
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1150px) {
   .h1, h1 {
     font-size: 2rem!important;
+  }
+}
+
+@media screen and (max-width: 795px) {
+  p {
+    margin-left: .5rem;
   }
 }

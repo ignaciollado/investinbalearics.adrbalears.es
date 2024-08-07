@@ -2,7 +2,7 @@ header {
   background-color: #003747;
   display: grid;
   grid-template-areas: "navLogo navLangSede" "navLogo navBottom";
-  grid-template-columns: 9% 91%;
+  grid-template-columns: 10% 90%;
   margin-top: .5rem;
   margin-bottom: 3rem;
 }
@@ -62,6 +62,10 @@ button, .button-header-menu {
   font-weight: 400;
 }
 
+li {
+    margin-bottom: 1rem;
+}
+
 li:hover, button:hover {
   transition: color 1s ease,  padding 0.8s linear;
   color: #ed7448;
@@ -90,11 +94,11 @@ h5 {
   margin-bottom:0;
 }
 
-@media screen and (max-width: 795px) {
+@media screen and (max-width: 1150px) {
  header {
     grid-template-areas: "navLogo mobileMenu" "navLogo navLangSede";
     margin-bottom: 1rem;
-    grid-template-columns: 20% 80%;
+    grid-template-columns: 10% 88%;
     margin-top: 0;
   } 
   .button-header-menu{
