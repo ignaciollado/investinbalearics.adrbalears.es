@@ -2,13 +2,14 @@ header {
   background-color: #003747;
   display: grid;
   grid-template-areas: "navLogo navLangSede" "navLogo navBottom";
-  grid-template-columns: 10% 90%;
-  margin-top: .5rem;
-  margin-bottom: 3rem;
+  grid-template-columns: 9% 91%;
+  margin-top: 0.1rem;
+  margin-bottom: 1.4rem;
+  max-height: 103px;
 }
 
 .offcanvas-header {
-  background-color: #019ee5;
+  background-color: #003747;
   color: #fff;
 }
 
@@ -25,7 +26,8 @@ header {
   grid-area: mobileMenu;
   display: none;
   padding-right: .2rem;
-  text-align: right;
+/*   text-align: right;
+  justify-content: flex-end; */
 }
 
 .nav-bar-left-logo {
@@ -48,29 +50,26 @@ header {
 
 .nav-bar-top-language {
   display: grid;
-  grid-template-columns: auto auto auto;
-  padding: .25rem;
-  gap: .25rem;
+  grid-template-columns: 33% 33% 33%;
   text-align: center;
+  margin-right: 1rem;
 }
 
 button, .button-header-menu {
-  background-color: transparent;
+  background-color: #ed7448;
   border-radius: 0;
-  margin-right: .2rem;
-  color: #ed7448;
-  font-weight: 400;
-  font-size: 1.1rem;
-  
+  color: #fff;
+  font-weight: 300;
+  margin-right: .5rem;
 }
 
 li {
-    margin-bottom: 1rem;
+  margin-bottom: 1rem;
 }
 
 li:hover, button:hover {
   transition: color 1s ease,  padding 0.8s linear;
-  color: #fff;
+  color: #003747;
 }
 
 .emprender-header {
@@ -103,7 +102,11 @@ h5 {
     grid-template-columns: 10% 88%;
     margin-top: 0;
     font-size: 1.5rem;
+    max-height: 120px;
   } 
+  .logo-adr {
+    height: 120px;
+  }
   .button-header-menu{
     margin-right: 0;
   }
@@ -111,16 +114,17 @@ h5 {
     display: none;
   }
   .mobile-menu-button {
-    display: block;
+    display: flex;
     margin: 0;
+    justify-content: flex-end;
   }
   div button:hover {
     color: #fff;
     border-color: #033747;
   }
-/*   a img {
-    width: 110px;
-  } */
+  button, .button-header-menu {
+    background-color: transparent;
+  }
 }
 
 @media screen and (max-width: 400px) {

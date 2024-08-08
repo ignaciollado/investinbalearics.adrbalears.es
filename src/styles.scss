@@ -50,7 +50,7 @@ a {
   vertical-align: baseline;
   background: transparent;
   text-decoration: underline;
-  color: #003747;
+  color: #003747!important;
 }
 
 a:visited {
@@ -58,8 +58,8 @@ a:visited {
 }
 
 a:hover {
-  transition: color 1s ease,  padding 0.8s linear;
-  color: #ed7448;
+  transition: color 1s ease,  padding 0.8s linear!important;
+  color: #ed7448!important;
 }
 
 .adrbalears {
@@ -67,14 +67,6 @@ a:hover {
   background-color: #fff;
 }
 
-.emprendre{
-  color:  #6b9da7;
-  background-color: #fff;
-}
-.connectar{
-  color:  #71b796;
-  background-color: #fff;
-}
 .projectar{
   color:  #ed7448;
   background-color: #fff;
@@ -85,24 +77,11 @@ a:hover {
   color: #fff;
 }
 
-.emprendre:hover {
-  background-color: #0098CB;
-  color: #fff;
-}
-.connectar:hover {
-  background-color:  #71b796;
-  color: #fff;
-}
 .projectar:hover {
   background-color:  #ed7448;
   color: #fff;
 }
-.emprendre-bck {
-  background-color:  #6b9da7;
-}
-.connectar-bck {
-  background-color:  #71b796;
-}
+
 .projectar-bck {
   background-color:  #ed7448;
 }

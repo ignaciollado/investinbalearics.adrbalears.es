@@ -22,7 +22,7 @@ export class ContactFormComponent {
     this.contactForm = this.formBuilder.group({
       contactName: ['', [Validators.required, Validators.minLength(4), Validators.maxLength(50)]],
       contactEmail: ['', [Validators.required, Validators.email]],
-      theQuestion: ['', [Validators.required, Validators.minLength(10), Validators.maxLength(250)]],
+      body: ['', [Validators.required, Validators.minLength(10), Validators.maxLength(250)]],
       acceptTerms: [false, [Validators.required]]
     })
   }
@@ -34,7 +34,7 @@ export class ContactFormComponent {
   onSubmit() {
     this.submitted = true
     this.formData = this.contactForm.value
-    this.sendMail.sendMail(this.formData, `M'agradaria que em contactessin per a rebre assessorament per Invest In Balearics`, '')
+    this.sendMail.sendMail(this.formData, `M'agradaria que em contactessin per a rebre assessorament per Invest In Balearics`, 'Invest In Balearics')
     .subscribe((sendMailResult:any) => {
       console.log ("La respuesta: ", sendMailResult.status, sendMailResult.statusText)
       this.submitted = false

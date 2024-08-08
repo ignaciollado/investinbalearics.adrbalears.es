@@ -14,8 +14,8 @@
         <small class="form-text text-muted">We'll never share your email with anyone else.</small>
       </div>
       <div class="form-group">
-        <label for="theQuestion">Your question</label>
-        <textarea class="form-control" rows="3" id="theQuestion" formControlName="theQuestion" [ngClass]="{ 'is-invalid': f['theQuestion'].errors }"></textarea>
+        <label for="body">Your question</label>
+        <textarea class="form-control" rows="3" id="body" formControlName="body" [ngClass]="{ 'is-invalid': f['body'].errors }"></textarea>
       </div>
       <div class="form-group form-check">
         <input type="checkbox" class="form-check-input" formControlName="acceptTerms" [ngClass]="{ 'is-invalid': f['acceptTerms'].errors?.['required'] }">

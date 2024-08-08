@@ -26,10 +26,10 @@ export class MessageService {
     const requester: string = formData.requester
     const contactPhone: string = formData.contactPhone
     const subject: string = formData.subject
-    const body: string = bodyText
+    const body: string = formData.body
     const projectContact: string = project
 
-    console.log (JSON.stringify(formData))
+    console.log (formData.body)
 
     return this.http
       .get<genericMailDTO[]>(`${URL_API_SEND}?${email}/${requester}/${requester}/${subject}/${body}/${projectContact}`, httpOptions)
