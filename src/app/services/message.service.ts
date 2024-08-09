@@ -1,7 +1,8 @@
 import { Injectable } from '@angular/core';
 import { genericMailDTO } from '../Models/generic-data.dto';
-import { Observable } from 'rxjs';
+import { Observable, of } from 'rxjs';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { catchError } from 'rxjs/operators';
 
 const URL_API_SEND = 'https://tramits.idi.es/public/assets/utils/enviaCorreoElectronicoANGULAR.php'
 
@@ -21,18 +22,16 @@ export class MessageService {
 
   constructor(private http: HttpClient) { }
 
-  sendMail(formData: genericMailDTO, bodyText: string, project: string): Observable<genericMailDTO[]> {
-    const email: string = formData.email
-    const requester: string = formData.requester
+  sendMail(formData: genericMailDTO, subjectMsg: string, project: string): Observable<genericMailDTO[]> {
+    const email: string = formData.contactEmail
+    const requester: string = formData.contactEmail
     const contactPhone: string = formData.contactPhone
-    const subject: string = formData.subject
+    const subject: string = subjectMsg
     const body: string = formData.body
     const projectContact: string = project
-
-    console.log (formData.body)
-
     return this.http
-      .get<genericMailDTO[]>(`${URL_API_SEND}?${email}/${requester}/${requester}/${subject}/${body}/${projectContact}`, httpOptions)
+      .get<genericMailDTO[]>(`${URL_API_SEND}?${email}/${requester}/${contactPhone}/${subject}/${body}/${projectContact}`, httpOptions)
+      .pipe(catchError(this.handleError<genericMailDTO[]>('countries', [])));
   }
 
   add(message: string) {
@@ -41,6 +40,13 @@ export class MessageService {
 
   clear() {
     this.messages = []
+  }
+
+  private handleError<T>(operation = 'operation', result?: T) {
+    return (error: any): Observable<T> => {
+      console.log(`failed: ${error.message}`);
+      return of(result as T);
+    };
   }
   
 }

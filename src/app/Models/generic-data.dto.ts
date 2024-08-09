@@ -6,21 +6,21 @@ export interface genericDataDTO {
 }
 
 export class genericMailDTO {
-  email:    string;
+  contactEmail:    string;
   requester: string;
   contactPhone: string;
   subject:  string;
   body:     string;
 
   constructor(
-    email: string,
+    contactEmail: string,
     requester: string,
     contactPhone: string,
     subject: string,
     body: string,
    )
     {
-      this.email = email,
+      this.contactEmail = contactEmail,
       this.requester = requester,
       this.contactPhone = contactPhone,
       this.subject = subject,
