@@ -3,8 +3,8 @@ header {
   display: grid;
   grid-template-areas: "navLogo navLangSede" "navLogo navBottom";
   grid-template-columns: 8% 92%;
-  margin-top: 0.1rem;
-  margin-bottom: 1.4rem;
+  margin-top: 0.2rem;
+  margin-bottom: 1rem;
   max-height: 105px;
 }
 
@@ -14,7 +14,7 @@ header {
 }
 
 .offcanvas-body {
-  background-color: #ec9e37;
+  background-color: #ed7448;
   color: #fff;
 }
 
@@ -30,7 +30,6 @@ header {
 
 .nav-bar-left-logo {
   grid-area: navLogo;
-  background-color: #fff;
 }
 
 .nav-bar-top {
@@ -38,6 +37,7 @@ header {
   display: grid;
   grid-template-columns: auto auto;
   justify-content: flex-end;
+  font-size: 1.5rem;
 }
 
 .nav-bar-bottom {
@@ -56,37 +56,17 @@ header {
 button, .button-header-menu {
   background-color: transparent;
   border-radius: 0;
-  color: #fff;
+  color: #ed7448;
   font-weight: 300;
-  margin-right: .5rem;
 }
 
 li {
   margin-bottom: 1rem;
 }
 
-li:hover, button:hover {
+.button-header-menu:hover, button:hover {
   transition: color 1s ease,  padding 0.8s linear;
-  color: #ec9e37;
-}
-
-.emprender-header {
   color: #fff!important;
-  background-color: #6b9da7;
-  padding: 4px 4px 4px 8px;
-}
-.conectar-header {
-  color: #fff!important;
-  background-color: #71b796;
-  padding: 4px 4px 4px 8px;
-}
-.proyectar-header {
-  color: #fff!important;
-  background-color: #ed7448;
-  padding: 4px 4px 4px 8px;
-}
-.emprender-header:hover, .conectar-header:hover, .projectar-header:hover {
-  cursor: default;
 }
 
 h5 {
@@ -106,14 +86,14 @@ h5 {
     height: 120px;
   }
   .button-header-menu{
-    margin-right: 0;
+    margin-right: .5rem;
   }
   .nav-bar-bottom {
     display: none;
   }
   .mobile-menu-button {
     display: flex;
-    margin: 0;
+    margin-right: .5rem;
     justify-content: flex-end;
   }
   div button:hover {

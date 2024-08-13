@@ -56,7 +56,11 @@ export class SimpleTextViewerComponent {
       this.articleService.get(id)
           .subscribe(
             (resp:any) => {
-              this.contenido = resp.data
+              if (resp.data.attributes.state === 1) {
+                this.contenido = resp.data
+              } else  {
+                this.contenido = null
+              }
           })
     }
 }
