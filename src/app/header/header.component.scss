@@ -34,10 +34,11 @@ header {
 
 .nav-bar-top {
   grid-area: navLangSede;
-  display: grid;
+  display: flex;
+  position: relative;
+  top: -8px;
   grid-template-columns: auto auto;
   justify-content: flex-end;
-  font-size: 1.5rem;
 }
 
 .nav-bar-bottom {
@@ -78,8 +79,7 @@ h5 {
     grid-template-areas: "navLogo mobileMenu" "navLogo navLangSede";
     margin-bottom: 1rem;
     grid-template-columns: 8% 92%;
-    margin-top: 0;
-    font-size: 1.5rem;
+   /*  margin-top: 0; */
     max-height: 120px;
   } 
   .logo-adr {
@@ -100,14 +100,22 @@ h5 {
     color: #fff;
     border-color: #033747;
   }
-  button, .button-header-menu {
+  .button-header-menu {
+    font-size: 1.2rem;
+    margin-right: .2rem;
+  }
+/*   button, .button-header-menu {
     background-color: transparent;
+  } */
+  .nav-item a:hover {
+    transition: color 1s ease,  padding 0.8s linear;
+    color: #fff!important;
   }
 }
 
 @media screen and (max-width: 400px) {
   .button-header-menu {
-    font-size: .7rem;
+    font-size: .9rem;
     margin-right: .2rem;
   }
 }
