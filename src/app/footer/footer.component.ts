@@ -21,7 +21,7 @@ export class FooterComponent {
         this.currentLang = 'en-EN'
         break
       default:
-        this.currentLang = 'ca-ES'
+        this.currentLang = 'en-EN'
       }
   }
 }

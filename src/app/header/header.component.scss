@@ -1,11 +1,12 @@
 header {
-  background-color: #003747;
+  background-color: rgba(0, 55, 71, .1);
+  border-bottom: 2px solid #003747;
   display: grid;
   grid-template-areas: "navLogo navLangSede" "navLogo navBottom";
   grid-template-columns: 8% 92%;
   margin-top: 0.2rem;
   margin-bottom: 1rem;
-  max-height: 105px;
+  max-height: 106px;
 }
 
 .offcanvas-header {
@@ -36,7 +37,7 @@ header {
   grid-area: navLangSede;
   display: flex;
   position: relative;
-  top: -8px;
+  top: -5px;
   grid-template-columns: auto auto;
   justify-content: flex-end;
 }
@@ -51,23 +52,18 @@ header {
   display: grid;
   grid-template-columns: 33% 33% 33%;
   text-align: center;
-  margin-right: 1rem;
+  margin-right: 0;
 }
 
 button, .button-header-menu {
   background-color: transparent;
   border-radius: 0;
-  color: #ed7448;
   font-weight: 300;
-}
-
-li {
-  margin-bottom: 1rem;
 }
 
 .button-header-menu:hover, button:hover {
   transition: color 1s ease,  padding 0.8s linear;
-  color: #fff!important;
+  color: #ed7448;
 }
 
 h5 {
@@ -79,11 +75,13 @@ h5 {
     grid-template-areas: "navLogo mobileMenu" "navLogo navLangSede";
     margin-bottom: 1rem;
     grid-template-columns: 8% 92%;
-   /*  margin-top: 0; */
     max-height: 120px;
   } 
   .logo-adr {
     height: 120px;
+  }
+  .btn {
+    --bs-btn-padding-x: 0.4rem;
   }
   .button-header-menu{
     margin-right: .5rem;
@@ -97,16 +95,13 @@ h5 {
     justify-content: flex-end;
   }
   div button:hover {
-    color: #fff;
-    border-color: #033747;
+    color: #ed7448;
   }
   .button-header-menu {
     font-size: 1.2rem;
     margin-right: .2rem;
   }
-/*   button, .button-header-menu {
-    background-color: transparent;
-  } */
+
   .nav-item a:hover {
     transition: color 1s ease,  padding 0.8s linear;
     color: #fff!important;

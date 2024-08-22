@@ -10,7 +10,7 @@ import * as CookieConsent from 'vanilla-cookieconsent';
   styleUrl: './header.component.scss'
 })
 export class HeaderComponent {
-    currentLang: string ="ca-ES";
+    currentLang: string ="en-EN";
 
 constructor( public translate: TranslateService, private router: Router ) { }
 
@@ -26,7 +26,7 @@ ngOnInit(): void {
         this.currentLang = 'en-EN'
       break
       default:
-        this.currentLang = 'ca-ES'
+        this.currentLang = 'en-EN'
     }
 }
     
