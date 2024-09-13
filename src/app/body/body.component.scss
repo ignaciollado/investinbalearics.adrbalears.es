@@ -84,15 +84,16 @@ a {
   margin-bottom: 3rem;
   font-weight: bolder;
   text-align: center;
+  margin-left: 4rem;
 }
 
 .empresas {
   grid-area: a;
   font-size: 2rem;
   text-align: center;
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
+  width: 250px;
+  padding: 1rem;
+  border-radius: 5%;
   background-color: #0098CB;
   color: #fff;
 }
@@ -101,9 +102,9 @@ a {
   grid-area: b;
   font-size: 2rem;
   text-align: center;
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
+  width: 250px;
+  padding: 1rem;
+  border-radius: 5%;
   background-color: #0098CB;
   color: #fff;
 }
@@ -112,9 +113,9 @@ a {
   grid-area: c;
   font-size: 2rem;
   text-align: center;
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
+  width: 250px;
+  padding: 1rem;
+  border-radius: 5%;
   background-color: #0098CB;
   color: #fff;
 }
@@ -123,9 +124,9 @@ a {
   grid-area: d;
   font-size: 1.5rem;
   text-align: center;
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
+  width: 250px;
+  padding: 1rem;
+  border-radius: 5%;
   background-color: #0098CB;
   color: #fff;
 }
@@ -133,13 +134,13 @@ a {
 .top10empresas {
   grid-area: f;
   font-size: 1.5rem;
-  height: 200px;
-  width: 200px;
   text-align: center;
   background-color: #0098CB;
   color: #fff;
-  border-radius: 50%;
-  display: inline-block;
+  width: 250px;
+  padding: 1rem;
+  border-radius: 5%;
+
 }
 
 .go-to-top {
