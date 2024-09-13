@@ -2,6 +2,10 @@
   color: #f1f1f1;
 }
 
+button{
+  margin-top: 4rem;
+}
+
 .capital-number {
   font-weight: bolder;
   font-size: 5rem;
@@ -26,8 +30,11 @@ p{
 
 ol {
   margin-top: 3rem;
+  margin-left: 10%;
+  font-size: 1.2rem;
   list-style: decimal-leading-zero outside none;
   line-height: 1.8rem;
+  width: 80%;
 }
 
 main {
@@ -66,7 +73,8 @@ article:nth-child(even) {
 }
 
 a {
-  color: #fff;
+  color: #fff!important;
+  text-decoration: none;
 }
 
 .table-content {
@@ -113,7 +121,7 @@ a {
 
 .top10facturacion {
   grid-area: d;
-  font-size: 2rem;
+  font-size: 1.5rem;
   text-align: center;
   width: 200px;
   height: 200px;
@@ -124,7 +132,7 @@ a {
 
 .top10empresas {
   grid-area: f;
-  font-size: 2rem;
+  font-size: 1.5rem;
   height: 200px;
   width: 200px;
   text-align: center;
