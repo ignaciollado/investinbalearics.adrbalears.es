@@ -1,17 +1,69 @@
-.card {
-  border: none;
-  margin-top: 4rem;
-  padding-left: 2rem;
-  padding-right: 2rem;
+.simple-content {
+  display: grid;
+  grid-template-rows: auto auto;
+  column-gap: 4rem;
 }
 
-.p-resaltado {
-  margin-left: 15rem!important;
-  padding: 1rem!important;
+.text-container {
+  border-radius: 15px;
+  padding: 1rem;
+  position: absolute;
+  top: 265px;
+  left: 90px;
+  background-color: rgba(0, 0, 0, .2);
+  width: 40%;
+  animation: 2s ease-out 0s 1 slideInFromLeft;
+}
+
+form {
   border: 1px solid #003747;
+  border-radius: 15px;
+  padding: 1rem;
+  position: absolute;
+  top: 775px;
+  right: 90px;
+  animation-duration: 3s;
+  animation-name: slidein;
 }
 
-.alert-adrbalears{
-  background-color: #003747;
-  color: #ffffff;
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slidein {
+  from {
+    translate: 150vw 0;
+    scale: 200% 1;
+  }
+
+  to {
+    translate: 0 0;
+    scale: 100% 1;
+  }
+}
+
+
+
+@media screen and (max-width: 1095px) {
+  .simple-content {
+    grid-template-rows: auto;
+    column-gap: 2rem;
+  }
+
+  .text-container {
+    position: relative;
+    width: 100%;
+    animation: 1s ease-out 0s 1 slideInFromLeft; 
+  }
+
+  form {
+    position: relative;
+    animation-duration: 2s;
+    animation-name: slidein;
+  }
 }

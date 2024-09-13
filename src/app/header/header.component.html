@@ -1,5 +1,50 @@
-<header>
-  <nav class='nav-bar-left-logo' id="logotipo">
+<header class="container-fluid">
+
+  <div class='nav-bar-left-logo' id="logotipo">
+    <a class="navbar-brand" href="#">
+      <img src="../assets/ADRBalears-conselleria-color.webp" alt="ADR Balears" title="Agència de desenvolupament regional de les Illes Balears" width="auto" height="120px">
+    </a>
+    <h1 class="adr-texto" *ngIf="currentLang === 'es-ES'">Agencia de Desarrollo Regional de les Illes Balears</h1>
+    <h1 class="adr-texto" *ngIf="currentLang === 'ca-ES'">Agència de Desenvolupament Regional de les Illes Balears</h1>
+  </div>  
+  <div class="navbar nav-bar-top">
+    <div>
+      <button class="btn button-header-menu "#langSelect (click)="switchLanguage('cas')">cas</button>
+      <button class="btn button-header-menu "#langSelect (click)="switchLanguage('en')">eng</button>
+      <button class="btn button-header-menu" #langSelect (click)="switchLanguage('cat')">cat</button>
+    </div>
+    <app-search-the-web></app-search-the-web>
+  </div>
+
+  <nav class="navbar-expand-md nav-bar-top-sede-elect">
+    <a *ngIf="currentLang === 'es-ES'" class="btn" href="#porque-invertir">Por qué invertir</a>
+    <a *ngIf="currentLang === 'en-ENG'" class="btn" href="#porque-invertir">Why invest</a>
+
+    <a *ngIf="currentLang === 'es-ES'" class="btn" href="#ecosistema-inversor">Ecosistema inversor</a>
+    <a *ngIf="currentLang === 'en-ENG'" class="btn" href="#ecosistema-inversor">Discover Balearics</a>
+
+    <a *ngIf="currentLang === 'es-ES'" class="btn" href="#servicios">Servicios</a>
+    <a *ngIf="currentLang === 'en-ENG'" class="btn" href="#servicios">Services</a>
+
+    <a *ngIf="currentLang === 'es-ES'" class="btn" href="#sectores">Sectores</a>
+    <a *ngIf="currentLang === 'en-ENG'" class="btn" href="#sectores">Sectors</a>
+
+    <a *ngIf="currentLang === 'es-ES'" class="btn" href="#talento">Talento</a>
+    <a *ngIf="currentLang === 'en-ENG'" class="btn" href="#talento">Talent</a>
+
+    <a *ngIf="currentLang === 'es-ES'" class="btn" routerLink="ayudas-y-subvenciones">{{'Ayudas' | translate}}</a>
+    <a *ngIf="currentLang === 'en-ENG'" class="btn" routerLink="ajuts-i-subvencions">{{'Ajudes' | translate}}</a>
+
+    <a *ngIf="currentLang === 'es-ES'" class="btn" routerLink="news-agenda-list/4">Noticias / Agenda</a>
+    <a *ngIf="currentLang === 'en-ENG'" class="btn" routerLink="news-agenda-list/4">Notícies / Agenda</a>
+
+    <a class="btn" routerLink="contact-adr-balears">Contacta</a>
+
+    <button *ngIf="currentLang === 'es-ES'" class="btn" (click)="sedeElectronica()">{{'Sede electrónica' | translate}}</button>
+    <button *ngIf="currentLang === 'en-ENG'" class="btn" (click)="sedeElectronica()">{{'Seu electrònica' | translate}}</button>
+  </nav>
+
+  <!--  <nav class='nav-bar-left-logo' id="logotipo">
     <a class="navbar-brand" href="#">
       <img src="../../assets/logo-adrbalears-proyectar.webp" alt="ADR Balears" class="logo-adr" title="Agència de desenvolupament regional de les Illes Balears" width="auto" height="105px">
     </a>
@@ -66,10 +111,11 @@
 
   <button class="btn mobile-menu-button" (click)="openCustomPanelClass(content)">
     <i class="bi bi-list" style="font-size: 3rem; color:#003747;"></i>
-  </button>
+  </button> -->
+
 </header>
 
-<ng-template #content let-offcanvas>
+<!-- <ng-template #content let-offcanvas>
 	<div class="offcanvas-header">
 		<div class="offcanvas-title"><strong>Invest In Balearics - ADR Balears</strong></div>
 		<button type="button" class="btn-close" aria-label="Close" (click)="offcanvas.dismiss('Cross click')"></button>
@@ -116,4 +162,4 @@
     </ul>
 
 	</div>
-</ng-template>
+</ng-template> -->

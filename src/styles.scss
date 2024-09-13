@@ -25,23 +25,18 @@
       padding:0;
       border: 0;
       outline:0;
-      font-size:22px;
+      font-size:17px;
       vertical-align: baseline;
-      background: transparent;
       font-family: "Inter", sans-serif;
 }
 
-html {
-  margin: auto!important;    
-  line-height: 1.5rem;
-  font-size: 14px;
-  color: #000;
-  max-width: 1320px;
+body {
+  position: relative;
 }
 
-p {
-  margin-top: 2rem!important;
-  font-size: 1.3rem;
+
+html {
+  scroll-behavior: smooth;
 }
 
 a {
@@ -60,44 +55,11 @@ a:visited {
 
 a:hover {
   transition: color 1s ease,  padding 0.8s linear!important;
-  color: #ed7448!important;
+  color: #0098CB!important;
 }
 
-.adrbalears {
-  color:  #ed7448;
-  background-color: #fff;
-}
-
-.projectar{
-  color:  #ed7448;
-  background-color: #fff;
-}
-
-.adrbalears:hover {
-  background-color:  #003747;
-  color: #fff;
-}
-
-.projectar:hover {
-  background-color:  #ed7448;
-  color: #fff;
-}
-
-.projectar-bck {
-  background-color:  #ed7448;
-}
-img {
-  max-width: 1320px;
-}
-
-@media (min-width: 1190px) {
+@media (min-width: 1200px) {
   .h1, h1 {
-    font-size: 2rem!important;
-  }
-}
-
-@media screen and (max-width: 1190px) {
-  p {
-    margin-left: .5rem;
+    font-size: 1.5rem!important;
   }
 }

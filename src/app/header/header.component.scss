@@ -1,12 +1,8 @@
 header {
-  background-color: rgba(0, 55, 71, .1);
-  border-bottom: 2px solid #003747;
   display: grid;
-  grid-template-areas: "navLogo navLangSede" "navLogo navBottom";
-  grid-template-columns: 8% 92%;
-  margin-top: 0.2rem;
-  margin-bottom: 1rem;
-  max-height: 106px;
+  grid-template-areas: "navLogo navLangSede" "menu menu";
+  grid-template-columns: auto auto;
+  font-size: 1rem;
 }
 
 .offcanvas-header {
@@ -37,7 +33,6 @@ header {
   grid-area: navLangSede;
   display: flex;
   position: relative;
-  top: -5px;
   grid-template-columns: auto auto;
   justify-content: flex-end;
 }
@@ -63,14 +58,14 @@ button, .button-header-menu {
 
 .button-header-menu:hover, button:hover {
   transition: color 1s ease,  padding 0.8s linear;
-  color: #ed7448;
+  color: #0098CB;
 }
 
 h5 {
   margin-bottom:0;
 }
 
-@media screen and (max-width: 1325px) {
+@media screen and (max-width: 1095px) {
  header {
     grid-template-areas: "navLogo mobileMenu" "navLogo navLangSede";
     margin-bottom: 1rem;
@@ -95,7 +90,7 @@ h5 {
     justify-content: flex-end;
   }
   div button:hover {
-    color: #ed7448;
+    color: #0098CB;
   }
   .button-header-menu {
     font-size: 1.2rem;

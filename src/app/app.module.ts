@@ -16,7 +16,7 @@ import { WellFormattedLinkPipe } from './Pipes/well-formatted-link.pipe';
 import { NotFoundComponent } from './error-pages/not-found/not-found.component';
 import { InternalServerComponent } from './error-pages/internal-server/internal-server.component';
 import { ContactFormComponent } from './contact-form/contact-form.component';
-
+import { SearchTheWebComponent } from './searchTheWeb/search-the-web/search-the-web.component';
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
@@ -33,7 +33,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     WellFormattedLinkPipe,
     NotFoundComponent,
     InternalServerComponent,
-    ContactFormComponent
+    ContactFormComponent,
+    SearchTheWebComponent
   ],
   imports: [
     BrowserModule,
