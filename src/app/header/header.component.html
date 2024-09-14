@@ -16,7 +16,7 @@
     <app-search-the-web></app-search-the-web>
   </div>
 
-  <nav class="navbar-expand-md nav-bar-top-sede-elect">
+<!--   <nav class="navbar-expand-md nav-bar-top-sede-elect">
     <a *ngIf="currentLang === 'es-ES'" class="btn" href="#porque-invertir">Por qué invertir</a>
     <a *ngIf="currentLang === 'en-ENG'" class="btn" href="#porque-invertir">Why invest</a>
 
@@ -42,124 +42,57 @@
 
     <button *ngIf="currentLang === 'es-ES'" class="btn" (click)="sedeElectronica()">{{'Sede electrónica' | translate}}</button>
     <button *ngIf="currentLang === 'en-ENG'" class="btn" (click)="sedeElectronica()">{{'Seu electrònica' | translate}}</button>
-  </nav>
-
-  <!--  <nav class='nav-bar-left-logo' id="logotipo">
-    <a class="navbar-brand" href="#">
-      <img src="../../assets/logo-adrbalears-proyectar.webp" alt="ADR Balears" class="logo-adr" title="Agència de desenvolupament regional de les Illes Balears" width="auto" height="105px">
-    </a>
-  </nav>
-
-  <nav class="navbar nav-bar-top">
-    <div class="nav-bar-top-language">
-      <button class="btn button-header-menu "#langSelect (click)="switchLanguage('cas')">cas</button>
-      <button class="btn button-header-menu "#langSelect (click)="switchLanguage('en')">eng</button>
-      <button class="btn button-header-menu" #langSelect (click)="switchLanguage('cat')">cat</button>
-    </div>
-    <div class="nav-bar-top-sede-elect">
-      <button *ngIf="currentLang === 'es-ES'" class="btn button-header-menu" (click)="sedeElectronica()">{{'Sede electrónica' | translate}}</button>
-      <button *ngIf="currentLang === 'ca-ES'" class="btn button-header-menu" (click)="sedeElectronica()">{{'Seu electrònica' | translate}}</button>
-      <button *ngIf="currentLang === 'en-EN'" class="btn button-header-menu" (click)="sedeElectronica()">{{"Electronic transactions" | translate}}</button> 
-
-    </div>
-  </nav>
-
-  <nav class="navbar navbar-expand nav-bar-bottom">
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-md-0">
-          <li class='nav-item btn button-header-menu'>
-            <button *ngIf="currentLang === 'es-ES'" ngbDropdownItem routerLink="quienes-somos-invest-balearics/3278">{{'Quienes somos' | translate}}</button>
-            <button *ngIf="currentLang === 'ca-ES'" ngbDropdownItem routerLink="qui-som-invest-balearics/3281">{{'Qui som' | translate}}</button>
-            <button *ngIf="currentLang === 'en-EN'" ngbDropdownItem routerLink="quienes-somos-invest-balearics/3278">{{"Who we are" | translate}}</button> 
-          </li>
-
-          <li class='nav-item btn button-header-menu'>
-            <button *ngIf="currentLang === 'es-ES'" ngbDropdownItem routerLink="baleares-una-apuesta-ganadora/3279">{{'Baleares, una apuesta ganadora' | translate}}</button>
-            <button *ngIf="currentLang === 'ca-ES'" ngbDropdownItem routerLink="balears-una-aposta-guanyadora/3280">{{'Balears, una aposta guanyadora' | translate}}</button>
-            <button *ngIf="currentLang === 'en-EN'" ngbDropdownItem routerLink="baleares-una-apuesta-ganadora/3279">{{"Balearic Islands, a winning bet" | translate}}</button> 
-          </li>
-
-          <li class='nav-item btn button-header-menu'>
-            <button *ngIf="currentLang === 'es-ES'" ngbDropdownItem routerLink="ecosistema-inversor/3282">{{'Ecosistema inversor (Quien es quien)' | translate}}</button>
-            <button *ngIf="currentLang === 'ca-ES'" ngbDropdownItem routerLink="ecosistema-inversor/3283">{{'Ecosistema inversor (Qui ès qui)' | translate}}</button>
-            <button *ngIf="currentLang === 'en-EN'" ngbDropdownItem routerLink="ecosistema-inversor/3282">{{"Investors ecosystem (Who's who)" | translate}}</button>           
-          </li>
-
-          <li class='nav-item btn button-header-menu'>
-            <button *ngIf="currentLang === 'es-ES'" ngbDropdownItem routerLink="servicios-inversor-emprendedor/3284">{{'Servicios' | translate}}</button>
-            <button *ngIf="currentLang === 'ca-ES'" ngbDropdownItem routerLink="serveis-inversor-emprenedor/3285">{{'Serveis' | translate}}</button>
-            <button *ngIf="currentLang === 'en-EN'" ngbDropdownItem routerLink="servicios-inversor-emprendedor/3284">{{'Services' | translate}}</button>
-          </li>
-          
-          <li class='nav-item btn button-header-menu'>
-            <button *ngIf="currentLang === 'es-ES'" ngbDropdownItem routerLink="sectores-e-industrias/3286">{{'Sectores e industrias' | translate}}</button>
-            <button *ngIf="currentLang === 'ca-ES'" ngbDropdownItem routerLink="sectors-i-industries/3287">{{'Sectors i indústries' | translate}}</button>
-            <button *ngIf="currentLang === 'en-EN'" ngbDropdownItem routerLink="sectores-e-industrias/3286">{{'Sectors & industries' | translate}}</button>
-          </li>
-
-          <li class='nav-item btn button-header-menu'>
-            <button *ngIf="currentLang === 'es-ES'" ngbDropdownItem routerLink="talento/3288">{{'Talento' | translate}}</button>
-            <button *ngIf="currentLang === 'ca-ES'" ngbDropdownItem routerLink="talent/3289">{{'Talent' | translate}}</button>
-            <button *ngIf="currentLang === 'en-EN'" ngbDropdownItem routerLink="talento/3288">{{'Talent' | translate}}</button>
-          </li>
-        </ul>
-      </div>
-  </nav>
-
-  <button class="btn mobile-menu-button" (click)="openCustomPanelClass(content)">
-    <i class="bi bi-list" style="font-size: 3rem; color:#003747;"></i>
-  </button> -->
-
+  </nav> -->
 </header>
 
-<!-- <ng-template #content let-offcanvas>
-	<div class="offcanvas-header">
-		<div class="offcanvas-title"><strong>Invest In Balearics - ADR Balears</strong></div>
-		<button type="button" class="btn-close" aria-label="Close" (click)="offcanvas.dismiss('Cross click')"></button>
-	</div>
-	<div class="offcanvas-body">
-    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-      <li class="nav-item">
-        <a *ngIf="currentLang === 'es-ES'" ngbDropdownItem (click)="offcanvas.dismiss('Cross click')" routerLink="quienes-somos-invest-balearics/3278">{{'Quienes somos' | translate}}</a>
-        <a *ngIf="currentLang === 'ca-ES'" ngbDropdownItem (click)="offcanvas.dismiss('Cross click')" routerLink="qui-som-invest-balearics/3281">{{'Qui som' | translate}}</a>
-        <a *ngIf="currentLang === 'en-EN'" ngbDropdownItem (click)="offcanvas.dismiss('Cross click')" routerLink="quienes-somos-invest-balearics/3278">{{"Who we are" | translate}}</a>
-      </li>
-      <li class="nav-item">
-        <a *ngIf="currentLang === 'es-ES'" ngbDropdownItem (click)="offcanvas.dismiss('Cross click')" routerLink="baleares-una-apuesta-ganadora/3279">{{'Baleares, una apuesta ganadora' | translate}}</a>
-        <a *ngIf="currentLang === 'ca-ES'" ngbDropdownItem (click)="offcanvas.dismiss('Cross click')" routerLink="balears-una-aposta-guanyadora/3280">{{'Balears, una aposta guanyadora' | translate}}</a>
-        <a *ngIf="currentLang === 'en-EN'" ngbDropdownItem (click)="offcanvas.dismiss('Cross click')" routerLink="baleares-una-apuesta-ganadora/3279">{{"Balearic Islands, a winning bet" | translate}}</a> 
-      </li>
-      <li class="nav-item">
-        <a *ngIf="currentLang === 'es-ES'" ngbDropdownItem (click)="offcanvas.dismiss('Cross click')" routerLink="ecosistema-inversor/3282">{{'Ecosistema inversor (Quien es quien)' | translate}}</a>
-        <a *ngIf="currentLang === 'ca-ES'" ngbDropdownItem (click)="offcanvas.dismiss('Cross click')" routerLink="ecosistema-inversor/3283">{{'Ecosistema inversor (Qui ès qui)' | translate}}</a>
-        <a *ngIf="currentLang === 'en-EN'" ngbDropdownItem (click)="offcanvas.dismiss('Cross click')" routerLink="ecosistema-inversor/3282">{{"Investors ecosystem (Who's who)" | translate}}</a> 
-      </li>
-      <li class="nav-item">
-        <a *ngIf="currentLang === 'es-ES'" ngbDropdownItem (click)="offcanvas.dismiss('Cross click')" routerLink="servicios-inversor-emprendedor/3284">{{'Servicios' | translate}}</a>
-        <a *ngIf="currentLang === 'ca-ES'" ngbDropdownItem (click)="offcanvas.dismiss('Cross click')" routerLink="serveis-inversor-emprenedor/3285">{{'Serveis' | translate}}</a>
-        <a *ngIf="currentLang === 'en-EN'" ngbDropdownItem (click)="offcanvas.dismiss('Cross click')" routerLink="servicios-inversor-emprendedor/3284">{{'Services' | translate}}</a>
-      </li>
-      <li class='nav-item'>
-        <a *ngIf="currentLang === 'es-ES'" ngbDropdownItem (click)="offcanvas.dismiss('Cross click')" routerLink="sectores-e-industrias/3286">{{'Sectores e industrias' | translate}}</a>
-        <a *ngIf="currentLang === 'ca-ES'" ngbDropdownItem (click)="offcanvas.dismiss('Cross click')" routerLink="sectors-i-industries/3287">{{'Sectors i indústries' | translate}}</a>
-        <a *ngIf="currentLang === 'en-EN'" ngbDropdownItem (click)="offcanvas.dismiss('Cross click')" routerLink="sectores-e-industrias/3286">{{'Sectors & industries' | translate}}</a>
-      </li>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+   <!--  <a class="navbar-brand" href="#">Invest In Balearics</a> -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" *ngIf="currentLang === 'es-ES'" href="#porque-invertir">Por qué invertir</a>
+          <a class="nav-link active" aria-current="page" *ngIf="currentLang === 'en-ENG'" href="#porque-invertir">Why invest</a>
+        </li>
 
-      <li class='nav-item'>
-        <a *ngIf="currentLang === 'es-ES'" ngbDropdownItem (click)="offcanvas.dismiss('Cross click')" routerLink="talento/3288">{{'Talento' | translate}}</a>
-        <a *ngIf="currentLang === 'ca-ES'" ngbDropdownItem (click)="offcanvas.dismiss('Cross click')" routerLink="talent/3289">{{'Talent' | translate}}</a>
-        <a *ngIf="currentLang === 'en-EN'" ngbDropdownItem (click)="offcanvas.dismiss('Cross click')" routerLink="talento/3288">{{'Talent' | translate}}</a>
-      </li>
+        <li class="nav-item">
+          <a class="nav-link active" *ngIf="currentLang === 'es-ES'" href="#ecosistema-inversor">Ecosistema inversor</a>
+          <a class="nav-link active" *ngIf="currentLang === 'en-ENG'" href="#ecosistema-inversor">Discover Balearics</a>         
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" *ngIf="currentLang === 'es-ES'" href="#servicios">Servicios</a>
+          <a class="nav-link active" *ngIf="currentLang === 'en-ENG'" href="#servicios">Services</a>         
+        </li>
 
-      <li class='nav-item'>
-        <a *ngIf="currentLang === 'es-ES'" (click)="offcanvas.dismiss('Cross click')" routerLink="contact-invest-in-balearics">{{'Contacta' | translate}}</a>
-        <a *ngIf="currentLang === 'ca-ES'" (click)="offcanvas.dismiss('Cross click')" routerLink="contact-invest-in-balearics">{{'Contacta' | translate}}</a>
-        <a *ngIf="currentLang === 'en-EN'" (click)="offcanvas.dismiss('Cross click')" routerLink="contact-invest-in-balearics">{{'Contact us' | translate}}</a>
-      </li>
-    </ul>
+        <li class="nav-item">
+          <a class="nav-link active" *ngIf="currentLang === 'es-ES'" href="#sectores">Sectores</a>
+          <a class="nav-link active" *ngIf="currentLang === 'en-ENG'" href="#sectores">Sectors</a>         
+        </li>
 
-	</div>
-</ng-template> -->
+        <li class="nav-item">
+          <a class="nav-link active" *ngIf="currentLang === 'es-ES'" href="#talento">Talento</a>
+          <a class="nav-link active" *ngIf="currentLang === 'en-ENG'" href="#talento">Talent</a>         
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link active" *ngIf="currentLang === 'es-ES'" routerLink="ayudas-y-subvenciones">{{'Ayudas' | translate}}</a>
+          <a class="nav-link active" *ngIf="currentLang === 'en-ENG'" routerLink="ajuts-i-subvencions">{{'Ajudes' | translate}}</a>         
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link active" *ngIf="currentLang === 'es-ES'" routerLink="news-agenda-list/4">Noticias / Agenda</a>
+          <a class="nav-link active" *ngIf="currentLang === 'en-ENG'" routerLink="news-agenda-list/4">Notícies / Agenda</a>               
+        </li>
+
+        <li class="nav-item">
+          <button *ngIf="currentLang === 'es-ES'" class ="btn" (click)="sedeElectronica()">{{'Sede electrónica' | translate}}</button>
+          <button *ngIf="currentLang === 'en-ENG'" class ="btn" (click)="sedeElectronica()">{{'Seu electrònica' | translate}}</button>
+        </li>
+      </ul>
+
+    </div>
+  </div>
+</nav>
