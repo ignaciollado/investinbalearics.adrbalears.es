@@ -88,11 +88,6 @@ grid-template-columns: 20% 20% 20% 20% 20% ; */
 
 
 
-div {
-  font: 800 40px system-ui;
-}
-
-
 /* .porque-invertir {
   align-self: start;
   grid-column: 1 / 3;
@@ -188,6 +183,50 @@ a {
 
 }
 
+
+#value::after {
+  font: 800 80px system-ui;
+  content: counter(count);
+  animation: counter 2s linear infinite alternate;
+  counter-reset: count 0;
+}
+
+@keyframes counter {
+  0% {
+    counter-increment: count 0;
+  }
+  10% {
+    counter-increment: count 1;
+  }
+  20% {
+    counter-increment: count 2;
+  }
+  30% {
+    counter-increment: count 3;
+  }
+  40% {
+    counter-increment: count 4;
+  }
+  50% {
+    counter-increment: count 5;
+  }
+  60% {
+    counter-increment: count 6;
+  }
+  70% {
+    counter-increment: count 7;
+  }
+  80% {
+    counter-increment: count 8;
+  }
+  90% {
+    counter-increment: count 9;
+  }
+  100% {
+    counter-increment: count 10;
+  }
+}
+
 .go-to-top {
   position: absolute;
   top: 0;
@@ -196,7 +235,7 @@ a {
 }
 
  // to hide the button when page first loaded
- .go-to-top:before {
+.go-to-top:before {
   content: '';
   display: block;
   height: 100vh;
@@ -204,7 +243,7 @@ a {
 }
 
    // fixed to right bottom of page
-   .go-to-top a {
+.go-to-top a {
     position: sticky;
     top: 88vh;
     cursor: pointer;

@@ -14,8 +14,6 @@ export class BodyComponent {
 
   constructor() {
     window.onscroll = function() {this.scrollFunction()};
-    const obj = document.getElementById("value");
-    this.animateValue(obj, 100, 0, 5000);
   }
 
   ngOnInit(): void {
