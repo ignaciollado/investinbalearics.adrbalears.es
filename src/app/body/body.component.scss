@@ -77,11 +77,21 @@ main {
   padding: 0 20px;
   width: 100%;
   display: grid;
-  grid-auto-rows: auto;
-  grid-template-columns: repeat(auto-fill, minmax(1fr, 1fr));
-  grid-template-rows: masonry;
+  grid-template-areas: "a b c" "d e f";
+/*   grid-auto-rows: auto; */
+/*   grid-template-columns: repeat(auto-fill, minmax(1fr, 1fr)); */
+/* grid-template-rows: 1fr 1fr;
+grid-template-columns: 20% 20% 20% 20% 20% ; */
+ /*  grid-template-rows: masonry; */
   grid-gap: 2em;
 }
+
+
+
+div {
+  font: 800 40px system-ui;
+}
+
 
 /* .porque-invertir {
   align-self: start;
@@ -126,7 +136,7 @@ a {
   grid-area: a;
   font-size: 2rem;
   text-align: center;
-  width: 250px;
+ /*  width: 250px; */
   padding: 1rem;
   border-radius: 5%;
   background-color: #0098CB;

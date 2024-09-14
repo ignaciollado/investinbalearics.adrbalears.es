@@ -14,12 +14,14 @@ export class BodyComponent {
 
   constructor() {
     window.onscroll = function() {this.scrollFunction()};
+    const obj = document.getElementById("value");
+    this.animateValue(obj, 100, 0, 5000);
   }
 
   ngOnInit(): void {
 
     console.log ("Welcome to the Invest In Balearics platform from the ADR Balears")
-   
+
 
     const square = document.querySelector('.square');
 square.classList.remove('square-transition');
@@ -50,6 +52,19 @@ scrollFunction() {
   } else {
     this.mybutton.style.display = "none";
   }
+}
+
+animateValue(obj, start, end, duration) {
+  let startTimestamp = null;
+  const step = (timestamp) => {
+    if (!startTimestamp) startTimestamp = timestamp;
+    const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+    obj.innerHTML = Math.floor(progress * (end - start) + start);
+    if (progress < 1) {
+      window.requestAnimationFrame(step);
+    }
+  };
+  window.requestAnimationFrame(step);
 }
 
 }
