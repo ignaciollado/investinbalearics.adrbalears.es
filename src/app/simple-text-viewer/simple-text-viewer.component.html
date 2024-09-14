@@ -7,28 +7,5 @@
     <div class="card__body" [innerHTML]="contenido.attributes.text.replaceAll( 'images/', 'https://contents.idi.es/images/') | wellFormattedLink">
     </div>
   </div>
-  <form>
-    <h2>Solicita información</h2>
-    <div class="mb-3">
-      <input type="text" class="form-control" placeholder="Nombre" id="exampleInputEmail1" aria-describedby="emailHelp">
-      <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
-    </div>
-    <div class="input-group mb-3">
-      <input type="mail" class="form-control" placeholder="Email" aria-label="Username">
-      <input type="tel" class="form-control" placeholder="Teléfono" aria-label="Server">
-    </div>
-    <div class="input-group mb-3">
-      <input type="mail" class="form-control" placeholder="Empresa" aria-label="Username">
-      <input type="tel" class="form-control" placeholder="País" aria-label="Server">
-    </div>
-    <div class="input-group">
-      <textarea class="form-control" placeholder="Cuéntanos sobre qué estás interesado" aria-label="With textarea"></textarea>
-    </div>
-    <div class="mb-3 form-check">
-      <input type="checkbox" class="form-check-input" id="exampleCheck1">
-      <label class="form-check-label" for="exampleCheck1">Accept terms and conditions</label>
-    </div>
-    <button type="submit" class="btn btn-primary">Submit</button>
-  </form>
 </div>
 

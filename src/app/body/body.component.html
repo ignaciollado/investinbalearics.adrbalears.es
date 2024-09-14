@@ -1,10 +1,33 @@
 
-<div class="content">
+<section class="section">
   <video class="img-fluid " id="myVideo" autoplay loop muted>
     <source src="https://mdbcdn.b-cdn.net/img/video/Tropical.mp4" type="video/mp4" />
   </video>
-  <app-simple-text-viewer></app-simple-text-viewer>
-</div>
+   <app-simple-text-viewer></app-simple-text-viewer>
+  <form>
+    <h2>Solicita información</h2>
+    <div class="mb-3">
+      <input type="text" class="form-control" placeholder="Nombre" id="exampleInputEmail1" aria-describedby="emailHelp">
+      <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+    </div>
+    <div class="input-group mb-3">
+      <input type="mail" class="form-control" placeholder="Email" aria-label="Username">
+      <input type="tel" class="form-control" placeholder="Teléfono" aria-label="Server">
+    </div>
+    <div class="input-group mb-3">
+      <input type="mail" class="form-control" placeholder="Empresa" aria-label="Username">
+      <input type="tel" class="form-control" placeholder="País" aria-label="Server">
+    </div>
+    <div class="input-group">
+      <textarea class="form-control" placeholder="Cuéntanos sobre qué estás interesado" aria-label="With textarea"></textarea>
+    </div>
+    <div class="mb-3 form-check">
+      <input type="checkbox" class="form-check-input" id="exampleCheck1">
+      <label class="form-check-label" for="exampleCheck1">Accept terms and conditions</label>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</section>
 
 <main>
   <article class="porque-invertir" id="porque-invertir"><span class="capital-number">1</span>
@@ -81,8 +104,8 @@ En Baleares, en pleno proceso de transformación y diversificación de su econom
     <p>Desde Baleares somos conscientes de la importancia de disponer de un capital humano formado, especializado y abierto a la globalización como factor esencial de producción para el desarrollo de actividades empresariales basadas en el conocimiento y la especialización industrial.</p>
     <button type="button" class="btn btn-outline-primary">Descubre +</button>
   </article>
-
 </main>
+
 <div class="go-to-top">
   <a href="#top">to top of page</a>
 </div>

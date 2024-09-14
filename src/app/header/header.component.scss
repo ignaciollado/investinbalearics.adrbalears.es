@@ -65,7 +65,7 @@ h5 {
   margin-bottom:0;
 }
 
-@media screen and (max-width: 1095px) {
+/* @media screen and (max-width: 1095px) {
  header {
     grid-template-areas: "navLogo mobileMenu" "navLogo navLangSede";
     margin-bottom: 1rem;
@@ -101,7 +101,7 @@ h5 {
     transition: color 1s ease,  padding 0.8s linear;
     color: #fff!important;
   }
-}
+} */
 
 @media screen and (max-width: 400px) {
   .button-header-menu {
