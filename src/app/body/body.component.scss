@@ -270,18 +270,24 @@ a {
 
 @media screen and (max-width: 1400px) {
   app-simple-text-viewer{
-    left: 0%;
-    top: 0%;
-    max-width: 100%;
+    left: 1%;
+    top: 1%;
+    max-width: 90%;
     color: rgb(255, 255, 255);
   }
   form{
-    left: 0%;
-    width: 100%;
-    border: 1px blue solid;
+    right: 1%;
+    top: 42%;
+    width: 60%;
+  }
+  form button {
+    margin-top: 0;
   }
   main {
-    margin-top: 6rem;
+    margin-top: 2rem;
+  }
+  .btn {
+    color: #fff;
   }
 }
 
