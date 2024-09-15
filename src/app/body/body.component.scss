@@ -16,12 +16,12 @@ app-simple-text-viewer{
 }
 
 form {
-  border: 1px solid #003747;
-  border-radius: 15px;
-  padding: 1rem;
   position: absolute;
   top: 45%;
   right: 5%;
+  border: 1px solid #003747;
+  border-radius: 15px;
+  padding: 1rem;
   animation-duration: 3s;
   animation-name: slidein;
 }
@@ -58,71 +58,66 @@ h4{
 p{
   margin-top: 3rem;
   margin-left: 10%;
-  font-size: 1.2rem;
-  line-height: 2rem;
+  font-size: 1.8rem;
+  line-height: 2.5rem;
   width: 80%;
 }
 
 ol {
   margin-top: 3rem;
   margin-left: 10%;
-  font-size: 1.2rem;
   list-style: decimal-leading-zero outside none;
   line-height: 1.8rem;
   width: 80%;
 }
 
+li {
+  font-size: 1.2rem;
+}
+
 main {
   margin: 30px auto;
-  padding: 0 20px;
+/*   padding: 0 20px; */
   width: 100%;
   display: grid;
-  grid-template-areas: "a b c" "d e f";
-/*   grid-auto-rows: auto; */
-/*   grid-template-columns: repeat(auto-fill, minmax(1fr, 1fr)); */
-/* grid-template-rows: 1fr 1fr;
-grid-template-columns: 20% 20% 20% 20% 20% ; */
- /*  grid-template-rows: masonry; */
-  grid-gap: 2em;
+  grid-template-areas: "a b b" "c c c" "d e e";
 }
 
 .porque-invertir {
   grid-area: a;
-  border: 1px solid red;
 }
 
 .ecosistema-inversor {
   grid-area: b;
-  border: 1px solid blue;
 }
 
 .servicios {
   grid-area: c;
-  border: 1px solid orange;
 }
 
 .sectores {
   grid-area: d;
-  border: 1px solid green;
 }
 
 .talento {
   grid-area: e;
-  border: 1px solid yellow;
 }
 
 article {
-  border-radius: 10px;
+  border-radius: 0;
   padding: 20px;
   color: #fff;
+  border: 1px solid #fff;
 }
 
 article:nth-child(odd) {
-  background-color: #55BBE9;
+  background-color: #0098CB;
+  background-image: linear-gradient(to top right, #0098CB, rgb(134, 129, 129));
 }
 
 article:nth-child(even) {
-  background-color: #afbe29;
+  background-color: #003747;
+  background-image: linear-gradient(to top right,#003747, #00000046);
 }
 
 a {
@@ -132,12 +127,11 @@ a {
 
 .table-content {
   display: grid;
-  grid-template-areas: "h i j" "k  l";
+  grid-template-areas: "h i j" "k m l";
   gap: 2rem;
-  margin-bottom: 3rem;
+  margin: 3rem;
   font-weight: bolder;
   text-align: center;
-  margin-left: 4rem;
 }
 
 .empresas {
@@ -154,7 +148,6 @@ a {
   grid-area: i;
   font-size: 2rem;
   text-align: center;
-  width: 250px;
   padding: 1rem;
   border-radius: 5%;
   background-color: #0098CB;
@@ -165,7 +158,6 @@ a {
   grid-area: j;
   font-size: 2rem;
   text-align: center;
-  width: 250px;
   padding: 1rem;
   border-radius: 5%;
   background-color: #0098CB;
@@ -176,7 +168,6 @@ a {
   grid-area: k;
   font-size: 1.5rem;
   text-align: center;
-  width: 250px;
   padding: 1rem;
   border-radius: 5%;
   background-color: #0098CB;
@@ -189,7 +180,6 @@ a {
   text-align: center;
   background-color: #0098CB;
   color: #fff;
-  width: 250px;
   padding: 1rem;
   border-radius: 5%;
 
@@ -283,18 +273,22 @@ a {
     left: 0%;
     top: 0%;
     max-width: 100%;
+    color: rgb(255, 255, 255);
   }
   form{
     left: 0%;
     width: 100%;
     border: 1px blue solid;
   }
-
+  main {
+    margin-top: 6rem;
+  }
 }
 
 @media screen and (max-width: 1200px) {
   main {
-    grid-template-areas: "a" "b" "c" "d" "e";
+    grid-template-areas: "a b" "c d" "e e";
+    padding: 0;
   } 
   .section {
     color: red;
@@ -303,6 +297,7 @@ a {
     position: relative;
     left: 0;
     max-width: 100%;
+    color: darkgreen;
   }
   form {
     position: relative;
@@ -310,63 +305,24 @@ a {
     margin-top: 1rem;
   }
 
+  article {
+    padding: 0;
+  }
+
+  button {
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    margin-left: 2rem;
+  }
+
   .table-content {
-    grid-template-areas: "h i" "j" "k" "l";
+    grid-template-areas: "h i" "j k" "l";
     border: 1px solid black;
   }
-  
-  .empresas {
-    grid-area: a;
-    font-size: 2rem;
-    text-align: center;
-    padding: 1rem;
-    border-radius: 5%;
-    background-color: #0098CB;
-    color: #fff;
-  }
-  
-  .facturacion {
-    grid-area: b;
-    font-size: 2rem;
-    text-align: center;
-    width: 100%;
-    padding: 1rem;
-    border-radius: 5%;
-    background-color: #0098CB;
-    color: #fff;
-  }
-  
-  .trabajadores {
-    grid-area: c;
-    font-size: 2rem;
-    text-align: center;
-    width: 100%;
-    padding: 1rem;
-    border-radius: 5%;
-    background-color: #0098CB;
-    color: #fff;
-  }
-  
-  .top10facturacion {
-    grid-area: d;
-    font-size: 1.5rem;
-    text-align: center;
-    width: 100%;
-    padding: 1rem;
-    border-radius: 5%;
-    background-color: #0098CB;
-    color: #fff;
-  }
-  
-  .top10empresas {
-    grid-area: f;
-    font-size: 1.5rem;
-    text-align: center;
-    background-color: #0098CB;
-    color: #fff;
-    width: 100%;
-    padding: 1rem;
-    border-radius: 5%;
-  
+}
+
+@media screen and (max-width: 992px) {
+  main {
+    grid-template-areas: "a" "b" "c" "d" "e";
   }
 }
