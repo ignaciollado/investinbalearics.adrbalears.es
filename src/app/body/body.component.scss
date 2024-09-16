@@ -236,28 +236,6 @@ a:hover {
   }
 }
 
-.go-to-top {
-  position: absolute;
-  top: 0;
-  right:0;
-  height: 100%;
-}
-
- // to hide the button when page first loaded
-.go-to-top:before {
-  content: '';
-  display: block;
-  height: 100vh;
-  pointer-events: none;
-}
-
-   // fixed to right bottom of page
-.go-to-top a {
-    position: sticky;
-    top: 88vh;
-    cursor: pointer;
-    font-size: 20px;
-  }
 @media (prefers-reduced-motion: no-preference) {
   .ecosistema-inversor {
     animation-name: wipe-enter 2s infinite;
@@ -273,13 +251,6 @@ a:hover {
 	50% {
 		transform: scale(1, .025);
 	}
-}
-
-.square {
- /*  width: 200px;
-  height: 200px; */
-  /* background: orange; */
-  // etc...
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -313,22 +284,25 @@ a:hover {
 
 @media screen and (max-width: 1200px) {
   main {
-    grid-template-areas: "a b" "c d" "e e";
+    grid-template-areas: "a" "b" "c" "d" "e";
     padding: 0;
   } 
-  .section {
-    color: red;
-  }
+
   app-simple-text-viewer{
     position: relative;
     left: 0;
     max-width: 100%;
-    color: darkgreen;
   }
+  
   form {
     position: relative;
     left: 0;
     margin-top: 1rem;
+    width: 100%;
+    border-radius: 0;
+    animation-name: slidein;
+    background-color: #003747;
+    background-image: linear-gradient(to bottom left,#003747, rgb(170, 170, 170));
   }
 
   article {
@@ -336,14 +310,12 @@ a:hover {
   }
 
   button {
-    margin-top: 1rem;
-    margin-bottom: 2rem;
-    margin-left: 2rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
   }
 
   .table-content {
     grid-template-areas: "h i" "j k" "l";
-    border: 1px solid black;
   }
 }
 

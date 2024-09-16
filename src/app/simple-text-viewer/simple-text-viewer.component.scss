@@ -14,7 +14,7 @@
   }
 }
 
-@media screen and (max-width: 1095px) {
+@media screen and (max-width: 1200px) {
   .simple-content {
     grid-template-rows: auto;
     column-gap: 2rem;
@@ -24,11 +24,8 @@
     position: relative;
     width: 100%;
     animation: 1s ease-out 0s 1 slideInFromLeft; 
-  }
-
-  form {
-    position: relative;
-    animation-duration: 2s;
-    animation-name: slidein;
+    border-radius: 0;
+    background-color: #003747;
+    background-image: linear-gradient(to top right,#003747, rgb(170, 170, 170));
   }
 }
