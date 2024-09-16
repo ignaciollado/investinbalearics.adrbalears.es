@@ -106,8 +106,8 @@ main {
 article {
   border-radius: 0;
   padding: 20px;
-  color: #fff;
-  border: 1px solid #fff;
+/*   color: #fff;
+  border: 1px solid #fff; */
 }
 
 article:nth-child(odd) {
@@ -316,6 +316,10 @@ a:hover {
 
   .table-content {
     grid-template-areas: "h i" "j k" "l";
+  }
+
+  .capital-number{
+    margin-left: 1px;
   }
 }
 
