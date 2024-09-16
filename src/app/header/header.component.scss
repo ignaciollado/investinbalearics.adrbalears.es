@@ -81,6 +81,19 @@ h5 {
 }
 
 @media screen and (max-width: 1200px) {
+  .container, .container-fluid {
+    padding-right: 0;
+    padding-left: 0;
+  }
+  header {
+    grid-template-areas: "navLogo" "navLangSede" "menu";
+  }
+  .nav-bar-left-logo{
+    text-align: center;
+  }
+  .nav-bar-top[_ngcontent-ng-c2360855671] {
+    justify-content: center;
+  }
   li {
     margin-right: 2rem;
     font-size: .8rem;
