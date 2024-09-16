@@ -7,36 +7,28 @@ import { Component } from '@angular/core';
 })
 export class BodyComponent {
   
-  pageXOffset:number =  window.pageXOffset
+/*   pageXOffset:number =  window.pageXOffset
   offsetHeight:number =  document.body.offsetHeight
-  innerHeight: number =  window.innerHeight
-  mybutton = document.getElementById("myBtn");
+  innerHeight: number =  window.innerHeight */
 
-  constructor() {
-    window.onscroll = function() {this.scrollFunction()};
-  }
+  constructor() {}
 
   ngOnInit(): void {
 
     console.log ("Welcome to the Invest In Balearics platform from the ADR Balears")
 
+/*     const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        const square = entry.target.querySelector('.square');
+        if (entry.isIntersecting) {
+          square.classList.add('square-animation');
+        return; 
+        }
+        square.classList.remove('square-animation');
+      });
+    });
+    observer.observe(document.querySelector('.servicios')); */
 
-    const square = document.querySelector('.square');
-square.classList.remove('square-transition');
-
-// Create the observer, same as before:
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      square.classList.add('square-transition');
-      return;
-    }
-
-    square.classList.remove('square-transition');
-  });
-});
-
-observer.observe(document.querySelector('.square-wrapper'));
   }
 
 topFunction() {
@@ -44,13 +36,6 @@ topFunction() {
   document.documentElement.scrollTop = 0;
 }
 
-scrollFunction() {
-  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-    this.mybutton.style.display = "block";
-  } else {
-    this.mybutton.style.display = "none";
-  }
-}
 
 animateValue(obj, start, end, duration) {
   let startTimestamp = null;

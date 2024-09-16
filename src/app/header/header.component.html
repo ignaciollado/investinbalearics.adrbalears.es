@@ -44,7 +44,7 @@
   </nav> -->
 </header>
 
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-lg">
   <div class="container-fluid">
    <!--  <a class="navbar-brand" href="#">Invest In Balearics</a> -->
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -52,48 +52,33 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-     <!--    <li class="nav-item">
-          <a class="nav-link active" aria-current="page" *ngIf="currentLang === 'es-ES'" href="#porque-invertir">Por qué invertir</a>
-          <a class="nav-link active" aria-current="page" *ngIf="currentLang === 'en-ENG'" href="#porque-invertir">Why invest</a>
-        </li>
-
         <li class="nav-item">
-          <a class="nav-link active" *ngIf="currentLang === 'es-ES'" href="#ecosistema-inversor">Ecosistema inversor</a>
-          <a class="nav-link active" *ngIf="currentLang === 'en-ENG'" href="#ecosistema-inversor">Discover Balearics</a>         
+          <a class="nav-link active" aria-current="page" *ngIf="currentLang === 'es-ES'" routerLink="baleares-una-apuesta-ganadora/3279">Por qué invertir</a>
+          <a class="nav-link active" aria-current="page" *ngIf="currentLang === 'en-ENG'" routerLink="baleares-una-apuesta-ganadora/3279">Why invest</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" *ngIf="currentLang === 'es-ES'" href="#servicios">Servicios</a>
-          <a class="nav-link active" *ngIf="currentLang === 'en-ENG'" href="#servicios">Services</a>         
+          <a class="nav-link active" *ngIf="currentLang === 'es-ES'" routerLink="ecosistema-inversor/3282">Ecosistema inversor</a>
+          <a class="nav-link active" *ngIf="currentLang === 'en-ENG'" routerLink="ecosistema-inversor/3282">Discover Balearics</a>         
         </li>
-
         <li class="nav-item">
-          <a class="nav-link active" *ngIf="currentLang === 'es-ES'" href="#sectores">Sectores</a>
-          <a class="nav-link active" *ngIf="currentLang === 'en-ENG'" href="#sectores">Sectors</a>         
+          <a class="nav-link active" *ngIf="currentLang === 'es-ES'" routerLink="servicios-inversor-emprendedor/3284">Servicios</a>
+          <a class="nav-link active" *ngIf="currentLang === 'en-ENG'" routerLink="servicios-inversor-emprendedor/3284">Services</a>         
         </li>
-
         <li class="nav-item">
-          <a class="nav-link active" *ngIf="currentLang === 'es-ES'" href="#talento">Talento</a>
-          <a class="nav-link active" *ngIf="currentLang === 'en-ENG'" href="#talento">Talent</a>         
-        </li> -->
-
+          <a class="nav-link active" *ngIf="currentLang === 'es-ES'" routerLink="sectores-e-industrias/3286">Sectores</a>
+          <a class="nav-link active" *ngIf="currentLang === 'en-ENG'" routerLink="sectores-e-industrias/3286">Sectors</a>         
+        </li>
+        <li class="nav-item nav-item-last">
+          <a class="nav-link active" *ngIf="currentLang === 'es-ES'" routerLink="talento/3288">Talento</a>
+          <a class="nav-link active" *ngIf="currentLang === 'en-ENG'" routerLink="talento/3288">Talent</a>         
+        </li>
         <li class="nav-item">
           <a class="nav-link active" *ngIf="currentLang === 'es-ES'" routerLink="ayudas-y-subvenciones">{{'Ayudas' | translate}}</a>
           <a class="nav-link active" *ngIf="currentLang === 'en-ENG'" routerLink="ajuts-i-subvencions">{{'Ajudes' | translate}}</a>         
         </li>
-
         <li class="nav-item">
           <a class="nav-link active" *ngIf="currentLang === 'es-ES'" routerLink="news-agenda-list/4">Noticias / Agenda</a>
           <a class="nav-link active" *ngIf="currentLang === 'en-ENG'" routerLink="news-agenda-list/4">Notícies / Agenda</a>               
-        </li>
-
-        <li class="nav-item">
-          <button *ngIf="currentLang === 'es-ES'" class ="btn" (click)="sedeElectronica()">{{'Sede electrónica' | translate}}</button>
-          <button *ngIf="currentLang === 'en-ENG'" class ="btn" (click)="sedeElectronica()">{{'Seu electrònica' | translate}}</button>
-        </li>
-
-        <li class="nav-item">
-          <button *ngIf="currentLang === 'es-ES'" class ="btn" routerLink="transparencia/4">{{'Transparencia' | translate}}</button>
-          <button *ngIf="currentLang === 'en-ENG'" class ="btn" routerLink="transparency/4">{{'Transparency' | translate}}</button>
         </li>
       </ul>
 

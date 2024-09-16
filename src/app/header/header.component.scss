@@ -5,6 +5,24 @@ header {
   font-size: 1rem;
 }
 
+ul {
+  list-style: decimal-leading-zero;
+  color: #0098CB;
+  margin-left: 2rem;
+}
+
+li {
+  margin-right: 4rem;
+}
+
+.nav-item {
+  font-weight: bold;
+}
+
+.nav-item-last {
+  margin-right: 12rem;
+}
+
 .offcanvas-header {
   background-color: #003747;
   color: #fff;

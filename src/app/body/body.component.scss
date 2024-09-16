@@ -44,13 +44,15 @@ form {
   margin-right: 0.5rem;
   font-family: sans-serif;
   background-color: #fff;
-  color: #000;
+  color: #003747;
   padding: 0.5rem 2rem;
 }
 
-h4{
+h3{
   margin-left: 5%;
   max-width: 80%;
+  font-weight: bold;
+  margin-top: 1rem;
 }
 
 p{
@@ -258,7 +260,7 @@ a:hover {
   }
 @media (prefers-reduced-motion: no-preference) {
   .ecosistema-inversor {
-    animation-name: wipe-enter;
+    animation-name: wipe-enter 2s infinite;
     animation-duration: 1s;
     animation-iteration-count: 1;
   }
@@ -271,6 +273,19 @@ a:hover {
 	50% {
 		transform: scale(1, .025);
 	}
+}
+
+.square {
+ /*  width: 200px;
+  height: 200px; */
+  /* background: orange; */
+  // etc...
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .square-animation {
+    animation: wipe-enter 2s 1;
+  }
 }
 
 @media screen and (max-width: 1400px) {
