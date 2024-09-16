@@ -1,8 +1,6 @@
 header {
   display: grid;
   grid-template-areas: "navLogo navLangSede" "menu menu";
-  grid-template-columns: auto auto;
-  font-size: 1rem;
 }
 
 ul {
@@ -49,9 +47,8 @@ li {
 
 .nav-bar-top {
   grid-area: navLangSede;
-  display: flex;
+  display: grid;
   position: relative;
-  grid-template-columns: auto auto;
   justify-content: flex-end;
 }
 
