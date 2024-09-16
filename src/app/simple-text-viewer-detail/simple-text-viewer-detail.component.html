@@ -1,0 +1,12 @@
+<div class="simple-content" *ngIf="contenido">
+  <div class="text-container">
+    <div class='detail-head'>
+      <img *ngIf="contenido.attributes.images.image_fulltext" width="100%" height="auto" src={{contenido.attributes.images.image_fulltext}} alt="{{contenido.attributes.title}}" title="{{contenido.attributes.title}}">
+      <img *ngIf="!contenido.attributes.images.image_fulltext" width="100%" height="auto" src="https://fastly.picsum.photos/id/356/200/300.jpg?hmac=pb0ZyD5jAO137vihtNEtssVuagKD77egevbOXVGquy8" alt="{{contenido.attributes.title}}" title="{{contenido.attributes.title}}">
+    </div>
+    <h2 class="detail-title">{{contenido.attributes.title}}</h2>   
+    <div class="detail-body" [innerHTML]="contenido.attributes.text.replaceAll( 'images/', 'https://contents.idi.es/images/') | wellFormattedLink">
+    </div>
+  </div>
+</div>
+

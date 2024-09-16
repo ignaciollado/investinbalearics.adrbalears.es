@@ -12,11 +12,13 @@ import { HeaderComponent } from './header/header.component';
 import { BodyComponent } from './body/body.component';
 import { FooterComponent } from './footer/footer.component';
 import { SimpleTextViewerComponent } from './simple-text-viewer/simple-text-viewer.component';
+import { SimpleTextViewerDetailComponent } from './simple-text-viewer-detail/simple-text-viewer.component';
 import { WellFormattedLinkPipe } from './Pipes/well-formatted-link.pipe';
 import { NotFoundComponent } from './error-pages/not-found/not-found.component';
 import { InternalServerComponent } from './error-pages/internal-server/internal-server.component';
 import { ContactFormComponent } from './contact-form/contact-form.component';
 import { SearchTheWebComponent } from './searchTheWeb/search-the-web/search-the-web.component';
+
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
@@ -30,6 +32,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     BodyComponent,
     FooterComponent,
     SimpleTextViewerComponent,
+    SimpleTextViewerDetailComponent,
     WellFormattedLinkPipe,
     NotFoundComponent,
     InternalServerComponent,

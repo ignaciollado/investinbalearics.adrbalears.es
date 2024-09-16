@@ -38,16 +38,14 @@ form {
   }
 }
 
-button{
-  margin-top: 4rem;
-}
-
 .capital-number {
   font-weight: bolder;
   font-size: 5rem;
   margin-right: 0.5rem;
-  font-family: 'Abril Fatface', serif;
-  line-height: 1.5;
+  font-family: sans-serif;
+  background-color: #fff;
+  color: #000;
+  padding: 0.5rem 2rem;
 }
 
 h4{
@@ -58,8 +56,8 @@ h4{
 p{
   margin-top: 3rem;
   margin-left: 10%;
-  font-size: 1.8rem;
-  line-height: 2.5rem;
+  font-size: 1.1rem;
+  line-height: 1.5rem;
   width: 80%;
 }
 
@@ -72,15 +70,15 @@ ol {
 }
 
 li {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
 }
 
 main {
-  margin: 30px auto;
-/*   padding: 0 20px; */
+  margin: 1rem auto;
   width: 100%;
   display: grid;
   grid-template-areas: "a b b" "c c c" "d e e";
+  gap: 1rem;
 }
 
 .porque-invertir {
@@ -113,16 +111,24 @@ article {
 article:nth-child(odd) {
   background-color: #0098CB;
   background-image: linear-gradient(to top right, #0098CB, rgb(134, 129, 129));
+  button {
+    border: 1px solid white;
+    color: white;
+  }
 }
 
 article:nth-child(even) {
   background-color: #003747;
-  background-image: linear-gradient(to top right,#003747, #00000046);
+  background-image: linear-gradient(to top right,#003747, rgb(134, 129, 129));
 }
 
 a {
   color: #fff!important;
-  text-decoration: none;
+  text-decoration: underline;
+}
+
+a:hover {
+  color: #0098CB!important;
 }
 
 .table-content {
@@ -139,7 +145,7 @@ a {
   font-size: 2rem;
   text-align: center;
   padding: 1rem;
-  border-radius: 5%;
+  border-radius: 1rem;
   background-color: #0098CB;
   color: #fff;
 }
@@ -149,7 +155,7 @@ a {
   font-size: 2rem;
   text-align: center;
   padding: 1rem;
-  border-radius: 5%;
+  border-radius: 1rem;
   background-color: #0098CB;
   color: #fff;
 }
@@ -159,7 +165,7 @@ a {
   font-size: 2rem;
   text-align: center;
   padding: 1rem;
-  border-radius: 5%;
+  border-radius: 1rem;
   background-color: #0098CB;
   color: #fff;
 }
@@ -169,7 +175,7 @@ a {
   font-size: 1.5rem;
   text-align: center;
   padding: 1rem;
-  border-radius: 5%;
+  border-radius: 1rem;
   background-color: #0098CB;
   color: #fff;
 }
@@ -181,8 +187,7 @@ a {
   background-color: #0098CB;
   color: #fff;
   padding: 1rem;
-  border-radius: 5%;
-
+  border-radius: 1rem;
 }
 
 
