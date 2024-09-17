@@ -1,6 +1,7 @@
 .section {
   position: relative;
   color: #f1f1f1;
+  margin-bottom: .5rem;
 }
 
 video {
@@ -24,6 +25,10 @@ form {
   padding: 1rem;
   animation-duration: 3s;
   animation-name: slidein;
+}
+
+.row {
+  --bs-gutter-x: 0;
 }
 
 @keyframes slidein {
@@ -76,7 +81,6 @@ li {
 }
 
 main {
-  margin: 1rem auto;
   width: 100%;
   display: grid;
   grid-template-areas: "a b b" "c c c" "d e e";
@@ -106,13 +110,11 @@ main {
 article {
   border-radius: 0;
   padding: 20px;
-/*   color: #fff;
-  border: 1px solid #fff; */
 }
 
 article:nth-child(odd) {
   background-color: #0098CB;
-  background-image: linear-gradient(to top right, #0098CB, rgb(134, 129, 129));
+  background-image: linear-gradient(to top right, #0098CB, rgb(134, 134, 134));
   button {
     border: 1px solid white;
     color: white;
@@ -121,80 +123,63 @@ article:nth-child(odd) {
 
 article:nth-child(even) {
   background-color: #003747;
-  background-image: linear-gradient(to top right,#003747, rgb(134, 129, 129));
+  background-image: linear-gradient(to bottom left,#003747, rgb(134, 134, 134));
 }
 
 a {
-  color: #fff!important;
-  text-decoration: underline;
+  color: #000!important;
+  text-decoration: none;
 }
 
 a:hover {
   color: #0098CB!important;
 }
 
-.table-content {
+.table-container {
   display: grid;
   grid-template-areas: "h i j" "k m l";
+  grid-template-rows: 1fr 1fr;
+  align-items: center;
   gap: 2rem;
-  margin: 3rem;
+  margin-bottom: 1rem;
   font-weight: bolder;
-  text-align: center;
+  justify-content: center;
 }
 
 .empresas {
   grid-area: h;
-  font-size: 2rem;
-  text-align: center;
-  padding: 1rem;
-  border-radius: 1rem;
-  background-color: #0098CB;
-  color: #fff;
+  font-size: 1.5rem;
+  color: #000;
+  /* width: 33%; */
 }
 
 .facturacion {
   grid-area: i;
-  font-size: 2rem;
-  text-align: center;
-  padding: 1rem;
-  border-radius: 1rem;
-  background-color: #0098CB;
-  color: #fff;
+  font-size: 1.5rem;
+  color: #000;
+  /* width: 33%; */
 }
 
 .trabajadores {
   grid-area: j;
-  font-size: 2rem;
-  text-align: center;
-  padding: 1rem;
-  border-radius: 1rem;
-  background-color: #0098CB;
-  color: #fff;
+  font-size: 1.5rem;
+  color: #000;
+  /* width: 33%; */
 }
 
 .top10facturacion {
   grid-area: k;
   font-size: 1.5rem;
-  text-align: center;
-  padding: 1rem;
-  border-radius: 1rem;
-  background-color: #0098CB;
-  color: #fff;
 }
 
 .top10empresas {
   grid-area: l;
   font-size: 1.5rem;
-  text-align: center;
-  background-color: #0098CB;
-  color: #fff;
-  padding: 1rem;
-  border-radius: 1rem;
 }
 
 
 #value::after {
-  font: 800 80px system-ui;
+  font: 800 3rem system-ui;
   content: counter(count);
   animation: counter 2s linear infinite alternate;
   counter-reset: count 0;

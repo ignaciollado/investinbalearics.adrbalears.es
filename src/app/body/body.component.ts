@@ -10,24 +10,25 @@ export class BodyComponent {
 /*   pageXOffset:number =  window.pageXOffset
   offsetHeight:number =  document.body.offsetHeight
   innerHeight: number =  window.innerHeight */
+  animationDone: boolean = false
 
   constructor() {}
 
   ngOnInit(): void {
 
     console.log ("Welcome to the Invest In Balearics platform from the ADR Balears")
-
-/*     const observer = new IntersectionObserver(entries => {
+    const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
         const square = entry.target.querySelector('.square');
-        if (entry.isIntersecting) {
+        if (entry.isIntersecting && !this.animationDone) {
           square.classList.add('square-animation');
+          this.animationDone = true
         return; 
         }
         square.classList.remove('square-animation');
       });
     });
-    observer.observe(document.querySelector('.servicios')); */
+    observer.observe(document.querySelector('.servicios')); 
 
   }
 
