@@ -3,13 +3,15 @@
   <div class="filter-form">
     <form role="search" [formGroup]="searchTheWebForm" novalidate class="form-inline">
       <input *ngIf="currentLang === 'es-ES'" class="form-control" type="text" formControlName="searchTerm" placeholder="¿qué necesitas? ..." aria-label="Search">
-      <input *ngIf="currentLang === 'ca-ES'" class="form-control" type="text" formControlName="searchTerm" placeholder="què necessites? ..." aria-label="Search"> 
-     
-      
+      <input *ngIf="currentLang === 'ca-ES'" class="form-control" type="text" formControlName="searchTerm" placeholder="què necessites? ..." aria-label="Search">
+      <input *ngIf="currentLang === 'en-EN'" class="form-control" type="text" formControlName="searchTerm" placeholder="what do you need? ..." aria-label="Search">
+
       <button class="btn btn-outline-primary" type="submit" (click)="onClick(searchTheWebForm)"
       [disabled]="!searchTheWebForm.valid">
       <span *ngIf="currentLang === 'es-ES'">Buscar</span>
       <span *ngIf="currentLang === 'ca-ES'">Cerca</span>
+      <span *ngIf="currentLang === 'en-EN'">Search</span>
+
 
       <span class="badge text-bg-secondary ocultar" id="totalResults">
         <a [ngbTooltip]="tipContent" routerLink="/search-the-web-result-list/{{searchTerm!.value}}">{{totalFound}}</a></span>
