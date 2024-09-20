@@ -16,24 +16,23 @@ export class wpPageService {
 
 
   headers = new HttpHeaders()
-  .set( 'Content-Type', 'application/vnd.api+json' ) 
-  .set( 'X-Joomla-Token', this.jToken )
+  .set( 'Access-Control-Allow-Origin','*')
 
   constructor(private httpClient: HttpClient, private messagesService: MessageService) { }
 
   getAll(): Observable<WpPage[]> {
     this.messagesService.add('ArticleService: fetched ALL articles')
-    return this.httpClient.get<WpPage[]>(`${this.apiBaseUrl}pages`, { headers: this.headers })
+    return this.httpClient.get<WpPage[]>(`${this.apiBaseUrl}pages`)
   }
 
   getLastContent(): Observable<WpPage[]> {
     this.messagesService.add('ArticleService: fetched ALL articles')
-    return this.httpClient.get<WpPage[]>(this.apiBaseUrl, { headers: this.headers })
+    return this.httpClient.get<WpPage[]>(this.apiBaseUrl)
   }
 
   getOne(id: string|null): Observable<WpPage> {
     this.messagesService.add('ArticleService: fetched ONE article')
-    return this.httpClient.get<WpPage>(`${this.apiBaseUrl}/pages/${id}`, { headers: this.headers })
+    return this.httpClient.get<WpPage>(`${this.apiBaseUrl}pages/${id}`)
   }
 
 }

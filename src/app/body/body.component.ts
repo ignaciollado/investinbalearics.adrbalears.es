@@ -102,7 +102,6 @@ private loadPages(): void {
   .subscribe(
       (requests: WpPage[]) => {
         this.wpPages = requests
-        console.log (this.wpPages)
         responseOK = true
         actionDone = "Data listed"
       },

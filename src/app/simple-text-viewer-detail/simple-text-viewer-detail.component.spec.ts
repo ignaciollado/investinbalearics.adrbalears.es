@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SimpleTextViewerDetailComponent } from './simple-text-viewer.component';
+import { SimpleTextViewerDetailComponent } from './simple-text-viewer-detail.component';
 
 describe('SimpleTextViewerDetailComponent', () => {
   let component: SimpleTextViewerDetailComponent;

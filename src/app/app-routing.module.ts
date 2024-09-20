@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { BodyComponent } from './body/body.component';
 
-import { SimpleTextViewerDetailComponent } from './simple-text-viewer-detail/simple-text-viewer.component';
+import { SimpleTextViewerDetailComponent } from './simple-text-viewer-detail/simple-text-viewer-detail.component';
 import { NotFoundComponent } from './error-pages/not-found/not-found.component';
 import { InternalServerComponent } from './error-pages/internal-server/internal-server.component';
 import { ContactFormComponent } from './contact-form/contact-form.component';

@@ -54,12 +54,8 @@ export class SimpleTextViewerComponent {
     getContent (id: string) {
       this.wpPageService.getOne(id)
           .subscribe(
-            (resp:any) => {
-              if (resp.data.attributes.state === 1) {
-                this.contenido = resp.data
-              } else  {
-                this.contenido = null
-              }
+            (wpPage: WpPage) => {
+              this.contenido = wpPage
           })
     }
 }

@@ -10,13 +10,13 @@ import { WpPage } from '../Models/wp-page-data.dto';
   styleUrl: './simple-text-viewer-detail.component.scss'
 })
 export class SimpleTextViewerDetailComponent {
-  public id:string | null = this.route.snapshot.paramMap.get('id')
+  public id:string | null = '107'
   public program_id: string | null = this.route.snapshot.paramMap.get('idMainCat')
   currentLang: string | undefined;
   public contenido: WpPage | undefined 
 
   constructor( public translateService: TranslateService, 
-    private articleService: wpPageService, 
+    private wpPageService: wpPageService, 
     private route: ActivatedRoute,
     private router: Router ) { }
 
@@ -34,34 +34,15 @@ export class SimpleTextViewerDetailComponent {
         default:
           this.currentLang = 'ca-ES'
       }
-      console.log (this.id)
-      if (!this.id) {
-        if (this.currentLang = 'es-ES') {
-          this.id = '105'
-        } else {
-          this.id = '105'
-        }
-        
-      
-      }
-  
       this.getContent(this.id)
-      if (this.program_id !== '0') { /* si no es 0, entonces es algún programa de iemprenjove */
-      }
-      
       window.scroll(0,0)
     }
 
     getContent (id: string) {
-      this.articleService.getOne(id)
+      this.wpPageService.getOne(id)
           .subscribe(
-            (resp:any) => {
-              if (resp.status === 'published') {
-                console.log (resp)
-                this.contenido = resp.data
-              } else  {
-                this.contenido = null
-              }
+            (wpPage: WpPage) => {
+              this.contenido = wpPage
           })
     }
 }
