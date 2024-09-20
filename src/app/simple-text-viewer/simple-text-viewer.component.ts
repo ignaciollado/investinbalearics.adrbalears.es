@@ -34,16 +34,15 @@ export class SimpleTextViewerComponent {
         default:
           this.currentLang = 'ca-ES'
       }
-      console.log (this.id)
+     
       if (!this.id) {
         if (this.currentLang = 'es-ES') {
-          this.id = '3278'
+          this.id = '105'
         } else {
-          this.id = '3280'
+          this.id = '105'
         }
-        
-      
       }
+      console.log ("**",this.id)
   
       this.getContent(this.id)
       if (this.program_id !== '0') { /* si no es 0, entonces es algún programa de iemprenjove */

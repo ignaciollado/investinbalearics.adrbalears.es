@@ -37,9 +37,9 @@ export class SimpleTextViewerDetailComponent {
       console.log (this.id)
       if (!this.id) {
         if (this.currentLang = 'es-ES') {
-          this.id = '3278'
+          this.id = '105'
         } else {
-          this.id = '3280'
+          this.id = '105'
         }
         
       
@@ -56,7 +56,8 @@ export class SimpleTextViewerDetailComponent {
       this.articleService.getOne(id)
           .subscribe(
             (resp:any) => {
-              if (resp.data.attributes.state === 1) {
+              if (resp.status === 'published') {
+                console.log (resp)
                 this.contenido = resp.data
               } else  {
                 this.contenido = null
