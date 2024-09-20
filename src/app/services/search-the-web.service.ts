@@ -1,6 +1,6 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { ArticleDTO } from '../Models/article-data.dto';
+import { WpPage } from '../Models/wp-page-data.dto';
 /* import { MessageService } from './message.service'; */
 
 @Injectable({
@@ -21,7 +21,7 @@ export class SearchTheWebService {
   getArticles() {
 
     /* this.messagesService.add('ArticleService: fetched ALL articles') */
-    return this.http.get<ArticleDTO>( this.apiBaseUrl, { headers: this.headers } )
+    return this.http.get<WpPage>( this.apiBaseUrl, { headers: this.headers } )
 
   }
   

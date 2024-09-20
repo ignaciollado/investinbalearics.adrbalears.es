@@ -6,25 +6,26 @@ export interface genericDataDTO {
 }
 
 export class genericMailDTO {
+  requester:       string;
+  country?:        string;
   contactEmail:    string;
-  requester: string;
-  contactPhone: string;
-  subject:  string;
-  body:     string;
+  contactPhone?:   string;
+  subject?:        string;
+  corporation?:    string;
+  body?:           string;
 
   constructor(
     contactEmail: string,
-    requester: string,
+    requester:    string,
     contactPhone: string,
-    subject: string,
-    body: string,
+    subject:      string,
+    body:         string,
    )
-    {
-      this.contactEmail = contactEmail,
-      this.requester = requester,
-      this.contactPhone = contactPhone,
-      this.subject = subject,
-      this.body = body
-    }
+  {
+    this.contactEmail = contactEmail,
+    this.requester = requester,
+    this.contactPhone = contactPhone,
+    this.subject = subject,
+    this.body = body
+  }
 }
-

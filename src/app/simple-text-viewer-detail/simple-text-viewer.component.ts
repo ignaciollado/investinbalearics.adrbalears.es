@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 import { Router, ActivatedRoute  } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
-import { ArticleContentService } from '../services/article-content.service';
-import { reqArticle } from '../Models/article-data.dto';
+import { wpPageService } from '../services/wp-page.service';
+import { WpPage } from '../Models/wp-page-data.dto';
 
 @Component({
   selector: 'app-simple-text-viewer-detail',
@@ -13,10 +13,10 @@ export class SimpleTextViewerDetailComponent {
   public id:string | null = this.route.snapshot.paramMap.get('id')
   public program_id: string | null = this.route.snapshot.paramMap.get('idMainCat')
   currentLang: string | undefined;
-  public contenido: reqArticle | undefined 
+  public contenido: WpPage | undefined 
 
   constructor( public translateService: TranslateService, 
-    private articleService: ArticleContentService, 
+    private articleService: wpPageService, 
     private route: ActivatedRoute,
     private router: Router ) { }
 
@@ -53,7 +53,7 @@ export class SimpleTextViewerDetailComponent {
     }
 
     getContent (id: string) {
-      this.articleService.get(id)
+      this.articleService.getOne(id)
           .subscribe(
             (resp:any) => {
               if (resp.data.attributes.state === 1) {

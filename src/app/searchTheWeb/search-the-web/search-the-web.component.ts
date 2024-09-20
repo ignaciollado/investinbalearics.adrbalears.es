@@ -1,10 +1,9 @@
 import { Component, ViewChild, Input } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { NgbCarousel, NgbSlideEvent, NgbSlideEventSource, NgbTooltipConfig } from '@ng-bootstrap/ng-bootstrap';
-import { ArticleContentService } from '../../services/article-content.service';
-import { genericDataDTO } from '../../Models/generic-data.dto';
 import { SearchTheWebService } from '../../services/search-the-web.service';
-import { reqArticle } from '../../Models/article-data.dto';
+import { wpPageService } from '../../services/wp-page.service';
+import { WpPage } from '../../Models/wp-page-data.dto';
 import { TranslateService } from '@ngx-translate/core';
 import { ActivatedRoute, Router } from '@angular/router';
 @Component({
@@ -15,9 +14,9 @@ import { ActivatedRoute, Router } from '@angular/router';
 export class SearchTheWebComponent {
   searchTheWebForm!: FormGroup
 	totalFound: string = ""
-	public contenidos: reqArticle[] = []
+	public contenidos: WpPage[] = []
 	currentLang: string = ""
-	genericDataContents: genericDataDTO[] = []
+	genericDataContents: WpPage[] = []
   images = [62, 83, 466, 965, 982, 1043, 738].map((n) => `https://picsum.photos/id/${n}/868/500`)
 
 	paused: boolean = false
@@ -30,7 +29,7 @@ export class SearchTheWebComponent {
   @Input() showLinks: string;
 
     constructor(private route: ActivatedRoute, private router: Router, config: NgbTooltipConfig,
-		private contentService: ArticleContentService,
+		private contentService: wpPageService,
 		private formBuilder: FormBuilder,
 		public translateService: TranslateService, 
 		private searchService: SearchTheWebService) {
@@ -104,15 +103,10 @@ export class SearchTheWebComponent {
             this.searchService.getArticles()
             .subscribe( (result: any) => {
               this.contenidos = result.data
-              this.contenidos = result.data.filter( (item : reqArticle) => item.attributes.language === `${this.currentLang}`) 
+              this.contenidos = result.data.filter( (item : WpPage) => item.status === `Published`) 
               console.log("1- ", this.contenidos)
-              this.contenidos.map((item:reqArticle) => {
-                if (item.attributes.state.toString().includes('0')) {
-                  this.contenidos?.splice(this.contenidos?.indexOf(item), 1)
-                }
-              })
               console.log("2- ", this.contenidos)
-              this.contenidos = this.contenidos.filter( item => item.attributes.text.toUpperCase().includes(searchTerm.trim().toUpperCase()) )
+              this.contenidos = this.contenidos.filter( item => item.content.rendered.toUpperCase().includes(searchTerm.trim().toUpperCase()) )
               this.totalFound = this.contenidos.length.toString()
               console.log("3- ", this.contenidos)
 

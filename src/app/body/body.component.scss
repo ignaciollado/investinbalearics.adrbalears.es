@@ -12,19 +12,27 @@ video {
 app-simple-text-viewer{
   position: absolute;
   left: 5%;
-  top: 5%;
+  top: 15%;
   max-width: 40%;
 }
 
 form {
   position: absolute;
-  top: 45%;
+  top: 50%;
   right: 5%;
- /*  border: 1px solid #003747; */
   border-radius: 15px;
   padding: 1rem;
   animation-duration: 3s;
   animation-name: slidein;
+}
+
+.macro-data {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+}
+
+.macro-data-area {
+  color: #fff;
 }
 
 .row {
