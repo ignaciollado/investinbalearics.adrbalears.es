@@ -12,6 +12,7 @@ import { HeaderComponent } from './header/header.component';
 import { BodyComponent } from './body/body.component';
 import { FooterComponent } from './footer/footer.component';
 import { SimpleTextViewerComponent } from './simple-text-viewer/simple-text-viewer.component';
+import { SimpleTextViewerDetailHomeComponent } from './simple-text-viewer-detail-home/simple-text-viewer-detail-home.component';
 import { SimpleTextViewerDetailComponent } from './simple-text-viewer-detail/simple-text-viewer-detail.component';
 import { WellFormattedLinkPipe } from './Pipes/well-formatted-link.pipe';
 import { NotFoundComponent } from './error-pages/not-found/not-found.component';
@@ -32,6 +33,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     BodyComponent,
     FooterComponent,
     SimpleTextViewerComponent,
+    SimpleTextViewerDetailHomeComponent,
     SimpleTextViewerDetailComponent,
     WellFormattedLinkPipe,
     NotFoundComponent,

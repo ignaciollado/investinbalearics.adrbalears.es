@@ -5,16 +5,16 @@ import { wpPageService } from '../services/wp-page.service';
 import { WpPage } from '../Models/wp-page-data.dto';
 
 @Component({
-  selector: 'app-simple-text-viewer-detail',
-  templateUrl: './simple-text-viewer-detail.component.html',
-  styleUrl: './simple-text-viewer-detail.component.scss'
+  selector: 'app-simple-text-viewer-detail-home',
+  templateUrl: './simple-text-viewer-detail-home.component.html',
+  styleUrl: './simple-text-viewer-detail-home.component.scss'
 })
-export class SimpleTextViewerDetailComponent {
-  public id:number | null = +this.route.snapshot.paramMap.get('id')
+export class SimpleTextViewerDetailHomeComponent {
+  /* public id:string | null = this.route.snapshot.paramMap.get('id') */
   /* public program_id: string | null = this.route.snapshot.paramMap.get('idMainCat') */
   currentLang: string | undefined;
   public contenido: WpPage | undefined 
-  /* @Input() wpPageDetailID: number = 0; */
+  @Input() wpPageDetailID: number = 0;
 
   constructor( public translateService: TranslateService, 
     private wpPageService: wpPageService, 
@@ -35,8 +35,8 @@ export class SimpleTextViewerDetailComponent {
         default:
           this.currentLang = 'ca-ES'
       }
-      this.getContent(this.id)
-      window.scroll(0,0)
+      this.getContent(this.wpPageDetailID)
+      /* window.scroll(0,0) */
     }
 
     getContent (id: number) {
@@ -44,7 +44,6 @@ export class SimpleTextViewerDetailComponent {
           .subscribe(
             (wpPage: WpPage) => {
               this.contenido = wpPage
-              console.log (this.contenido)
           })
     }
 }

@@ -1,0 +1,5 @@
+<div class="content-detail" *ngIf="contenido">
+  <h2 class="detail-title">{{contenido.title.rendered}}</h2>
+  <div class="detail-body" [innerHTML]="contenido.excerpt.rendered"></div>
+  <button class="btn btn-outline-primary detail-button" type="button" routerLink="invest-in-balearics-detail/{{wpPageDetailID}}">Descubre +</button>
+</div>

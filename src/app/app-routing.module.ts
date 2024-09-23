@@ -10,7 +10,7 @@ import { ContactFormComponent } from './contact-form/contact-form.component';
 
 const routes: Routes = [
 
-  { path: 'baleares-una-apuesta-ganadora/:id', component: SimpleTextViewerDetailComponent },
+  /* { path: 'baleares-una-apuesta-ganadora/:id', component: SimpleTextViewerDetailComponent },
   { path: 'balears-una-aposta-guanyadora/:id', component: SimpleTextViewerDetailComponent },
   { path: 'ecosistema-inversor/:id', component: SimpleTextViewerDetailComponent },
   { path: 'servicios-inversor-emprendedor/:id', component: SimpleTextViewerDetailComponent },
@@ -18,7 +18,9 @@ const routes: Routes = [
   { path: 'sectores-e-industrias/:id', component: SimpleTextViewerDetailComponent },
   { path: 'sectors-i-industries/:id', component: SimpleTextViewerDetailComponent },
   { path: 'talento/:id', component: SimpleTextViewerDetailComponent },
-  { path: 'talent/:id', component: SimpleTextViewerDetailComponent },
+  { path: 'talent/:id', component: SimpleTextViewerDetailComponent }, */
+
+  { path: 'invest-in-balearics-detail/:id', component: SimpleTextViewerDetailComponent },
 
   { path: 'accesibilidad/:id', component: SimpleTextViewerDetailComponent },
   { path: 'aviso-legal/:id', component: SimpleTextViewerDetailComponent },
