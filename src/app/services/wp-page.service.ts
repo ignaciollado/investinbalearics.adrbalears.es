@@ -30,7 +30,7 @@ export class wpPageService {
     return this.httpClient.get<WpPage[]>(this.apiBaseUrl)
   }
 
-  getOne(id: string|null): Observable<WpPage> {
+  getOne(id: number|null): Observable<WpPage> {
     this.messagesService.add('ArticleService: fetched ONE article')
     return this.httpClient.get<WpPage>(`${this.apiBaseUrl}pages/${id}`)
   }

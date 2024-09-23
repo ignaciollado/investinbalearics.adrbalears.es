@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Router, ActivatedRoute  } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
 import { WpPage } from '../Models/wp-page-data.dto';
@@ -14,6 +14,7 @@ export class SimpleTextViewerComponent {
   public program_id: string | null = this.route.snapshot.paramMap.get('idMainCat')
   currentLang: string | undefined;
   public contenido: WpPage | undefined 
+  @Input() wpPageID: number = 0;
 
   constructor( public translateService: TranslateService, 
     private wpPageService: wpPageService, 
@@ -35,27 +36,26 @@ export class SimpleTextViewerComponent {
           this.currentLang = 'ca-ES'
       }
      
-      if (!this.id) {
+     /*  if (!this.id) {
         if (this.currentLang = 'es-ES') {
           this.id = '105'
         } else {
           this.id = '105'
         }
       }
-      console.log ("**",this.id)
+      console.log ("**",this.id) */
   
-      this.getContent(this.id)
-      if (this.program_id !== '0') { /* si no es 0, entonces es algún programa de iemprenjove */
-      }
-      
-      window.scroll(0,0)
+      this.getContent(this.wpPageID)
+ /*     
+      window.scroll(0,0) */
     }
 
-    getContent (id: string) {
+    getContent (id: number) {
       this.wpPageService.getOne(id)
           .subscribe(
             (wpPage: WpPage) => {
               this.contenido = wpPage
+              console.log(this.contenido)
           })
     }
 }

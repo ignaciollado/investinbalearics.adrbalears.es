@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Router, ActivatedRoute  } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
 import { wpPageService } from '../services/wp-page.service';
@@ -10,10 +10,11 @@ import { WpPage } from '../Models/wp-page-data.dto';
   styleUrl: './simple-text-viewer-detail.component.scss'
 })
 export class SimpleTextViewerDetailComponent {
-  public id:string | null = '107'
+  public id:number | null = 107
   public program_id: string | null = this.route.snapshot.paramMap.get('idMainCat')
   currentLang: string | undefined;
   public contenido: WpPage | undefined 
+  @Input() wpPageDetailID: number = 0;
 
   constructor( public translateService: TranslateService, 
     private wpPageService: wpPageService, 
@@ -34,11 +35,11 @@ export class SimpleTextViewerDetailComponent {
         default:
           this.currentLang = 'ca-ES'
       }
-      this.getContent(this.id)
+      this.getContent(this.wpPageDetailID)
       window.scroll(0,0)
     }
 
-    getContent (id: string) {
+    getContent (id: number) {
       this.wpPageService.getOne(id)
           .subscribe(
             (wpPage: WpPage) => {

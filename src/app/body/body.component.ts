@@ -108,7 +108,7 @@ private loadPages(): void {
       (error: HttpErrorResponse) => {
         if ( error.message.includes('Http failure during parsing for') ) {
           responseOK = false
-          actionDone = "No data found to list"
+          actionDone = "No data found ..."
         }
         finalize(async () => {
           await this.sharedService.managementToast( 'postFeedback', responseOK, error )

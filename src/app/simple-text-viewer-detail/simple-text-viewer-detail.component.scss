@@ -1,23 +1,25 @@
-.text-container {
+.content-detail {
   margin-top: 2rem;
   border-radius: 0;
   padding: 1rem;
   animation: 2s ease-out 0s 1 slideInFromLeft;
   display: grid;
-  grid-template-areas: "a b" "a c";
+  grid-template-areas: "a" "b" "c";
   gap: 1rem;
 }
 
-.detail-head {
+.detail-title {
   grid-area: a;
 }
 
-.detail-title {
+.detail-body {
   grid-area: b;
 }
 
-.detail-body {
+.detail-button {
   grid-area: c;
+  justify-content: flex-end;
+  background-color: red;
 }
 
 

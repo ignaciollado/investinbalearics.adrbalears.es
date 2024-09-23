@@ -4,7 +4,7 @@
     <source src="https://mdbcdn.b-cdn.net/img/video/Tropical.mp4" type="video/mp4" />
   </video>
 
-   <app-simple-text-viewer></app-simple-text-viewer>
+   <app-simple-text-viewer [wpPageID] = '105'></app-simple-text-viewer>
 
    <form class="form" [formGroup]="contactForm" (ngSubmit)="onSubmit()">
       <h2 *ngIf="currentLang === 'es-ES'">Solicita información</h2>
@@ -49,7 +49,7 @@
 
 <main class = "row">
   <article class="porque-invertir"><span class="capital-number">01</span>
-    <h3>BALEARES, UNA APUESTA GANADORA (UN ENTORNO ATRACTIVO PARA LA INVERSIÓN): CONOCE LOS BENEFICIOS DE BALEARES PARA INICIAR Y DESARROLLAR TU PROYECTO Y COMO LUGAR DONDE INVERTIR.  CONOCE LAS ÁREAS DE ESPECIALIZACIÓN EMPRESARIAL EN BALEARES
+   <!--  <h3>BALEARES, UNA APUESTA GANADORA (UN ENTORNO ATRACTIVO PARA LA INVERSIÓN): CONOCE LOS BENEFICIOS DE BALEARES PARA INICIAR Y DESARROLLAR TU PROYECTO Y COMO LUGAR DONDE INVERTIR.  CONOCE LAS ÁREAS DE ESPECIALIZACIÓN EMPRESARIAL EN BALEARES
     </h3>
     <p>
       Invest in Balearics funciona como una plataforma abierta al mundo donde el emprendedor o inversor encontrará información sobre las ventajas competitivas de Baleares, toda la información necesaria para la toma de decisiones estratégicas, así como un punto de atención durante todo el proceso. 
@@ -59,50 +59,53 @@
       Baleares, territorio con un nuevo mapa de oportunidades y sectores clave para su transformación y diversificación económica. 
       
       En Baleares, en pleno proceso de transformación y diversificación de su economía, se fomentan las inversiones en sectores como el turismo sostenible, las energías renovables, la tecnología y la innovación, así como en proyectos relacionados con la protección del medio ambiente y la conservación de los recursos naturales. Además, se están promoviendo iniciativas para impulsar la diversificación económica y reducir la dependencia del turismo tradicional. Esto incluye incentivos 
-      ...</p>
-      <button type="button" routerLink="baleares-una-apuesta-ganadora/3279" class="btn btn-outline-primary">Descubre +</button>
-    
+      ...</p> -->
+      <!-- <button type="button" routerLink="baleares-una-apuesta-ganadora/3279" class="btn btn-outline-primary">Descubre +</button> -->
+    <app-simple-text-viewer-detail [wpPageDetailID]="107"></app-simple-text-viewer-detail>
   </article>
 
   <article class="ecosistema-inversor"><span class="capital-number">02</span>
-    <h3>ECOSISTEMA INVERSOR (QUIÉN ES QUIÉN)</h3>
+   <!--  <h3>ECOSISTEMA INVERSOR (QUIÉN ES QUIÉN)</h3>
     <p>Nuestro objetivo es atender al que quiera emprender un negocio, al empresario o inversor que busca instalarse y crecer en Baleares,  proporcionando información de primera mano y acompañándole durante todo el proceso, prestamos servicios a lo largo de todo el ciclo de vida de un proyecto:</p>
     <ol>
       <li>
         Para aquellos proyectos incipientes que se quieran instalar desde el minuto cero, disponemos de un servicio de información y asesoramiento para el emprendedor, a través de la plataforma <a href='https://www.iempren.es'>www.iempren.es</a> 
         INCORPORAR info de RED.ES <a href='https://startups.one.gob.es/intro'>https://startups.one.gob.es/intro</a>  ...
       </li>
-     <!--  <li>
+      <li>
         Para empresas más consolidadas, disponemos de ayudas y subvenciones del Gobierno Regional para impulsar los negocios en nuestra región, facilitar la transición ecológica de los mismos, acompañarlos en su transformación digital y servir de palanca para su desarrollo a escala internacional. www.caib.es (Portal PIEIB) , ayudas energías renovables, (+Incentivos Económicos Regionales).
       </li>
       <li>
         Para empresas Startups, en Baleares se facilita y potencia la instalación y desarrollo de empresas de base tecnológica desde los diferentes Parques tecnológicos ubicados en las diferentes islas (Mallorca, Menorca e Ibiza), donde encontrará un entorno dinámico e innovador.
-      </li> -->
+      </li> 
     </ol>
-    <!--   <p>Asimismo, disponemos de una red de contactos con ayuntamientos, Consells Insulars (Mallorca, Menorca, Ibiza y Formentera), Cámaras de Comercio de Mallorca, Menorca e Ibiza, entidades sectoriales (Asociaciones y clústers), entidades financieras, entidades de educación superior (Formación Profesional y Formación Universitaria), a través de los cuales atender las consultas específicas de potenciales interesados en emprender, crecer, instalarse o invertir en Baleares.</p>
+      <p>Asimismo, disponemos de una red de contactos con ayuntamientos, Consells Insulars (Mallorca, Menorca, Ibiza y Formentera), Cámaras de Comercio de Mallorca, Menorca e Ibiza, entidades sectoriales (Asociaciones y clústers), entidades financieras, entidades de educación superior (Formación Profesional y Formación Universitaria), a través de los cuales atender las consultas específicas de potenciales interesados en emprender, crecer, instalarse o invertir en Baleares.</p>
     -->
-    <button type="button" routerLink="ecosistema-inversor/3282" class="btn btn-outline-primary">Descubre +</button>
+    <!-- <button type="button" routerLink="ecosistema-inversor/3282" class="btn btn-outline-primary">Descubre +</button> -->
+    <app-simple-text-viewer-detail [wpPageDetailID]="109"></app-simple-text-viewer-detail>
   </article>
 
   <article class="servicios">
     <div class="square">
-    <span class="capital-number">03</span><h3>SERVICIOS AL INVERSOR Y AL EMPRENDEDOR</h3>
+    <span class="capital-number">03</span><!-- <h3>SERVICIOS AL INVERSOR Y AL EMPRENDEDOR</h3>
     <ol>
       <li>Orientación: orientamos sobre la estructura gubernamental en Baleares, y derivamos las consultas o intereses hacia las entidades más adecuadas. </li>
       <li>Información: Informamos y orientamos sobre los procedimientos e incentivos para establecerse o iniciar un negocio en Baleares.</li>
       <li>Ayudas y subvenciones: informamos y asesoramos tanto a empresas de reciente creación como empresas consolidadas con sede social en Baleares sobre los incentivos y las ayudas en los ámbitos de la digitalización, sostenibilidad, internacionalización e innovación.</li>
     </ol>
-    <button type="button" routerLink="servicios-inversor-emprendedor/3284" class="btn btn-outline-primary">Descubre +</button>
+    <button type="button" routerLink="servicios-inversor-emprendedor/3284" class="btn btn-outline-primary">Descubre +</button> -->
+    <app-simple-text-viewer-detail [wpPageDetailID]="111"></app-simple-text-viewer-detail>
     </div>
   </article>
 
   <article class="sectores">
-    <span class="capital-number">04</span><h3>SECTORES E INDUSTRIAS</h3>
+    <span class="capital-number">04</span><!-- <h3>SECTORES E INDUSTRIAS</h3>
     <ol>
       <li>Conoce cuáles son los principales sectores de actividad en Baleares.
         INCORPORAR INFORMACIÓN CUANTITATIVA E INFOGRAFÍAS DE IBESTAT (SEGÚN SOLICITADO).</li>
       <li>Conoce Baleares como territorio innovador y con una clara apuesta hacia la R+D+i: Clústeres innovadores i HUBS en Baleares.</li>
-    </ol>
+    </ol> -->
+    <app-simple-text-viewer-detail [wpPageDetailID]="113"></app-simple-text-viewer-detail>
 <div class="macro-data">
   <div class="row">
       <div class="col-1-3-no-margin col-sm-xs-1-2-no-margin col-tiny-full-width macro-col">
@@ -165,15 +168,16 @@
       </div>
   </div>
 </div>
-    <button type="button" routerLink="sectores-e-industrias/3286" class="btn btn-outline-primary">Descubre +</button>
+   <!--  <button type="button" routerLink="sectores-e-industrias/3286" class="btn btn-outline-primary">Descubre +</button> -->
   </article>
 
   <article class="talento">
-    <span class="capital-number">05</span><h3>TALENTO</h3>
+     <span class="capital-number">05</span><!--<h3>TALENTO</h3>
     <p>Mirar SOIB / Educació. Pendiente reunión....</p>
     <p>Incorporar información cuantitativa y cualitativa sobre Talento/sector, números, empleabilidad, y tipología de estudios superiores (Universidades) y Formación Profesional y formación dual.</p>
     <p>Desde Baleares somos conscientes de la importancia de disponer de un capital humano formado, especializado y abierto a la globalización como factor esencial de producción para el desarrollo de actividades empresariales basadas en el conocimiento y la especialización industrial.</p>
-    <button type="button" routerLink="talento/3288" class="btn btn-outline-primary">Descubre +</button>
+    <button type="button" routerLink="talento/3288" class="btn btn-outline-primary">Descubre +</button> -->
+    <app-simple-text-viewer-detail [wpPageDetailID]="115"></app-simple-text-viewer-detail>
   </article>
 </main>
 
