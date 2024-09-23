@@ -97,6 +97,9 @@ h5 {
   header {
     grid-template-areas: "navLogo" "navLangSede" "menu";
   }
+  header h1 {
+    margin-top: 1rem;
+  }
   img {
     width: 50%;
     height: auto;
@@ -104,18 +107,21 @@ h5 {
   .logo-title{
     text-align: center;
   }
-  .nav-bar-top[_ngcontent-ng-c2360855671] {
-    justify-content: center;
+  div.container-fluid {
+    justify-content: end;
+    padding: .5rem;
+  }
+  button, .button-header-menu {
+    font-weight: 200;
+    font-size: .9rem;
   }
   li {
     margin-right: 2rem;
     font-size: .8rem;
   }
-  
   .nav-item {
     font-weight: normal;
   }
-  
   .nav-item-last {
     margin-right: 8rem;
   }

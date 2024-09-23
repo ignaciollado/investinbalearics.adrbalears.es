@@ -91,6 +91,12 @@ ul{
   margin: 1px;
 }
 
+@media screen and (max-width: 1200px) {
+  form {
+    padding: .5rem;
+  }
+}
+
 @media screen and (max-width: 992px) {
   .pre-defined-filter-area {
     margin-top: 0;
