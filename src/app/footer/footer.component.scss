@@ -1,15 +1,11 @@
 footer {
-  z-index: +9999;
-  background-color: #fff;
-  opacity: 1;
-  width: 100%;
   display: grid;
-  grid-template-columns: 25% 25% 25% 25%;
-  grid-template-areas: "logoBottom localizacionBottom socialMedia textosLegales";
-  text-align: left;
-  margin-bottom: .5rem;
-  margin-top: 4rem;
-  font-size: 14px!important;
+  grid-template-columns: 33% 33% 33%;
+  grid-template-areas: "logoBottom localizacionBottom socialMedia" "textosLegales textosLegales textosLegales" "copyRight copyRight copyRight";
+  margin-bottom: 1.5rem;
+  margin-top: 3rem;
+  row-gap: 2rem;
+  text-align: center;
 }
 
 a:hover {
@@ -20,13 +16,11 @@ a:hover {
 .logo-adr-balears {
   grid-area: logoBottom;
   margin-left: 1rem;
+  justify-self: start;
 }
 
 .localizacion-adr-balears {
   grid-area: localizacionBottom;
-  padding-left: 3rem;
-  
-  padding-top: 1rem;
 }
 
 .bi{
@@ -43,28 +37,17 @@ a:hover {
   grid-area: socialMedia;
   display: grid;
   grid-template-columns: auto auto auto auto;
-  padding-left: 0;
-  
-  padding-top: 3rem;
-  padding-left: 3rem;
 }
 
 .textos-legales {
   grid-area: textosLegales;
   display: grid;
-  
-  padding-top: 0rem;
-  padding-left: 10rem;
+  text-align: center;
+  grid-template-columns: auto auto auto auto auto auto auto;
 }
 
-.logo-feder-izq, .logo-feder, .logo-feder-dcha {
-  margin-top: 2rem;
-}
-
-.logoFeder {
-  margin-bottom: 1rem;
-  padding-left: 3rem;
-  width: 50%;
+.copy-right-adr {
+  grid-area: copyRight;
 }
 
 @media screen and (max-width: 1200px) {
@@ -88,9 +71,6 @@ a:hover {
     margin-top: 3rem;
     margin-bottom: 3rem;
     padding-left: 0;
-  }
-  .logoFeder {
-    padding-left: 0;
-    width: 30%;
+    grid-template-columns: auto;
   }
 }
