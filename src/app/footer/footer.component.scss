@@ -53,12 +53,16 @@ a:hover {
 @media screen and (max-width: 1200px) {
   footer{
     grid-template-columns: 100%;
-    grid-template-areas: "logoBottom" "localizacionBottom" "socialMedia" "textosLegales";
+    grid-template-areas: "logoBottom" "localizacionBottom" "socialMedia" "textosLegales" "copyRight";
     text-align: center;
-    font-size: .5rem;
+    font-size: 1rem;
+
+  }
+  .logo-adr-balears {
+    justify-self: center;
   }
   .localizacion-adr-balears {
-    margin-top: 2rem;
+    margin-top: 1rem;
     margin-left: 0;
     padding-left: 0;
   }
@@ -68,8 +72,7 @@ a:hover {
     padding-left: 0;
   }
   .textos-legales {
-    margin-top: 3rem;
-    margin-bottom: 3rem;
+    margin-top: 1rem;
     padding-left: 0;
     grid-template-columns: auto;
   }

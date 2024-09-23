@@ -4,6 +4,11 @@ header {
   margin-top: 1rem;
 }
 
+img {
+  width: 25%;
+  height: auto;
+}
+
 header h1 {
   margin-top: 2rem;
 }
@@ -46,7 +51,7 @@ li {
   padding-right: .2rem;
 }
 
-.nav-bar-left-logo {
+.logo-title {
   grid-area: navLogo;
 }
 
@@ -92,7 +97,11 @@ h5 {
   header {
     grid-template-areas: "navLogo" "navLangSede" "menu";
   }
-  .nav-bar-left-logo{
+  img {
+    width: 50%;
+    height: auto;
+  }
+  .logo-title{
     text-align: center;
   }
   .nav-bar-top[_ngcontent-ng-c2360855671] {
