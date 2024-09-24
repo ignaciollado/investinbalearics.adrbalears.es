@@ -1,5 +1,5 @@
 <div class="content-detail" *ngIf="contenido">
   <h2 class="detail-title">{{contenido.title.rendered}}</h2>
   <div class="detail-body" [innerHTML]="contenido.content.rendered"></div>
-  <img src='{{contenidoMedia.guid.rendered}}' alt='{{contenido.title.rendered}}'>
+  <img src='{{contenidoMedia.guid.rendered}}' alt='{{contenido.title.rendered}}' title='{{contenido.title.rendered}}'>
 </div>
