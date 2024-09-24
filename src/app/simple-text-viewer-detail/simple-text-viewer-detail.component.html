@@ -1,5 +1,5 @@
 <div class="content-detail" *ngIf="contenido">
   <h2 class="detail-title">{{contenido.title.rendered}}</h2>
   <div class="detail-body" [innerHTML]="contenido.content.rendered"></div>
-  <!-- <button class="btn btn-outline-primary detail-button" type="button" routerLink="baleares-una-apuesta-ganadora/{{id}}">Descubre +</button> -->
+  <img src='{{contenidoMedia.guid.rendered}}' alt='{{contenido.title.rendered}}'>
 </div>

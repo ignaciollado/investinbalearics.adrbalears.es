@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { WpPage } from '../Models/wp-page-data.dto';
+import { WpPageFeaturedMedia } from '../Models/wp-page-featured-media.dto';
 import { Observable } from 'rxjs';
 import { MessageService } from './message.service';
 
@@ -33,6 +34,11 @@ export class wpPageService {
   getOne(id: number|null): Observable<WpPage> {
     this.messagesService.add('ArticleService: fetched ONE article')
     return this.httpClient.get<WpPage>(`${this.apiBaseUrl}pages/${id}`)
+  }
+
+  getOneFeaturedMedia(id: number|null): Observable<WpPageFeaturedMedia> {
+    this.messagesService.add('ArticleService: fetched ONE media')
+    return this.httpClient.get<WpPageFeaturedMedia>(`${this.apiBaseUrl}media/${id}`)
   }
 
 }
