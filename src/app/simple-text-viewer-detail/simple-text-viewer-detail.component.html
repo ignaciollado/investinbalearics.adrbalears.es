@@ -1,5 +1,20 @@
 <div class="content-detail" *ngIf="contenido">
   <h2 class="detail-title">{{contenido.title.rendered}}</h2>
   <div class="detail-body" [innerHTML]="contenido.content.rendered"></div>
-  <img src='{{contenidoMedia.guid.rendered}}' alt='{{contenido.title.rendered}}' title='{{contenido.title.rendered}}'>
+  <figure>
+    <picture *ngIf="contenidoMedia.media_details">
+      <source [srcset]="contenidoMedia.media_details.sizes.full.source_url" 
+      media="(min-width: 1200px)" 
+      [type]="contenidoMedia.media_details.sizes.full.mime_type"
+      [width]="contenidoMedia.media_details.width"
+      [height]="contenidoMedia.media_details.height">
+      <source srcset="{{contenidoMedia.media_details.sizes.medium.source_url}}" 
+      media="(min-width: 992px)"
+      [type]="contenidoMedia.media_details.sizes.medium.mime_type"
+      [width]="contenidoMedia.media_details.width"
+      [height]="contenidoMedia.media_details.height">
+      <img srcset="{{contenidoMedia.media_details.sizes.thumbnail.source_url}}" alt='{{contenidoMedia.title.rendered}}' title='{{contenidoMedia.title.rendered}}'>
+    </picture>
+    <figcaption [innerHTML]="contenidoMedia.caption.rendered"></figcaption>
+  </figure>
 </div>
