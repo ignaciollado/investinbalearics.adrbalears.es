@@ -28,7 +28,7 @@ export class BodyComponent {
 
 ngOnInit(): void {
     console.log ("Welcome to the Invest In Balearics platform from the ADR Balears")
-    switch ( localStorage.getItem('preferredLang') ) {
+      /*     switch ( localStorage.getItem('preferredLang') ) {
       case 'ca-ES':
         this.currentLang = 'ca-ES'
       break
@@ -40,7 +40,8 @@ ngOnInit(): void {
       break
       default:
         this.currentLang = 'ca-ES'
-    }
+    } */
+    this.currentLang = localStorage.getItem('preferredLang')
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
         const square = entry.target.querySelector('.square');
@@ -53,6 +54,7 @@ ngOnInit(): void {
       });
     });
     observer.observe(document.querySelector('.servicios'))
+    
     this.contactForm = this.formBuilder.group({
       country:  [''],
       contactName:  ['', [Validators.required, Validators.minLength(4), Validators.maxLength(50)]],
