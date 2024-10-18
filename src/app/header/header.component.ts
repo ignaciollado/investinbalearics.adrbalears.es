@@ -15,7 +15,7 @@ export class HeaderComponent {
 constructor( public translate: TranslateService, private router: Router ) { }
 
 ngOnInit(): void {
-    switch (localStorage.getItem('preferredLang')) {
+/*     switch (localStorage.getItem('preferredLang')) {
       case 'cat':
         this.currentLang = 'ca-ES'
       break
@@ -27,7 +27,8 @@ ngOnInit(): void {
       break
       default:
         this.currentLang = 'en-EN'
-    }
+    } */
+    this.currentLang = localStorage.getItem('preferredLang')
 }
     
 private offcanvasService = inject(NgbOffcanvas);

@@ -1,12 +1,17 @@
 
 <section class="section col-md-12">
-  <video class="img-fluid " id="myVideo" autoplay loop muted>
+<!--   <video class="img-fluid " id="myVideo" autoplay loop muted>
     <source src="https://mdbcdn.b-cdn.net/img/video/Tropical.mp4" type="video/mp4" />
-  </video>
+  </video> -->
+  <figure class="center">
+    <h1>
+       Illes Balears
+      </h1>
+  </figure>
 
-   <app-simple-text-viewer [wpPageID] = '105'></app-simple-text-viewer>
+  <app-simple-text-viewer [wpPageID] = '105'></app-simple-text-viewer>
 
-   <form class="form" [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+  <form class="form" [formGroup]="contactForm" (ngSubmit)="onSubmit()">
       <h2 *ngIf="currentLang === 'es-ES'">Solicita información</h2>
       <h2 *ngIf="currentLang === 'ca-ES'">Sol·licita informació</h2>
       <h2 *ngIf="currentLang === 'en-EN'">Request for information</h2>
