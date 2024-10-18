@@ -28,19 +28,6 @@ export class BodyComponent {
 
 ngOnInit(): void {
     console.log ("Welcome to the Invest In Balearics platform from the ADR Balears")
-      /*     switch ( localStorage.getItem('preferredLang') ) {
-      case 'ca-ES':
-        this.currentLang = 'ca-ES'
-      break
-      case 'es-ES':
-        this.currentLang = 'es-ES'      
-      break
-      case 'en-EN':
-        this.currentLang = 'en-EN'
-      break
-      default:
-        this.currentLang = 'ca-ES'
-    } */
     this.currentLang = localStorage.getItem('preferredLang')
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
