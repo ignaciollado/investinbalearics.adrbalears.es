@@ -26,13 +26,13 @@ export class SimpleTextViewerComponent {
       switch (localStorage.getItem('preferredLang')) {
         case 'cat':
           this.currentWPLang = 42
-        break
+          break
         case 'cas':
           this.currentWPLang = 43
-        break
+          break
         case 'en':
           this.currentWPLang = 44
-        break
+          break
         default:
           this.currentWPLang = 41
       }

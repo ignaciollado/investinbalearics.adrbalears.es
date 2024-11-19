@@ -4,11 +4,6 @@ header {
   margin-top: 1rem;
 }
 
-img {
-  width: 25%;
-  height: auto;
-}
-
 header h1 {
   margin-top: 2rem;
 }
@@ -17,18 +12,9 @@ ul {
   list-style: decimal-leading-zero;
   color: #0098CB;
   margin-left: 2rem;
-}
-
-li {
-  margin-right: 4rem;
-}
-
-.nav-item {
-  font-weight: bold;
-}
-
-.nav-item-last {
-  margin-right: 12rem;
+  li {
+    margin-right: 2rem;
+  }
 }
 
 .offcanvas-header {

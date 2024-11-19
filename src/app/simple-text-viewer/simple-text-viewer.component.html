@@ -1,8 +1,7 @@
-<div class="simple-content" *ngIf="contenido">
-  <div class="text-container">
-
-  <h2>{{contenido.title.rendered}}</h2>
-  <div [innerHTML]="contenido.content.rendered"></div>
-
-</div>
+<section class="simple-content" *ngIf="contenido">
+  <article class="text-container">
+  <h2 [innerHTML]="contenido.title.rendered"></h2>
+  <section [innerHTML]="contenido.content.rendered"></section>
+  </article>
+</section>
 
