@@ -17,9 +17,11 @@ export class BodyComponent {
   contactForm: FormGroup
   formData: genericMailDTO
   wpPages: WpPage[] = []
+  homeIntroPage: number = 105
   submitted: boolean = false
   animationDone: boolean = false
   currentLang: string = "en-EN"
+  currentWPLang: number
 
   constructor( private formBuilder: FormBuilder, private sendMail: MessageService, private wpPage: wpPageService,
     private sharedService: SharedService ) {
@@ -29,6 +31,23 @@ export class BodyComponent {
 ngOnInit(): void {
     console.log ("Welcome to the Invest In Balearics platform from the ADR Balears")
     this.currentLang = localStorage.getItem('preferredLang')
+    switch (this.currentLang) {
+        case 'ca-ES':
+          this.currentWPLang = 42
+          this.homeIntroPage = 262
+        break
+        case 'es-ES':
+          this.currentWPLang = 43
+          this.homeIntroPage = 105
+        break
+        case 'en-EN':
+          this.currentWPLang = 44
+          this.homeIntroPage = 264
+        break
+        default:
+          this.currentWPLang = 44
+          this.homeIntroPage = 264
+      }
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
         const square = entry.target.querySelector('.square');

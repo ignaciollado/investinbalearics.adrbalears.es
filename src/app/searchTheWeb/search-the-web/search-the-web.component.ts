@@ -24,6 +24,7 @@ export class SearchTheWebComponent {
 	pauseOnIndicator: boolean = false
 	pauseOnHover: boolean = true
 	pauseOnFocus: boolean = true
+  currentWPLang: number = 44
   value = 'Clear me';
   
   @Input() showLinks: string;
@@ -50,18 +51,19 @@ export class SearchTheWebComponent {
       
   ngOnInit() {
     this.createForm()
-    switch (localStorage.getItem('preferredLang')) {
-      case 'cat':
-        this.currentLang = 'ca-ES'
+    this.currentLang = localStorage.getItem('preferredLang')
+    switch (this.currentLang) {
+        case 'ca-ES':
+          this.currentWPLang = 42
         break
-      case 'cas':
-        this.currentLang = 'es-ES'      
+        case 'es-ES':
+          this.currentWPLang = 43
         break
-      case 'en':
-        this.currentLang = 'en-EN'
+        case 'en-EN':
+          this.currentWPLang = 44
         break
-      default:
-        this.currentLang = 'ca-ES'
+        default:
+          this.currentWPLang = 44
       }
       this.contentService.getAll()
         .subscribe((response:any[]) => {

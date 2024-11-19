@@ -4,15 +4,18 @@ import { TranslateService } from '@ngx-translate/core';
 import { wpPageService } from '../services/wp-page.service';
 import { WpPage } from '../Models/wp-page-data.dto';
 import { WpPageFeaturedMedia } from '../Models/wp-page-featured-media.dto';
+
 @Component({
   selector: 'app-simple-text-viewer-detail',
   templateUrl: './simple-text-viewer-detail.component.html',
   styleUrl: './simple-text-viewer-detail.component.scss'
 })
+
 export class SimpleTextViewerDetailComponent {
   public id:number | null = +this.route.snapshot.paramMap.get('id')
   /* public program_id: string | null = this.route.snapshot.paramMap.get('idMainCat') */
-  currentLang: string | undefined
+  public currentLang: string | undefined
+  public currentWPLang: number
   public contenido: WpPage
   public contenidoMedia: WpPageFeaturedMedia
   /* @Input() wpPageDetailID: number = 0; */
@@ -26,15 +29,19 @@ export class SimpleTextViewerDetailComponent {
       switch (localStorage.getItem('preferredLang')) {
         case 'cat':
           this.currentLang = 'ca-ES'
+          this.currentWPLang = 42
         break
         case 'cas':
-          this.currentLang = 'es-ES'      
+          this.currentLang = 'es-ES'
+          this.currentWPLang = 43
         break
         case 'en':
           this.currentLang = 'en-EN'
+          this.currentWPLang = 44
         break
         default:
           this.currentLang = 'ca-ES'
+          this.currentWPLang = 41
       }
       this.getContent(this.id)
       window.scroll(0,0)

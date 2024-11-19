@@ -8,10 +8,9 @@
        Illes Balears
       </h1>
   </figure>
-
-  <app-simple-text-viewer [wpPageID] = '105'></app-simple-text-viewer>
-
+  <app-simple-text-viewer [wpPageID] = homeIntroPage></app-simple-text-viewer>
   <form class="form" [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+    {{currentLang}}
       <h2 *ngIf="currentLang === 'es-ES'">Solicita información</h2>
       <h2 *ngIf="currentLang === 'ca-ES'">Sol·licita informació</h2>
       <h2 *ngIf="currentLang === 'en-EN'">Request for information</h2>

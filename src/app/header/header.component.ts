@@ -10,25 +10,30 @@ import * as CookieConsent from 'vanilla-cookieconsent';
   styleUrl: './header.component.scss'
 })
 export class HeaderComponent {
-    currentLang: string ="en-EN";
-
+    currentLang: string ="en-EN"
+    currentWPLang: number = 44
+    homeIntroPage: number = 264
 constructor( public translate: TranslateService, private router: Router ) { }
 
 ngOnInit(): void {
-/*     switch (localStorage.getItem('preferredLang')) {
-      case 'cat':
-        this.currentLang = 'ca-ES'
-      break
-      case 'cas':
-        this.currentLang = 'es-ES'      
-      break
-      case 'en':
-        this.currentLang = 'en-EN'
-      break
-      default:
-        this.currentLang = 'en-EN'
-    } */
     this.currentLang = localStorage.getItem('preferredLang')
+    switch (this.currentLang) {
+        case 'ca-ES':
+          this.currentWPLang = 42
+          this.homeIntroPage = 262
+        break
+        case 'es-ES':
+          this.currentWPLang = 43
+          this.homeIntroPage = 105
+        break
+        case 'en-EN':
+          this.currentWPLang = 44
+          this.homeIntroPage = 264
+        break
+        default:
+          this.currentWPLang = 44
+          this.homeIntroPage = 264
+      }
 }
     
 private offcanvasService = inject(NgbOffcanvas);

@@ -12,9 +12,10 @@ import { wpPageService } from '../services/wp-page.service';
 export class SimpleTextViewerComponent {
   public id:string | null = this.route.snapshot.paramMap.get('id')
   public program_id: string | null = this.route.snapshot.paramMap.get('idMainCat')
-  currentLang: string | undefined;
-  public contenido: WpPage | undefined 
-  @Input() wpPageID: number = 0;
+  currentLang: string | undefined
+  currentWPLang: number
+  public contenido: WpPage
+  @Input() wpPageID: number
 
   constructor( public translateService: TranslateService, 
     private wpPageService: wpPageService, 
@@ -24,38 +25,26 @@ export class SimpleTextViewerComponent {
     ngOnInit(): void {
       switch (localStorage.getItem('preferredLang')) {
         case 'cat':
-          this.currentLang = 'ca-ES'
+          this.currentWPLang = 42
         break
         case 'cas':
-          this.currentLang = 'es-ES'      
+          this.currentWPLang = 43
         break
         case 'en':
-          this.currentLang = 'en-EN'
+          this.currentWPLang = 44
         break
         default:
-          this.currentLang = 'ca-ES'
+          this.currentWPLang = 41
       }
-     
-     /*  if (!this.id) {
-        if (this.currentLang = 'es-ES') {
-          this.id = '105'
-        } else {
-          this.id = '105'
-        }
-      }
-      console.log ("**",this.id) */
-  
-      this.getContent(this.wpPageID)
- /*     
-      window.scroll(0,0) */
+      this.getContent(this.currentWPLang, this.wpPageID)
     }
 
-    getContent (id: number) {
+    getContent (currentLanguage: number, id: number) {
       this.wpPageService.getOne(id)
           .subscribe(
             (wpPage: WpPage) => {
               this.contenido = wpPage
-              console.log(this.contenido)
+              console.log(this.contenido, id, currentLanguage)
           })
     }
 }
