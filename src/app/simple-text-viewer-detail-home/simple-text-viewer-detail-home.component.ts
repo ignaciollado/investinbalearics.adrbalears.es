@@ -10,8 +10,6 @@ import { WpPage } from '../Models/wp-page-data.dto';
   styleUrl: './simple-text-viewer-detail-home.component.scss'
 })
 export class SimpleTextViewerDetailHomeComponent {
-  /* public id:string | null = this.route.snapshot.paramMap.get('id') */
-  /* public program_id: string | null = this.route.snapshot.paramMap.get('idMainCat') */
   public currentWPLang: number | undefined;
   public contenido: WpPage | undefined 
   @Input() wpPageDetailID: number = 0;

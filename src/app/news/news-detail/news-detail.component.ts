@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ViewEncapsulation } from '@angular/core';
 import { Router, ActivatedRoute,  } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
 import { WPpostService } from '../../services/wp-post.service';
@@ -9,7 +9,8 @@ import { WpTag } from '../../Models/wp-tag.dto';
 @Component({
   selector: 'app-news-detail',
   templateUrl: './news-detail.component.html',
-  styleUrl: './news-detail.component.scss'
+  styleUrl: './news-detail.component.scss',
+  encapsulation: ViewEncapsulation.None
 })
 export class NewsDetailComponent {
 

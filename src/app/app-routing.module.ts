@@ -39,7 +39,7 @@ const routes: Routes = [
 
   { path: 'news-list/:newsToDisplay', component: NewsListComponent },
   { path: 'news-list-all/:newsToDisplay', component: NewsListComponent },
-  { path: 'news-detail/:id', component: NewsDetailComponent},
+  { path: 'news-detail/:slug/:id', component: NewsDetailComponent},
 
   { path: 'agenda-list/:eventsTodisplay', component: AgendaListComponent},
   { path: 'agenda-detail/:id', component: AgendaDetailComponent},

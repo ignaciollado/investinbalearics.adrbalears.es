@@ -1,6 +1,10 @@
 @use '../../adr-colors';
 @use '../../utilities.scss';
 
+.detail-news-container{
+  margin: 3rem;
+}
+
 .cabecera {
   width: 100%;
   height: auto;
@@ -8,17 +12,22 @@
 }
 .card {
   display: grid;
-  grid-template-areas: "titulo texto"
-                       "imagen texto";
+  grid-template-areas:  "titulo titulo"
+                        "imagen texto"
+                        "imagen texto";
   margin-top: 3.5rem;
   gap: 1.4rem;
   border: none;
 }
-.card-head {
+.card__head {
   grid-area: imagen;
 }
-.card-title {
+.card__title {
   grid-area: titulo;
+}
+.card__title h1 {
+  font-size: 2rem!important;
+  font-weight: bolder;
 }
 .card__body {
   grid-area: texto;

@@ -9,7 +9,7 @@ import { WpPageFeaturedMedia } from '../Models/wp-page-featured-media.dto';
   selector: 'app-simple-text-viewer-detail',
   templateUrl: './simple-text-viewer-detail.component.html',
   styleUrl: './simple-text-viewer-detail.component.scss',
-    encapsulation: ViewEncapsulation.None
+  encapsulation: ViewEncapsulation.None
 })
 
 export class SimpleTextViewerDetailComponent {

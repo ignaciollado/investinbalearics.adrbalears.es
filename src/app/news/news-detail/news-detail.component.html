@@ -1,23 +1,12 @@
-<!-- <section class="detail-news-container" *ngIf="unaNoticiaAttribute">
-  <article class="card">
-      <figure class="card__head" *ngIf="unaNoticiaAttribute.images.image_fulltext">
-          <img src={{unaNoticiaAttribute.images.image_fulltext}} alt={{unaNoticiaAttribute.title}} title={{unaNoticiaAttribute.title}}>
-      </figure>
-      <section class="card__body">
-          <h1 class="card__title">{{unaNoticiaAttribute.title}}</h1>
-          <h4 class="card__date barra_meta" *ngIf="unaNoticiaAttribute.images.image_fulltext">{{unaNoticiaAttribute.modified | date: 'dd/MM/yyyy'}}</h4>
-          <div class="card__text" [innerHTML]="unaNoticiaAttribute.text.replaceAll('https://idi.es/index.php/contenido_texto_nivel3/detalle/','#/sectors-idi-hlp-detail/').replaceAll('/index.php/contenido_busca_web_nivel3/detalle/','/#/idi-detail/').replaceAll( 'images/', 'https://contents.idi.es/images/')"></div>
-      </section>
-  </article>
-</section> -->
-
 <section class="detail-news-container" *ngIf="oneNew">
     <article class="card">
         <figure class="card__head" *ngIf="contenidoMedia">
             <img src={{contenidoMedia.guid.rendered}} alt={{contenidoMedia.title.rendered}} title={{contenidoMedia.title.rendered}}>
         </figure>
-        <section class="card__body">
+        <section class="card__title">
             <h1 [innerHTML]="oneNew.title.rendered"></h1>
+        </section>
+        <section class="card__body">
             <h4 class="card__date">{{oneNew.modified | date: 'dd/MM/yyyy'}}</h4>
             <article class="card__text" [innerHTML]="oneNew.content.rendered"></article>
         </section>
