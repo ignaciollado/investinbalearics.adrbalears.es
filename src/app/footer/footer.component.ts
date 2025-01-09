@@ -6,22 +6,22 @@ import { Component } from '@angular/core';
   styleUrl: './footer.component.scss'
 })
 export class FooterComponent {
-  currentLang: string | undefined
+  currentWPLang: number
   constructor() {}
  
   ngOnInit(): void {
     switch (localStorage.getItem('preferredLang')) {
-      case 'cat':
-        this.currentLang = 'ca-ES'
+      case 'ca-ES':
+        this.currentWPLang = 42
         break
-      case 'cas':
-        this.currentLang = 'es-ES'      
+      case 'es-ES':
+        this.currentWPLang = 43
         break
-      case 'en':
-        this.currentLang = 'en-EN'
+      case 'en-EN':
+        this.currentWPLang = 44
         break
       default:
-        this.currentLang = 'en-EN'
+        this.currentWPLang = 43
       }
   }
 }

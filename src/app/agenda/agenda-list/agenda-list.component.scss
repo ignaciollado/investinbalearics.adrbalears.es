@@ -1,0 +1,74 @@
+@use '../../adr-colors';
+@use '../../utilities.scss';
+.data-container{
+  margin: 2rem;
+}
+h1 {
+  margin-bottom: 1rem!important;
+}
+h2 {
+  margin-bottom: 0;
+}
+h5 {
+  color: adr-colors.$primary-adr;
+}
+.row {
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+}
+.card{
+  margin-bottom: 1rem;
+}
+
+.card-emprender:hover {
+  border-color: adr-colors.$emprender;
+}
+.card-connectar:hover {
+  border-color: adr-colors.$conectar;
+}
+.card-proyectar:hover {
+  border-color: adr-colors.$proyectar;
+}
+
+.card-body {
+  min-height: 15rem;
+}
+
+a {
+  color: adr-colors.$secondary-adr-bck!important;
+}
+
+.event-list-container{
+  margin-bottom: 4rem;
+}
+
+.emprender-bck, .conectar-bck, .proyectar-bck {
+  color: #ffffff;
+}
+
+.no-hay-eventos{
+  background-color: grey;
+  margin-bottom: 2rem;
+  padding: 1rem;
+}
+
+@media screen and (max-width: 992px) {
+  .row {
+    grid-template-columns: 50% 50%;
+  }
+  .card-body {
+    min-height: 20rem;
+    max-height: 100%;
+  }
+}
+
+@media screen and (max-width: 760px) {
+  .row {
+    grid-template-columns: auto;
+  }
+
+  .card-body {
+    min-height: 18rem;
+    max-height: 100%;
+  }
+}

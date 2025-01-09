@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, ViewEncapsulation } from '@angular/core';
 import { Router, ActivatedRoute  } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
 import { WpPage } from '../Models/wp-page-data.dto';
@@ -7,8 +7,10 @@ import { wpPageService } from '../services/wp-page.service';
 @Component({
   selector: 'app-simple-text-viewer',
   templateUrl: './simple-text-viewer.component.html',
-  styleUrl: './simple-text-viewer.component.scss'
+  styleUrl: './simple-text-viewer.component.scss',
+  encapsulation: ViewEncapsulation.None
 })
+
 export class SimpleTextViewerComponent {
   public id:string | null = this.route.snapshot.paramMap.get('id')
   public program_id: string | null = this.route.snapshot.paramMap.get('idMainCat')

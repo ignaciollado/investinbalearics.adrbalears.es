@@ -1,5 +1,10 @@
 <div class="content-detail" *ngIf="contenido">
   <h2 class="detail-title">{{contenido.title.rendered}}</h2>
   <div class="detail-body" [innerHTML]="contenido.excerpt.rendered"></div>
-  <button class="btn btn-outline-primary detail-button" type="button" routerLink="invest-in-balearics-detail/{{wpPageDetailID}}">Descubre +</button>
+  <button class="btn btn-outline-primary detail-button" type="button" routerLink="invest-in-balearics-detail/{{wpPageDetailID}}">
+    <span *ngIf="currentWPLang === 43">Descubre</span>
+          <span *ngIf="currentWPLang === 42">Descobreix</span>
+          <span *ngIf="currentWPLang === 44">Discover</span>
+     +
+  </button>
 </div>

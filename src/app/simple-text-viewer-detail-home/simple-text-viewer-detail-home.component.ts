@@ -12,7 +12,7 @@ import { WpPage } from '../Models/wp-page-data.dto';
 export class SimpleTextViewerDetailHomeComponent {
   /* public id:string | null = this.route.snapshot.paramMap.get('id') */
   /* public program_id: string | null = this.route.snapshot.paramMap.get('idMainCat') */
-  currentLang: string | undefined;
+  public currentWPLang: number | undefined;
   public contenido: WpPage | undefined 
   @Input() wpPageDetailID: number = 0;
 
@@ -23,17 +23,17 @@ export class SimpleTextViewerDetailHomeComponent {
 
     ngOnInit(): void {
       switch (localStorage.getItem('preferredLang')) {
-        case 'cat':
-          this.currentLang = 'ca-ES'
+        case 'ca-ES':
+          this.currentWPLang = 42
         break
-        case 'cas':
-          this.currentLang = 'es-ES'      
+        case 'es-ES':
+          this.currentWPLang = 43
         break
-        case 'en':
-          this.currentLang = 'en-EN'
+        case 'en-EN':
+          this.currentWPLang = 44
         break
         default:
-          this.currentLang = 'ca-ES'
+          this.currentWPLang = 44
       }
       this.getContent(this.wpPageDetailID)
       /* window.scroll(0,0) */

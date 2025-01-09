@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, ViewEncapsulation } from '@angular/core';
 import { Router, ActivatedRoute  } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
 import { wpPageService } from '../services/wp-page.service';
@@ -8,7 +8,8 @@ import { WpPageFeaturedMedia } from '../Models/wp-page-featured-media.dto';
 @Component({
   selector: 'app-simple-text-viewer-detail',
   templateUrl: './simple-text-viewer-detail.component.html',
-  styleUrl: './simple-text-viewer-detail.component.scss'
+  styleUrl: './simple-text-viewer-detail.component.scss',
+    encapsulation: ViewEncapsulation.None
 })
 
 export class SimpleTextViewerDetailComponent {

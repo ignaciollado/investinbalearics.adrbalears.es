@@ -6,6 +6,12 @@ import { TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 
+
+import { NewsListComponent } from './news/news-list/news-list.component';
+import { NewsDetailComponent } from './news/news-detail/news-detail.component';
+import { AgendaDetailComponent } from './agenda/agenda-detail/agenda-detail.component';
+import { AgendaListComponent } from './agenda/agenda-list/agenda-list.component';
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -39,7 +45,11 @@ export function HttpLoaderFactory(http: HttpClient) {
     NotFoundComponent,
     InternalServerComponent,
     ContactFormComponent,
-    SearchTheWebComponent
+    SearchTheWebComponent,
+    NewsListComponent,
+    NewsDetailComponent,
+    AgendaDetailComponent,
+    AgendaListComponent
   ],
   imports: [
     BrowserModule,

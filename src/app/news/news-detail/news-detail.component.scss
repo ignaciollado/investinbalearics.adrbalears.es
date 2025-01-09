@@ -1,0 +1,87 @@
+@use '../../adr-colors';
+@use '../../utilities.scss';
+
+.cabecera {
+  width: 100%;
+  height: auto;
+  border: #a3d4db 1px solid;
+}
+.card {
+  display: grid;
+  grid-template-areas: "titulo texto"
+                       "imagen texto";
+  margin-top: 3.5rem;
+  gap: 1.4rem;
+  border: none;
+}
+.card-head {
+  grid-area: imagen;
+}
+.card-title {
+  grid-area: titulo;
+}
+.card__body {
+  grid-area: texto;
+  margin-top: 0;
+  margin-bottom: 4rem;
+  line-height: 2.4rem;
+  font-size: 1.4rem;
+  padding-top: 0;
+}
+.card__date {
+  font-weight: 300;
+}
+.card__text {
+  margin-top: 1rem;
+}
+img {
+  width: 100%;
+  height: auto;
+}
+h2 {
+  border-bottom: #7e7e7c 1px solid;
+}
+.noticia-tag{
+  display: grid;
+  grid-template-columns: repeat(6,1fr);
+  gap: 2rem;
+}
+small {
+  font-weight: 800;
+}
+a {
+  font-weight: 300;
+  color: adr-colors.$primary-adr!important;
+  border-radius: 4px;
+  padding-left: .5rem;
+  padding-right: .5rem;
+  padding-top: .3rem;
+  padding-bottom: .3rem;
+}
+.noticia-tag a:hover {
+  opacity: .8;
+  color: adr-colors.$secondary-adr!important;
+  text-decoration: underline adr-colors.$primary-adr !important;
+}
+
+.barra_meta {
+  border-bottom: 5px solid #ededed;
+  display: block;
+  padding: 5px 0 0 0;
+  margin: 0 0 1rem 0;
+}
+@media only screen and (max-width: 760px) {
+  .card {
+      grid-template-areas:    'imagen' 
+                              'titulo'
+                              'texto';
+      margin-top: .5rem;
+      margin-bottom: .5rem;                                
+  }
+  .menu-texto-idi{
+      grid-template-columns: repeat(2,1fr);
+  }
+  .menu-ayuda-idi{
+      grid-template-columns: repeat(1, 1fr);
+  }
+}

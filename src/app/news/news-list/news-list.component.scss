@@ -1,0 +1,50 @@
+.data-container{
+  margin: 2rem;
+}
+h1 {
+  margin-bottom: 1rem!important;
+}
+
+h5 {
+  color: #fff;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+  grid-gap: 1rem 0;
+}
+
+.btn {
+  padding: 0;
+}
+
+.card-body {
+  grid-area: title;
+  background-color: #003747;
+  color: #ffffff!important;
+  min-height: 12rem;
+  max-height: 12rem;
+  line-height: 1.4285em;
+  padding-left: 1rem;
+}
+
+.card-header {
+  padding: 0;
+}
+
+@media screen and (max-width: 992px) {
+  .row {
+    grid-template-columns: 100%;
+  }
+
+  h6 {
+    font-size: 1rem;
+  }
+
+  .card-body {
+    max-height: auto;
+  }
+}
+
+
