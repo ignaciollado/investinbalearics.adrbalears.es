@@ -19,20 +19,31 @@ ngOnInit(): void {
     this.currentLang = localStorage.getItem('preferredLang')
     switch (this.currentLang) {
         case 'ca-ES':
-          this.currentWPLang = 42
-          this.homeIntroPage = 262
+        case 'cat':
+            localStorage.setItem('preferredLang', 'ca-ES')
+            this.currentLang = 'ca-ES'
+            this.currentWPLang = 42
+            this.homeIntroPage = 262
         break
         case 'es-ES':
-          this.currentWPLang = 43
-          this.homeIntroPage = 105
+        case 'cas':
+            localStorage.setItem('preferredLang', 'es-ES')
+            this.currentLang = 'es-ES'         
+            this.currentWPLang = 43
+            this.homeIntroPage = 105
         break
         case 'en-EN':
-          this.currentWPLang = 44
-          this.homeIntroPage = 264
+        case 'eng':
+            localStorage.setItem('preferredLang', 'en-EN')
+            this.currentLang = 'en-EN'
+            this.currentWPLang = 44
+            this.homeIntroPage = 264
         break
         default:
-          this.currentWPLang = 44
-          this.homeIntroPage = 264
+            localStorage.setItem('preferredLang', 'en-EN')
+            this.currentLang = 'en-EN'
+            this.currentWPLang = 44
+            this.homeIntroPage = 264
       }
 }
     
@@ -183,7 +194,6 @@ scroll(el: string) {
 switchLanguage( lang:string ) {
     this.translate.use(lang)
     localStorage.setItem('preferredLang', lang)
-    /* this.router.navigate(['']) */
     location.reload() 
 }
 
