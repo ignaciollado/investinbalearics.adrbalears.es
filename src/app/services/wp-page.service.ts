@@ -14,6 +14,8 @@ export class wpPageService {
   /* key para JOOMLA 4 */
   private jToken = 'c2hhMjU2OjkwNzpjZjRkMmYwOTkxMGYyZTFiMWY2NGFjYThjZWVjM2VlNmI4ZGRlNGU1OTBjNzNiODA0NzM2NDdhYjUwN2M4NTdm'
   private apiBaseUrl = 'https://app.investinbalearics.es/wp-json/wp/v2/'
+  private apiAdrbalearsUrl = 'https://app.adrbalears.es/wp-json/wp/v2/'
+
 
 
   headers = new HttpHeaders()
@@ -39,6 +41,11 @@ export class wpPageService {
   getOneFeaturedMedia(id: number|null): Observable<WpPageFeaturedMedia> {
     this.messagesService.add('ArticleService: fetched ONE media')
     return this.httpClient.get<WpPageFeaturedMedia>(`${this.apiBaseUrl}media/${id}`)
+  }
+
+  getLegalContent(id: number|null): Observable<WpPage> {
+    this.messagesService.add('ArticleService: fetched ONE article')
+    return this.httpClient.get<WpPage>(`${this.apiAdrbalearsUrl}pages/${id}`)
   }
 
 }

@@ -25,6 +25,7 @@ import { NotFoundComponent } from './error-pages/not-found/not-found.component';
 import { InternalServerComponent } from './error-pages/internal-server/internal-server.component';
 import { ContactFormComponent } from './contact-form/contact-form.component';
 import { SearchTheWebComponent } from './searchTheWeb/search-the-web/search-the-web.component';
+import { ShowLegalInfoComponent } from './show-legal-info/show-legal-info.component';
 
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(http: HttpClient) {
@@ -49,7 +50,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     NewsListComponent,
     NewsDetailComponent,
     AgendaDetailComponent,
-    AgendaListComponent
+    AgendaListComponent,
+    ShowLegalInfoComponent
   ],
   imports: [
     BrowserModule,

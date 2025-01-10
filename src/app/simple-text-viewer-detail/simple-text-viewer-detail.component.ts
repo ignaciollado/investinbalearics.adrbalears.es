@@ -1,4 +1,4 @@
-import { Component, Input, ViewEncapsulation } from '@angular/core';
+import { Component, ViewEncapsulation } from '@angular/core';
 import { Router, ActivatedRoute  } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
 import { wpPageService } from '../services/wp-page.service';
@@ -14,12 +14,10 @@ import { WpPageFeaturedMedia } from '../Models/wp-page-featured-media.dto';
 
 export class SimpleTextViewerDetailComponent {
   public id:number | null = +this.route.snapshot.paramMap.get('id')
-  /* public program_id: string | null = this.route.snapshot.paramMap.get('idMainCat') */
   public currentLang: string | undefined
   public currentWPLang: number
   public contenido: WpPage
   public contenidoMedia: WpPageFeaturedMedia
-  /* @Input() wpPageDetailID: number = 0; */
 
   constructor( public translateService: TranslateService, 
     private wpPageService: wpPageService, 
@@ -53,7 +51,6 @@ export class SimpleTextViewerDetailComponent {
           .subscribe(
             (wpPage: WpPage) => {
               this.contenido = wpPage
-              console.log (` - ${this.contenido.featured_media} - ${this.contenido._links['wp:featuredmedia'][0].href}` )
               this.getFeaturedMedia (this.contenido.featured_media)
           })
     }

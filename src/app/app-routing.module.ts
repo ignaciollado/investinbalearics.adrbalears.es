@@ -10,6 +10,7 @@ import { NewsListComponent } from './news/news-list/news-list.component';
 import { AgendaListComponent } from './agenda/agenda-list/agenda-list.component';
 import { NewsDetailComponent } from './news/news-detail/news-detail.component';
 import { AgendaDetailComponent } from './agenda/agenda-detail/agenda-detail.component';
+import { ShowLegalInfoComponent } from './show-legal-info/show-legal-info.component';
 
 
 const routes: Routes = [
@@ -44,11 +45,11 @@ const routes: Routes = [
   { path: 'agenda-list/:eventsTodisplay', component: AgendaListComponent},
   { path: 'agenda-detail/:id', component: AgendaDetailComponent},
 
-  { path: 'accesibilidad/:id', component: SimpleTextViewerDetailComponent },
-  { path: 'aviso-legal/:id', component: SimpleTextViewerDetailComponent },
+  { path: 'accesibilidad/:id', component: ShowLegalInfoComponent },
+  { path: 'aviso-legal/:id', component: ShowLegalInfoComponent },
   { path: 'contacta', component: SimpleTextViewerDetailComponent},
-  { path: 'politica-de-cookies/:id', component: SimpleTextViewerDetailComponent},
-  { path: 'politica-de-privacidad/:id', component: SimpleTextViewerDetailComponent},
+  { path: 'politica-de-cookies/:id', component: ShowLegalInfoComponent},
+  { path: 'politica-de-privacidad/:id', component: ShowLegalInfoComponent},
   { path: 'feder-detail/:id', component: SimpleTextViewerDetailComponent },
   { path: 'contact-invest-in-balearics', component: ContactFormComponent },
 
