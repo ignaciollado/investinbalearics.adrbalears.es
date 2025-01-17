@@ -1,9 +1,8 @@
 <header class="container-fluid">
   <div class="logo-title">
     <a class="navbar-brand" href="#">
-      <img src="../../assets/images/logo gov+adr.svg" alt="ADR Balears" title="Agència de desenvolupament regional de les Illes Balears" width="420" height="auto">
+      <img src="../../assets/web-logos-invest-in-01.png" alt="ADR Balears" title="Agència de desenvolupament regional de les Illes Balears" width="260" height="auto">
     </a>
-    <h1>Invest in Balearics</h1>
   </div>  
   <div>
       <button class="btn button-header-menu "#langSelect (click)="switchLanguage('es-ES')">cas</button>
@@ -19,7 +18,12 @@
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0 border-gradient border-gradient-green only-top">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" *ngIf="currentLang === 'es-ES'" routerLink="por-que-invertir-en-baleares/212">Quienes somos</a>
+          <a class="nav-link active" aria-current="page" *ngIf="currentLang === 'ca-ES'" routerLink="per-que-invertir-a-balears/319">Qui som</a>
+          <a class="nav-link active" aria-current="page" *ngIf="currentLang === 'en-EN'" routerLink="why-invest-in-balears/321">Who we are</a>
+        </li>
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" *ngIf="currentLang === 'es-ES'" routerLink="por-que-invertir-en-baleares/212">Por qué invertir</a>
           <a class="nav-link active" aria-current="page" *ngIf="currentLang === 'ca-ES'" routerLink="per-que-invertir-a-balears/319">Per qué invertir</a>
@@ -50,16 +54,16 @@
           <a class="nav-link active" *ngIf="currentLang === 'ca-ES'" routerLink="ayudas-y-subvenciones">{{'Ajudes i subvencions' | translate}}</a>
           <a class="nav-link active" *ngIf="currentLang === 'en-EN'" routerLink="ajuts-i-subvencions">{{'Grants and subsidies' | translate}}</a>         
         </li>
-        <li class="nav-item">
+<!--         <li class="nav-item">
           <a class="nav-link active" *ngIf="currentLang === 'es-ES'" routerLink="news-list/4">Noticias</a>
           <a class="nav-link active" *ngIf="currentLang === 'ca-ES'" routerLink="news-list/4">Noticies</a>
           <a class="nav-link active" *ngIf="currentLang === 'en-EN'" routerLink="news-list/4">News</a>               
-        </li>
-        <li class="nav-item">
+        </li> -->
+<!--         <li class="nav-item">
           <a class="nav-link active" *ngIf="currentLang === 'es-ES'" routerLink="agenda-list/4">Agenda</a>
           <a class="nav-link active" *ngIf="currentLang === 'ca-ES'" routerLink="agenda-list/4">Agenda</a>
           <a class="nav-link active" *ngIf="currentLang === 'en-EN'" routerLink="agenda-list/4">Agenda</a>               
-        </li>
+        </li> -->
       </ul>
     </div>
   </div>

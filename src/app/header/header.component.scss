@@ -9,8 +9,6 @@ header h1 {
 }
 
 ul {
-  list-style: decimal-leading-zero;
-  color: #0098CB;
   margin-left: 2rem;
   li {
     margin-right: 2rem;
@@ -36,17 +34,31 @@ ul {
   display: none;
   padding-right: .2rem;
 }
-
 .logo-title {
   grid-area: navLogo;
 }
-
 .nav-bar-top {
   grid-area: navLangSede;
   display: grid;
   justify-content: center;
 }
-
+.navbar {
+  grid-area: menu;
+  width: 100%;
+  border-bottom: 3px solid red;
+  font-weight: bolder;
+  justify-content: right;
+  justify-items: right;
+  align-items: right;
+}
+.border-gradient {
+  border: 10px solid;
+  border-image-slice: 1;
+  border-width: 5px;
+}
+.border-gradient-green {
+  border-image-source: linear-gradient(to left, #00C853, #B2FF59);
+}
 .nav-bar-bottom {
   grid-area: navBottom;
   display: grid;
