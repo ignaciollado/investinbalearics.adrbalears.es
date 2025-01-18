@@ -1,5 +1,4 @@
 .the-header {
-  border: 1px solid yellow;
   display: grid;
   grid-template-areas: "navLogo languageSearch" "mainMenu mainMenu";
   margin-top: 1rem;
@@ -32,7 +31,6 @@ ul {
   padding-right: .2rem;
 }
 .logo {
-  border: 1px solid green;
   grid-area: navLogo;
 }
 .language-and-search {

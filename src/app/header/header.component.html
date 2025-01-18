@@ -1,4 +1,4 @@
-<header ngClass="container-fluid the-header">
+<header ngClass="the-header border-gradient">
   <section ngClass="logo">
     <a ngClass="navbar-brand" href="#">
       <img src="../../assets/web-logos-invest-in-01.png" alt="ADR Balears" title="Agència de desenvolupament regional de les Illes Balears" width="260" height="auto">
@@ -9,50 +9,50 @@
       <button ngClass="btn button-header-menu "#langSelect (click)="switchLanguage('en-EN')">eng</button>
       <button ngClass="btn button-header-menu" #langSelect (click)="switchLanguage('ca-ES')">cat</button>
     <app-search-the-web></app-search-the-web>
+    <nav ngClass="navbar navbar-expand-md main-menu">
+      <button ngClass="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span ngClass="navbar-toggler-icon"></span>
+      </button>
+      <section ngClass="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul ngClass="navbar-nav me-auto mb-2 mb-md-0">
+          <li ngClass="nav-item">
+            <a ngClass="nav-link active" aria-current="page" *ngIf="currentLang === 'es-ES'" routerLink="por-que-invertir-en-baleares/212">Quienes somos</a>
+            <a ngClass="nav-link active" aria-current="page" *ngIf="currentLang === 'ca-ES'" routerLink="per-que-invertir-a-balears/319">Qui som</a>
+            <a ngClass="nav-link active" aria-current="page" *ngIf="currentLang === 'en-EN'" routerLink="why-invest-in-balears/321">Who we are</a>
+          </li>
+          <li ngClass="nav-item">
+            <a ngClass="nav-link active" aria-current="page" *ngIf="currentLang === 'es-ES'" routerLink="por-que-invertir-en-baleares/212">Por qué invertir</a>
+            <a ngClass="nav-link active" aria-current="page" *ngIf="currentLang === 'ca-ES'" routerLink="per-que-invertir-a-balears/319">Per qué invertir</a>
+            <a ngClass="nav-link active" aria-current="page" *ngIf="currentLang === 'en-EN'" routerLink="why-invest-in-balears/321">Why invest</a>
+          </li>
+          <li ngClass="nav-item">
+            <a ngClass="nav-link active" *ngIf="currentLang === 'es-ES'" routerLink="ecosistema-inversor/3282">Ecosistema inversor</a>
+            <a ngClass="nav-link active" *ngIf="currentLang === 'ca-ES'" routerLink="ecosistema-inversor-cat/3282">Ecosistema inversor</a>
+            <a ngClass="nav-link active" *ngIf="currentLang === 'en-EN'" routerLink="investment-ecosystem/3282">Discover Balearics</a>         
+          </li>
+          <li ngClass="nav-item">
+            <a ngClass="nav-link active" *ngIf="currentLang === 'es-ES'" routerLink="servicios-al-inversor-y-al-emprendedor/3284">Servicios</a>
+            <a ngClass="nav-link active" *ngIf="currentLang === 'ca-ES'" routerLink="serveis-a-linversor-i-a-lemprenedor/3284">Serveis</a>
+            <a ngClass="nav-link active" *ngIf="currentLang === 'en-EN'" routerLink="investor-and-entrepreneur-services/3284">Services</a>         
+          </li>
+          <li ngClass="nav-item">
+            <a ngClass="nav-link active" *ngIf="currentLang === 'es-ES'" routerLink="sectores-e-industrias/3286">Sectores</a>
+            <a ngClass="nav-link active" *ngIf="currentLang === 'ca-ES'" routerLink="sectors-i-industries/3286">Sectors</a>
+            <a ngClass="nav-link active" *ngIf="currentLang === 'en-EN'" routerLink="sectors-and-industries/3286">Sectors</a>         
+          </li>
+          <li ngClass="nav-item">
+            <a ngClass="nav-link active" *ngIf="currentLang === 'es-ES'" routerLink="talento/115">Talento</a>
+            <a ngClass="nav-link active" *ngIf="currentLang === 'ca-ES'" routerLink="talent/308">Talent</a>
+            <a ngClass="nav-link active" *ngIf="currentLang === 'en-EN'" routerLink="talent-eng/310">Talent</a>         
+          </li>
+          <li ngClass="nav-item">
+            <a ngClass="nav-link active" *ngIf="currentLang === 'es-ES'" routerLink="ayudas-y-subvenciones">{{'Ayudas y subvenciones' | translate}}</a>
+            <a ngClass="nav-link active" *ngIf="currentLang === 'ca-ES'" routerLink="ayudas-y-subvenciones">{{'Ajudes i subvencions' | translate}}</a>
+            <a ngClass="nav-link active" *ngIf="currentLang === 'en-EN'" routerLink="ajuts-i-subvencions">{{'Grants and subsidies' | translate}}</a>         
+          </li>
+        </ul>
+      </section>
+    </nav>
   </section>
-  <nav ngClass="navbar navbar-expand-md main-menu">
-    <button ngClass="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span ngClass="navbar-toggler-icon"></span>
-    </button>
-    <section ngClass="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul ngClass="navbar-nav me-auto mb-2 mb-md-0 border-gradient only-top">
-        <li ngClass="nav-item">
-          <a ngClass="nav-link active" aria-current="page" *ngIf="currentLang === 'es-ES'" routerLink="por-que-invertir-en-baleares/212">Quienes somos</a>
-          <a ngClass="nav-link active" aria-current="page" *ngIf="currentLang === 'ca-ES'" routerLink="per-que-invertir-a-balears/319">Qui som</a>
-          <a ngClass="nav-link active" aria-current="page" *ngIf="currentLang === 'en-EN'" routerLink="why-invest-in-balears/321">Who we are</a>
-        </li>
-        <li ngClass="nav-item">
-          <a ngClass="nav-link active" aria-current="page" *ngIf="currentLang === 'es-ES'" routerLink="por-que-invertir-en-baleares/212">Por qué invertir</a>
-          <a ngClass="nav-link active" aria-current="page" *ngIf="currentLang === 'ca-ES'" routerLink="per-que-invertir-a-balears/319">Per qué invertir</a>
-          <a ngClass="nav-link active" aria-current="page" *ngIf="currentLang === 'en-EN'" routerLink="why-invest-in-balears/321">Why invest</a>
-        </li>
-        <li ngClass="nav-item">
-          <a ngClass="nav-link active" *ngIf="currentLang === 'es-ES'" routerLink="ecosistema-inversor/3282">Ecosistema inversor</a>
-          <a ngClass="nav-link active" *ngIf="currentLang === 'ca-ES'" routerLink="ecosistema-inversor-cat/3282">Ecosistema inversor</a>
-          <a ngClass="nav-link active" *ngIf="currentLang === 'en-EN'" routerLink="investment-ecosystem/3282">Discover Balearics</a>         
-        </li>
-        <li ngClass="nav-item">
-          <a ngClass="nav-link active" *ngIf="currentLang === 'es-ES'" routerLink="servicios-al-inversor-y-al-emprendedor/3284">Servicios</a>
-          <a ngClass="nav-link active" *ngIf="currentLang === 'ca-ES'" routerLink="serveis-a-linversor-i-a-lemprenedor/3284">Serveis</a>
-          <a ngClass="nav-link active" *ngIf="currentLang === 'en-EN'" routerLink="investor-and-entrepreneur-services/3284">Services</a>         
-        </li>
-        <li ngClass="nav-item">
-          <a ngClass="nav-link active" *ngIf="currentLang === 'es-ES'" routerLink="sectores-e-industrias/3286">Sectores</a>
-          <a ngClass="nav-link active" *ngIf="currentLang === 'ca-ES'" routerLink="sectors-i-industries/3286">Sectors</a>
-          <a ngClass="nav-link active" *ngIf="currentLang === 'en-EN'" routerLink="sectors-and-industries/3286">Sectors</a>         
-        </li>
-        <li ngClass="nav-item">
-          <a ngClass="nav-link active" *ngIf="currentLang === 'es-ES'" routerLink="talento/115">Talento</a>
-          <a ngClass="nav-link active" *ngIf="currentLang === 'ca-ES'" routerLink="talent/308">Talent</a>
-          <a ngClass="nav-link active" *ngIf="currentLang === 'en-EN'" routerLink="talent-eng/310">Talent</a>         
-        </li>
-        <li ngClass="nav-item">
-          <a ngClass="nav-link active" *ngIf="currentLang === 'es-ES'" routerLink="ayudas-y-subvenciones">{{'Ayudas y subvenciones' | translate}}</a>
-          <a ngClass="nav-link active" *ngIf="currentLang === 'ca-ES'" routerLink="ayudas-y-subvenciones">{{'Ajudes i subvencions' | translate}}</a>
-          <a ngClass="nav-link active" *ngIf="currentLang === 'en-EN'" routerLink="ajuts-i-subvencions">{{'Grants and subsidies' | translate}}</a>         
-        </li>
-      </ul>
-    </section>
-</nav>
 </header>
 
