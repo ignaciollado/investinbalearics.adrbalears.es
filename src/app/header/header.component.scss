@@ -1,11 +1,8 @@
-header {
+.the-header {
+  border: 1px solid yellow;
   display: grid;
-  grid-template-areas: "navLogo navLangSede" "menu menu";
+  grid-template-areas: "navLogo languageSearch" "mainMenu mainMenu";
   margin-top: 1rem;
-}
-
-header h1 {
-  margin-top: 2rem;
 }
 
 ul {
@@ -34,30 +31,27 @@ ul {
   display: none;
   padding-right: .2rem;
 }
-.logo-title {
+.logo {
+  border: 1px solid green;
   grid-area: navLogo;
 }
-.nav-bar-top {
-  grid-area: navLangSede;
-  display: grid;
-  justify-content: center;
+.language-and-search {
+  border: 1px solid blue;
+  grid-area: languageSearch;
+  text-align: right;
 }
-.navbar {
-  grid-area: menu;
+.main-menu {
+  border: 1px solid red;
+  grid-area: mainMenu;
   width: 100%;
-  border-bottom: 3px solid red;
   font-weight: bolder;
-  justify-content: right;
-  justify-items: right;
-  align-items: right;
 }
+
 .border-gradient {
-  border: 10px solid;
-  border-image-slice: 1;
-  border-width: 5px;
-}
-.border-gradient-green {
-  border-image-source: linear-gradient(to left, #00C853, #B2FF59);
+  border-bottom: 5px solid transparent;
+  border-image: linear-gradient(to right, #dd9f70, #974890);
+  border-image-slice: 1; /* hace que se vea el borde */
+  width:100%;
 }
 .nav-bar-bottom {
   grid-area: navBottom;
@@ -87,21 +81,21 @@ h5 {
   margin-bottom:0;
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 768px) { /* para hacerlo coincidir con el punto de ruptura de bootstrap 'ng' */
   .container, .container-fluid {
-    padding-right: 0;
-    padding-left: 0;
+    padding-right: 0.5;
+    padding-left: 0.5;
   }
   header {
-    grid-template-areas: "navLogo" "navLangSede" "menu";
+    grid-template-areas: "navLogo" "languageSearch" "mainMenu";
   }
   header h1 {
     margin-top: 1rem;
   }
-  img {
-    width: 50%;
+/*   img {
+    width: 100%;
     height: auto;
-  }
+  } */
   .logo-title{
     text-align: center;
   }
