@@ -15,8 +15,8 @@ video {
 figure {
   width: 100%;
   height: 60vh;
-  background-image: url('../../assets/images/header-image.jpeg');
-  background-color: linear-gradient(to right, blue, red);
+  background-image: linear-gradient(to bottom, rgba(245, 246, 252, 0.52), #3d4e97),url('../../assets/images/header-image.jpeg');
+  
   background-size:cover;
   animation: zoominout 5;
   animation-fill-mode: forwards;
