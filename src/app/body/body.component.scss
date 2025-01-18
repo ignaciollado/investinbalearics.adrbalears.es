@@ -14,13 +14,15 @@ video {
 
 figure {
   width: 100%;
-  height: 120vh;
-  background-image: url('../../assets/images/cala-agulla-mallorca.jpg');
+  height: 60vh;
+  background-image: url('../../assets/images/header-image.jpeg');
+  background-color: linear-gradient(to right, blue, red);
   background-size:cover;
-  animation: zoominout 100s;
+  animation: zoominout 5;
   animation-fill-mode: forwards;
-  animation-iteration-count: infinite;
+  animation-iteration-count: 1;
   animation-direction: alternate;
+
 }
 @keyframes zoominout {
   from {background-position: top;background-size:3000px; }
@@ -30,23 +32,19 @@ figure {
 app-simple-text-viewer{
   position: absolute;
   left: 5%;
-  top: 15%;
+  top: 10%;
   max-width: 40%;
 }
 
 form {
   position: absolute;
-  top: 50%;
+  top: 10%;
   right: 5%;
-  border-radius: 15px;
-  border: 1px solid #fff;
+  background-color: #dd9f70;
+  color: #000;
   padding: 1rem;
   animation-duration: 3s;
   animation-name: slidein;
-}
-
-span {
-  color: #fff;
 }
 
 .mb-3 {

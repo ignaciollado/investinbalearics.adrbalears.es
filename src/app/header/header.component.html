@@ -4,16 +4,16 @@
       <img src="../../assets/web-logos-invest-in-01.png" alt="ADR Balears" title="Agència de desenvolupament regional de les Illes Balears" width="260" height="auto">
     </a>
   </section>  
-  <section ngClass="language-and-search">
-      <button ngClass="btn button-header-menu "#langSelect (click)="switchLanguage('es-ES')">cas</button>
-      <button ngClass="btn button-header-menu "#langSelect (click)="switchLanguage('en-EN')">eng</button>
-      <button ngClass="btn button-header-menu" #langSelect (click)="switchLanguage('ca-ES')">cat</button>
-    <app-search-the-web></app-search-the-web>
-    <nav ngClass="navbar navbar-expand-md main-menu">
-      <button ngClass="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+  <section ngClass="language-select">
+        <button ngClass="btn button-header-menu "#langSelect (click)="switchLanguage('es-ES')">cas</button>
+        <button ngClass="btn button-header-menu "#langSelect (click)="switchLanguage('en-EN')">eng</button>
+        <button ngClass="btn button-header-menu" #langSelect (click)="switchLanguage('ca-ES')">cat</button>
+  </section>
+  <nav ngClass="navbar navbar-expand-md main-menu">
+    <button ngClass="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span ngClass="navbar-toggler-icon"></span>
-      </button>
-      <section ngClass="collapse navbar-collapse" id="navbarSupportedContent">
+    </button>
+    <section ngClass="collapse navbar-collapse" id="navbarSupportedContent">
         <ul ngClass="navbar-nav me-auto mb-2 mb-md-0">
           <li ngClass="nav-item">
             <a ngClass="nav-link active" aria-current="page" *ngIf="currentLang === 'es-ES'" routerLink="por-que-invertir-en-baleares/212">Quienes somos</a>
@@ -51,8 +51,10 @@
             <a ngClass="nav-link active" *ngIf="currentLang === 'en-EN'" routerLink="ajuts-i-subvencions">{{'Grants and subsidies' | translate}}</a>         
           </li>
         </ul>
-      </section>
-    </nav>
+    </section>
+  </nav>
+  <section ngClass="search">
+    <app-search-the-web></app-search-the-web>
   </section>
 </header>
 

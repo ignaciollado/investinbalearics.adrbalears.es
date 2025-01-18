@@ -1,20 +1,19 @@
 
 <section class="section col-md-12">
-  <!--   <video class="img-fluid " id="myVideo" autoplay loop muted>
+<!--   <video class="img-fluid " id="myVideo" autoplay loop muted>
     <source src="https://mdbcdn.b-cdn.net/img/video/Tropical.mp4" type="video/mp4" />
   </video> -->
-  <figure class="center">
-   <!--  <h1>
-       Illes Balears
-      </h1> -->
-  </figure>
-  <app-simple-text-viewer [wpPageID] = homeIntroPage></app-simple-text-viewer>
-  <form class="form" [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+
+  <figure></figure>
+
+   <app-simple-text-viewer [wpPageID] = '105'></app-simple-text-viewer>
+
+   <form class="form" [formGroup]="contactForm" (ngSubmit)="onSubmit()">
       <h2 *ngIf="currentLang === 'es-ES'">Solicita información</h2>
       <h2 *ngIf="currentLang === 'ca-ES'">Sol·licita informació</h2>
       <h2 *ngIf="currentLang === 'en-EN'">Request for information</h2>
     <div class="mb-3">
-      <input type="text" class="form-control" placeholder="Nombre" aria-describedby="emailHelp" formControlName="contactName">
+      <input type="text" class="form-control" required placeholder="Nombre*" aria-describedby="emailHelp" formControlName="contactName">
       <span id="emailHelp" class="form-text">We'll never share your email with anyone else.</span>
     </div>
     <div class="input-group mb-3">
@@ -37,11 +36,7 @@
       </a>
     </div>
     <button type="submit" class="btn" [disabled]="!contactForm.valid">
-      <div class="text-center" *ngIf ="!submitted">
-        <span *ngIf="currentLang === 'es-ES'">Envía</span>
-        <span *ngIf="currentLang === 'ca-ES'">Envia</span>
-        <span *ngIf="currentLang === 'en-EN'">Submit</span>
-      </div>
+      <div class="text-center" *ngIf ="!submitted">Submit</div>
       <div class="spinner-border" role="status" *ngIf ="contactForm.valid && submitted">
         <span class="visually-hidden">
           <span *ngIf="currentLang === 'es-ES'">Enviando formulario ...</span>
@@ -50,7 +45,7 @@
         </span>
       </div>
     </button>
-    <!-- {{contactForm.value | json}} -->
+    <!--   {{contactForm.value | json}} -->
   </form>
 </section>
 

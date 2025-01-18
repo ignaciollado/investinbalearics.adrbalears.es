@@ -1,48 +1,46 @@
 .the-header {
   display: grid;
-  grid-template-areas: "navLogo languageSearch" "mainMenu mainMenu";
+  grid-template-areas: "logo search language" "logo mainmenu mainmenu";
   margin-top: 1rem;
 }
 
-ul {
+/* ul {
   margin-left: 2rem;
   li {
     margin-right: 2rem;
   }
-}
+} */
 
 .offcanvas-header {
   background-color: #003747;
   color: #fff;
 }
-
 .offcanvas-body {
   background-color: #ed7448;
   color: #fff;
 }
-
 .btn-close {
   color: #fff;
 }
-
 .mobile-menu-button {
   grid-area: mobileMenu;
   display: none;
   padding-right: .2rem;
 }
 .logo {
-  grid-area: navLogo;
+  grid-area: logo;
+  margin-left: .5rem;
 }
-.language-and-search {
-  border: 1px solid blue;
-  grid-area: languageSearch;
+.language-select {
+  grid-area: language;
   text-align: right;
 }
 .main-menu {
-  border: 1px solid red;
-  grid-area: mainMenu;
-  width: 100%;
+  grid-area: mainmenu;
   font-weight: bolder;
+}
+.search {
+  grid-area: search;
 }
 
 .border-gradient {
@@ -51,28 +49,17 @@ ul {
   border-image-slice: 1; /* hace que se vea el borde */
   width:100%;
 }
-.nav-bar-bottom {
-  grid-area: navBottom;
-  display: grid;
-  justify-content: flex-end;
-}
-
-.nav-bar-top-language {
-  display: grid;
-  grid-template-columns: 33% 33% 33%;
-  text-align: center;
-  margin-right: 0;
-}
-
-button, .button-header-menu {
-  background-color: transparent;
-  border-radius: 0;
-  font-weight: 300;
-}
 
 .button-header-menu:hover, button:hover {
   transition: color 1s ease,  padding 0.8s linear;
-  color: #0098CB;
+  border: 1px;
+  border-color: #000000;
+  background: #974890;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 1.125rem;
+  line-height: 1.5rem;
+  color: #ffffff;
 }
 
 h5 {
@@ -85,7 +72,7 @@ h5 {
     padding-left: 0.5;
   }
   header {
-    grid-template-areas: "navLogo" "languageSearch" "mainMenu";
+    grid-template-areas: "logo" "languageSearch" "mainmenu";
   }
   header h1 {
     margin-top: 1rem;

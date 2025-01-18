@@ -12,9 +12,6 @@
   grid-area: preDefinedFilter;
   background-color: transparent;
   color: #003747!important;
-  height: 80%;
-  padding-left: .5rem;
-  margin-top: 4rem;
 }
 
 .accordion-body{
@@ -50,13 +47,26 @@ a {
 }
 
 button {
-  background-color: #003747;
-  color: #fff;
-  border-radius: 0;
+  border: 1px;
+  border-color: #000000;
+  background: #dd9f70;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 1.125rem;
+  line-height: 1.5rem;
+  color: #ffffff;
 }
 
 .btn:hover {
   border-color: none!important;
+  border: 1px;
+border-color: #000000;
+background: #974890;
+font-style: normal;
+font-weight: bold;
+font-size: 1.125rem;
+line-height: 1.5rem;
+color: #ffffff;
 }
 
 li:hover, a:hover {
