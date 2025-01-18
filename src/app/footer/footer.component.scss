@@ -1,16 +1,13 @@
 footer {
   display: grid;
   grid-template-columns: 33% 33% 33%;
-  grid-template-areas: "logoBottom localizacionBottom socialMedia" "textosLegales textosLegales textosLegales" "copyRight copyRight copyRight";
+  grid-template-areas: "localizacionBottom textosLegales logoBottom " "copyRight copyRight copyRight";
   margin-bottom: 1.5rem;
   margin-top: 3rem;
   row-gap: 2rem;
-  text-align: center;
-}
-
-a:hover {
-  transition: color 1s ease,  padding 0.8s linear;
-  color: #0098CB;
+  text-align: left;
+  background-color: #000000;
+  color: #ffffff;
 }
 
 .logo-adr-balears {
@@ -33,17 +30,11 @@ a:hover {
   prefix: '\F8DB';
 }
 
-.social-media {
-  grid-area: socialMedia;
-  display: grid;
-  grid-template-columns: auto auto auto auto;
-}
-
 .textos-legales {
   grid-area: textosLegales;
   display: grid;
-  text-align: center;
-  grid-template-columns: auto auto auto auto auto auto auto;
+  text-align: left;
+  grid-template-columns: 1fr;
 }
 
 .copy-right-adr {

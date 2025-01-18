@@ -4,13 +4,12 @@
   margin-top: 1rem;
 }
 
-/* ul {
-  margin-left: 2rem;
-  li {
-    margin-right: 2rem;
-  }
-} */
-
+.nav-link {
+  color: #000000!important;
+}
+.nav-link:hover {
+  color: #974890!important;
+}
 .offcanvas-header {
   background-color: #003747;
   color: #fff;
@@ -38,6 +37,7 @@
 .main-menu {
   grid-area: mainmenu;
   font-weight: bolder;
+  color: #000000!important;
 }
 .search {
   grid-area: search;

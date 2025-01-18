@@ -2,7 +2,7 @@
   position: relative;
   color: #f1f1f1;
   margin-bottom: .5rem;
-  max-width: 1200px;
+  max-width: 100%;
   width: 100%;
   margin: auto;
 }
@@ -22,8 +22,8 @@ figure {
   animation-fill-mode: forwards;
   animation-iteration-count: 1;
   animation-direction: alternate;
-
 }
+
 @keyframes zoominout {
   from {background-position: top;background-size:3000px; }
   to {background-position: -100px 0px;background-size:1750px;}
@@ -31,15 +31,15 @@ figure {
 
 app-simple-text-viewer{
   position: absolute;
-  left: 5%;
+  left: 20%;
   top: 10%;
-  max-width: 40%;
+  max-width: 30%;
 }
 
 form {
   position: absolute;
   top: 10%;
-  right: 5%;
+  right: 20%;
   background-color: #dd9f70;
   color: #000;
   padding: 1rem;

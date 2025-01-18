@@ -3,50 +3,51 @@
 <!--   <video class="img-fluid " id="myVideo" autoplay loop muted>
     <source src="https://mdbcdn.b-cdn.net/img/video/Tropical.mp4" type="video/mp4" />
   </video> -->
+  <section>
+    <figure></figure>
+  
+    <app-simple-text-viewer [wpPageID] = '105'></app-simple-text-viewer>
+    <form class="form" [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+       <h2 *ngIf="currentLang === 'es-ES'">Solicita información</h2>
+       <h2 *ngIf="currentLang === 'ca-ES'">Sol·licita informació</h2>
+       <h2 *ngIf="currentLang === 'en-EN'">Request for information</h2>
+     <div class="mb-3">
+       <input type="text" class="form-control" required placeholder="Nombre*" aria-describedby="emailHelp" formControlName="contactName">
+       <span id="emailHelp" class="form-text">We'll never share your email with anyone else.</span>
+     </div>
+     <div class="input-group mb-3">
+       <input type="mail" class="form-control" required placeholder="Email*" aria-label="Email address" formControlName="contactEmail">
+       <input type="tel" class="form-control" placeholder="Teléfono" aria-label="Phone" formControlName="contactPhone">
+     </div>
+     <div class="input-group mb-3">
+       <input type="mail" class="form-control" placeholder="Empresa" aria-label="Corporation" formControlName="corporation">
+       <input type="tel" class="form-control" placeholder="País" aria-label="Country" formControlName="country">
+     </div>
+     <div class="input-group">
+       <textarea class="form-control" placeholder="Cuéntanos sobre qué estás interesado" aria-label="With textarea" formControlName="body"></textarea>
+     </div>
+     <div class="mb-3 form-check">
+       <input type="checkbox" class="form-check-input" formControlName="acceptTerms">
+       <a href='https://adrbalears.es/aviso-legal/2773' target="_blank">
+         <span *ngIf="currentLang === 'es-ES'">Aceptar términos y condiciones</span>
+         <span *ngIf="currentLang === 'ca-ES'">Acceptar termes i condicions</span>
+         <span *ngIf="currentLang === 'en-EN'">Accept terms and conditions</span>
+       </a>
+     </div>
+     <button type="submit" class="btn" [disabled]="!contactForm.valid">
+       <div class="text-center" *ngIf ="!submitted">Submit</div>
+       <div class="spinner-border" role="status" *ngIf ="contactForm.valid && submitted">
+         <span class="visually-hidden">
+           <span *ngIf="currentLang === 'es-ES'">Enviando formulario ...</span>
+           <span *ngIf="currentLang === 'ca-ES'">Enviant formulari ...</span>
+           <span *ngIf="currentLang === 'en-EN'">Sending form ...</span>
+         </span>
+       </div>
+     </button>
+     <!--   {{contactForm.value | json}} -->
+    </form>
+  </section>
 
-  <figure></figure>
-
-   <app-simple-text-viewer [wpPageID] = '105'></app-simple-text-viewer>
-
-   <form class="form" [formGroup]="contactForm" (ngSubmit)="onSubmit()">
-      <h2 *ngIf="currentLang === 'es-ES'">Solicita información</h2>
-      <h2 *ngIf="currentLang === 'ca-ES'">Sol·licita informació</h2>
-      <h2 *ngIf="currentLang === 'en-EN'">Request for information</h2>
-    <div class="mb-3">
-      <input type="text" class="form-control" required placeholder="Nombre*" aria-describedby="emailHelp" formControlName="contactName">
-      <span id="emailHelp" class="form-text">We'll never share your email with anyone else.</span>
-    </div>
-    <div class="input-group mb-3">
-      <input type="mail" class="form-control" required placeholder="Email*" aria-label="Email address" formControlName="contactEmail">
-      <input type="tel" class="form-control" placeholder="Teléfono" aria-label="Phone" formControlName="contactPhone">
-    </div>
-    <div class="input-group mb-3">
-      <input type="mail" class="form-control" placeholder="Empresa" aria-label="Corporation" formControlName="corporation">
-      <input type="tel" class="form-control" placeholder="País" aria-label="Country" formControlName="country">
-    </div>
-    <div class="input-group">
-      <textarea class="form-control" placeholder="Cuéntanos sobre qué estás interesado" aria-label="With textarea" formControlName="body"></textarea>
-    </div>
-    <div class="mb-3 form-check">
-      <input type="checkbox" class="form-check-input" formControlName="acceptTerms">
-      <a href='https://adrbalears.es/aviso-legal/2773' target="_blank">
-        <span *ngIf="currentLang === 'es-ES'">Aceptar términos y condiciones</span>
-        <span *ngIf="currentLang === 'ca-ES'">Acceptar termes i condicions</span>
-        <span *ngIf="currentLang === 'en-EN'">Accept terms and conditions</span>
-      </a>
-    </div>
-    <button type="submit" class="btn" [disabled]="!contactForm.valid">
-      <div class="text-center" *ngIf ="!submitted">Submit</div>
-      <div class="spinner-border" role="status" *ngIf ="contactForm.valid && submitted">
-        <span class="visually-hidden">
-          <span *ngIf="currentLang === 'es-ES'">Enviando formulario ...</span>
-          <span *ngIf="currentLang === 'ca-ES'">Enviant formulari ...</span>
-          <span *ngIf="currentLang === 'en-EN'">Sending form ...</span>
-        </span>
-      </div>
-    </button>
-    <!--   {{contactForm.value | json}} -->
-  </form>
 </section>
 
 <main class = "row">
