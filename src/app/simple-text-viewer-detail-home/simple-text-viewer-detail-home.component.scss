@@ -4,8 +4,12 @@
   padding: 1rem;
   animation: 2s ease-out 0s 1 slideInFromLeft;
   display: grid;
-  grid-template-areas: "a" "b" "c";
+  grid-template-areas: "a" "b" ;
   gap: 1rem;
+}
+
+.content-detail:hover {
+  cursor: pointer;
 }
 
 .detail-title {

@@ -120,8 +120,8 @@ li {
 
 main {
   display: grid;
-  grid-template-areas: "a b b" "c c c" "d e e";
-  gap: 1rem;
+  grid-template-areas: "a" "b" "c" "d" "e";
+  gap: 0;
 }
 
 .porque-invertir {
@@ -159,6 +159,7 @@ button {
 article:nth-child(odd) {
   background-color: #0098CB;
   background-image: linear-gradient(to top right, #0098CB, rgb(134, 134, 134));
+  text-align: left;
   button {
     border: none;
     color: #fff;
@@ -167,6 +168,7 @@ article:nth-child(odd) {
 
 article:nth-child(even) {
   background-color: #003747;
+  text-align: right;
   background-image: linear-gradient(to bottom left,#003747, rgb(134, 134, 134));
   button {
     border: none;
@@ -174,14 +176,14 @@ article:nth-child(even) {
   }
 }
 
-a {
+/* a {
   color: #000!important;
   text-decoration: none;
-}
+} */
 
-a:hover {
+/* a:hover {
   color: #0098CB!important;
-}
+} */
 
 .table-container {
   display: grid;
