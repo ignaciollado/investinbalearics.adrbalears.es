@@ -1,5 +1,5 @@
 <article [ngClass]="!adjustContent ? 'content-detail': 'content-detail-full'" 
-*ngIf="contenido" routerLink = "invest-in-balearics-detail/{{wpPageDetailID}}">
+*ngIf="contenido">
   <figure ngClass="content-detail--figure">
     <picture *ngIf="contenidoMedia.media_details">
       <source [srcset]="contenidoMedia.media_details.sizes.full.source_url" 
