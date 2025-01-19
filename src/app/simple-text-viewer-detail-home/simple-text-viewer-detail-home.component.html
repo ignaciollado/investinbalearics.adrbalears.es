@@ -1,5 +1,4 @@
-<article [ngClass]="!adjustContent ? 'content-detail': 'content-detail-full'" 
-*ngIf="contenido">
+<article [ngClass]="!adjustContent ? 'content-detail': 'content-detail-full'" *ngIf="contenido">
   <figure ngClass="content-detail--figure">
     <picture *ngIf="contenidoMedia.media_details">
       <source [srcset]="contenidoMedia.media_details.sizes.full.source_url" 
@@ -17,7 +16,7 @@
     <figcaption [innerHTML]="contenidoMedia.caption.rendered"></figcaption>
   </figure>
   <h2 ngClass="content-detail--title" >{{contenido.title.rendered}}</h2>
-  <div ngClass="content-detail--body" [innerHTML]="contenido.excerpt.rendered"></div>
+  <section [ngClass]="'content-detail--body'" [innerHTML]="contenido.excerpt.rendered"></section>
   <button ngClass="btn btn-outline-primary content-detail--button" type="button" routerLink="invest-in-balearics-detail/{{wpPageDetailID}}">
     + info
   </button>

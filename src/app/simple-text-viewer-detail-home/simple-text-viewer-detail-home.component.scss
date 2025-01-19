@@ -11,12 +11,15 @@
 
 .content-detail-full {
   border-radius: 0;
-  padding: 1rem;
+  padding: 0;
   animation: 2s ease-out 0s 1 slideInFromLeft;
   display: grid;
   grid-template-areas: "title figure" "body figure" "button figure";
   gap: 1rem;
   max-width: 100%;
+  color: #fff;
+  margin-left: 15%;
+  margin-right: 15%;
 }
 
 .content-detail--figure {
@@ -40,11 +43,15 @@
 
 .content-detail--button {
   grid-area: button;
-  max-height: 36px;
   border: 1px solid #fff;
-  /* justify-self: end; */
+  justify-self: end;
+  width: 150px;
 }
 
+img {
+  max-width: 552px;
+  height: auto;
+}
 
 @keyframes slideInFromLeft {
   0% {

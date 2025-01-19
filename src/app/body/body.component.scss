@@ -120,8 +120,8 @@ article:nth-child(odd) {
 
 article:nth-child(even) {
   background-color: #003747;
-  text-align: right;
-  background-image: linear-gradient(to bottom left,#c75765, rgb(134, 134, 134));
+  text-align: left;
+  background-image: linear-gradient(to right,#c75765, #fff);
   button {
     border: none;
     color: #000;
