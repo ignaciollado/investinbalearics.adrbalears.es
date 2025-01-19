@@ -1,7 +1,7 @@
 .section {
   position: relative;
   color: #f1f1f1;
-  margin-bottom: .5rem;
+/*   margin-bottom: .5rem; */
   max-width: 100%;
   width: 100%;
   margin: auto;
@@ -109,7 +109,6 @@ li {
 }
 
 article:nth-child(odd) {
-  background-color: #0098CB;
   background-image: linear-gradient(to top right, #fff, #fff);
   text-align: left;
   button {
@@ -118,10 +117,17 @@ article:nth-child(odd) {
   }
 }
 
-article:nth-child(even) {
-  background-color: #003747;
+article:nth-child(2) {
   text-align: left;
   background-image: linear-gradient(to right,#c75765, #fff);
+  button {
+    border: none;
+    color: #000;
+  }
+}
+article:nth-child(4) {
+  text-align: left;
+  background-image: linear-gradient(to right,#3d4e97, #fff);
   button {
     border: none;
     color: #000;

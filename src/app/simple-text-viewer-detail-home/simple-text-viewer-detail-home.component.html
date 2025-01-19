@@ -1,5 +1,5 @@
 <article [ngClass]="!adjustContent ? 'content-detail': 'content-detail-full'" *ngIf="contenido">
-  <figure ngClass="content-detail--figure">
+<!--   <figure ngClass="content-detail--figure">
     <picture *ngIf="contenidoMedia.media_details">
       <source [srcset]="contenidoMedia.media_details.sizes.full.source_url" 
       media="(min-width: 1200px)" 
@@ -10,11 +10,10 @@
       media="(max-width: 992px)"
       [type]="contenidoMedia.media_details.sizes.medium.mime_type"
       [width]="contenidoMedia.media_details.width"
-      [height]="contenidoMedia.media_details.height">
-      <img srcset="{{contenidoMedia.media_details.sizes.thumbnail.source_url}}" alt='{{contenidoMedia.title.rendered}}' title='{{contenidoMedia.title.rendered}}'>
-    </picture>
-    <figcaption [innerHTML]="contenidoMedia.caption.rendered"></figcaption>
-  </figure>
+      [height]="contenidoMedia.media_details.height"> -->
+      <img ngClass="content-detail--figure" srcset="{{contenidoMedia.media_details.sizes.full.source_url}}" alt='{{contenidoMedia.title.rendered}}' title='{{contenidoMedia.title.rendered}}'>
+<!--     </picture>
+  </figure> -->
   <h2 ngClass="content-detail--title" >{{contenido.title.rendered}}</h2>
   <section [ngClass]="'content-detail--body'" [innerHTML]="contenido.excerpt.rendered"></section>
   <button ngClass="btn btn-outline-primary content-detail--button" type="button" routerLink="invest-in-balearics-detail/{{wpPageDetailID}}">
@@ -22,4 +21,4 @@
   </button>
 </article>
 
-<article *ngIf="!contenido">No content to display ...</article>
+<article *ngIf="!contenido">Waiting for contents to display ...</article>
