@@ -1,26 +1,17 @@
 .section {
-  position: relative;
+  /* position: relative; */
   color: #f1f1f1;
-/*   margin-bottom: .5rem; */
-  max-width: 100%;
-  width: 100%;
-  margin: auto;
-}
-
-video {
-  width: 100%;
-  height: auto; 
-}
-
-figure {
   width: 100%;
   height: 60vh;
-  background-image: linear-gradient(to bottom, rgba(245, 246, 252, 0.52), #3d4e97),url('../../assets/images/header-image.jpeg');
+  background-image: linear-gradient( rgba(245, 246, 252, 0.52), #3d4e97),url('../../assets/images/header-image.jpeg');
   background-size:cover;
   animation: zoominout 5;
   animation-fill-mode: forwards;
   animation-iteration-count: 1;
   animation-direction: alternate;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-areas: "texto formulario";
 }
 
 @keyframes zoominout {
@@ -29,16 +20,23 @@ figure {
 }
 
 app-simple-text-viewer{
-  position: absolute;
+  grid-area: texto;
+  border: 1px solid red;
+  min-width: 100%;
+
+/*   position: absolute;
   left: 20%;
-  top: 10%;
-  max-width: 30%;
+  top: 10%;*/
+  /* max-width: 30%; */
 }
 
 form {
-  position: absolute;
+  grid-area: formulario;
+  border: 1px solid green;
+  min-width: 100%;
+/*   position: absolute;
   top: 10%;
-  right: 20%;
+  right: 20%; */
   background-color: #fffae4;
   color: #000;
   padding: 1rem;
@@ -46,7 +44,7 @@ form {
   animation-name: slidein;
 }
 
-.mb-3 {
+/* .mb-3 {
   padding-top: 1rem;
 }
 
@@ -62,7 +60,7 @@ form {
 .row {
   --bs-gutter-x: 0;
 }
-
+ */
 @keyframes slidein {
   from {
     translate: 150vw 0;
@@ -75,7 +73,7 @@ form {
   }
 }
 
-h3{
+/* h3{
   margin-left: 5%;
   max-width: 80%;
   font-weight: bold;
@@ -107,7 +105,7 @@ ol {
 li {
   font-size: 1.1rem;
 }
-
+ */
 article:nth-child(odd) {
   background-image: linear-gradient(to top right, #fff, #fff);
   text-align: left;
@@ -144,10 +142,10 @@ article:nth-child(4) {
   align-content: space-evenly;
 } */
 
-ul li {
+/* ul li {
   border-left: 5px solid black;
   padding-left: 5px;
-}
+} */
 
 /* .empresas {
   grid-area: h;
@@ -303,13 +301,15 @@ ul li {
   }
 }
 
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 765px) {
+  .section {
+    grid-template-columns: 100%;
+    grid-template-areas: "texto" "formulario";
+  }
   main {
     grid-template-areas: "a" "b" "c" "d" "e";
   }
-  .table-container {
-    grid-template-areas: "h" "i" "j" "k" "l";
-  }
+
   p {
     margin-top: 2rem;
     margin-left: 5%;
