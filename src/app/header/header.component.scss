@@ -3,7 +3,6 @@
   grid-template-areas: "logo search language" "logo mainmenu mainmenu";
   margin-top: 1rem;
 }
-
 .nav-link {
   color: #000000!important;
 }
@@ -28,11 +27,12 @@
 }
 .logo {
   grid-area: logo;
-  margin-left: .5rem;
+  margin-left: 36px;
 }
 .language-select {
   grid-area: language;
   text-align: right;
+  margin-right: 36px;
 }
 .main-menu {
   grid-area: mainmenu;

@@ -16,7 +16,6 @@ figure {
   width: 100%;
   height: 60vh;
   background-image: linear-gradient(to bottom, rgba(245, 246, 252, 0.52), #3d4e97),url('../../assets/images/header-image.jpeg');
-  
   background-size:cover;
   animation: zoominout 5;
   animation-fill-mode: forwards;
@@ -25,7 +24,7 @@ figure {
 }
 
 @keyframes zoominout {
-  from {background-position: top;background-size:3000px; }
+  from {background-position: top;background-size:1200px; }
   to {background-position: -100px 0px;background-size:1750px;}
 }
 
@@ -40,7 +39,7 @@ form {
   position: absolute;
   top: 10%;
   right: 20%;
-  background-color: #dd9f70;
+  background-color: #fffae4;
   color: #000;
   padding: 1rem;
   animation-duration: 3s;
@@ -76,15 +75,6 @@ form {
   }
 }
 
-.capital-number {
-  font-weight: bolder;
-  font-size: 5rem;
-  font-family: sans-serif;
-  background-color: #fff;
-  color: #003747;
-  padding: 0.5rem 2rem;
-}
-
 h3{
   margin-left: 5%;
   max-width: 80%;
@@ -118,47 +108,9 @@ li {
   font-size: 1.1rem;
 }
 
-main {
-  display: grid;
-  grid-template-areas: "a" "b" "c" "d" "e";
-  gap: 0;
-}
-
-.porque-invertir {
-  grid-area: a;
-}
-
-.ecosistema-inversor {
-  grid-area: b;
-}
-
-.servicios {
-  grid-area: c;
-}
-
-.sectores {
-  grid-area: d;
-}
-
-.talento {
-  grid-area: e;
-}
-
-article {
-  position: relative;
-  border-radius: 0;
-  padding: 2rem;
-}
-
-button {
-  position: absolute;
-  bottom: .5rem;
-  right: 1rem;
-}
-
 article:nth-child(odd) {
   background-color: #0098CB;
-  background-image: linear-gradient(to top right, #0098CB, rgb(134, 134, 134));
+  background-image: linear-gradient(to top right, #fff, #fff);
   text-align: left;
   button {
     border: none;
@@ -169,23 +121,14 @@ article:nth-child(odd) {
 article:nth-child(even) {
   background-color: #003747;
   text-align: right;
-  background-image: linear-gradient(to bottom left,#003747, rgb(134, 134, 134));
+  background-image: linear-gradient(to bottom left,#c75765, rgb(134, 134, 134));
   button {
     border: none;
     color: #000;
   }
 }
 
-/* a {
-  color: #000!important;
-  text-decoration: none;
-} */
-
-/* a:hover {
-  color: #0098CB!important;
-} */
-
-.table-container {
+/* .table-container {
   display: grid;
   grid-template-areas: "h i j" "k m l";
   grid-template-rows: 1fr 1fr;
@@ -193,14 +136,14 @@ article:nth-child(even) {
   margin-bottom: 1rem;
   font-weight: bolder;
   align-content: space-evenly;
-}
+} */
 
 ul li {
   border-left: 5px solid black;
   padding-left: 5px;
 }
 
-.empresas {
+/* .empresas {
   grid-area: h;
   font-size: 1.5rem;
   color: #000;
@@ -233,7 +176,7 @@ ul li {
   content: counter(count);
   animation: counter 2s linear infinite alternate;
   counter-reset: count 0;
-}
+} */
 
 @keyframes counter {
   0% {
@@ -311,9 +254,6 @@ ul li {
   }
   main {
     margin-top: 2rem;
-  }
-  .btn {
-    color: #fff;
   }
 }
 

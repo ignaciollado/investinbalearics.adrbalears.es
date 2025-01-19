@@ -38,7 +38,6 @@ body {
   color: #000000;
 }
 
-
 html {
   scroll-behavior: smooth;
 }
@@ -57,27 +56,29 @@ a:visited {
   color: #003747;
 }
 
-button {
-  border: 1px;
-border-color: #000000;
-background: #dd9f70;
-font-style: normal;
-font-weight: bold;
-font-size: 1.125rem;
-line-height: 1.5rem;
-color: #ffffff
-}
-
 a:hover {
   transition: color 2s ease,  padding 0.8s linear!important;
   color: #974890!important;
+}
+
+.btn {
+  border: 1px solid #fff;
+  border-radius: 0!important;
+  background-color: #dd9f70!important;
+  font-weight: bold;
+  font-size: 1.125rem;
+  line-height: 1.5rem;
+  color: #ffffff!important;
+}
+
+.btn:hover {
+  background-color: #974890!important;
 }
 
 .navbar {
   --bs-navbar-padding-x: 0;
   --bs-navbar-padding-y: 0!important;
 }
-
 
 @media (min-width: 768px) {
   .h1, h1 {

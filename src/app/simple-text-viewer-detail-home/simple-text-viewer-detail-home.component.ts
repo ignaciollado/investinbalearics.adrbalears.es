@@ -3,6 +3,7 @@ import { Router, ActivatedRoute  } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
 import { wpPageService } from '../services/wp-page.service';
 import { WpPage } from '../Models/wp-page-data.dto';
+import { WpPageFeaturedMedia } from '../Models/wp-page-featured-media.dto';
 
 @Component({
   selector: 'app-simple-text-viewer-detail-home',
@@ -12,7 +13,11 @@ import { WpPage } from '../Models/wp-page-data.dto';
 export class SimpleTextViewerDetailHomeComponent {
   public currentWPLang: number | undefined;
   public contenido: WpPage | undefined 
+  public contenidoMedia: WpPageFeaturedMedia
+  
   @Input() wpPageDetailID: number = 0;
+  @Input() adjustContent: boolean = false; /* 0:normal, 1:gradient */
+
 
   constructor( public translateService: TranslateService, 
     private wpPageService: wpPageService, 
@@ -42,6 +47,16 @@ export class SimpleTextViewerDetailHomeComponent {
           .subscribe(
             (wpPage: WpPage) => {
               this.contenido = wpPage
+              this.getFeaturedMedia (this.contenido.featured_media)
+          })
+    }
+
+    getFeaturedMedia (idMedia: number) {
+      this.wpPageService.getOneFeaturedMedia(idMedia)
+          .subscribe(
+            (mediaItem: WpPageFeaturedMedia) => {
+              this.contenidoMedia = mediaItem
+              console.log (this.contenidoMedia.guid.rendered)
           })
     }
 }

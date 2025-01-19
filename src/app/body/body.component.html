@@ -6,37 +6,37 @@
   <section>
     <figure></figure>
     <app-simple-text-viewer [wpPageID] = '105'></app-simple-text-viewer>
-    <form class="form" [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+    <form ngClass="form" [formGroup]="contactForm" (ngSubmit)="onSubmit()">
        <h2 *ngIf="currentLang === 'es-ES'">Solicita información</h2>
        <h2 *ngIf="currentLang === 'ca-ES'">Sol·licita informació</h2>
        <h2 *ngIf="currentLang === 'en-EN'">Request for information</h2>
-     <div class="mb-3">
-       <input type="text" class="form-control" required placeholder="Nombre*" aria-describedby="emailHelp" formControlName="contactName">
-       <span id="emailHelp" class="form-text">We'll never share your email with anyone else.</span>
+     <div ngClass="mb-3">
+       <input type="text" ngClass="form-control" required placeholder="Nombre*" aria-describedby="emailHelp" formControlName="contactName">
+       <span id="emailHelp" ngClass="form-text">We'll never share your email with anyone else.</span>
      </div>
-     <div class="input-group mb-3">
-       <input type="mail" class="form-control" required placeholder="Email*" aria-label="Email address" formControlName="contactEmail">
-       <input type="tel" class="form-control" placeholder="Teléfono" aria-label="Phone" formControlName="contactPhone">
+     <div ngClass="input-group mb-3">
+       <input type="mail" ngClass="form-control" required placeholder="Email*" aria-label="Email address" formControlName="contactEmail">
+       <input type="tel" ngClass="form-control" placeholder="Teléfono" aria-label="Phone" formControlName="contactPhone">
      </div>
-     <div class="input-group mb-3">
-       <input type="mail" class="form-control" placeholder="Empresa" aria-label="Corporation" formControlName="corporation">
-       <input type="tel" class="form-control" placeholder="País" aria-label="Country" formControlName="country">
+     <div ngClass="input-group mb-3">
+       <input type="mail" ngClass="form-control" placeholder="Empresa" aria-label="Corporation" formControlName="corporation">
+       <input type="tel" ngClass="form-control" placeholder="País" aria-label="Country" formControlName="country">
      </div>
-     <div class="input-group">
-       <textarea class="form-control" placeholder="Cuéntanos sobre qué estás interesado" aria-label="With textarea" formControlName="body"></textarea>
+     <div ngClass="input-group">
+       <textarea ngClass="form-control" placeholder="Cuéntanos sobre qué estás interesado" aria-label="With textarea" formControlName="body"></textarea>
      </div>
-     <div class="mb-3 form-check">
-       <input type="checkbox" class="form-check-input" formControlName="acceptTerms">
+     <div ngClass="mb-3 form-check">
+       <input type="checkbox" ngClass="form-check-input" formControlName="acceptTerms">
        <a href='https://adrbalears.es/aviso-legal/2773' target="_blank">
          <span *ngIf="currentLang === 'es-ES'">Aceptar términos y condiciones</span>
          <span *ngIf="currentLang === 'ca-ES'">Acceptar termes i condicions</span>
          <span *ngIf="currentLang === 'en-EN'">Accept terms and conditions</span>
        </a>
      </div>
-     <button type="submit" class="btn" [disabled]="!contactForm.valid">
-       <div class="text-center" *ngIf ="!submitted">Submit</div>
-       <div class="spinner-border" role="status" *ngIf ="contactForm.valid && submitted">
-         <span class="visually-hidden">
+     <button type="submit" ngClass="btn" [disabled]="!contactForm.valid">
+       <div ngClass="text-center" *ngIf ="!submitted">Submit</div>
+       <div ngClass="spinner-border" role="status" *ngIf ="contactForm.valid && submitted">
+         <span ngClass="visually-hidden">
            <span *ngIf="currentLang === 'es-ES'">Enviando formulario ...</span>
            <span *ngIf="currentLang === 'ca-ES'">Enviant formulari ...</span>
            <span *ngIf="currentLang === 'en-EN'">Sending form ...</span>
@@ -49,140 +49,24 @@
 
 </section>
 
-<main class = "row home-content">
-  <article class="porque-invertir"><span class="capital-number">01</span>
-   <!--  <h3>BALEARES, UNA APUESTA GANADORA (UN ENTORNO ATRACTIVO PARA LA INVERSIÓN): CONOCE LOS BENEFICIOS DE BALEARES PARA INICIAR Y DESARROLLAR TU PROYECTO Y COMO LUGAR DONDE INVERTIR.  CONOCE LAS ÁREAS DE ESPECIALIZACIÓN EMPRESARIAL EN BALEARES
-    </h3>
-    <p>
-      Invest in Balearics funciona como una plataforma abierta al mundo donde el emprendedor o inversor encontrará información sobre las ventajas competitivas de Baleares, toda la información necesaria para la toma de decisiones estratégicas, así como un punto de atención durante todo el proceso. 
-
-      Queremos dar a conocer Baleares como un territorio donde se promueve la inversión en actividades de sectores de alto valor añadido, como polo de atracción de talento y proyectos innovadores y con una apuesta clara por la sostenibilidad.
-
-      Baleares, territorio con un nuevo mapa de oportunidades y sectores clave para su transformación y diversificación económica. 
-      
-      En Baleares, en pleno proceso de transformación y diversificación de su economía, se fomentan las inversiones en sectores como el turismo sostenible, las energías renovables, la tecnología y la innovación, así como en proyectos relacionados con la protección del medio ambiente y la conservación de los recursos naturales. Además, se están promoviendo iniciativas para impulsar la diversificación económica y reducir la dependencia del turismo tradicional. Esto incluye incentivos 
-      ...</p> -->
-      <!-- <button type="button" routerLink="baleares-una-apuesta-ganadora/3279" class="btn btn-outline-primary">Descubre +</button> -->
-    <app-simple-text-viewer-detail-home [wpPageDetailID]="107"></app-simple-text-viewer-detail-home>
+<main class = "home-content">
+  <article class="porque-invertir">
+    <app-simple-text-viewer-detail-home [wpPageDetailID]="107" [adjustContent]=false></app-simple-text-viewer-detail-home>
   </article>
 
-  <article class="ecosistema-inversor"><span class="capital-number">02</span>
-   <!--  <h3>ECOSISTEMA INVERSOR (QUIÉN ES QUIÉN)</h3>
-    <p>Nuestro objetivo es atender al que quiera emprender un negocio, al empresario o inversor que busca instalarse y crecer en Baleares,  proporcionando información de primera mano y acompañándole durante todo el proceso, prestamos servicios a lo largo de todo el ciclo de vida de un proyecto:</p>
-    <ol>
-      <li>
-        Para aquellos proyectos incipientes que se quieran instalar desde el minuto cero, disponemos de un servicio de información y asesoramiento para el emprendedor, a través de la plataforma <a href='https://www.iempren.es'>www.iempren.es</a> 
-        INCORPORAR info de RED.ES <a href='https://startups.one.gob.es/intro'>https://startups.one.gob.es/intro</a>  ...
-      </li>
-      <li>
-        Para empresas más consolidadas, disponemos de ayudas y subvenciones del Gobierno Regional para impulsar los negocios en nuestra región, facilitar la transición ecológica de los mismos, acompañarlos en su transformación digital y servir de palanca para su desarrollo a escala internacional. www.caib.es (Portal PIEIB) , ayudas energías renovables, (+Incentivos Económicos Regionales).
-      </li>
-      <li>
-        Para empresas Startups, en Baleares se facilita y potencia la instalación y desarrollo de empresas de base tecnológica desde los diferentes Parques tecnológicos ubicados en las diferentes islas (Mallorca, Menorca e Ibiza), donde encontrará un entorno dinámico e innovador.
-      </li> 
-    </ol>
-      <p>Asimismo, disponemos de una red de contactos con ayuntamientos, Consells Insulars (Mallorca, Menorca, Ibiza y Formentera), Cámaras de Comercio de Mallorca, Menorca e Ibiza, entidades sectoriales (Asociaciones y clústers), entidades financieras, entidades de educación superior (Formación Profesional y Formación Universitaria), a través de los cuales atender las consultas específicas de potenciales interesados en emprender, crecer, instalarse o invertir en Baleares.</p>
-    -->
-    <!-- <button type="button" routerLink="ecosistema-inversor/3282" class="btn btn-outline-primary">Descubre +</button> -->
-    <app-simple-text-viewer-detail-home [wpPageDetailID]="109"></app-simple-text-viewer-detail-home>
+  <article class="ecosistema-inversor">
+    <app-simple-text-viewer-detail-home [wpPageDetailID]="109" [adjustContent]=true></app-simple-text-viewer-detail-home>
   </article>
 
   <article class="servicios">
-    <div class="square">
-    <span class="capital-number">03</span><!-- <h3>SERVICIOS AL INVERSOR Y AL EMPRENDEDOR</h3>
-    <ol>
-      <li>Orientación: orientamos sobre la estructura gubernamental en Baleares, y derivamos las consultas o intereses hacia las entidades más adecuadas. </li>
-      <li>Información: Informamos y orientamos sobre los procedimientos e incentivos para establecerse o iniciar un negocio en Baleares.</li>
-      <li>Ayudas y subvenciones: informamos y asesoramos tanto a empresas de reciente creación como empresas consolidadas con sede social en Baleares sobre los incentivos y las ayudas en los ámbitos de la digitalización, sostenibilidad, internacionalización e innovación.</li>
-    </ol>
-    <button type="button" routerLink="servicios-inversor-emprendedor/3284" class="btn btn-outline-primary">Descubre +</button> -->
-    <app-simple-text-viewer-detail-home [wpPageDetailID]="111"></app-simple-text-viewer-detail-home>
-    </div>
+    <app-simple-text-viewer-detail-home [wpPageDetailID]="111" [adjustContent]=false></app-simple-text-viewer-detail-home>
   </article>
 
   <article class="sectores">
-    <span class="capital-number">04</span><!-- <h3>SECTORES E INDUSTRIAS</h3>
-    <ol>
-      <li>Conoce cuáles son los principales sectores de actividad en Baleares.
-        INCORPORAR INFORMACIÓN CUANTITATIVA E INFOGRAFÍAS DE IBESTAT (SEGÚN SOLICITADO).</li>
-      <li>Conoce Baleares como territorio innovador y con una clara apuesta hacia la R+D+i: Clústeres innovadores i HUBS en Baleares.</li>
-    </ol> -->
-    <app-simple-text-viewer-detail-home [wpPageDetailID]="113"></app-simple-text-viewer-detail-home>
-<div class="macro-data">
-  <div class="row">
-      <div class="col-1-3-no-margin col-sm-xs-1-2-no-margin col-tiny-full-width macro-col">
-          <span class="macro-data-area"><em>Capital</em></span>
-          <h3 class="black-color title-5 no-bottom-margin">
-              <strong>Palma de Mallorca</strong></h3>
-      </div>
-      <div class="col-1-3-no-margin col-sm-xs-1-2-no-margin col-tiny-full-width macro-col">
-        <span class="macro-data-area"><em>Island</em></span>
-        <h3 class="black-color title-5 no-bottom-margin">
-            <strong>Mallorca</strong></h3>
-      </div>
-  </div>
-  <div class="row">
-      <div class="col-1-3-no-margin col-sm-xs-1-2-no-margin col-tiny-full-width macro-col">
-          <span class="macro-data-area"><em>Total population</em></span>
-          <h3 class="black-color title-5 no-bottom-margin">
-              <strong>1,149,460</strong>
-          </h3>
-          <span><em>(2019)</em></span>
-      </div>
-      <div class="col-1-3-no-margin col-sm-xs-1-2-no-margin col-tiny-full-width macro-col">
-          <span class="macro-data-area"><em>Foreign population</em></span>
-          <h3 class="black-color title-5 no-bottom-margin">
-              <strong>204,987</strong>
-          </h3>
-          <span><em>(2019)</em></span>
-      </div>
-  </div>
-  <div class="row">
-      <div class="col-1-3-no-margin col-sm-xs-1-2-no-margin col-tiny-full-width macro-col">
-          <span class="macro-data-area"><em>GDP</em></span>
-          <h3 class="black-color title-5 no-bottom-margin">
-              <strong>€32,542  mill.</strong>
-          </h3>
-          <span><em>(2018)</em></span>
-      </div>
-      <div class="col-1-3-no-margin col-sm-xs-1-2-no-margin col-tiny-full-width macro-col">
-          <span class="macro-data-area"><em>GDP per cápita</em></span>
-          <h3 class="black-color title-5 no-bottom-margin">
-              <strong>€27,682 </strong>
-          </h3>
-          <span><em>(2018)</em></span>
-      </div>
-  </div>
-  <div class="row">
-      <div class="col-1-3-no-margin col-sm-xs-1-2-no-margin col-tiny-full-width macro-col">
-          <span class="macro-data-area"><em>Exports</em></span>
-          <h3 class="black-color title-5 no-bottom-margin">
-              <strong>€1,789  mill.</strong>
-          </h3>
-          <span><em>(2019)</em></span>
-      </div>
-      <div class="col-1-3-no-margin col-sm-xs-1-2-no-margin col-tiny-full-width macro-col">
-          <span class="macro-data-area"><em>Imports</em></span>
-          <h3 class="black-color title-5 no-bottom-margin">
-              <strong>€1,515  mill.</strong>
-          </h3>
-          <span><em>(2019)</em></span>
-      </div>
-  </div>
-</div>
-   <!--  <button type="button" routerLink="sectores-e-industrias/3286" class="btn btn-outline-primary">Descubre +</button> -->
+    <app-simple-text-viewer-detail-home [wpPageDetailID]="113" [adjustContent]=true></app-simple-text-viewer-detail-home>
   </article>
 
   <article class="talento">
-     <span class="capital-number">05</span><!--<h3>TALENTO</h3>
-    <p>Mirar SOIB / Educació. Pendiente reunión....</p>
-    <p>Incorporar información cuantitativa y cualitativa sobre Talento/sector, números, empleabilidad, y tipología de estudios superiores (Universidades) y Formación Profesional y formación dual.</p>
-    <p>Desde Baleares somos conscientes de la importancia de disponer de un capital humano formado, especializado y abierto a la globalización como factor esencial de producción para el desarrollo de actividades empresariales basadas en el conocimiento y la especialización industrial.</p>
-    <button type="button" routerLink="talento/3288" class="btn btn-outline-primary">Descubre +</button> -->
-    <app-simple-text-viewer-detail-home [wpPageDetailID]="115"></app-simple-text-viewer-detail-home>
+    <app-simple-text-viewer-detail-home [wpPageDetailID]="115" [adjustContent]=false></app-simple-text-viewer-detail-home>
   </article>
 </main>
-
-<!-- <div class="go-to-top" id="go-to-top">
-  <a href="#top">to top of page</a>
-</div> -->
