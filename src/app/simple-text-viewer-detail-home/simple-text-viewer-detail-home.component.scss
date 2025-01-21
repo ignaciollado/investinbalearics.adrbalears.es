@@ -62,6 +62,9 @@ img {
 }
 
 @media screen and (max-width: 992px) {
+  img {
+    max-width: 100%;
+  }
   .content-detail {
     grid-template-areas: "figure" "title" "body" "button";
   }
@@ -71,7 +74,6 @@ img {
     padding: 1rem;
     margin-left: 0;
   }
-
 
   .simple-content {
     grid-template-rows: auto;
