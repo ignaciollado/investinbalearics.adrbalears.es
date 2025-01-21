@@ -38,7 +38,6 @@
 
 .content-detail--body {
   grid-area: body;
-
 }
 
 .content-detail--button {
@@ -62,7 +61,18 @@ img {
   }
 }
 
-@media screen and (max-width: 1095px) {
+@media screen and (max-width: 992px) {
+  .content-detail {
+    grid-template-areas: "figure" "title" "body" "button";
+  }
+  
+  .content-detail-full {
+    grid-template-areas: "figure" "title" "body" "button";
+    padding: 1rem;
+    margin-left: 0;
+  }
+
+
   .simple-content {
     grid-template-rows: auto;
     column-gap: 2rem;

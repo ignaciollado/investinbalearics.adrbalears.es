@@ -66,7 +66,7 @@ h5 {
   margin-bottom:0;
 }
 
-@media screen and (max-width: 768px) { /* para hacerlo coincidir con el punto de ruptura de bootstrap 'ng' */
+@media screen and (max-width: 992px) { /* para hacerlo coincidir con el punto de ruptura de bootstrap 'ng' */
   .container, .container-fluid {
     padding-right: 0.5;
     padding-left: 0.5;
@@ -77,10 +77,6 @@ h5 {
   header h1 {
     margin-top: 1rem;
   }
-/*   img {
-    width: 100%;
-    height: auto;
-  } */
   .logo-title{
     text-align: center;
   }

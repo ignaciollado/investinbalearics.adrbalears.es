@@ -46,23 +46,6 @@ form {
   animation-name: slidein;
 }
 
-/* .mb-3 {
-  padding-top: 1rem;
-}
-
-.macro-data {
-  display: grid;
-  grid-template-columns: 1.5fr 1fr;
-}
-
-.macro-data-area {
-  color: #fff;
-}
-
-.row {
-  --bs-gutter-x: 0;
-}
- */
 @keyframes slidein {
   from {
     translate: 150vw 0;
@@ -75,39 +58,6 @@ form {
   }
 }
 
-/* h3{
-  margin-left: 5%;
-  max-width: 80%;
-  font-weight: bold;
-  margin-top: 1rem;
-}
-
-p{
-  margin-top: 3rem;
-  margin-left: 10%;
-  font-size: 1.1rem;
-  line-height: 1.5rem;
-  width: 80%;
-}
-
-ul {
-  margin-top: 3rem;
-  margin-left: 0;
-  list-style: none;
-}
-
-ol {
-  margin-top: 3rem;
-  margin-left: 10%;
-  list-style: decimal-leading-zero outside none;
-  line-height: 1.8rem;
-  width: 80%;
-}
-
-li {
-  font-size: 1.1rem;
-}
- */
 article:nth-child(odd) {
   background-image: linear-gradient(to top right, #fff, #fff);
   text-align: left;
@@ -133,56 +83,6 @@ article:nth-child(4) {
     color: #000;
   }
 }
-
-/* .table-container {
-  display: grid;
-  grid-template-areas: "h i j" "k m l";
-  grid-template-rows: 1fr 1fr;
-  gap: 3rem;
-  margin-bottom: 1rem;
-  font-weight: bolder;
-  align-content: space-evenly;
-} */
-
-/* ul li {
-  border-left: 5px solid black;
-  padding-left: 5px;
-} */
-
-/* .empresas {
-  grid-area: h;
-  font-size: 1.5rem;
-  color: #000;
-}
-
-.facturacion {
-  grid-area: i;
-  font-size: 1.5rem;
-  color: #000;
-}
-
-.trabajadores {
-  grid-area: j;
-  font-size: 1.5rem;
-  color: #000;
-}
-
-.top10facturacion {
-  grid-area: k;
-  font-size: 1.5rem;
-}
-
-.top10empresas {
-  grid-area: l;
-  font-size: 1.5rem;
-}
-
-#value::after {
-  font-size: 1.5rem;
-  content: counter(count);
-  animation: counter 2s linear infinite alternate;
-  counter-reset: count 0;
-} */
 
 @keyframes counter {
   0% {
@@ -243,78 +143,12 @@ article:nth-child(4) {
   }
 }
 
-@media screen and (max-width: 1400px) {
-  app-simple-text-viewer{
-    left: 1%;
-    top: 1%;
-    max-width: 90%;
-    color: rgb(255, 255, 255);
-  }
-  form{
-    right: 1%;
-    top: 42%;
-    width: 60%;
-  }
-  form button {
-    margin-top: 0;
-  }
-  main {
-    margin-top: 2rem;
-  }
-}
-
-@media screen and (max-width: 1200px) {
-  main {
-    grid-template-areas: "a" "b" "c" "d" "e";
-    padding: 0;
-  } 
-
-  app-simple-text-viewer{
-    position: relative;
-    left: 0;
-    max-width: 100%;
-  }
-  
-  form {
-    position: relative;
-    left: 0;
-    margin-top: 1rem;
-    width: 100%;
-    border-radius: 0;
-    animation-name: slidein;
-    background-color: #003747;
-    background-image: linear-gradient(to bottom left,#003747, rgb(170, 170, 170));
-  }
-
-  article {
-    padding: 0;
-  }
-
-  button {
-    margin-bottom: 1rem;
-  }
-
-  .table-container {
-    grid-template-areas: "h i" "j k" "l";
-  }
-
-  .capital-number{
-    margin-left: 1px;
-  }
-}
-
-@media screen and (max-width: 765px) {
+@media screen and (max-width: 992px) {
   .section {
     grid-template-columns: 100%;
     grid-template-areas: "texto" "formulario";
   }
   main {
     grid-template-areas: "a" "b" "c" "d" "e";
-  }
-
-  p {
-    margin-top: 2rem;
-    margin-left: 5%;
-    width: 95%;
   }
 }

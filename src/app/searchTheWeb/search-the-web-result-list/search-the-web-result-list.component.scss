@@ -11,13 +11,7 @@ h2 {
   margin-bottom: 1rem;
 }
 
-@media screen and (max-width: 1320px) {
-  .row {
-    grid-template-columns: auto auto auto;
-  }
-}
-
-@media screen and (max-width: 760px) {
+@media screen and (max-width: 992px) {
   .row {
     grid-template-columns: auto;
   }

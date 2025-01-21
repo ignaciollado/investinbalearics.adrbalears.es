@@ -54,16 +54,6 @@ a {
 
 @media screen and (max-width: 992px) {
   .row {
-    grid-template-columns: 50% 50%;
-  }
-  .card-body {
-    min-height: 20rem;
-    max-height: 100%;
-  }
-}
-
-@media screen and (max-width: 760px) {
-  .row {
     grid-template-columns: auto;
   }
 

@@ -101,11 +101,11 @@ ul{
   margin: 1px;
 }
 
-@media screen and (max-width: 1200px) {
+/* @media screen and (max-width: 1200px) {
   form {
     padding: .5rem;
   }
-}
+} */
 
 @media screen and (max-width: 992px) {
   .pre-defined-filter-area {
@@ -113,7 +113,7 @@ ul{
   }
 }
 
-@media screen and (max-width: 760px) {
+@media screen and (max-width: 768px) {
   .filter-form {
     padding-left: 0;
   }

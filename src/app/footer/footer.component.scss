@@ -43,7 +43,7 @@ footer {
   text-align: center;
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 992px) {
   footer{
     grid-template-columns: 100%;
     grid-template-areas: "logoBottom" "localizacionBottom" "socialMedia" "textosLegales" "copyRight";
@@ -53,6 +53,9 @@ footer {
   }
   .logo-adr-balears {
     justify-self: center;
+  }
+  .textos-legales {
+    text-align: center;
   }
   .localizacion-adr-balears {
     margin-top: 1rem;
