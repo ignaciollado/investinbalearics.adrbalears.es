@@ -1,13 +1,12 @@
 
 .content-detail {
   border-radius: 0;
-  padding: 1rem;
   animation: 2s ease-out 0s 1 slideInFromLeft;
   display: grid;
   grid-template-areas: "figure title" "figure body" "figure button";
   gap: 1rem;
   max-width: 1200px;
-  margin: auto;
+  margin: 1rem auto;
 }
 
 .content-detail-full {
@@ -63,29 +62,29 @@ img {
 
 @media screen and (max-width: 992px) {
   img {
-    max-width: 100%;
+    min-width: 100%;
   }
   .content-detail {
     grid-template-areas: "figure" "title" "body" "button";
+    margin-top: 1rem;
+    padding-bottom: 1rem;
   }
-  
   .content-detail-full {
     grid-template-areas: "figure" "title" "body" "button";
-    padding: 1rem;
-    margin-left: 0;
+    padding-bottom: 1rem;
   }
-
+  .content-detail--button {
+    justify-self: start;
+  }
   .simple-content {
     grid-template-rows: auto;
     column-gap: 2rem;
   }
-
   .text-container {
     position: relative;
     width: 100%;
     animation: 1s ease-out 0s 1 slideInFromLeft; 
   }
-
   form {
     position: relative;
     animation-duration: 2s;

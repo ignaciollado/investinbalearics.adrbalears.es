@@ -25,12 +25,6 @@
     <div *ngIf="currentWPLang === 42"><a routerLink="/aviso-legal/361" aria-label="avis legal">{{'Politica de privacitat i avís legal' | translate}}</a></div>
     <div *ngIf="currentWPLang === 44"><a routerLink="/aviso-legal/361" aria-label="avis legal">{{'Privacy policy and legal notice' | translate}}</a></div>
 
-    <div>
-      <a *ngIf="currentWPLang === 43" routerLink="contact-invest-in-balearics">{{'Contacta' | translate}}</a>
-      <a *ngIf="currentWPLang === 42" routerLink="contact-invest-in-balearics">{{'Contacta' | translate}}</a>
-      <a *ngIf="currentWPLang === 44" routerLink="contact-invest-in-balearics">{{'Contact us' | translate}}</a>
-    </div>
-
     <div *ngIf="currentWPLang === 43"><a routerLink="/politica-de-cookies/359" aria-label="política de cookies">{{'Política Cookies' | translate}}</a></div>
     <div *ngIf="currentWPLang === 42"><a routerLink="/politica-de-cookies/359" aria-label="politica de cookies">{{'Política Galetes' | translate}}</a></div>
     <div *ngIf="currentWPLang === 44"><a routerLink="/politica-de-cookies/359" aria-label="politica de cookies">{{'Cookie Policy' | translate}}</a></div>
@@ -43,9 +37,16 @@
     <div *ngIf="currentWPLang === 42"><a href="https://www.adrbalears.es/transparency-list" target="_blank">{{'Transparencia' | translate}}</a></div>
     <div *ngIf="currentWPLang === 44"><a href="https://www.adrbalears.es/transparency-list" target="_blank">{{'Transparency' | translate}}</a></div>
 
-    <div *ngIf="currentWPLang === 43"><a href="https://www.adrbalears.es/transparency-list" target="_blank">{{'Denuncia' | translate}}</a></div>
-    <div *ngIf="currentWPLang === 42"><a href="https://www.adrbalears.es/transparency-list" target="_blank">{{'Denuncia' | translate}}</a></div>
+    <div *ngIf="currentWPLang === 43"><a href="https://www.adrbalears.es/transparency-list" target="_blank">{{'Canal de denuncias' | translate}}</a></div>
+    <div *ngIf="currentWPLang === 42"><a href="https://www.adrbalears.es/transparency-list" target="_blank">{{'Canal de denuncies' | translate}}</a></div>
     <div *ngIf="currentWPLang === 44"><a href="https://www.adrbalears.es/transparency-list" target="_blank">{{'Denuncia' | translate}}</a></div>
+
+    <div>
+      <a *ngIf="currentWPLang === 43" routerLink="contact-invest-in-balearics">{{'Contacta' | translate}}</a>
+      <a *ngIf="currentWPLang === 42" routerLink="contact-invest-in-balearics">{{'Contacta' | translate}}</a>
+      <a *ngIf="currentWPLang === 44" routerLink="contact-invest-in-balearics">{{'Contact us' | translate}}</a>
+    </div>
+
 
   </section>
 

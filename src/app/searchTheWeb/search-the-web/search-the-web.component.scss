@@ -1,3 +1,6 @@
+.filters {
+  margin-right: 36px;
+}
 .filter-form {
   grid-area: formulario;
   margin-bottom: 0;
@@ -100,12 +103,6 @@ ul{
 .emprendre-bck, .connectar-bck, .projectar-bck{
   margin: 1px;
 }
-
-/* @media screen and (max-width: 1200px) {
-  form {
-    padding: .5rem;
-  }
-} */
 
 @media screen and (max-width: 992px) {
   .pre-defined-filter-area {
