@@ -23,7 +23,9 @@ export class BodyComponent {
   currentLang: string = "en-EN"
   currentWPLang: number
 
-  constructor( private formBuilder: FormBuilder, private sendMail: MessageService, private wpPage: wpPageService,
+  constructor( private formBuilder: FormBuilder, 
+    private sendMail: MessageService, 
+    private wpPage: wpPageService,
     private sharedService: SharedService ) {
       this.formData = new genericMailDTO('', '', '', '', '')
     }
