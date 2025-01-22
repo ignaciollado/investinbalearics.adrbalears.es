@@ -1,6 +1,6 @@
-<div class="content-detail" *ngIf="contenido">
-  <h2 class="detail-title">{{contenido.title.rendered}}</h2>
-  <div class="detail-body" [innerHTML]="contenido.content.rendered"></div>
+<section class="content-detail" *ngIf="contenido">
+  <h1 class="detail-title">{{contenido.title.rendered}}</h1>
+  <article class="detail-body" [innerHTML]="contenido.content.rendered"></article>
   <figure>
     <picture *ngIf="contenidoMedia.media_details">
       <source [srcset]="contenidoMedia.media_details.sizes.full.source_url" 
@@ -17,9 +17,4 @@
     </picture>
     <figcaption [innerHTML]="contenidoMedia.caption.rendered"></figcaption>
   </figure>
-  <div class="center">
-    <h1>
-      Second level Animation
-    </h1>
-  </div>
-</div>
+</section>

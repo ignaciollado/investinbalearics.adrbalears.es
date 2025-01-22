@@ -6,8 +6,8 @@ footer {
   margin-top: 0;
   row-gap: 2rem;
   text-align: left;
-  background-color: #000000;
-  color: #ffffff;
+  background-color: #000;
+  color: #fff;
   padding: 1rem;
 }
 
@@ -21,7 +21,16 @@ footer {
   grid-area: localizacionBottom;
 }
 
-.bi{
+a {
+  color: #fff!important;
+}
+
+a:hover {
+  transition: color 1s ease, padding 0.8s linear;
+  color: #974890!important;
+}
+
+/* .bi{
   font-size: 2rem;
   height: auto;
   width: 2rem;
@@ -29,7 +38,7 @@ footer {
 
 .bi::before{
   prefix: '\F8DB';
-}
+} */
 
 .textos-legales {
   grid-area: textosLegales;

@@ -1,4 +1,3 @@
-
 .content-detail {
   border-radius: 0;
   animation: 2s ease-out 0s 1 slideInFromLeft;
@@ -18,16 +17,20 @@
   gap: 1rem;
   max-width: 100%;
   color: #fff;
-  margin-left: 15%;
+  /* margin-left: 18.5%; */
   margin-right: 0;
+  max-width: 1200px;
+  margin: auto;
 }
 
 .content-detail--figure {
   grid-area: figure;
 }
 
-.content-detail--figure.img {
+.content-detail--figure-gradient {
+  grid-area: figure;
   max-width: 552px;
+  background-image: linear-gradient(to right,#c75765, #fff), url('../../../src/assets/images/header-image.jpeg');
 }
 
 .content-detail--title {
@@ -42,7 +45,7 @@
 .content-detail--button {
   grid-area: button;
   border: 1px solid #fff;
-  justify-self: end;
+  justify-self: start;
   width: 150px;
 }
 
@@ -71,6 +74,7 @@ img {
   }
   .content-detail-full {
     grid-template-areas: "figure" "title" "body" "button";
+    margin-left: 0;
     padding-bottom: 1rem;
   }
   .content-detail--button {

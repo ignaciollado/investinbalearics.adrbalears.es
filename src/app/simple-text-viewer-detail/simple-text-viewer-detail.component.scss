@@ -4,51 +4,36 @@
   padding: 1rem;
   animation: .5s ease-out 0s 1 slideInFromLeft;
   display: grid;
-  grid-template-areas: "a" "b" "c";
+  grid-template-areas: "figure title" "figure body";
   gap: 1rem;
 }
 
-p {
-  margin: 2rem;
-}
-
 .detail-title {
-  grid-area: a;
-  font-weight: bolder;
+  grid-area: title;
 }
 
 .detail-body {
-  grid-area: b;
-  font-size: 1.25rem;
-  line-height: 2rem;
+  grid-area: body;
 }
 
 .detail-button {
-  grid-area: c;
+  grid-area: button;
   justify-self: end;
 }
 
 figure {
-  border: 2px dotted #003747;
-  border-radius: 8px;
-  width: auto;
-  height: auto;
-  background-image: url('https://static.pexels.com/photos/414171/pexels-photo-414171.jpeg');
-  background-size:cover;
-  animation: slidein 10s;
-  animation-fill-mode: forwards;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
+  grid-area: figure;
 }
 
-.center {
-  background-image: url('https://static.pexels.com/photos/414171/pexels-photo-414171.jpeg');
-  background-size:cover;
-  animation: slidein 10s;
-  animation-fill-mode: forwards;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
+img {
+  max-width: 552px;
+  height: auto;
 }
+
+a {
+  color: #000!important;
+}
+
 @keyframes slidein {
   from {background-position: top;background-size:3000px; }
   to {background-position: -100px 0px;background-size:2750px;}
@@ -65,20 +50,8 @@ figure {
 }
 
 @media screen and (max-width: 992px) {
-  .simple-content {
-    grid-template-rows: auto;
-    column-gap: 2rem;
-  }
-
-  .text-container {
-    position: relative;
-    width: 100%;
-    animation: 1s ease-out 0s 1 slideInFromLeft; 
-  }
-
-  form {
-    position: relative;
-    animation-duration: 2s;
-    animation-name: slidein;
+  .content-detail {
+    grid-template-areas: "figure" "title" "body";
+    margin: 0;
   }
 }
