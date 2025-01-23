@@ -1,6 +1,7 @@
 .blinking-text {
   animation: blink 6s linear infinite;
 }
+
 @keyframes blink {
   0%, 100% {opacity: 1;}
   50% {opacity: .5;}
@@ -9,6 +10,7 @@
 .pulse-element {
   animation: pulse 6s infinite;
 }
+
 @keyframes pulse {
   0% {
     transform: scale(1);
@@ -20,3 +22,7 @@
     transform: scale(1);
   }
 }
+
+$breakpoint-tablet: 992px;
+$standard-width: 552px;
+$button-width: 72px+72px+24px;

@@ -2,7 +2,7 @@
 /* @import "bootstrap/scss/bootstrap"; */
 
 //@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
-
+@import "../src/app/utilities.scss";
 * {
   margin: 0;
   padding: 0;
@@ -74,7 +74,7 @@ figure {
   line-height: 1.5rem;
   color: #ffffff!important;
   height: 36px;
-  max-width: 150px;
+  max-width: $button-width;
 }
 
 .btn:hover {
@@ -128,10 +128,6 @@ h6 {
   font-size: 1.25rem;
   line-height: 1.5rem;
 }
-
-
-
-
 
 @media (min-width: 992px) {
 /*   .h1, h1 {

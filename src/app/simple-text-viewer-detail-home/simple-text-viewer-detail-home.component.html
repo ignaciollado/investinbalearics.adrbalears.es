@@ -1,10 +1,9 @@
-<article [ngClass]="!adjustContent ? 'content-detail': 'content-detail-full'" *ngIf="contenido" [ngStyle]="{'background-image':'url({{contenidoMedia.media_details.sizes.full.source_url}})'}">
-  <img [ngClass]="!adjustContent ? 'content-detail--figure': 'content-detail--figure-gradient'" srcset="{{contenidoMedia.media_details.sizes.full.source_url}}" alt='{{contenidoMedia.title.rendered}}' title='{{contenidoMedia.title.rendered}}' />
-  
-  <h2 ngClass="content-detail--title" >{{contenido.title.rendered}}</h2>
-  <section [ngClass]="'content-detail--body'" [innerHTML]="contenido.excerpt.rendered"></section>
-  <button ngClass="btn btn-outline-primary content-detail--button" type="button" routerLink="invest-in-balearics-detail/{{wpPageDetailID}}">
-    + info
-  </button>
-
+<section [ngClass]="!adjustContent ? 'content-detail': 'content-detail-full'" *ngIf="contenido">
+  <img [ngClass]="!adjustContent ? 'content-detail__figure': 'content-detail-full__figure-gradient'" srcset="{{contenidoMedia.media_details.sizes.full.source_url}}" alt='{{contenidoMedia.title.rendered}}' title='{{contenidoMedia.title.rendered}}' />
+  <section [ngClass]="!adjustContent ? 'content-detail__text': 'content-detail-full__text'">
+    <h2 ngClass="content-detail__title" >{{contenido.title.rendered}}</h2>
+    <article [ngClass]="'content-detail__body'" [innerHTML]="contenido.excerpt.rendered"></article>
+    <button [ngClass]="!adjustContent ? 'btn content-detail__button--end': 'btn content-detail__button--start'" type="button" routerLink="invest-in-balearics-detail/{{wpPageDetailID}}">+ info</button>
+  </section>
+</section>
 <article *ngIf="!contenido">Waiting for contents to display ...</article>
