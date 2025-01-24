@@ -107,6 +107,7 @@ img {
   .content-detail-full__text {
     width: 100%;
     border: none;
+    color: #000;
   }
   .simple-content {
     grid-template-rows: auto;
@@ -124,6 +125,9 @@ img {
   }
   h2, .btn {
     margin-left: 1px;
+  }
+  p {
+    margin-left: 2px!important;
   }
   
 }
