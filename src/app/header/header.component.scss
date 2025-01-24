@@ -29,6 +29,7 @@
   grid-area: mobileMenu;
   display: none;
   padding-right: .2rem;
+  border: 1px solid red;
 }
 .logo {
   grid-area: logo;
@@ -38,6 +39,9 @@
   grid-area: language;
   text-align: right;
   margin-right: 36px;
+}
+.navbar-toggler {
+  grid-area: iconomenu;
 }
 .main-menu {
   grid-area: mainmenu;
@@ -67,19 +71,22 @@ h5 {
   margin-bottom:0;
 }
 @media screen and (max-width: 992px) { /* para hacerlo coincidir con el punto de ruptura de bootstrap 'ng' */
-  .container, .container-fluid {
-    padding-right: 0.5;
-    padding-left: 0.5;
+  .the-header {
+    grid-template-areas: "logo language" "mainmenu mainmenu";
+    row-gap: 1rem;
   }
-  header {
-    grid-template-areas: "logo" "languageSearch" "mainmenu";
+  .main-menu {
+    display: grid;
+    grid-template-areas: "search iconomenu";
   }
-  header h1 {
-    margin-top: 1rem;
+  .logo {
+    margin-left: 0;
   }
-  .logo-title{
-    text-align: center;
+  .language-select {
+    text-align: right;
+    margin-right: .5rem;
   }
+
   div.container-fluid {
     justify-content: end;
     padding: .5rem;
@@ -100,9 +107,21 @@ h5 {
   }
 }
 
+@media screen and (max-width: 768px) {
+
+}
+
 @media screen and (max-width: 400px) {
-  .button-header-menu {
-    font-size: .9rem;
-    margin-right: .2rem;
+  .the-header {
+    grid-template-areas: "logo" "language" "mainmenu";
+  }
+  .logo {
+    margin-left: .5rem;
+  }
+  .search {
+    margin-left: .5rem;
+  }
+  .navbar-toggler {
+    margin-right: .5rem;
   }
 }
