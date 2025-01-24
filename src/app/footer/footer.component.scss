@@ -17,7 +17,7 @@ footer {
   justify-self: start;
 }
 
-.localizacion-adr-balears {
+.localization {
   grid-area: localizacionBottom;
 }
 
@@ -29,16 +29,6 @@ a:hover {
   transition: color 1s ease, padding 0.8s linear;
   color: #974890!important;
 }
-
-/* .bi{
-  font-size: 2rem;
-  height: auto;
-  width: 2rem;
-}
-
-.bi::before{
-  prefix: '\F8DB';
-} */
 
 .textos-legales {
   grid-area: textosLegales;
@@ -55,7 +45,7 @@ a:hover {
 @media screen and (max-width: 992px) {
   footer{
     grid-template-columns: 100%;
-    grid-template-areas: "logoBottom" "localizacionBottom" "socialMedia" "textosLegales" "copyRight";
+    grid-template-areas: "logoBottom" "localizacionBottom" "textosLegales" "copyRight";
     text-align: center;
     font-size: 1rem;
   }
@@ -65,7 +55,7 @@ a:hover {
   .textos-legales {
     text-align: center;
   }
-  .localizacion-adr-balears {
+  .localization {
     margin-top: 1rem;
     margin-left: 0;
     padding-left: 0;
@@ -79,5 +69,8 @@ a:hover {
     margin-top: 0;
     padding-left: 0;
     grid-template-columns: auto;
+  }
+  .copy-right-adr {
+    font-size: .7rem;
   }
 }

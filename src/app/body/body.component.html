@@ -1,45 +1,7 @@
 
 <section class="section col-md-12">
     <app-simple-text-viewer [wpPageID] = '105'></app-simple-text-viewer>
-    <form ngClass="form" [formGroup]="contactForm" (ngSubmit)="onSubmit()">
-       <h2 *ngIf="currentLang === 'es-ES'">Solicita información</h2>
-       <h2 *ngIf="currentLang === 'ca-ES'">Sol·licita informació</h2>
-       <h2 *ngIf="currentLang === 'en-EN'">Request for information</h2>
-     <div ngClass="mb-3">
-       <input type="text" ngClass="form-control" required placeholder="Nombre*" aria-describedby="emailHelp" formControlName="contactName">
-       <span id="emailHelp" ngClass="form-text">We'll never share your email with anyone else.</span>
-     </div>
-     <div ngClass="input-group mb-3">
-       <input type="mail" ngClass="form-control" required placeholder="Email*" aria-label="Email address" formControlName="contactEmail">
-       <input type="tel" ngClass="form-control" placeholder="Teléfono" aria-label="Phone" formControlName="contactPhone">
-     </div>
-     <div ngClass="input-group mb-3">
-       <input type="mail" ngClass="form-control" placeholder="Empresa" aria-label="Corporation" formControlName="corporation">
-       <input type="tel" ngClass="form-control" placeholder="País" aria-label="Country" formControlName="country">
-     </div>
-     <div ngClass="input-group">
-       <textarea ngClass="form-control" placeholder="Cuéntanos sobre qué estás interesado" aria-label="With textarea" formControlName="body"></textarea>
-     </div>
-     <div ngClass="mb-3 form-check">
-       <input type="checkbox" ngClass="form-check-input" formControlName="acceptTerms">
-       <a href='https://adrbalears.es/aviso-legal/2773' target="_blank">
-         <span *ngIf="currentLang === 'es-ES'">Aceptar términos y condiciones</span>
-         <span *ngIf="currentLang === 'ca-ES'">Acceptar termes i condicions</span>
-         <span *ngIf="currentLang === 'en-EN'">Accept terms and conditions</span>
-       </a>
-     </div>
-     <button type="submit" ngClass="btn" [disabled]="!contactForm.valid">
-       <div ngClass="text-center" *ngIf ="!submitted">Submit</div>
-       <div ngClass="spinner-border" role="status" *ngIf ="contactForm.valid && submitted">
-         <span ngClass="visually-hidden">
-           <span *ngIf="currentLang === 'es-ES'">Enviando formulario ...</span>
-           <span *ngIf="currentLang === 'ca-ES'">Enviant formulari ...</span>
-           <span *ngIf="currentLang === 'en-EN'">Sending form ...</span>
-         </span>
-       </div>
-     </button>
-     <!--   {{contactForm.value | json}} -->
-    </form>
+    <app-contact-form></app-contact-form>
 </section>
 
 <main class = "home-content">

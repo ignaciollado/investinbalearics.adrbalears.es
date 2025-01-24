@@ -22,3 +22,20 @@ p {
   font-size: 1.25rem;
   line-height: 2rem;
 }
+
+@media screen and (max-width: 992px) { 
+  .content-detail {
+    margin: .5rem;
+    padding: 0;
+  }
+
+  .detail-body {
+    font-size: inherit;
+    line-height: 2rem;
+  }
+
+  a {
+    color: #dd9f70!important;
+  }
+
+}

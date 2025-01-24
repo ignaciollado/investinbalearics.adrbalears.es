@@ -1,11 +1,31 @@
-form {
-  margin-left: 1rem;
-  margin-right: 1rem;
+.form-control {
+  border-radius: 0;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid #ccc; /* You can adjust the color and thickness of the outline */
+}
+
+.form-control:focus {
+  border-color: #c75765;
+
+  box-shadow: none;
+}
+
+button {
+  width: 150px;
 }
 .form-group {
   margin-top: 2rem;
 }
 
+.input-group {
+  column-gap: 16px;
+}
+
 .ocultar {
   display: none;
+}
+
+a {
+  color: #000!important;
 }
