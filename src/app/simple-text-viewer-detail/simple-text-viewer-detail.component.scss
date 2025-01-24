@@ -54,4 +54,7 @@ a {
     grid-template-areas: "figure" "title" "body";
     margin: 0;
   }
+  figure {
+    width: 100%;
+  }
 }
