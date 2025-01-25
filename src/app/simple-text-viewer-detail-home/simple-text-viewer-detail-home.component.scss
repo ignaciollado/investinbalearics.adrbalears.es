@@ -46,7 +46,7 @@ h2, .btn {
 
 .content-detail-full__text {
   grid-area: textfull;
-  border: 1px solid greenyellow;
+  /* border: 1px solid greenyellow; */
   //margin-left: calc((get-vw(1200px) - 1200px)/2);
   width: $standard-width;
   display: grid;
