@@ -39,7 +39,6 @@ export class SimpleTextViewerDetailHomeComponent {
           this.currentWPLang = 44
       }
       this.getContent(this.wpPageDetailID)
-      /* window.scroll(0,0) */
     }
 
     getContent (id: number) {
@@ -47,6 +46,7 @@ export class SimpleTextViewerDetailHomeComponent {
           .subscribe(
             (wpPage: WpPage) => {
               this.contenido = wpPage
+              console.log ("contenido: ", id, this.contenido.featured_media)
               this.getFeaturedMedia (this.contenido.featured_media)
           })
     }
@@ -56,7 +56,7 @@ export class SimpleTextViewerDetailHomeComponent {
           .subscribe(
             (mediaItem: WpPageFeaturedMedia) => {
               this.contenidoMedia = mediaItem
-              console.log (this.contenidoMedia.guid.rendered)
+              console.log ("contenido media", this.contenidoMedia)
           })
     }
 }

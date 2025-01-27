@@ -1,10 +1,7 @@
 import { Component } from '@angular/core';
-import { FormBuilder, FormGroup, Validators, AbstractControl } from '@angular/forms'
-import { MessageService } from '../services/message.service';
 import { wpPageService } from '../services/wp-page.service';
 import { HttpErrorResponse } from '@angular/common/http';
 import { SharedService } from '../services/shared.service';
-import { genericMailDTO } from '../Models/generic-data.dto';
 import { WpPage } from '../Models/wp-page-data.dto';
 import { finalize } from 'rxjs';
 
@@ -14,21 +11,18 @@ import { finalize } from 'rxjs';
   styleUrl: './body.component.scss'
 })
 export class BodyComponent {
-  contactForm: FormGroup
-  formData: genericMailDTO
+
+
   wpPages: WpPage[] = []
   homeIntroPage: number = 105
-  submitted: boolean = false
+
   animationDone: boolean = false
   currentLang: string = "en-EN"
   currentWPLang: number
 
-  constructor( private formBuilder: FormBuilder, 
-    private sendMail: MessageService, 
+  constructor(  
     private wpPage: wpPageService,
-    private sharedService: SharedService ) {
-      this.formData = new genericMailDTO('', '', '', '', '')
-    }
+    private sharedService: SharedService ) { }
 
 ngOnInit(): void {
     console.log ("Welcome to the Invest In Balearics platform from the ADR Balears")
@@ -50,7 +44,7 @@ ngOnInit(): void {
           this.currentWPLang = 44
           this.homeIntroPage = 264
       }
-    const observer = new IntersectionObserver(entries => {
+/*     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
         const square = entry.target.querySelector('.square');
         if (entry.isIntersecting && !this.animationDone) {
@@ -61,38 +55,9 @@ ngOnInit(): void {
         square.classList.remove('square-animation');
       });
     });
-    observer.observe(document.querySelector('.servicios'))
+    observer.observe(document.querySelector('.servicios')) */
     
-    this.contactForm = this.formBuilder.group({
-      country:  [''],
-      contactName:  ['', [Validators.required, Validators.minLength(4), Validators.maxLength(50)]],
-      contactEmail: ['', [Validators.required, Validators.email]],
-      contactPhone: [''],
-      corporation: [''],
-      body: [''],
-      acceptTerms: [false, [Validators.requiredTrue]]
-    })
-
     this.loadPages()
-}
-
-get f(): { [key: string]: AbstractControl } {
-  return this.contactForm.controls;
-}
-
-onSubmit() {
-  let errorResponse: any
-  let actionDone: string = ""
-  let responseOK: boolean = false
-  this.submitted = true
-  this.formData = this.contactForm.value
-  this.sendMail.sendMail(this.formData,this.formData.body,"Invest IN Balearics")
-    .subscribe((sendMailResult:any) => {
-    },
-    (error: HttpErrorResponse) => {
-      errorResponse = error;
-      this.sharedService.errorLog(errorResponse);
-      })
 }
 
 private loadPages(): void {

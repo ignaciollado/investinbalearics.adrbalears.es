@@ -1,0 +1,47 @@
+{
+    "IdiOneLine": "Agencia de Desarrollo Regional de las Islas Baleares",
+    "IdiLine_1": "Agencia de Desarrollo",
+    "IdiLine_2": "Regional",
+    "IdiLine_3": "de las Islas Baleares",
+    "home": "Inicio",
+
+    "companyName": "Nombre de la empresa",
+    "companyAddress": "Domicilio",
+    "requestForInformation": "Solicita información",
+    "country": "País",
+    "howCanWeHelpYou": "¿Cómo te podemos ayudar?",
+
+
+    "copyright": "Creado por la Agencia de desarrollo regional de las Islas Baleares",
+    "isRequired": " este dato es obligatorio",
+    "invalidPattern": "formato no válido",
+    "charsMin": ", longitud mínima de ",
+    "charsMax": ", longitud máxima de ",
+    "characters": "caracteres",
+
+    "profile": "Mis datos",
+
+    "Name": "Nombre",
+    "Email": "Dirección electrónica",
+    "Mobile": "Mobil",
+    "phone": "Un teléfono de contacto",
+    "Update": "Actualizar",
+    "Error": "Por favor, indique los detalles requeridos.",
+    "municipioDe": "Municipio",
+
+    "Accesibilidad": "Accesibilidad",
+    "AvisoLegal": "Aviso legal",
+    "Contacta": "Contacta",
+    "Contactanos": "Contáctanos",
+    "Links": "Enlaces externos",
+    "IDI": "ADR Balears",
+    "PoliticaCookies": "Política de cookies",
+    "PoliticaPrivacidad": "Política de privacidad",
+
+    "writeHere": "Escriba aquí, por favor",
+
+    "acceptTerms": " He leído y acepto los términos y las condiciones",
+    "send": "Envía",
+    "fieldValue": "Este campo",
+    "searchTheWeb": "Busca en la web"
+  }

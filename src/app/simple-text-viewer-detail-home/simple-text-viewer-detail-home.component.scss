@@ -107,7 +107,7 @@ img {
     width: 100%;
   }
   .content-detail-full {
-    grid-template-areas: "figure" "textfull" ;
+    grid-template-columns: 100%;
     margin-left: 0;
     padding-bottom: 1rem;
   }

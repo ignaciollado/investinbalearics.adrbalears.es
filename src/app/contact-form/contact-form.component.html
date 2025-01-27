@@ -1,39 +1,30 @@
 <form ngClass="form" [formGroup]="contactForm" (ngSubmit)="onSubmit()">
-    <h2 *ngIf="currentLang === 'es-ES'">Solicita información</h2>
-    <h2 *ngIf="currentLang === 'ca-ES'">Sol·licita informació</h2>
-    <h2 *ngIf="currentLang === 'en-EN'">Request for information</h2>
+    <h2>{{'requestForInformation' | translate}}</h2>
   <section ngClass="mb-3">
-    <input type="text" ngClass="form-control ng-untouched ng-pristine ng-valid" required placeholder="Nombre*" aria-describedby="emailHelp" formControlName="contactName">
-   <!--  <span *ngIf="contactName.hasError('required')">{{'regulationID' | translate}} <strong>{{'isRequired' | translate}}</strong></span>
-    <span *ngIf="contactName.hasError('minlength')">{{'regulationID' | translate}} <strong>min. length: 5 characters</strong></span>
-    <span *ngIf="contactName.hasError('maxlength')">{{'regulationID' | translate}} <strong>max. length: 35 characters</strong></span> -->
+    <input type="text" ngClass="form-control ng-untouched ng-pristine ng-valid" required placeholder="{{'Name' | translate}}*" aria-describedby="emailHelp" formControlName="contactName">
   </section>
   <section ngClass="input-group mb-3">
-    <input type="mail" ngClass="form-control" required placeholder="Email*" aria-label="Email address" formControlName="contactEmail">
-    <input type="tel" ngClass="form-control" placeholder="Teléfono" aria-label="Phone" formControlName="contactPhone">
+    <input type="mail" ngClass="form-control" required placeholder="{{'Email' | translate}}*" aria-label="Email address" formControlName="contactEmail">
+    <input type="tel" ngClass="form-control" placeholder="{{'phone' | translate}}" aria-label="Phone" formControlName="contactPhone">
   </section>
   <section ngClass="input-group mb-3">
-    <input type="mail" ngClass="form-control" placeholder="Empresa" aria-label="Corporation" formControlName="corporation">
-    <input type="tel" ngClass="form-control" placeholder="País" aria-label="Country" formControlName="country">
+    <input type="mail" ngClass="form-control" placeholder="{{'companyName' | translate}}" aria-label="Corporation" formControlName="corporation">
+    <input type="tel" ngClass="form-control" placeholder="{{'country' | translate}}" aria-label="Country" formControlName="country">
   </section>
   <section ngClass="input-group">
-    <textarea ngClass="form-control" placeholder="Cuéntanos sobre qué estás interesado" aria-label="With textarea" formControlName="body"></textarea>
+    <textarea ngClass="form-control" placeholder="{{'howCanWeHelpYou' | translate}}" aria-label="With textarea" formControlName="body"></textarea>
   </section>
   <section ngClass="mb-3 form-check">
     <input type="checkbox" ngClass="form-check-input" formControlName="acceptTerms">
-    <a href='https://adrbalears.es/aviso-legal/2773' target="_blank">
-      <span *ngIf="currentLang === 'es-ES'">Aceptar términos y condiciones</span>
-      <span *ngIf="currentLang === 'ca-ES'">Acceptar termes i condicions</span>
-      <span *ngIf="currentLang === 'en-EN'">Accept terms and conditions</span>
+    <a routerLink="/aviso-legal/361" target="_self">
+      {{'acceptTerms' | translate}}
     </a>
   </section>
   <button type="submit" ngClass="btn" [disabled]="!contactForm.valid">
-    <div ngClass="text-center" *ngIf ="!submitted">Submit</div>
+    <div ngClass="text-center" *ngIf ="!submitted">{{'send' | translate}}</div>
     <div ngClass="spinner-border" role="status" *ngIf ="contactForm.valid && submitted">
       <span ngClass="visually-hidden">
-        <span *ngIf="currentLang === 'es-ES'">Enviando formulario ...</span>
-        <span *ngIf="currentLang === 'ca-ES'">Enviant formulari ...</span>
-        <span *ngIf="currentLang === 'en-EN'">Sending form ...</span>
+        {{'sending' | translate}}
       </span>
     </div>
   </button>

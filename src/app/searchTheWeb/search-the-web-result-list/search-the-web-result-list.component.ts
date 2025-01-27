@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
-import { reqArticle } from '../../Models/wp-page-data.dto';
+import { WpPage } from '../../Models/wp-page-data.dto';
 import { SearchTheWebService } from '../../services/search-the-web.service';
 
 @Component({
@@ -12,7 +12,7 @@ import { SearchTheWebService } from '../../services/search-the-web.service';
 export class SearchTheWebResultListComponent {
 
   currentLang: string | undefined;
-  public contenidos: reqArticle[] | undefined
+  public contenidos: WpPage[] | undefined
   public searchTerm: string | null = ""
 
   constructor( private route: ActivatedRoute,
@@ -38,13 +38,10 @@ export class SearchTheWebResultListComponent {
    this.searchService.getArticles()
       .subscribe( (result: any) => {
         this.contenidos = result.data
-/*         this.contenidos = this.contenidos!.filter( (item : reqArticle) => {
-          item.attributes.state === 1
-        } ) */
-        this.contenidos = result.data.filter( (item : reqArticle) => item.attributes.language === `${this.currentLang}`) 
-        this.contenidos = this.contenidos!.filter( item => item.attributes.text.toUpperCase().includes(this.searchTerm!.trim().toUpperCase()) )
-        this.contenidos.map((item:reqArticle) => {
-          if (item.attributes.state.toString().includes('0')) {
+        this.contenidos = result.data.filter( (item : WpPage) => item.content.rendered === `${this.currentLang}`) 
+        this.contenidos = this.contenidos!.filter( item => item.content.rendered.toUpperCase().includes(this.searchTerm!.trim().toUpperCase()) )
+        this.contenidos.map((item: WpPage) => {
+          if (item.status.toString().includes('0')) {
             this.contenidos?.splice(this.contenidos?.indexOf(item), 1)
           }
         })

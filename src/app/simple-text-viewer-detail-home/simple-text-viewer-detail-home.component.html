@@ -1,7 +1,6 @@
 <section [ngClass]="!adjustContent ? 'content-detail': 'content-detail-full'" *ngIf="contenido">
-  <img *ngIf = "!adjustContent" [ngClass]="'content-detail__figure'" srcset="{{contenidoMedia.media_details.sizes.full.source_url}}" alt='{{contenidoMedia.title.rendered}}' title='{{contenidoMedia.title.rendered}}' />
-<!--   <img [ngClass]="!adjustContent ? 'content-detail__figure': 'content-detail-full__figure-gradient'" srcset="{{contenidoMedia.media_details.sizes.full.source_url}}" alt='{{contenidoMedia.title.rendered}}' title='{{contenidoMedia.title.rendered}}' /> -->
-
+  <img *ngIf = "!adjustContent" [ngClass]="'content-detail__figure'" srcset="{{contenidoMedia.media_details.sizes.full.source_url}}" alt='{{contenido.title.rendered}}' title='{{contenido.title.rendered}}' />
+  <!--   <img [ngClass]="!adjustContent ? 'content-detail__figure': 'content-detail-full__figure-gradient'" srcset="{{contenidoMedia.media_details.sizes.full.source_url}}" alt='{{contenidoMedia.title.rendered}}' title='{{contenidoMedia.title.rendered}}' /> -->
   <section [ngClass]="!adjustContent ? 'content-detail__text': 'content-detail-full__text'">
     <h2 ngClass="content-detail__title" >{{contenido.title.rendered}}</h2>
     <article [ngClass]="'content-detail__body'" [innerHTML]="contenido.excerpt.rendered"></article>

@@ -20,7 +20,7 @@ export class SharedService {
 
   async managementToast( element: string, validRequest: boolean, error?: HttpErrorResponse, actionDone?: string ): Promise<void> {
     const toastMsg = document.getElementById(element);
-    console.log (element, validRequest, error, actionDone)
+    /* console.log (element, validRequest, error, actionDone) */
     if (toastMsg) {
       if (validRequest) {
         toastMsg.className = 'show requestOk';

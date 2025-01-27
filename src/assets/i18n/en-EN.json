@@ -1,0 +1,54 @@
+{
+  "IdiOneLine": "Agencia de desarrollo regional de las Islas Baleares",
+  "IdiLine_1": "Agencia de desarrollo",
+  "IdiLine_2": "regional",
+  "IdiLine_3": "de las Islas Baleares",
+  "home": "Home",
+
+  "companyName": "Company name",
+  "companyAddress": "Company address",
+  "requestForInformation": "Request for information",
+  "country": "Country",
+  "howCanWeHelpYou": "how can we help you?",
+
+
+  "copyright": "Creado por el Agencia de desarrollo regional de las Islas Baleares",
+  "isRequired": " este dato es obligatorio",
+  "invalidPattern": "formato no válido",
+  "charsMin": ", longitud mínima de ",
+  "charsMax": ", longitud máxima de ",
+  "characters": "caracteres",
+
+  "profile": "Mis datos",
+
+  "Name": "Name",
+  "Email": "Email address",
+  "Mobile": "Mobile",
+  "phone": "Your contact phone",
+  "Update": "Actualizar",
+  "Error": "Por favor, indique los detalles requeridos.",
+
+  "Contacta": "Contacta",
+  "Contactanos": "Contáctanos",
+  "Links": "Enlaces externos",
+  "IDI": "IDI",
+  "PoliticaCookies": "Política de cookies",
+  "PoliticaPrivacidad": "Política de privacidad",
+  "ProgramasIDI": "Programas del IDI",
+
+  "writeHere": "Escriba aquí, por favor",
+
+  "recievedOK": "Hemos recibido correctamente la siguiente consulta:",
+  "fullName": "Su nombre para dirigirnos a usted",
+  "contactPhone": "Un teléfono de contacto, no es obligatorio",
+  "contactEmail": "Una dirección de correo electrónico de contacto",
+  "subject": "El asunto de su consulta",
+  "yourMessage": "Su consulta",
+  "acceptTerms": " I have read and accept the Terms and Conditions",
+  "send": "Send",
+  "sending": "Sending...",
+
+  "fieldValue": "Este campo",
+  "searchTheWeb": "Busca en la web"
+
+  }

@@ -1,0 +1,42 @@
+{
+    "IdiOneLine": "Agència de Desenvolupament Regional \nde les Illes Balears",
+    "IdiLine_1": "Agència de Desenvolupament",
+    "IdiLine_2": "Regional",
+    "IdiLine_3": "de les Illes Balears",
+    "home": "Inici",
+    
+    "companyName": "Nom de l'empresa",
+    "companyAddress": "Domicili",
+    "requestForInformation": "Sol.licita informació",
+    "country": "Pais",
+    "howCanWeHelpYou": "Com et podem ajudar?",
+
+    "invalidPattern": "format no vàlid",
+    "charsMin": ", longitud mínima de ",
+    "charsMax": ", longitud màxima de ",
+    "characters": "caràcters",
+    "profile": "Les meves dades",
+
+    "Name": "Nom",
+    "Email": "Adreça electrònica",
+    "Mobile": "Mòbil",
+    "phone": "Un telèfon per contactar",
+    "Update": "Actualitzar",
+    "Error": "Per favor, indiqui els detalls requerits.",
+    "municipioDe": "Municipi",
+
+    "Accesibilidad": "Accesibilitat",
+    "AvisoLegal": "Avís legal",
+    "Contacta": "Contacta",
+    "Contactanos": "Contacta'ns",
+    "Links": "Enllaços externs",
+    "IDI": "IDI",
+    "PoliticaCookies": "Política de cookies",
+    "PoliticaPrivacidad": "Política de privacitat",
+
+    "acceptTerms": " He llegit i accept els termes i les condicions",
+    "send": "Envia",
+    "sending": "Enviant...",
+    "isRequired": " és obligatori.",
+    "fieldValue": "Aquest camp"
+  }
