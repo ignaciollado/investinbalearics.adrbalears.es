@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormBuilder, FormGroup, Validators, AbstractControl } from '@angular/forms'
+import { FormBuilder, FormGroup, Validators, AbstractControl, UntypedFormControl } from '@angular/forms'
 import { genericMailDTO } from '../Models/generic-data.dto';
 import { MessageService } from '../services/message.service';
 
@@ -11,6 +11,12 @@ import { MessageService } from '../services/message.service';
 
 export class ContactFormComponent {
   contactForm: FormGroup
+  contactName: UntypedFormControl
+  contactEmail: UntypedFormControl
+  contactPhone: UntypedFormControl
+  body: UntypedFormControl
+  acceptTerms: UntypedFormControl
+
   formData: genericMailDTO
   submitted: boolean = false
   currentLang: string = "en-EN"
@@ -36,9 +42,9 @@ export class ContactFormComponent {
           this.currentWPLang = 44
       }
     this.contactForm = this.formBuilder.group({
-      contactName:  ['', [Validators.required, Validators.minLength(4), Validators.maxLength(50)]],
+      contactName:  ['', [Validators.required, Validators.minLength(5), Validators.maxLength(50)]],
       contactEmail: ['', [Validators.required, Validators.email]],
-      contactPhone: ['', [Validators.minLength, Validators.maxLength]],
+      contactPhone: ['', [Validators.minLength(9), Validators.maxLength(9)]],
       body: ['', [Validators.required, Validators.minLength(10), Validators.maxLength(250)]],
       acceptTerms: [false, [Validators.requiredTrue]]
     })

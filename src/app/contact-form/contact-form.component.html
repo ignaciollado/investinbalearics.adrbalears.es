@@ -3,8 +3,10 @@
     <h2 *ngIf="currentLang === 'ca-ES'">Sol·licita informació</h2>
     <h2 *ngIf="currentLang === 'en-EN'">Request for information</h2>
   <section ngClass="mb-3">
-    <input type="text" ngClass="form-control" required placeholder="Nombre*" aria-describedby="emailHelp" formControlName="contactName">
-    <span id="emailHelp" ngClass="form-text">We'll never share your email with anyone else.</span>
+    <input type="text" ngClass="form-control ng-untouched ng-pristine ng-valid" required placeholder="Nombre*" aria-describedby="emailHelp" formControlName="contactName">
+   <!--  <span *ngIf="contactName.hasError('required')">{{'regulationID' | translate}} <strong>{{'isRequired' | translate}}</strong></span>
+    <span *ngIf="contactName.hasError('minlength')">{{'regulationID' | translate}} <strong>min. length: 5 characters</strong></span>
+    <span *ngIf="contactName.hasError('maxlength')">{{'regulationID' | translate}} <strong>max. length: 35 characters</strong></span> -->
   </section>
   <section ngClass="input-group mb-3">
     <input type="mail" ngClass="form-control" required placeholder="Email*" aria-label="Email address" formControlName="contactEmail">

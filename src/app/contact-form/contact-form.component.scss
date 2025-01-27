@@ -1,3 +1,7 @@
+.form {
+  padding: 24px;
+}
+
 .form-control {
   border-radius: 0;
   border: none;
@@ -6,9 +10,17 @@
 }
 
 .form-control:focus {
-  border-color: #c75765;
+  border-color: #3d4e97;
 
   box-shadow: none;
+}
+
+.ng-invalid.ng-untouched:not(form)  {
+  border-left: 5px solid #42A948; /* green */
+}
+
+.ng-invalid.ng-touched:not(form)  {
+  border-left: 5px solid #a94442; /* red */
 }
 
 button {
@@ -16,6 +28,7 @@ button {
 }
 .form-group {
   margin-top: 2rem;
+  padding: 24px;
 }
 
 .input-group {
