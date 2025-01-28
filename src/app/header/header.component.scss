@@ -86,7 +86,18 @@ h5 {
     text-align: right;
     margin-right: .5rem;
   }
-
+  .mobile-invest-menu {
+    margin-left: .5rem;
+    padding-left: .5rem;
+    font-size: 1.5rem;
+    border: 1px solid #974890;
+    background-color: #dd9f70;
+    border-radius: 3px;
+    margin-bottom: .5rem;
+  }
+  .nav-link {
+    color: #fff!important;
+  }
   div.container-fluid {
     justify-content: end;
     padding: .5rem;
