@@ -46,7 +46,7 @@ export class SimpleTextViewerDetailHomeComponent {
           .subscribe(
             (wpPage: WpPage) => {
               this.contenido = wpPage
-              console.log ("contenido: ", id, this.contenido.featured_media)
+             /*  console.log ("contenido: ", id, this.contenido.featured_media) */
               this.getFeaturedMedia (this.contenido.featured_media)
           })
     }
@@ -56,7 +56,7 @@ export class SimpleTextViewerDetailHomeComponent {
           .subscribe(
             (mediaItem: WpPageFeaturedMedia) => {
               this.contenidoMedia = mediaItem
-              console.log ("contenido media", this.contenidoMedia)
+              /* console.log ("contenido media", this.contenidoMedia) */
           })
     }
 }

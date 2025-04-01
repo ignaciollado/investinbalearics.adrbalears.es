@@ -5,7 +5,7 @@
   </section>
   <section ngClass="input-group mb-3">
     <input type="mail" ngClass="form-control" required placeholder="{{'Email' | translate}}*" aria-label="Email address" formControlName="contactEmail">
-    <input type="tel" ngClass="form-control" placeholder="{{'phone' | translate}}" aria-label="Phone" formControlName="contactPhone">
+    <input type="tel" ngClass="form-control" placeholder="{{'phone' | translate}}" aria-label="Phone" formControlName="contactPhone" maxlength="9" minlength="9">
   </section>
   <section ngClass="input-group mb-3">
     <input type="mail" ngClass="form-control" placeholder="{{'companyName' | translate}}" aria-label="Corporation" formControlName="corporation">
@@ -23,9 +23,7 @@
   <button type="submit" ngClass="btn" [disabled]="!contactForm.valid">
     <div ngClass="text-center" *ngIf ="!submitted">{{'send' | translate}}</div>
     <div ngClass="spinner-border" role="status" *ngIf ="contactForm.valid && submitted">
-      <span ngClass="visually-hidden">
-        {{'sending' | translate}}
-      </span>
+      <span ngClass="visually-hidden">{{'sending' | translate}}</span>
     </div>
   </button>
   <!--   {{contactForm.value | json}} -->

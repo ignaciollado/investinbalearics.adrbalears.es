@@ -15,7 +15,7 @@ import { WpTag } from '../../Models/wp-tag.dto';
 export class NewsDetailComponent {
 
   public oneNew: WpPost
-  public currentLang: string = ''
+  public currentLang: string | undefined
   public currentWPLang: string = ''
   public subPath: string = ''
   public cabecera: string = ''

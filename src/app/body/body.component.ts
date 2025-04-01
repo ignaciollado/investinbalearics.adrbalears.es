@@ -11,13 +11,17 @@ import { finalize } from 'rxjs';
   styleUrl: './body.component.scss'
 })
 export class BodyComponent {
-
-
+  welcomeString:string = ""
   wpPages: WpPage[] = []
-  homeIntroPage: number = 105
+  homeIntroPage: number = 351
+  homeIntroPage_1: number = 317
+  homeIntroPage_2: number = 355
+  homeIntroPage_3: number = 361
+  homeIntroPage_4: number = 364
+  homeIntroPage_5: number = 310
 
   animationDone: boolean = false
-  currentLang: string = "en-EN"
+  currentLang: string
   currentWPLang: number
 
   constructor(  
@@ -25,38 +29,48 @@ export class BodyComponent {
     private sharedService: SharedService ) { }
 
 ngOnInit(): void {
-    console.log ("Welcome to the Invest In Balearics platform from the ADR Balears")
     this.currentLang = localStorage.getItem('preferredLang')
     switch (this.currentLang) {
         case 'ca-ES':
           this.currentWPLang = 42
-          this.homeIntroPage = 262
+          this.homeIntroPage = 349
+          this.homeIntroPage_1 = 315
+          this.homeIntroPage_2 = 357
+          this.homeIntroPage_3 = 359
+          this.homeIntroPage_4 = 366
+          this.homeIntroPage_5 = 308
+          this.welcomeString = "Benvingut a la plataforma Invest In Balerics de la ADR Balears"
         break
         case 'es-ES':
           this.currentWPLang = 43
           this.homeIntroPage = 105
+          this.homeIntroPage_1 = 212
+          this.homeIntroPage_2 = 109
+          this.homeIntroPage_3 = 111
+          this.homeIntroPage_4 = 113
+          this.homeIntroPage_5 = 115
+          this.welcomeString = "Bienvenido a la plataforma Invest In Balerics de la ADR Baleares"
         break
         case 'en-EN':
           this.currentWPLang = 44
-          this.homeIntroPage = 264
+          this.homeIntroPage = 351
+          this.homeIntroPage_1 = 317
+          this.homeIntroPage_2 = 355
+          this.homeIntroPage_3 = 361
+          this.homeIntroPage_4 = 364
+          this.homeIntroPage_5 = 310
+          this.welcomeString = "Welcome to the Invest In Balearics platform from the ADR Balears"
         break
         default:
           this.currentWPLang = 44
-          this.homeIntroPage = 264
+          this.homeIntroPage = 351
+          this.homeIntroPage_1 = 317
+          this.homeIntroPage_2 = 355
+          this.homeIntroPage_3 = 361
+          this.homeIntroPage_4 = 364
+          this.homeIntroPage_5 = 310
       }
-/*     const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        const square = entry.target.querySelector('.square');
-        if (entry.isIntersecting && !this.animationDone) {
-          square.classList.add('square-animation');
-          this.animationDone = true
-        return; 
-        }
-        square.classList.remove('square-animation');
-      });
-    });
-    observer.observe(document.querySelector('.servicios')) */
-    
+    console.log (this.welcomeString)
     this.loadPages()
 }
 

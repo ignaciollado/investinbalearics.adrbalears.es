@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators, AbstractControl, UntypedFormControl } from '@angular/forms'
 import { genericMailDTO } from '../Models/generic-data.dto';
 import { MessageService } from '../services/message.service';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-contact-form',
@@ -21,15 +22,15 @@ export class ContactFormComponent {
 
   formData: genericMailDTO
   submitted: boolean = false
-  currentLang: string = "en-EN"
+  currentLang: string
   currentWPLang: number
 
-  constructor(private formBuilder: FormBuilder, private sendMail: MessageService) { 
+  constructor(private translate: TranslateService, private formBuilder: FormBuilder, private sendMail: MessageService) { 
     this.formData = new genericMailDTO('', '', '', '', '')
   }
 
   ngOnInit() {
-    this.currentLang = localStorage.getItem('preferredLang')
+/*     this.currentLang = localStorage.getItem('preferredLang')
     switch (this.currentLang) {
         case 'ca-ES':
           this.currentWPLang = 42
@@ -42,7 +43,7 @@ export class ContactFormComponent {
         break
         default:
           this.currentWPLang = 44
-      }
+      } */
     this.contactForm = this.formBuilder.group({
       contactName:  ['', [Validators.required, Validators.minLength(5), Validators.maxLength(50)]],
       contactEmail: ['', [Validators.required, Validators.email]],

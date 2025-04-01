@@ -11,10 +11,10 @@ import { AgendaListComponent } from './agenda/agenda-list/agenda-list.component'
 import { NewsDetailComponent } from './news/news-detail/news-detail.component';
 import { AgendaDetailComponent } from './agenda/agenda-detail/agenda-detail.component';
 import { ShowLegalInfoComponent } from './show-legal-info/show-legal-info.component';
+import { ContactContainerComponent } from './contact-container/contact-container.component';
 
 
 const routes: Routes = [
-
 
   { path: 'por-que-invertir-en-baleares/:id', component: SimpleTextViewerDetailComponent },
   { path: 'per-que-invertir-a-balears/:id', component: SimpleTextViewerDetailComponent },
@@ -51,7 +51,7 @@ const routes: Routes = [
   { path: 'politica-de-cookies/:id', component: ShowLegalInfoComponent},
   { path: 'politica-de-privacidad/:id', component: ShowLegalInfoComponent},
   { path: 'feder-detail/:id', component: SimpleTextViewerDetailComponent },
-  { path: 'contact-invest-in-balearics', component: ContactFormComponent },
+  { path: 'contact-invest-in-balearics', component: ContactContainerComponent },
 
   { path: '404', component: NotFoundComponent },
   { path: '500', component: InternalServerComponent },

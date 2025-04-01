@@ -10,38 +10,40 @@ import * as CookieConsent from 'vanilla-cookieconsent';
   styleUrl: './header.component.scss'
 })
 export class HeaderComponent {
-    currentLang: string ="en-EN"
+    currentLang: string
     currentWPLang: number = 44
     homeIntroPage: number = 264
-constructor( public translate: TranslateService, private router: Router ) { }
+
+constructor(  public translate: TranslateService, 
+                private router: Router ) { }
 
 ngOnInit(): void {
     this.currentLang = localStorage.getItem('preferredLang')
     switch (this.currentLang) {
         case 'ca-ES':
         case 'cat':
-            localStorage.setItem('preferredLang', 'ca-ES')
-            this.currentLang = 'ca-ES'
+          /*   localStorage.setItem('preferredLang', 'ca-ES')
+            this.currentLang = 'ca-ES' */
             this.currentWPLang = 42
             this.homeIntroPage = 262
         break
         case 'es-ES':
         case 'cas':
-            localStorage.setItem('preferredLang', 'es-ES')
-            this.currentLang = 'es-ES'         
+            /* localStorage.setItem('preferredLang', 'es-ES')
+            this.currentLang = 'es-ES'        */  
             this.currentWPLang = 43
             this.homeIntroPage = 105
         break
         case 'en-EN':
         case 'eng':
-            localStorage.setItem('preferredLang', 'en-EN')
-            this.currentLang = 'en-EN'
+           /*  localStorage.setItem('preferredLang', 'en-EN')
+            this.currentLang = 'en-EN' */
             this.currentWPLang = 44
             this.homeIntroPage = 264
         break
         default:
-            localStorage.setItem('preferredLang', 'en-EN')
-            this.currentLang = 'en-EN'
+           /*  localStorage.setItem('preferredLang', 'en-EN')
+            this.currentLang = 'en-EN' */
             this.currentWPLang = 44
             this.homeIntroPage = 264
       }
@@ -182,10 +184,10 @@ openCustomPanelClass(content: TemplateRef<any>) {
     this.offcanvasService.open(content, { panelClass: 'bg-info' });
 }
 
-sedeElectronica(): void {
+//sedeElectronica(): void {
     //window.open('https://adrbalears.sedipualba.es', '_blank');
-    window.open('https://seuelectronica.caib.es/', '_blank');
-}
+    //window.open('https://seuelectronica.caib.es/', '_blank');
+//}
 
 scroll(el: string) {
     console.log (window.innerHeight, window.innerWidth)
@@ -194,7 +196,8 @@ scroll(el: string) {
 switchLanguage( lang:string ) {
     this.translate.use(lang)
     localStorage.setItem('preferredLang', lang)
-    location.reload() 
+    location.reload()
+    /* this.router.navigate(['']) */
 }
 
 redirectToExternalUrl(externalURL: string) {

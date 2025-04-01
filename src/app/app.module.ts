@@ -6,7 +6,6 @@ import { TranslateModule, TranslateLoader  } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 
-
 import { NewsListComponent } from './news/news-list/news-list.component';
 import { NewsDetailComponent } from './news/news-detail/news-detail.component';
 import { AgendaDetailComponent } from './agenda/agenda-detail/agenda-detail.component';
@@ -26,6 +25,7 @@ import { InternalServerComponent } from './error-pages/internal-server/internal-
 import { ContactFormComponent } from './contact-form/contact-form.component';
 import { SearchTheWebComponent } from './searchTheWeb/search-the-web/search-the-web.component';
 import { ShowLegalInfoComponent } from './show-legal-info/show-legal-info.component';
+import { ContactContainerComponent } from './contact-container/contact-container.component';
 
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(http: HttpClient) {
@@ -51,7 +51,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     NewsDetailComponent,
     AgendaDetailComponent,
     AgendaListComponent,
-    ShowLegalInfoComponent
+    ShowLegalInfoComponent,
+    ContactContainerComponent
   ],
   imports: [
     BrowserModule,

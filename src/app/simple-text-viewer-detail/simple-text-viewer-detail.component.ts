@@ -51,7 +51,10 @@ export class SimpleTextViewerDetailComponent {
           .subscribe(
             (wpPage: WpPage) => {
               this.contenido = wpPage
-              this.getFeaturedMedia (this.contenido.featured_media)
+              if (this.contenido.featured_media) {
+               /*  console.log ("contenido: ", this.contenido, this.contenido.featured_media) */
+                this.getFeaturedMedia (this.contenido.featured_media)
+              }
           })
     }
 
@@ -60,7 +63,7 @@ export class SimpleTextViewerDetailComponent {
           .subscribe(
             (mediaItem: WpPageFeaturedMedia) => {
               this.contenidoMedia = mediaItem
-              console.log (this.contenidoMedia.guid.rendered)
+             /*  console.log ("contenidoMedia: ", idMedia, this.contenidoMedia) */
           })
     }
 }
