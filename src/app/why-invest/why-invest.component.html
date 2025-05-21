@@ -1,4 +1,4 @@
-<main ngClass="entry-content">
+<main #entryContent ngClass="entry-content">
     <h1 class="detail-title" *ngIf="contenido" [innerHTML]="contenido.title.rendered"></h1>
   <section ngClass="centrado" *ngIf="contenido" [innerHTML]="contenido.content.rendered"></section>
 </main>

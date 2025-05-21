@@ -12,29 +12,38 @@ import { AgendaDetailComponent } from './agenda/agenda-detail/agenda-detail.comp
 import { ShowLegalInfoComponent } from './show-legal-info/show-legal-info.component';
 import { ContactContainerComponent } from './contact-container/contact-container.component';
 import { SectorsAndIndustriesComponent } from './sectors-and-industries/sectors-and-industries.component';
+import { WhoWeAreComponent } from './who-we-are/who-we-are.component';
+import { WhyInvestComponent } from './why-invest/why-invest.component';
+import { InvestmentEcosystemComponent } from './investment-ecosystem/investment-ecosystem.component';
+import { OurServicesComponent } from './our-services/our-services.component';
+import { TheTalentComponent } from './the-talent/the-talent.component';
 
 
 const routes: Routes = [
 
-  { path: 'por-que-invertir-en-baleares/:id', component: SimpleTextViewerDetailComponent },
-  { path: 'per-que-invertir-a-balears/:id', component: SimpleTextViewerDetailComponent },
-  { path: 'why-invest-in-balears/:id', component: SimpleTextViewerDetailComponent },
+  { path: 'quienes-somos/:id', component: WhoWeAreComponent },
+  { path: 'qui-som/:id', component: WhoWeAreComponent },
+  { path: 'who-we-are/:id', component: WhoWeAreComponent },
 
-  { path: 'ecosistema-inversor/:id', component: SimpleTextViewerDetailComponent },
-  { path: 'ecosistema-inversor-cat/:id', component: SimpleTextViewerDetailComponent },
-  { path: 'investment-ecosystem/:id', component: SimpleTextViewerDetailComponent },
+  { path: 'por-que-invertir-en-baleares/:id', component: WhyInvestComponent },
+  { path: 'per-que-invertir-a-balears/:id', component: WhyInvestComponent },
+  { path: 'why-invest-in-balears/:id', component: WhyInvestComponent },
 
-  { path: 'servicios-al-inversor-y-al-emprendedor/:id', component: SimpleTextViewerDetailComponent },
-  { path: 'serveis-a-linversor-i-a-lemprenedor/:id', component: SimpleTextViewerDetailComponent },
-  { path: 'investor-and-entrepreneur-services/:id', component: SimpleTextViewerDetailComponent },
+  { path: 'ecosistema-inversor/:id', component: InvestmentEcosystemComponent },
+  { path: 'ecosistema-inversor-cat/:id', component: InvestmentEcosystemComponent },
+  { path: 'investment-ecosystem/:id', component: InvestmentEcosystemComponent },
+
+  { path: 'servicios-al-inversor-y-al-emprendedor/:id', component: OurServicesComponent },
+  { path: 'serveis-a-linversor-i-a-lemprenedor/:id', component: OurServicesComponent },
+  { path: 'investor-and-entrepreneur-services/:id', component: OurServicesComponent },
 
   { path: 'sectores-e-industrias/:id', component: SectorsAndIndustriesComponent },
   { path: 'sectors-i-industries/:id', component: SectorsAndIndustriesComponent },
   { path: 'sectors-and-industries/:id', component: SectorsAndIndustriesComponent },
 
-  { path: 'talento/:id', component: SimpleTextViewerDetailComponent },
-  { path: 'talent/:id', component: SimpleTextViewerDetailComponent },
-  { path: 'talent-eng/:id', component: SimpleTextViewerDetailComponent },
+  { path: 'talento/:id', component: TheTalentComponent },
+  { path: 'talent/:id', component: TheTalentComponent },
+  { path: 'talent-eng/:id', component: TheTalentComponent },
 
   { path: 'invest-in-balearics-detail/:id', component: SimpleTextViewerDetailComponent },
 

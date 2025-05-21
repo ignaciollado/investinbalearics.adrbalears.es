@@ -1,52 +1,66 @@
-import { Component, ViewEncapsulation } from '@angular/core';
-import { Router, ActivatedRoute  } from '@angular/router';
+import { Component, ViewEncapsulation, ElementRef, AfterViewInit, Renderer2, ViewChild } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 import { wpPageService } from '../services/wp-page.service';
 import { WpPage } from '../Models/wp-page-data.dto';
 import { WpPageFeaturedMedia } from '../Models/wp-page-featured-media.dto';
 
 @Component({
-  selector: 'app-sectors-and-industries',
-  templateUrl: './sectors-and-industries.component.html',
-  styleUrl: './sectors-and-industries.component.scss',
+  selector: 'app-why-invest',
+  templateUrl: './why-invest.component.html',
+  styleUrl: './why-invest.component.scss',
   encapsulation: ViewEncapsulation.None
 })
-export class SectorsAndIndustriesComponent {
+export class WhyInvestComponent implements AfterViewInit {
   public id:number | null
   public currentLang: string | undefined
   public currentWPLang: number
   public contenido: WpPage
   public contenidoMedia: WpPageFeaturedMedia
 
+  @ViewChild('entryContent', { static: false }) entryContent!: ElementRef;
+
   constructor( public translateService: TranslateService, 
     private wpPageService: wpPageService, 
-    private route: ActivatedRoute,
-    private router: Router ) { }
+    private renderer: Renderer2 ) { }
 
-    ngOnInit(): void {
+  
+ngAfterViewInit(): void {
+ const animations = [
+   'slideInFromLeft',
+   'slideInFromRight',
+   'slideInFromTop',
+   'fadeInZoom'
+ ];
+
+ const randomAnimation = animations[Math.floor(Math.random() * animations.length)];
+  console.log ("randomAnimation", randomAnimation, this.entryContent)
+ this.renderer.addClass(this.entryContent.nativeElement, 'animated-entry');
+ this.renderer.setStyle(this.entryContent.nativeElement, 'animationName', randomAnimation); }
+
+ngOnInit(): void {
       switch (localStorage.getItem('preferredLang')) {
         case 'cat':
         case 'ca-ES':
           this.currentLang = 'ca-ES'
           this.currentWPLang = 42
-          this.id = 366
+          this.id = 319
         break
         case 'cas':
         case 'es-ES':
           this.currentLang = 'es-ES'
           this.currentWPLang = 43
-          this.id = 113
+          this.id = 401
         break
         case 'en':
         case 'en-EN':
           this.currentLang = 'en-EN'
           this.currentWPLang = 44
-          this.id = 364
+          this.id = 321
         break
         default:
           this.currentLang = 'en-EN'
           this.currentWPLang = 41
-          this.id = 364
+          this.id = 321
       }
       this.getContent(this.id)
       window.scroll(0,0)

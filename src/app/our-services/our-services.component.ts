@@ -5,14 +5,15 @@ import { wpPageService } from '../services/wp-page.service';
 import { WpPage } from '../Models/wp-page-data.dto';
 import { WpPageFeaturedMedia } from '../Models/wp-page-featured-media.dto';
 
+
 @Component({
-  selector: 'app-sectors-and-industries',
-  templateUrl: './sectors-and-industries.component.html',
-  styleUrl: './sectors-and-industries.component.scss',
+  selector: 'app-our-services',
+  templateUrl: './our-services.component.html',
+  styleUrl: './our-services.component.scss',
   encapsulation: ViewEncapsulation.None
 })
-export class SectorsAndIndustriesComponent {
-  public id:number | null
+export class OurServicesComponent {
+ public id:number | null
   public currentLang: string | undefined
   public currentWPLang: number
   public contenido: WpPage
@@ -29,24 +30,24 @@ export class SectorsAndIndustriesComponent {
         case 'ca-ES':
           this.currentLang = 'ca-ES'
           this.currentWPLang = 42
-          this.id = 366
+          this.id = 359
         break
         case 'cas':
         case 'es-ES':
           this.currentLang = 'es-ES'
           this.currentWPLang = 43
-          this.id = 113
+          this.id = 111
         break
         case 'en':
         case 'en-EN':
           this.currentLang = 'en-EN'
           this.currentWPLang = 44
-          this.id = 364
+          this.id = 361
         break
         default:
           this.currentLang = 'en-EN'
           this.currentWPLang = 41
-          this.id = 364
+          this.id = 361
       }
       this.getContent(this.id)
       window.scroll(0,0)

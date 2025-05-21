@@ -27,6 +27,11 @@ import { SearchTheWebComponent } from './searchTheWeb/search-the-web/search-the-
 import { ShowLegalInfoComponent } from './show-legal-info/show-legal-info.component';
 import { ContactContainerComponent } from './contact-container/contact-container.component';
 import { SectorsAndIndustriesComponent } from './sectors-and-industries/sectors-and-industries.component';
+import { WhoWeAreComponent } from './who-we-are/who-we-are.component';
+import { WhyInvestComponent } from './why-invest/why-invest.component';
+import { InvestmentEcosystemComponent } from './investment-ecosystem/investment-ecosystem.component';
+import { OurServicesComponent } from './our-services/our-services.component';
+import { TheTalentComponent } from './the-talent/the-talent.component';
 
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(http: HttpClient) {
@@ -54,7 +59,12 @@ export function HttpLoaderFactory(http: HttpClient) {
     AgendaListComponent,
     ShowLegalInfoComponent,
     ContactContainerComponent,
-    SectorsAndIndustriesComponent
+    SectorsAndIndustriesComponent,
+    WhoWeAreComponent,
+    WhyInvestComponent,
+    InvestmentEcosystemComponent,
+    OurServicesComponent,
+    TheTalentComponent
   ],
   imports: [
     BrowserModule,
