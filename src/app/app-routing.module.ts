@@ -5,13 +5,13 @@ import { BodyComponent } from './body/body.component';
 import { SimpleTextViewerDetailComponent } from './simple-text-viewer-detail/simple-text-viewer-detail.component';
 import { NotFoundComponent } from './error-pages/not-found/not-found.component';
 import { InternalServerComponent } from './error-pages/internal-server/internal-server.component';
-import { ContactFormComponent } from './contact-form/contact-form.component';
 import { NewsListComponent } from './news/news-list/news-list.component';
 import { AgendaListComponent } from './agenda/agenda-list/agenda-list.component';
 import { NewsDetailComponent } from './news/news-detail/news-detail.component';
 import { AgendaDetailComponent } from './agenda/agenda-detail/agenda-detail.component';
 import { ShowLegalInfoComponent } from './show-legal-info/show-legal-info.component';
 import { ContactContainerComponent } from './contact-container/contact-container.component';
+import { SectorsAndIndustriesComponent } from './sectors-and-industries/sectors-and-industries.component';
 
 
 const routes: Routes = [
@@ -28,9 +28,9 @@ const routes: Routes = [
   { path: 'serveis-a-linversor-i-a-lemprenedor/:id', component: SimpleTextViewerDetailComponent },
   { path: 'investor-and-entrepreneur-services/:id', component: SimpleTextViewerDetailComponent },
 
-  { path: 'sectores-e-industrias/:id', component: SimpleTextViewerDetailComponent },
-  { path: 'sectors-i-industries/:id', component: SimpleTextViewerDetailComponent },
-  { path: 'sectors-and-industries/:id', component: SimpleTextViewerDetailComponent },
+  { path: 'sectores-e-industrias/:id', component: SectorsAndIndustriesComponent },
+  { path: 'sectors-i-industries/:id', component: SectorsAndIndustriesComponent },
+  { path: 'sectors-and-industries/:id', component: SectorsAndIndustriesComponent },
 
   { path: 'talento/:id', component: SimpleTextViewerDetailComponent },
   { path: 'talent/:id', component: SimpleTextViewerDetailComponent },

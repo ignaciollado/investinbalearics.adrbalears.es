@@ -6,14 +6,14 @@ import { WpPage } from '../Models/wp-page-data.dto';
 import { WpPageFeaturedMedia } from '../Models/wp-page-featured-media.dto';
 
 @Component({
-  selector: 'app-simple-text-viewer-detail',
-  templateUrl: './simple-text-viewer-detail.component.html',
-  styleUrl: './simple-text-viewer-detail.component.scss',
+  selector: 'app-sectors-and-industries',
+  templateUrl: './sectors-and-industries.component.html',
+  styleUrl: './sectors-and-industries.component.scss',
   encapsulation: ViewEncapsulation.None
 })
-
-export class SimpleTextViewerDetailComponent {
-  public id:number | null = +this.route.snapshot.paramMap.get('id')
+export class SectorsAndIndustriesComponent {
+  /* public id:number | null = +this.route.snapshot.paramMap.get('id') */
+  public id:number | null
   public currentLang: string | undefined
   public currentWPLang: number
   public contenido: WpPage
@@ -27,20 +27,27 @@ export class SimpleTextViewerDetailComponent {
     ngOnInit(): void {
       switch (localStorage.getItem('preferredLang')) {
         case 'cat':
+        case 'ca-ES':
           this.currentLang = 'ca-ES'
           this.currentWPLang = 42
+          this.id = 366
         break
         case 'cas':
+        case 'es-ES':
           this.currentLang = 'es-ES'
           this.currentWPLang = 43
+          this.id = 113
         break
         case 'en':
+        case 'en-EN':
           this.currentLang = 'en-EN'
           this.currentWPLang = 44
+          this.id = 364
         break
         default:
-          this.currentLang = 'ca-ES'
+          this.currentLang = 'en-EN'
           this.currentWPLang = 41
+          this.id = 364
       }
       this.getContent(this.id)
       window.scroll(0,0)
@@ -51,9 +58,9 @@ export class SimpleTextViewerDetailComponent {
           .subscribe(
             (wpPage: WpPage) => {
               this.contenido = wpPage
-              if (this.contenido.featured_media) {
+             /*  if (this.contenido.featured_media) {
                 this.getFeaturedMedia (this.contenido.featured_media)
-              }
+              } */
           })
     }
 

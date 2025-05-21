@@ -31,6 +31,7 @@ export class BodyComponent {
 ngOnInit(): void {
     this.currentLang = localStorage.getItem('preferredLang')
     switch (this.currentLang) {
+        case 'cat':
         case 'ca-ES':
           this.currentWPLang = 42
           this.homeIntroPage = 349
@@ -41,6 +42,7 @@ ngOnInit(): void {
           this.homeIntroPage_5 = 308
           this.welcomeString = "Benvingut a la plataforma Invest In Balerics de la ADR Balears"
         break
+        case 'es':
         case 'es-ES':
           this.currentWPLang = 43
           this.homeIntroPage = 105
@@ -51,6 +53,7 @@ ngOnInit(): void {
           this.homeIntroPage_5 = 115
           this.welcomeString = "Bienvenido a la plataforma Invest In Balerics de la ADR Baleares"
         break
+        case 'en':
         case 'en-EN':
           this.currentWPLang = 44
           this.homeIntroPage = 351

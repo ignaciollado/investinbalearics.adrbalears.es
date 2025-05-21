@@ -19,34 +19,40 @@ constructor(  public translate: TranslateService,
 
 ngOnInit(): void {
     this.currentLang = localStorage.getItem('preferredLang')
+    console.log ("this.currentLang", this.currentLang)
+    if (!this.currentLang) {
+      this.currentLang = "en-EN"
+      localStorage.setItem("preferredLang", 'en-EN')
+    }
     switch (this.currentLang) {
         case 'ca-ES':
         case 'cat':
-          /*   localStorage.setItem('preferredLang', 'ca-ES')
-            this.currentLang = 'ca-ES' */
+            localStorage.setItem('preferredLang', 'ca-ES')
+            this.currentLang = 'ca-ES'
             this.currentWPLang = 42
             this.homeIntroPage = 262
         break
         case 'es-ES':
         case 'cas':
-            /* localStorage.setItem('preferredLang', 'es-ES')
-            this.currentLang = 'es-ES'        */  
+            localStorage.setItem('preferredLang', 'es-ES')
+            this.currentLang = 'es-ES'
             this.currentWPLang = 43
             this.homeIntroPage = 105
         break
         case 'en-EN':
         case 'eng':
-           /*  localStorage.setItem('preferredLang', 'en-EN')
-            this.currentLang = 'en-EN' */
+           localStorage.setItem('preferredLang', 'en-EN')
+            this.currentLang = 'en-EN'
             this.currentWPLang = 44
             this.homeIntroPage = 264
         break
         default:
-           /*  localStorage.setItem('preferredLang', 'en-EN')
-            this.currentLang = 'en-EN' */
+            localStorage.setItem('preferredLang', 'en-EN')
+            this.currentLang = 'en-EN'
             this.currentWPLang = 44
             this.homeIntroPage = 264
       }
+      console.log ("this.currentLang", this.currentLang)
 }
     
 private offcanvasService = inject(NgbOffcanvas);

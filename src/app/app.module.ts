@@ -26,6 +26,7 @@ import { ContactFormComponent } from './contact-form/contact-form.component';
 import { SearchTheWebComponent } from './searchTheWeb/search-the-web/search-the-web.component';
 import { ShowLegalInfoComponent } from './show-legal-info/show-legal-info.component';
 import { ContactContainerComponent } from './contact-container/contact-container.component';
+import { SectorsAndIndustriesComponent } from './sectors-and-industries/sectors-and-industries.component';
 
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(http: HttpClient) {
@@ -52,7 +53,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     AgendaDetailComponent,
     AgendaListComponent,
     ShowLegalInfoComponent,
-    ContactContainerComponent
+    ContactContainerComponent,
+    SectorsAndIndustriesComponent
   ],
   imports: [
     BrowserModule,
