@@ -2,26 +2,18 @@
   display: grid;
   grid-template-areas: "logo search language" "logo mainmenu mainmenu";
   margin-top: 1rem;
+  font-weight: 300;
 }
-.nav-link {
+ .nav-link {
   color: #000000!important;
 }
-.nav-link:hover {
-  color: #974890!important;
-}
+
 .button-header-menu {
   background: transparent!important;
   color: #000!important;
   padding-right: 0;
 }
-.offcanvas-header {
-  background-color: #003747;
-  color: #fff;
-}
-.offcanvas-body {
-  background-color: #ed7448;
-  color: #fff;
-}
+
 .btn-close {
   color: #fff;
 }
@@ -29,7 +21,6 @@
   grid-area: mobileMenu;
   display: none;
   padding-right: .2rem;
-  border: 1px solid red;
 }
 .logo {
   grid-area: logo;
@@ -70,9 +61,17 @@
 h5 {
   margin-bottom:0;
 }
-@media screen and (max-width: 992px) { /* para hacerlo coincidir con el punto de ruptura de bootstrap 'ng' */
+
+@media screen and (max-width: 1215px) {
+  .nav-link {
+  font-weight: 400;
+  font-size: .9rem;
+}
+}
+
+@media screen and (max-width: 991px) { /* para hacerlo coincidir con el punto de ruptura de bootstrap 'ng' */
   .the-header {
-    grid-template-areas: "logo language" "mainmenu mainmenu";
+    grid-template-areas: "logo" "language" "mainmenu";
     row-gap: 1rem;
   }
   .main-menu {

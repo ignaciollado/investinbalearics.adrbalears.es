@@ -11,12 +11,12 @@
   </section>
   <nav ngClass="navbar navbar-expand-lg main-menu">
     <button ngClass="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span ngClass="navbar-toggler-icon"></span>
+      <span ngClass="navbar-toggler-icon"></span>
     </button>
     <section ngClass="collapse navbar-collapse mobile-invest-menu" id="navbarSupportedContent">
         <ul ngClass="navbar-nav ml-auto">
           <li ngClass="nav-item">
-            <a ngClass="nav-link" aria-current="page" *ngIf="currentLang === 'es-ES'" routerLink="quienes-somos/369">Quienes somos</a>
+            <a ngClass="nav-link" aria-current="page" *ngIf="currentLang === 'es-ES'" routerLink="quienes-somos/369" cdkMenuItem>Quienes somos</a>
             <a ngClass="nav-link" aria-current="page" *ngIf="currentLang === 'ca-ES'" routerLink="qui-som/371">Qui som</a>
             <a ngClass="nav-link" aria-current="page" *ngIf="currentLang === 'en-EN'" routerLink="who-we-are/373">Who we are</a>
           </li>
@@ -51,10 +51,8 @@
             <a ngClass="nav-link" *ngIf="currentLang === 'en-EN'" routerLink="ajuts-i-subvencions">{{'Grants and subsidies' | translate}}</a>         
           </li>
         </ul>
+       
     </section>
-    <section ngClass="search">
-      <app-search-the-web></app-search-the-web>
-    </section>
+    <app-search-the-web ngClass="search"></app-search-the-web>
   </nav>
 </header>
-

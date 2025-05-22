@@ -1,14 +1,14 @@
 footer {
   display: grid;
-  grid-template-columns: 33% 33% 33%;
+  grid-template-columns: 25% 45% 30%;
   grid-template-areas: "localizacionBottom textosLegales logoBottom " "copyRight copyRight copyRight";
- /*  margin-bottom: 1.5rem; */
   margin-top: 0;
-  row-gap: 2rem;
+  row-gap: 1rem;
   text-align: left;
-  background-color: #000;
-  color: #fff;
+  background-color: #f7fafc;
+  color: #000;
   padding: 1rem;
+  font-size: .8rem;
 }
 
 .logo-adr-balears {
@@ -21,20 +21,11 @@ footer {
   grid-area: localizacionBottom;
 }
 
-a {
-  color: #fff!important;
-}
-
-a:hover {
-  transition: color 1s ease, padding 0.8s linear;
-  color: #974890!important;
-}
-
 .textos-legales {
   grid-area: textosLegales;
   display: grid;
   text-align: left;
-  grid-template-columns: 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
 }
 
 .copy-right-adr {
@@ -42,7 +33,7 @@ a:hover {
   text-align: center;
 }
 
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 991px) {
   footer{
     grid-template-columns: 100%;
     grid-template-areas: "logoBottom" "localizacionBottom" "textosLegales" "copyRight";

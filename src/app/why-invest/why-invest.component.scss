@@ -23,3 +23,11 @@
 a {
   color: black!important;
 } */
+
+.wp-block-gallery {
+  display: grid;
+  grid-template-columns:  repeat(2, 1fr);
+  gap: 1rem;
+  max-width: 100%;
+  margin: 0 auto;
+}
