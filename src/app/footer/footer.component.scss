@@ -5,10 +5,11 @@ footer {
   margin-top: 0;
   row-gap: 1rem;
   text-align: left;
-  background-color: #f7fafc;
-  color: #000;
+  background-color: #000;
+  color: #fff;
   padding: 1rem;
   font-size: .8rem;
+  border-top: 5px solid #aa0043;
 }
 
 .logo-adr-balears {
@@ -31,6 +32,15 @@ footer {
 .copy-right-adr {
   grid-area: copyRight;
   text-align: center;
+}
+
+a {
+  color: #fff!important;
+  text-decoration: none;
+  display: inline;
+  overflow: hidden;
+  transition: color 0.4s ease;
+  text-decoration: none!important;
 }
 
 @media screen and (max-width: 991px) {

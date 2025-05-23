@@ -1,17 +1,9 @@
 
-
-
-
-
-
-
-
-
-
-
-
 <section [ngClass]="!adjustContent ? 'content-detail': 'content-detail-full'" *ngIf="contenido">
-  <img *ngIf = "!adjustContent && contenidoMedia" [ngClass]="'content-detail__figure'" srcset="{{contenidoMedia.media_details.sizes.full.source_url}}" alt='{{contenido.title.rendered}}' title='{{contenido.title.rendered}}' />
+  <img *ngIf = "!adjustContent && contenidoMedia" [ngClass]="'content-detail__figure'" 
+      srcset="{{contenidoMedia.media_details.sizes.full.source_url}}" 
+      alt='{{contenido.title.rendered}}' 
+      title='{{contenido.title.rendered}}' />
   <section [ngClass]="!adjustContent ? 'content-detail__text': 'content-detail-full__text'">
     <h2 ngClass="content-detail__title" >{{contenido.title.rendered}}</h2>
     <article [ngClass]="'content-detail__body'" [innerHTML]="contenido.excerpt.rendered"></article>

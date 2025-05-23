@@ -1,8 +1,10 @@
 .the-header {
   display: grid;
-  grid-template-areas: "logo search language" "logo mainmenu mainmenu";
+  /* grid-template-areas: "logo search language" "logo mainmenu mainmenu"; */
+  grid-template-areas: "logo language" "logo mainmenu";
   margin-top: 1rem;
   font-weight: 300;
+  border-bottom: 5px solid #aa0043;
 }
  .nav-link {
   color: #000000!important;
@@ -41,12 +43,7 @@
 .search {
   grid-area: search;
 }
-.border-gradient {
-  border-bottom: 5px solid transparent;
-  border-image: linear-gradient(to right, #dd9f70, #974890);
-  border-image-slice: 1;
-  width: 100%;
-}
+
 .button-header-menu:hover, button:hover {
   transition: color 1s ease, padding 0.8s linear;
   border: 1px;

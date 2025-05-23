@@ -71,6 +71,7 @@ ngOnInit(): void {
           .subscribe(
             (wpPage: WpPage) => {
               this.contenido = wpPage
+              this.getFeaturedMedia (this.contenido.featured_media)
           })
     }
 

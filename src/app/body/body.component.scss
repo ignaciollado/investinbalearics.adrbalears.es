@@ -2,8 +2,9 @@
   position: relative;
   color: #f1f1f1;
   height: 540px;
-  background-image: linear-gradient( rgba(245, 246, 252, 0.52), #3d4e97),url('../../assets/images/header-image.jpeg');
-  animation: zoominout 5;
+ /*  background-image: linear-gradient( rgba(245, 246, 252, 0.52), #3d4e97),url('../../assets/images/home-invest-in-01.webp'); */
+  background-image: url('../../assets/images/home-invest-in-01.webp');
+  /* animation: zoominout 5; */
   animation-fill-mode: forwards;
   animation-iteration-count: 1;
   animation-direction: alternate;
@@ -16,7 +17,7 @@ article, section {
 
 @keyframes zoominout {
   from {background-position: top;background-size:1200px;}
-  to {background-position: -100px 0px;background-size:1750px;}
+  to {background-position: -100px 0px;background-size:2000px;}
 }
 
 .top-content {
@@ -40,7 +41,6 @@ app-simple-text-viewer{
 app-contact-form {
   grid-area: formulario;
   margin-left: 12px;
-  /* padding: 24px; */
   background-color: #f6ece4;
   color: #000;
   animation-duration: 3s;
@@ -77,10 +77,8 @@ button {
 }
 
 article:nth-child(2) {
-  /* text-align: left; */
-  /* background-image: linear-gradient(to right,#c75765, #fff); */
-  background-image: linear-gradient(to right, #c75765, rgba(255, 255, 255, 0.5)),
-  url("../../assets/images/ecosistema-inverosr-rojos.jpg");
+  /* background-image: linear-gradient(to right, #c75765, rgba(255, 255, 255, 0.5)), url("../../assets/images/home-invest-in-03.webp"); */
+  background-image: url("../../assets/images/home-invest-in-03.webp");
   background-repeat: no-repeat; 
   background-position-x: right;       
   button {
@@ -89,9 +87,8 @@ article:nth-child(2) {
   }
 }
 article:nth-child(4) {
-  /* background-image: linear-gradient(to right,#3d4e97, #fff), url("https://interactive-examples.mdn.mozilla.net/media/examples/lizard.png"); */
-  background-image: linear-gradient(to right, #3d4e97, rgba(255, 255, 255, 0.5)),
-                  url("../../assets/images/empresa-industrial-baleares.jpg");
+ /*  background-image: linear-gradient(to right, #3d4e97, rgba(255, 255, 255, 0.5)), url("../../assets/images/empresa-industrial-baleares.jpg"); */
+  background-image: url("../../assets/images/home-invest-in-05.webp");
   background-repeat: no-repeat; 
   background-position-x: right;          
   button {
