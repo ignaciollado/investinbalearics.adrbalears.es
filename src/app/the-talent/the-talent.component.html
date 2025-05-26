@@ -1,4 +1,5 @@
 <main ngClass="entry-content">
-    <h1 class="detail-title" *ngIf="contenido" [innerHTML]="contenido.title.rendered"></h1>
-  <section ngClass="centrado" *ngIf="contenido" [innerHTML]="contenido.content.rendered"></section>
+  <h1 ngClass="detail-title" *ngIf="contenido" [innerHTML]="contenido.title.rendered"></h1>
+  <section ngClass="content" *ngIf="contenido" [innerHTML]="contenido.content.rendered"></section>
+  <img ngClass="image" *ngIf="contenidoMedia" src='{{contenidoMedia.source_url}}' alt='{{contenido.title.rendered}}' title='{{contenido.title.rendered}}'>
 </main>

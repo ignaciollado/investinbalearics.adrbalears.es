@@ -58,6 +58,8 @@ export class TheTalentComponent {
           .subscribe(
             (wpPage: WpPage) => {
               this.contenido = wpPage
+              console.log ("talento: ", this.contenido)
+              this.getFeaturedMedia (this.contenido.featured_media)
           })
     }
 
