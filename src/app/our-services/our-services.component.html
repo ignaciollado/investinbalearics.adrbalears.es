@@ -1,5 +1,8 @@
-<main ngClass="entry-content">
-    <h1 class="detail-title" *ngIf="contenido" [innerHTML]="contenido.title.rendered"></h1>
-  <section ngClass="centrado" *ngIf="contenido" [innerHTML]="contenido.content.rendered"></section>
-</main>
+<main ngClass="entry-content" *ngIf="contenido" [innerHTML]="contenido.content.rendered"></main>
+
+<section ngClass="contact-form-area">
+  <app-contact-form></app-contact-form>
+  <img src='../../assets/images/home-invest-in-06.webp' alt=''>
+</section>
+
 

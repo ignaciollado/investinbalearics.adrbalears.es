@@ -1,7 +1,1 @@
-<main #entryContent ngClass="entry-content">
-  <!-- <h1 ngClass="detail-title" *ngIf="contenido" [innerHTML]="contenido.title.rendered"></h1> -->
-  <section ngClass="content" *ngIf="contenido" [innerHTML]="contenido.content.rendered">
-    
-  </section>
-  <!-- <img *ngIf="contenidoMedia" ngClass="image" src='{{contenidoMedia.source_url}}' alt='{{contenido.title.rendered}}' title='{{contenido.title.rendered}}'> -->
-</main>
+<main #entryContent ngClass="entry-content" *ngIf="contenido" [innerHTML]="contenido.content.rendered"></main>

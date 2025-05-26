@@ -32,6 +32,7 @@ import { WhyInvestComponent } from './why-invest/why-invest.component';
 import { InvestmentEcosystemComponent } from './investment-ecosystem/investment-ecosystem.component';
 import { OurServicesComponent } from './our-services/our-services.component';
 import { TheTalentComponent } from './the-talent/the-talent.component';
+import { ClustersComponent } from './clusters/clusters.component';
 
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(http: HttpClient) {
@@ -64,7 +65,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     WhyInvestComponent,
     InvestmentEcosystemComponent,
     OurServicesComponent,
-    TheTalentComponent
+    TheTalentComponent,
+    ClustersComponent
   ],
   imports: [
     BrowserModule,
