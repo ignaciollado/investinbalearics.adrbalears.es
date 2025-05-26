@@ -172,18 +172,17 @@ h6 {
   display: block;
 }
 
-.wp-block-gallery figcaption {
+/* .wp-block-gallery figcaption {
   position: absolute;
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
   width: 100%;
   padding: 0.5rem;
-  background: rgba(0, 0, 0, 0.6);
   color: white;
   font-size: 1rem;
   text-align: center;
-}
+} */
 
 .wp-block-gallery img:hover {
   opacity: 0.7;

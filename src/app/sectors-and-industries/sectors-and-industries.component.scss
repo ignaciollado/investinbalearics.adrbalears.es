@@ -25,15 +25,15 @@
   transform: translateX(-50%);
   width: 100%;
   padding: 0.5rem;
-  background: rgba(0, 0, 0, 0.6);
   color: white;
-  font-size: 1rem;
+  font-size: 3rem;
   text-align: center;
+  border: 1px solid red;
 }
 
 .wp-block-gallery img:hover {
   opacity: 0.7;
-  filter: sepia(100%);
+  filter: grayscale(100%);
 }
 
 .wp-block-gallery .overlay {
@@ -61,6 +61,27 @@
   bottom: 10px;
   width: 100%;
 }
+
+.wp-block-image {
+  position: relative;
+  display: inline-block;
+
+  img {
+    display: block;
+  }
+
+  .wp-element-caption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white; // Puedes ajustar el color según tus necesidades
+    //background-color: rgba(0, 0, 0, 0.5); // Fondo semitransparente para mejor legibilidad
+    //padding: 5px;
+    text-align: center;
+  }
+}
+
 
 @media screen and (max-width: 992px) {
   .content-detail {
