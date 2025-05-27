@@ -35,14 +35,14 @@
 }
 
 .wp-block-group:nth-child(3) {
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-  padding: 0 15%;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+    width: 50%;
+    margin: auto;
 }
 
-/* .wp-block-column {
-   img {
+.wp-block-image {
+  img {
     width: 100%;
-    height: auto;
   }
-} */
+}

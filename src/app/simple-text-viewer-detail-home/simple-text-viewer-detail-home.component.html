@@ -7,7 +7,8 @@
   <section [ngClass]="!adjustContent ? 'content-detail__text': 'content-detail-full__text'">
     <h2 ngClass="content-detail__title" >{{contenido.title.rendered}}</h2>
     <article [ngClass]="'content-detail__body'" [innerHTML]="contenido.excerpt.rendered"></article>
-    <button [ngClass]="!adjustContent ? 'btn content-detail__button--end': 'btn content-detail__button--start'" type="button" routerLink="invest-in-balearics-detail/{{wpPageDetailID}}">+ info</button>
+<!--     <button [ngClass]="!adjustContent ? 'btn content-detail__button--end': 'btn content-detail__button--start'" type="button" routerLink="invest-in-balearics-detail/{{wpPageDetailID}}">+ info</button> -->
+         <button [ngClass]="!adjustContent ? 'btn content-detail__button--end': 'btn content-detail__button--start'" type="button" (click)="showDetail(wpPageDetailID)">+ info</button>
   </section>
 </section>
 <article *ngIf="!contenido">Waiting for contents to display ...</article>

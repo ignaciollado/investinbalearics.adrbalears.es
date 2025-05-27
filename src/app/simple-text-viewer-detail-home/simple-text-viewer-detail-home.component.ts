@@ -58,4 +58,14 @@ export class SimpleTextViewerDetailHomeComponent {
               console.log (this.contenidoMedia)
           })
     }
+
+    showDetail(id) {
+      console.log (id)
+      switch (id)  {
+        case 113:
+        case 366:
+        case 364:
+          this.router.navigate(['/sectores-e-industrias',113])
+      }
+    }
 }
