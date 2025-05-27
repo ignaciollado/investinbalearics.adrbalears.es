@@ -63,9 +63,54 @@ export class SimpleTextViewerDetailHomeComponent {
       console.log (id)
       switch (id)  {
         case 113:
-        case 366:
-        case 364:
           this.router.navigate(['/sectores-e-industrias',113])
+          break
+        case 366:
+          this.router.navigate(['/sectores-e-industrias',366])
+          break
+        case 364:
+          this.router.navigate(['/sectores-e-industrias',364])
+          break
+//Por qué invertir
+        case 212:
+          this.router.navigate(['/por-que-invertir-en-baleares',212]) 
+          break
+        case 315:
+          this.router.navigate(['/por-que-invertir-en-baleares',315])
+          break
+        case 317:
+          this.router.navigate(['/por-que-invertir-en-baleares',317])
+          break
+//ecosistema inversor
+        case 212:
+          this.router.navigate(['/ecosistema-inversor',109])
+          break
+        case 315:
+          this.router.navigate(['/ecosistema-inversor',357])
+          break
+        case 317:
+          this.router.navigate(['/ecosistema-inversor',355])
+          break
+
+        case 111:
+          this.router.navigate(['/ecosistema-inversor',111])
+          break
+        case 359:
+          this.router.navigate(['/ecosistema-inversor',359])
+          break
+        case 361:
+          this.router.navigate(['/ecosistema-inversor',361])
+          break
+
+        case 115:
+          this.router.navigate(['/ecosistema-inversor',115])
+          break
+        case 310:
+          this.router.navigate(['/ecosistema-inversor',310])
+          break
+        case 308:
+          this.router.navigate(['/ecosistema-inversor',308])
+          break          
       }
     }
 }

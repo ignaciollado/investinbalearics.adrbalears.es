@@ -35,7 +35,7 @@ ngOnInit(): void {
         case 'ca-ES':
           this.currentWPLang = 42
           this.homeIntroPage = 349
-          this.homeIntroPage_1 = 315
+          this.homeIntroPage_1 = 319
           this.homeIntroPage_2 = 357
           this.homeIntroPage_3 = 359
           this.homeIntroPage_4 = 366
@@ -57,7 +57,7 @@ ngOnInit(): void {
         case 'en-EN':
           this.currentWPLang = 44
           this.homeIntroPage = 351
-          this.homeIntroPage_1 = 317
+          this.homeIntroPage_1 = 321
           this.homeIntroPage_2 = 355
           this.homeIntroPage_3 = 361
           this.homeIntroPage_4 = 364
@@ -67,7 +67,7 @@ ngOnInit(): void {
         default:
           this.currentWPLang = 44
           this.homeIntroPage = 351
-          this.homeIntroPage_1 = 317
+          this.homeIntroPage_1 = 321
           this.homeIntroPage_2 = 355
           this.homeIntroPage_3 = 361
           this.homeIntroPage_4 = 364
