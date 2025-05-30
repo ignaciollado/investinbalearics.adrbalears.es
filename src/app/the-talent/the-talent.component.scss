@@ -4,11 +4,14 @@
                         "contenido imagen";
 }
 
+
+
 .detail-title {
   grid-area: titulo;
 }
 .content {
   grid-area: contenido;
+ /*  padding-right: 4rem; */
 }
 .image {
   grid-area: imagen;
