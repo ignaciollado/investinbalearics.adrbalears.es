@@ -12,7 +12,12 @@
 
   }
 }
-
+.wp-block-column h1 {
+  padding-bottom: 1rem;
+}
+.wp-block-column h2 {
+  padding-bottom: 1rem;
+}
 .wp-block-group:nth-child(2), .wp-block-group:nth-child(4) {
   color: #fff;
   padding: 2rem 0;

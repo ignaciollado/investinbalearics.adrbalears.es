@@ -2,9 +2,17 @@
   display: grid;
   grid-template-areas:  "titulo imagen" 
                         "contenido imagen";
+                
 }
 
+.entry-content h1 {
+  padding-right: 4rem;
+  padding-bottom: 1rem;
+}
 
+.entry-content h1 p {
+  padding-right: 4rem;
+}
 
 .detail-title {
   grid-area: titulo;
