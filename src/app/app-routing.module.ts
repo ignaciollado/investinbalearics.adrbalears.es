@@ -19,6 +19,7 @@ import { OurServicesComponent } from './our-services/our-services.component';
 import { TheTalentComponent } from './the-talent/the-talent.component';
 import { ClustersComponent } from './clusters/clusters.component';
 import { SectorsAndIndustriesDetailComponent } from './sectors-and-industries-detail/sectors-and-industries-detail.component';
+import { GrantsAndSubsidiesComponent } from './grants-and-subsidies/grants-and-subsidies.component';
 
 
 const routes: Routes = [
@@ -52,6 +53,10 @@ const routes: Routes = [
   { path: 'talento/:id', component: TheTalentComponent },
   { path: 'talent/:id', component: TheTalentComponent },
   { path: 'talent-eng/:id', component: TheTalentComponent },
+
+  { path: 'ayudas-y-subvenciones/:id', component: GrantsAndSubsidiesComponent},
+  { path: 'grants-and-subsidies/:id', component: GrantsAndSubsidiesComponent},
+  { path: 'ajuts-i-subvencions/:id', component: GrantsAndSubsidiesComponent},
 
   { path: 'invest-in-balearics-detail/:id', component: SimpleTextViewerDetailComponent },
 

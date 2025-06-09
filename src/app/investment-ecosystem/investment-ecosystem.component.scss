@@ -1,9 +1,11 @@
 .entry-content {
   padding: 0;
 }
+
 .wp-block-column h1 {
   padding-bottom: 1rem;
 }
+
 .wp-block-columns:nth-child(1) {
   display: grid;
   grid-template-columns: 1fr 1fr;

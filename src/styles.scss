@@ -176,18 +176,6 @@ h6 {
   padding-right: 4rem;
 }
 
-/* .wp-block-gallery figcaption {
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 100%;
-  padding: 0.5rem;
-  color: white;
-  font-size: 1rem;
-  text-align: center;
-} */
-
 .wp-block-gallery img:hover {
   opacity: 0.7;
   filter: sepia(100%);
@@ -253,9 +241,15 @@ h6 {
 
 
 @media (max-width: 992px) {
+
 .entry-content {
   padding: 2rem 5%;
 }
+
+.wp-block-columns {
+  grid-template-columns: 1fr;
+}
+
 }
 
 @media (max-width: 400px) {
@@ -263,3 +257,4 @@ h6 {
   padding: 2rem 0;
 }
 }
+

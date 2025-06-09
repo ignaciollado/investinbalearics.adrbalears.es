@@ -1,5 +1,5 @@
-import { Component, ViewEncapsulation } from '@angular/core';
-import { Router, ActivatedRoute  } from '@angular/router';
+import { Component } from '@angular/core';
+import { ActivatedRoute  } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
 import { wpPageService } from '../services/wp-page.service';
 import { WpPage } from '../Models/wp-page-data.dto';

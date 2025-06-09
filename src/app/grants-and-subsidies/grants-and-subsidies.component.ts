@@ -3,14 +3,15 @@ import { TranslateService } from '@ngx-translate/core';
 import { wpPageService } from '../services/wp-page.service';
 import { WpPage } from '../Models/wp-page-data.dto';
 import { WpPageFeaturedMedia } from '../Models/wp-page-featured-media.dto';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
-  selector: 'app-why-invest',
-  templateUrl: './why-invest.component.html',
-  styleUrl: './why-invest.component.scss',
+  selector: 'app-grants-and-subsidies',
+  templateUrl: './grants-and-subsidies.component.html',
+  styleUrl: './grants-and-subsidies.component.scss',
   encapsulation: ViewEncapsulation.None
 })
-export class WhyInvestComponent implements AfterViewInit {
+export class GrantsAndSubsidiesComponent implements AfterViewInit {
   public id:number | null
   public currentLang: string | undefined
   public currentWPLang: number
@@ -19,47 +20,47 @@ export class WhyInvestComponent implements AfterViewInit {
 
   @ViewChild('entryContent', { static: false }) entryContent!: ElementRef;
 
-  constructor( public translateService: TranslateService, 
+    constructor( public translateService: TranslateService, 
     private wpPageService: wpPageService, 
-    private renderer: Renderer2 ) { }
+    private renderer: Renderer2, private route: ActivatedRoute ) { }
 
-  
-ngAfterViewInit(): void {
- const animations = [
+  ngAfterViewInit(): void {
+  const animations = [
    'slideInFromLeft',
    'slideInFromRight',
    'slideInFromTop',
    'fadeInZoom'
- ];
+  ];
 
  const randomAnimation = animations[Math.floor(Math.random() * animations.length)];
  this.renderer.addClass(this.entryContent.nativeElement, 'animated-entry');
  this.renderer.setStyle(this.entryContent.nativeElement, 'animationName', randomAnimation); }
 
-ngOnInit(): void {
+ ngOnInit(): void {
+  this.id = +this.route.snapshot.paramMap.get('id')!;
       switch (localStorage.getItem('preferredLang')) {
         case 'cat':
         case 'ca-ES':
           this.currentLang = 'ca-ES'
           this.currentWPLang = 42
-          this.id = 319
+         /*  this.id = 319 */
         break
         case 'cas':
         case 'es-ES':
           this.currentLang = 'es-ES'
           this.currentWPLang = 43
-          this.id = 401
+         /*  this.id = 401 */
         break
         case 'en':
         case 'en-EN':
           this.currentLang = 'en-EN'
           this.currentWPLang = 44
-          this.id = 321
+         /*  this.id = 321 */
         break
         default:
           this.currentLang = 'en-EN'
           this.currentWPLang = 41
-          this.id = 321
+         /*  this.id = 321 */
       }
       this.getContent(this.id)
       window.scroll(0,0)
@@ -81,4 +82,5 @@ ngOnInit(): void {
               this.contenidoMedia = mediaItem
           })
     }
+
 }

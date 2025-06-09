@@ -35,6 +35,7 @@ import { TheTalentComponent } from './the-talent/the-talent.component';
 import { ClustersComponent } from './clusters/clusters.component';
 import { SectorsAndIndustriesDetailComponent } from './sectors-and-industries-detail/sectors-and-industries-detail.component';
 import { ReplaceStringHtmlPipe } from './Pipes/replace-string.pipe';
+import { GrantsAndSubsidiesComponent } from './grants-and-subsidies/grants-and-subsidies.component';
 
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(http: HttpClient) {
@@ -70,7 +71,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     TheTalentComponent,
     ClustersComponent,
     SectorsAndIndustriesDetailComponent,
-    ReplaceStringHtmlPipe
+    ReplaceStringHtmlPipe,
+    GrantsAndSubsidiesComponent
   ],
   imports: [
     BrowserModule,
