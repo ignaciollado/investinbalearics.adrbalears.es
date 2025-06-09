@@ -1,0 +1,15 @@
+.entry-content {
+  display: grid;
+  grid-template-areas:  "titulo imagen" 
+                        "contenido imagen";
+}
+
+.detail-title {
+  grid-area: titulo;
+}
+.content {
+  grid-area: contenido;
+}
+.image {
+  grid-area: imagen;
+}

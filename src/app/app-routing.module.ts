@@ -18,6 +18,7 @@ import { InvestmentEcosystemComponent } from './investment-ecosystem/investment-
 import { OurServicesComponent } from './our-services/our-services.component';
 import { TheTalentComponent } from './the-talent/the-talent.component';
 import { ClustersComponent } from './clusters/clusters.component';
+import { SectorsAndIndustriesDetailComponent } from './sectors-and-industries-detail/sectors-and-industries-detail.component';
 
 
 const routes: Routes = [
@@ -41,6 +42,8 @@ const routes: Routes = [
   { path: 'sectores-e-industrias/:id', component: SectorsAndIndustriesComponent },
   { path: 'sectors-i-industries/:id', component: SectorsAndIndustriesComponent },
   { path: 'sectors-and-industries/:id', component: SectorsAndIndustriesComponent },
+
+  { path: 'sectors-detail/:id', component: SectorsAndIndustriesDetailComponent },
 
   { path: 'clusteres/:id', component: ClustersComponent },
   { path: 'clusters-ca/:id', component: ClustersComponent },

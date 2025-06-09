@@ -1,1 +1,2 @@
-<main ngClass="entry-content" *ngIf="contenido" [innerHTML]="contenido.content.rendered"></main>
+<main ngClass="entry-content" *ngIf="contenido" 
+[innerHTML]="contenido.content.rendered | replaceStringHtml: '<a href=&quot;https://app.investinbalearics.es':'<a href=&quot;/sectors-detail'"></main>

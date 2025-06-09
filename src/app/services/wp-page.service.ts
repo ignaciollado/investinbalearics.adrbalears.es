@@ -38,6 +38,11 @@ export class wpPageService {
     return this.httpClient.get<WpPage>(`${this.apiBaseUrl}pages/${id}`)
   }
 
+  getOneBySlug(slug: string|null): Observable<WpPage> {
+    this.messagesService.add('ArticleService: fetched ONE article by slug')
+    return this.httpClient.get<WpPage>(`${this.apiBaseUrl}pages?slug=${slug}`)
+  }
+
   getOneFeaturedMedia(id: number|null): Observable<WpPageFeaturedMedia> {
     this.messagesService.add('ArticleService: fetched ONE media')
     return this.httpClient.get<WpPageFeaturedMedia>(`${this.apiBaseUrl}media/${id}`)

@@ -33,6 +33,8 @@ import { InvestmentEcosystemComponent } from './investment-ecosystem/investment-
 import { OurServicesComponent } from './our-services/our-services.component';
 import { TheTalentComponent } from './the-talent/the-talent.component';
 import { ClustersComponent } from './clusters/clusters.component';
+import { SectorsAndIndustriesDetailComponent } from './sectors-and-industries-detail/sectors-and-industries-detail.component';
+import { ReplaceStringHtmlPipe } from './Pipes/replace-string.pipe';
 
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(http: HttpClient) {
@@ -66,7 +68,9 @@ export function HttpLoaderFactory(http: HttpClient) {
     InvestmentEcosystemComponent,
     OurServicesComponent,
     TheTalentComponent,
-    ClustersComponent
+    ClustersComponent,
+    SectorsAndIndustriesDetailComponent,
+    ReplaceStringHtmlPipe
   ],
   imports: [
     BrowserModule,

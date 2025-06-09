@@ -13,7 +13,7 @@ import { WpPageFeaturedMedia } from '../Models/wp-page-featured-media.dto';
   encapsulation: ViewEncapsulation.None
 })
 export class WhoWeAreComponent {
- public id:number | null
+  public id:number | null
   public currentLang: string | undefined
   public currentWPLang: number
   public contenido: WpPage
