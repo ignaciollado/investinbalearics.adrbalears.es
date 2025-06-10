@@ -55,7 +55,9 @@ export class WhoWeAreComponent {
           .subscribe(
             (wpPage: WpPage) => {
               this.contenido = wpPage
-              this.getFeaturedMedia (this.contenido.featured_media)
+              if (this.contenido.featured_media !== 0) {
+                this.getFeaturedMedia (this.contenido.featured_media)
+              }
           })
     }
 
@@ -64,7 +66,6 @@ export class WhoWeAreComponent {
           .subscribe(
             (mediaItem: WpPageFeaturedMedia) => {
               this.contenidoMedia = mediaItem
-              console.log (this.contenidoMedia)
           })
     }
 }

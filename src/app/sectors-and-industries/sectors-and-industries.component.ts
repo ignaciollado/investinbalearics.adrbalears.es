@@ -55,7 +55,6 @@ export class SectorsAndIndustriesComponent {
             (wpPage: WpPage) => {
               this.contenido = wpPage
              /*  this.contenido.content.rendered = this.contenido.content.rendered.replace('<a href="https://app.investinbalearics.es/"','<a routerLink="/sectors-detail"'); */
-              console.log (this.contenido)
           })
     }
 

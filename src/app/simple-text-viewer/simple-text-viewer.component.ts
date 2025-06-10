@@ -46,7 +46,6 @@ export class SimpleTextViewerComponent {
           .subscribe(
             (wpPage: WpPage) => {
               this.contenido = wpPage
-              /* console.log(this.contenido, id, currentLanguage) */
           })
     }
 }

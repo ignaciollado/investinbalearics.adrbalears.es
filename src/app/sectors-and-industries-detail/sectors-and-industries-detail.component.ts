@@ -26,7 +26,6 @@ export class SectorsAndIndustriesDetailComponent {
     /* this.getContent(this.id) */
     this.route.paramMap.subscribe(params => {
       this.theSlug = params.get('id')!;
-      console.log('Slug ID:', this.theSlug);
     });
     this.getContentBySlug(this.theSlug)
     window.scroll(0,0)

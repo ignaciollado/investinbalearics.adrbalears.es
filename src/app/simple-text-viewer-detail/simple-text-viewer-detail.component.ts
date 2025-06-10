@@ -62,7 +62,6 @@ export class SimpleTextViewerDetailComponent {
           .subscribe(
             (mediaItem: WpPageFeaturedMedia) => {
               this.contenidoMedia = mediaItem
-             /*  console.log ("contenidoMedia: ", idMedia, this.contenidoMedia) */
           })
     }
 }

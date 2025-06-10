@@ -106,12 +106,8 @@ export class SearchTheWebComponent {
             .subscribe( (result: any) => {
               this.contenidos = result.data
               this.contenidos = result.data.filter( (item : WpPage) => item.status === `Published`) 
-              console.log("1- ", this.contenidos)
-              console.log("2- ", this.contenidos)
               this.contenidos = this.contenidos.filter( item => item.content.rendered.toUpperCase().includes(searchTerm.trim().toUpperCase()) )
               this.totalFound = this.contenidos.length.toString()
-              console.log("3- ", this.contenidos)
-
             }, (err) => {
               console.log ( err.msg );
             });

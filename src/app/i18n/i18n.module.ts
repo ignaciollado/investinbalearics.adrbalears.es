@@ -20,7 +20,7 @@ export class I18nModule {
   constructor(translate: TranslateService) {
 
     translate.addLangs(['ca-ES', 'es-ES', 'en-EN']) /* Indica que lenguas hay disponibles para la traducción */
-    // translate.setDefaultLang('cat') /* Lengua por defecto cuando no se encuentre un JSON de traducción */
+    translate.setDefaultLang('en-EN') /* Lengua por defecto cuando no se encuentre un JSON de traducción */
     const browserLang = translate.getBrowserLang()
 
     if (localStorage.getItem('preferredLang') === null) {
@@ -33,5 +33,5 @@ export class I18nModule {
 }
 
 export function translateLoaderFactory( httpClient: HttpClient ) {
-  return new TranslateHttpLoader(httpClient);
+  return new TranslateHttpLoader(httpClient, './assets/i18n/', '.json');
 }

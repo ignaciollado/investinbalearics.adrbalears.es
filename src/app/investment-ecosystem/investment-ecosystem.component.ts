@@ -46,24 +46,20 @@ ngAfterViewInit(): void {
         case 'ca-ES':
           this.currentLang = 'ca-ES'
           this.currentWPLang = 42
-/*           this.id = 357 */
         break
         case 'cas':
         case 'es-ES':
           this.currentLang = 'es-ES'
           this.currentWPLang = 43
-/*           this.id = 109 */
         break
         case 'en':
         case 'en-EN':
           this.currentLang = 'en-EN'
           this.currentWPLang = 44
-/*           this.id = 355 */
         break
         default:
           this.currentLang = 'en-EN'
           this.currentWPLang = 41
-/*           this.id = 355 */
       }
       this.getContent(this.id)
       window.scroll(0,0)
@@ -74,7 +70,6 @@ ngAfterViewInit(): void {
           .subscribe(
             (wpPage: WpPage) => {
               this.contenido = wpPage
-              console.log ("contenido", this.contenido)
           })
     }
 

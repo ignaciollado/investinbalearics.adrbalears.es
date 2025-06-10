@@ -2,12 +2,10 @@ footer {
   display: grid;
   grid-template-columns: 25% 45% 30%;
   grid-template-areas: "localizacionBottom textosLegales logoBottom " "copyRight copyRight copyRight";
-  margin-top: 0;
-  row-gap: 1rem;
   text-align: left;
-  background-color: #000;
+  background-color: #2f2f2f;
   color: #fff;
-  padding: 1rem;
+  padding-top: .8rem;
   font-size: .8rem;
   border-top: 5px solid #aa0043;
 }

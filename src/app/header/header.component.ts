@@ -19,7 +19,6 @@ constructor(  public translate: TranslateService,
 
 ngOnInit(): void {
     this.currentLang = localStorage.getItem('preferredLang')
-    console.log ("this.currentLang", this.currentLang)
     if (!this.currentLang) {
       this.currentLang = "en-EN"
       localStorage.setItem("preferredLang", 'en-EN')
@@ -52,7 +51,6 @@ ngOnInit(): void {
             this.currentWPLang = 44
             this.homeIntroPage = 264
       }
-      console.log ("this.currentLang", this.currentLang)
 }
     
 private offcanvasService = inject(NgbOffcanvas);

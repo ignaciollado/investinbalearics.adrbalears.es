@@ -46,7 +46,9 @@ export class SimpleTextViewerDetailHomeComponent {
           .subscribe(
             (wpPage: WpPage) => {
               this.contenido = wpPage
-              this.getFeaturedMedia (this.contenido.featured_media)
+              if (this.contenido.featured_media !== 0) {
+                this.getFeaturedMedia (this.contenido.featured_media)
+              }
           })
     }
 
@@ -55,12 +57,10 @@ export class SimpleTextViewerDetailHomeComponent {
           .subscribe(
             (mediaItem: WpPageFeaturedMedia) => {
               this.contenidoMedia = mediaItem
-              console.log (this.contenidoMedia)
           })
     }
 
     showDetail(id) {
-      console.log (id)
       switch (id)  {
         case 113:
           this.router.navigate(['/sectores-e-industrias',113])

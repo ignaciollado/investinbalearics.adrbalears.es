@@ -31,7 +31,6 @@ export class NewsListComponent implements OnInit {
 
   constructor( public translateService: TranslateService, private articleWPContent: WPpostService, private route: ActivatedRoute ) {
     this.newsToDisplay = this.route.snapshot.paramMap.get("newsToDisplay")
-    console.log (this.newsToDisplay)
   }
 
   ngOnInit(): void {

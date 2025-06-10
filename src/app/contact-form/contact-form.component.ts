@@ -25,26 +25,13 @@ export class ContactFormComponent {
   currentLang: string
   currentWPLang: number
 
-  constructor(/* private translate: TranslateService, */ private formBuilder: FormBuilder, private sendMail: MessageService) { 
+  constructor(private formBuilder: FormBuilder, 
+    private sendMail: MessageService) { 
     this.formData = new genericMailDTO('', '', '', '', '')
   }
 
   ngOnInit() {
     this.currentLang = localStorage.getItem('preferredLang')
-    console.log (this.currentLang)
-    /* switch (this.currentLang) {
-        case 'ca-ES':
-          this.currentWPLang = 42
-        break
-        case 'es-ES':
-          this.currentWPLang = 43
-        break
-        case 'en-EN':
-          this.currentWPLang = 44
-        break
-        default:
-          this.currentWPLang = 44
-      } */
     this.contactForm = this.formBuilder.group({
       contactName:  ['', [Validators.required, Validators.minLength(5), Validators.maxLength(50)]],
       contactEmail: ['', [Validators.required, Validators.email]],
