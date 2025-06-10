@@ -2,8 +2,9 @@ import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators, AbstractControl, UntypedFormControl } from '@angular/forms'
 import { genericMailDTO } from '../Models/generic-data.dto';
 import { MessageService } from '../services/message.service';
-/* import { TranslateService } from '@ngx-translate/core';
- */
+import { CountriesDTO } from '../Models/countries.dto';
+import { CountriesService } from '../services/countries.service';
+
 @Component({
   selector: 'app-contact-form',
   templateUrl: './contact-form.component.html',
@@ -24,10 +25,14 @@ export class ContactFormComponent {
   submitted: boolean = false
   currentLang: string
   currentWPLang: number
+  countries: CountriesDTO[] = [];
+  groupedCountries: { letter: string; countries: CountriesDTO[] }[] = [];
 
-  constructor(private formBuilder: FormBuilder, 
+  constructor(private formBuilder: FormBuilder,
+    private countriesService: CountriesService,
     private sendMail: MessageService) { 
     this.formData = new genericMailDTO('', '', '', '', '')
+     this.getAllCountries()
   }
 
   ngOnInit() {
@@ -45,6 +50,29 @@ export class ContactFormComponent {
 
   get f(): { [key: string]: AbstractControl } {
     return this.contactForm.controls;
+  }
+
+  getAllCountries() {
+    this.countriesService.getAll().subscribe((countries: CountriesDTO[]) => {
+      const letterList: string[] = []
+      this.countries = countries.sort((a, b) => a.name.common.localeCompare(b.name.common));
+      this.countries = countries.map((country: CountriesDTO) => {
+        country.name.common = country.name.common.replace(/Å/g, "A"); // Caso Aaland Islands
+        if (!letterList.includes(country.name.common.charAt(0))) {
+          letterList.push(country.name.common.charAt(0))
+        }
+        return country
+      })
+      this.groupedCountries = letterList.map((letter: string) => {
+        return {
+          letter: letter,
+          countries: this.countries.filter((country: CountriesDTO) => country.name.common.charAt(0) === letter)
+        }
+      })
+      console.log ("this.groupedCountries", this.groupedCountries)
+    }, (error) => {
+      console.log(error)
+    })
   }
 
   onSubmit() {

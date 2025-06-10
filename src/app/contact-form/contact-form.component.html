@@ -9,7 +9,15 @@
   </section>
   <section ngClass="input-group mb-3">
     <input type="mail" ngClass="form-control" placeholder="{{'companyName' | translate}}" aria-label="Corporation" formControlName="corporation">
-    <input type="tel" ngClass="form-control" placeholder="{{'country' | translate}}" aria-label="Country" formControlName="country">
+    <!-- <input type="text" ngClass="form-control" placeholder="{{'country' | translate}}" aria-label="Country" formControlName="country"> -->
+    <select ngClass="form-control" id="country" name="country" formControlName="country">
+      <option value="" disabled selected hidden>{{ 'country' | translate }}</option>
+      <optgroup *ngFor="let group of groupedCountries" [label]="group.letter">
+        <option *ngFor="let country of group.countries" [value]="country.name.common">
+          {{ country.name.common }}
+        </option>
+      </optgroup>
+    </select>
   </section>
   <section ngClass="input-group">
     <textarea ngClass="form-control" placeholder="{{'howCanWeHelpYou' | translate}}" aria-label="With textarea" formControlName="body"></textarea>

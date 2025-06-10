@@ -26,9 +26,8 @@ export class I18nModule {
     if (localStorage.getItem('preferredLang') === null) {
       localStorage.setItem('preferredLang', translate.defaultLang)
     }
-    translate.use(translate.getLangs().includes(browserLang) ? browserLang : 'en')  /* Usar el idioma del navegador */
+    translate.use(translate.getLangs().includes(browserLang) ? browserLang : 'en-EN')  /* Usar el idioma del navegador */
     translate.use(localStorage.getItem('preferredLang')) /* Usar el idioma preferido del usuario */
-    console.log ("Idioma: ", browserLang, localStorage.getItem('preferredLang'))
   }
 }
 
