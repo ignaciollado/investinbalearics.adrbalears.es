@@ -2,8 +2,8 @@ import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators, AbstractControl, UntypedFormControl } from '@angular/forms'
 import { genericMailDTO } from '../Models/generic-data.dto';
 import { MessageService } from '../services/message.service';
-import { TranslateService } from '@ngx-translate/core';
-
+/* import { TranslateService } from '@ngx-translate/core';
+ */
 @Component({
   selector: 'app-contact-form',
   templateUrl: './contact-form.component.html',
@@ -25,13 +25,14 @@ export class ContactFormComponent {
   currentLang: string
   currentWPLang: number
 
-  constructor(private translate: TranslateService, private formBuilder: FormBuilder, private sendMail: MessageService) { 
+  constructor(/* private translate: TranslateService, */ private formBuilder: FormBuilder, private sendMail: MessageService) { 
     this.formData = new genericMailDTO('', '', '', '', '')
   }
 
   ngOnInit() {
-/*     this.currentLang = localStorage.getItem('preferredLang')
-    switch (this.currentLang) {
+    this.currentLang = localStorage.getItem('preferredLang')
+    console.log (this.currentLang)
+    /* switch (this.currentLang) {
         case 'ca-ES':
           this.currentWPLang = 42
         break

@@ -3,6 +3,7 @@ import { TranslateService } from '@ngx-translate/core';
 import { wpPageService } from '../services/wp-page.service';
 import { WpPage } from '../Models/wp-page-data.dto';
 import { WpPageFeaturedMedia } from '../Models/wp-page-featured-media.dto';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-investment-ecosystem',
@@ -20,8 +21,9 @@ export class InvestmentEcosystemComponent {
  @ViewChild('entryContent', { static: false }) entryContent!: ElementRef;
 
 
-  constructor( public translateService: TranslateService, 
-    private wpPageService: wpPageService, 
+  constructor( public translateService: TranslateService,
+    private wpPageService: wpPageService,
+    private route: ActivatedRoute,
     private renderer: Renderer2 ) { }
 
 ngAfterViewInit(): void {
@@ -33,35 +35,35 @@ ngAfterViewInit(): void {
  ];
 
   const randomAnimation = animations[Math.floor(Math.random() * animations.length)];
-  console.log ("randomAnimation", randomAnimation)
   this.renderer.addClass(this.entryContent.nativeElement, 'animated-entry');
   this.renderer.setStyle(this.entryContent.nativeElement, 'animationName', randomAnimation);
 }    
 
     ngOnInit(): void {
+      this.id = +this.route.snapshot.paramMap.get('id');
       switch (localStorage.getItem('preferredLang')) {
         case 'cat':
         case 'ca-ES':
           this.currentLang = 'ca-ES'
           this.currentWPLang = 42
-          this.id = 357
+/*           this.id = 357 */
         break
         case 'cas':
         case 'es-ES':
           this.currentLang = 'es-ES'
           this.currentWPLang = 43
-          this.id = 109
+/*           this.id = 109 */
         break
         case 'en':
         case 'en-EN':
           this.currentLang = 'en-EN'
           this.currentWPLang = 44
-          this.id = 355
+/*           this.id = 355 */
         break
         default:
           this.currentLang = 'en-EN'
           this.currentWPLang = 41
-          this.id = 355
+/*           this.id = 355 */
       }
       this.getContent(this.id)
       window.scroll(0,0)

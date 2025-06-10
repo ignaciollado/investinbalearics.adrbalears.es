@@ -3,6 +3,7 @@ import { TranslateService } from '@ngx-translate/core';
 import { wpPageService } from '../services/wp-page.service';
 import { WpPage } from '../Models/wp-page-data.dto';
 import { WpPageFeaturedMedia } from '../Models/wp-page-featured-media.dto';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-why-invest',
@@ -20,7 +21,8 @@ export class WhyInvestComponent implements AfterViewInit {
   @ViewChild('entryContent', { static: false }) entryContent!: ElementRef;
 
   constructor( public translateService: TranslateService, 
-    private wpPageService: wpPageService, 
+    private wpPageService: wpPageService,
+    private route: ActivatedRoute,
     private renderer: Renderer2 ) { }
 
   
@@ -37,29 +39,26 @@ ngAfterViewInit(): void {
  this.renderer.setStyle(this.entryContent.nativeElement, 'animationName', randomAnimation); }
 
 ngOnInit(): void {
+      this.id = +this.route.snapshot.paramMap.get('id');
       switch (localStorage.getItem('preferredLang')) {
         case 'cat':
         case 'ca-ES':
           this.currentLang = 'ca-ES'
           this.currentWPLang = 42
-          this.id = 319
         break
         case 'cas':
         case 'es-ES':
           this.currentLang = 'es-ES'
           this.currentWPLang = 43
-          this.id = 401
         break
         case 'en':
         case 'en-EN':
           this.currentLang = 'en-EN'
           this.currentWPLang = 44
-          this.id = 321
         break
         default:
           this.currentLang = 'en-EN'
           this.currentWPLang = 41
-          this.id = 321
       }
       this.getContent(this.id)
       window.scroll(0,0)

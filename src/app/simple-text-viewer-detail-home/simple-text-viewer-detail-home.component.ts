@@ -72,15 +72,15 @@ export class SimpleTextViewerDetailHomeComponent {
           this.router.navigate(['/sectores-e-industrias',364])
           break
 //Por qué invertir
-        case 212:
-          this.router.navigate(['/por-que-invertir-en-baleares',212]) 
+       /*  case 212:
+          this.router.navigate(['/por-que-invertir-en-baleares',212])  
           break
-        case 315:
-          this.router.navigate(['/por-que-invertir-en-baleares',315])
+          case 315:
+          this.router.navigate(['/por-que-invertir-en-baleares',315]) 
           break
         case 317:
           this.router.navigate(['/por-que-invertir-en-baleares',317])
-          break
+          break*/
 //ecosistema inversor
         case 212:
           this.router.navigate(['/ecosistema-inversor',109])
