@@ -94,7 +94,7 @@
   }
   .wp-block-gallery {
     grid-template-columns: repeat(1, 1fr);
-   .wp-block-image .wp-element-caption {
+    .wp-block-image .wp-element-caption {
       position: absolute;
       line-height: 3rem;
       top: 60%;
@@ -103,6 +103,9 @@
       transform: translate(-50%, -60%);
       color: white;
       text-align: center;
-} 
+    } 
+  }
+    .entry-content {
+    padding: 0;
   }
 }

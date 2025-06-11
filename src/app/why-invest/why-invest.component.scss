@@ -89,10 +89,13 @@
   border-right: none;
   padding-left: 0;
 }
-  .wp-block-group:nth-child(3) {
+.wp-block-group:nth-child(3) {
     padding-top: 2rem;
     padding-bottom: 2rem;
     width: 100%;
     margin: auto;
-  }
+}
+.wp-block-column p {
+  padding-right: 0;
+}
 }
