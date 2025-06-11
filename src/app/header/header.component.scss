@@ -1,6 +1,5 @@
 .the-header {
   display: grid;
-  /* grid-template-areas: "logo search language" "logo mainmenu mainmenu"; */
   grid-template-areas: "logo language" "logo mainmenu";
   margin-top: 1rem;
   font-weight: 300;
@@ -76,7 +75,10 @@ h5 {
     grid-template-areas: "search iconomenu";
   }
   .logo {
-    margin-left: 0;
+    img {
+    width: 95%;
+    margin: auto;
+    }
   }
   .language-select {
     text-align: right;
@@ -111,6 +113,9 @@ h5 {
   }
   .nav-item-last {
     margin-right: 8rem;
+  }
+  .navbar-toggler {
+    margin-bottom: .2rem;
   }
 }
 

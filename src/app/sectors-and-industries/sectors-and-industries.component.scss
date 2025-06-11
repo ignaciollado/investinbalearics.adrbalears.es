@@ -92,4 +92,17 @@
   figure {
     width: 100%;
   }
+  .wp-block-gallery {
+    grid-template-columns: repeat(1, 1fr);
+   .wp-block-image .wp-element-caption {
+      position: absolute;
+      line-height: 3rem;
+      top: 60%;
+      left: 50%;
+      font-size: 2.5rem;
+      transform: translate(-50%, -60%);
+      color: white;
+      text-align: center;
+} 
+  }
 }

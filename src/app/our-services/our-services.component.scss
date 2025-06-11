@@ -44,3 +44,25 @@
   grid-template-columns: 50% 50%;
   padding: 0 15%;
 }
+
+@media screen and (max-width: 992px) { 
+  .wp-block-columns:nth-child(1) {
+  grid-template-columns: 1fr;
+  padding: 0;
+  img {
+    width: 100%;
+    height: auto;
+  }
+  }
+  .wp-block-group:nth-child(2) .wp-block-columns, .wp-block-group:nth-child(4) .wp-block-columns {
+    grid-template-columns: 1fr;
+  }
+.contact-form-area {
+  grid-template-columns: 1fr;
+  padding: 0;
+    img {
+    width: 100%;
+    height: auto;
+  }
+}  
+}

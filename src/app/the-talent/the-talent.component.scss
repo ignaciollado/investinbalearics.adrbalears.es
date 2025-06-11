@@ -19,8 +19,24 @@
 }
 .content {
   grid-area: contenido;
- /*  padding-right: 4rem; */
 }
 .image {
   grid-area: imagen;
+}
+
+@media screen and (max-width: 992px) { 
+.entry-content {
+  padding: 0;
+  display: grid;
+  grid-template-areas:  "imagen" "titulo"
+                        "contenido";
+  .detail-title, .content {
+    padding-right: 0;
+  }
+  .image {
+    width: 100%;
+    height: auto;
+  }
+                
+}  
 }

@@ -38,3 +38,21 @@
     }
   }
 }
+
+@media screen and (max-width: 992px) {
+ .wp-block-columns {
+  grid-template-columns: 1fr;
+  padding: 0;
+  img {
+    width: 100%;
+    margin: auto;
+  }
+} 
+.wp-block-columns:nth-child(2), .wp-block-columns:nth-child(4) {
+  grid-template-columns: 1fr;
+  padding: 0;
+}
+.wp-block-columns:nth-child(2) .wp-block-column img, .wp-block-columns:nth-child(4) .wp-block-column img {
+  width: 100%;
+}
+}

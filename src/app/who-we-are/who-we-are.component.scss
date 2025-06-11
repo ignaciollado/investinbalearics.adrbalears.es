@@ -2,6 +2,9 @@
   display: grid;
   grid-template-areas:  "titulo imagen" 
                         "contenido imagen";
+  .image{
+    width: 100%;
+  }
 }
 
 .detail-title {
@@ -12,4 +15,13 @@
 }
 .image {
   grid-area: imagen;
+}
+
+@media screen and (max-width: 992px) {
+  .entry-content {
+  padding: 0;
+  grid-template-areas:  "imagen"
+                        "titulo"
+                        "contenido";
+}
 }
