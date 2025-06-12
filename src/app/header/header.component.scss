@@ -47,7 +47,7 @@
 .button-header-menu:hover, button:hover, .btn:hover {
   transition: color 1s ease, padding 0.8s linear;
   border-color: transparent!important;
-  background: #974890;
+  background: #aa0043;
   font-style: normal;
   font-weight: bold;
   font-size: 1.125rem;
@@ -88,8 +88,8 @@ h5 {
     margin-left: .5rem;
     padding-left: .5rem;
     font-size: 1.5rem;
-    border: 1px solid #974890;
-    background-color: #dd9f70;
+    border: 1px solid #000;
+    background-color: #aa0043;
     border-radius: 3px;
     margin-bottom: .5rem;
   }
@@ -115,7 +115,8 @@ h5 {
     margin-right: 8rem;
   }
   .navbar-toggler {
-    margin-bottom: .2rem;
+    margin-bottom: .5rem;
+    margin-right: .5rem;
   }
 }
 

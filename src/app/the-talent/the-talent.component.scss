@@ -26,12 +26,15 @@
 
 @media screen and (max-width: 992px) { 
 .entry-content {
-  padding: 0;
   display: grid;
   grid-template-areas:  "imagen" "titulo"
                         "contenido";
+  h1,h2 {
+    margin-top: .5rem;
+  }
   .detail-title, .content {
-    padding-right: 0;
+    padding-right: 1.25rem;
+    padding-left: 1.25rem;
   }
   .image {
     width: 100%;

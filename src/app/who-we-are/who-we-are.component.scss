@@ -5,6 +5,10 @@
   .image{
     width: 100%;
   }
+  h1,h2, p {
+  padding-left: 1.25rem;
+  padding-right: 1.25rem; 
+  }
 }
 
 .detail-title {
@@ -19,7 +23,6 @@
 
 @media screen and (max-width: 992px) {
   .entry-content {
-  padding: 0;
   grid-template-areas:  "imagen"
                         "titulo"
                         "contenido";

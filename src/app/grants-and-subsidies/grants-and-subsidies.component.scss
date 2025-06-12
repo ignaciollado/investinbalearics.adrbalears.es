@@ -55,7 +55,10 @@
 .wp-block-columns:nth-child(2) .wp-block-column img, .wp-block-columns:nth-child(4) .wp-block-column img {
   width: 100%;
 }
-.wp-block-column p {
-  padding-right: 0;
+.wp-block-column{ 
+  h1, h2, p {
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+  }
 }
 }

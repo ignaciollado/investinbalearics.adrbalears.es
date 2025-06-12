@@ -241,20 +241,19 @@ h6 {
 
 
 @media (max-width: 992px) {
+  .entry-content {
+    padding: 0;
+  } 
 
-.entry-content {
-  padding: 2rem 5%;
-}
-
-.wp-block-columns {
-  grid-template-columns: 1fr;
-}
+  .wp-block-columns {
+    grid-template-columns: 1fr;
+  }
 
 }
 
 @media (max-width: 400px) {
-.entry-content {
+/* .entry-content {
   padding: 2rem 0;
-}
+} */
 }
 

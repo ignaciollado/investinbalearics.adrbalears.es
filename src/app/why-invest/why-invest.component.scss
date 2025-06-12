@@ -53,6 +53,15 @@
 }
 
 @media screen and (max-width: 992px) {
+  .entry-content {
+  .image{
+    width: 100%;
+  }
+  h1,h2, p {
+  padding-left: 1.25rem;
+  padding-right: 1.25rem; 
+  }
+}
 
   .wp-block-columns:nth-child(1) {
     grid-template-columns: 1fr;
@@ -94,8 +103,5 @@
     padding-bottom: 2rem;
     width: 100%;
     margin: auto;
-}
-.wp-block-column p {
-  padding-right: 0;
 }
 }
