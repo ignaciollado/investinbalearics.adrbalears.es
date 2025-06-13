@@ -2,23 +2,34 @@
   position: relative;
   color: #f1f1f1;
   height: 540px;
- /*  background-image: linear-gradient( rgba(245, 246, 252, 0.52), #3d4e97),url('../../assets/images/home-invest-in-01.webp'); */
   background-image: url('../../assets/images/home-invest-in-01.webp');
-  /* animation: zoominout 5; */
-  animation-fill-mode: forwards;
-  animation-iteration-count: 1;
-  animation-direction: alternate;
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  background-position: center;
+  animation: expandBackground 10s forwards;
   padding-top: 36px;
+
+  .top-content {
+ 
+  }
 }
 
 article, section {
   margin-bottom: 36px;
 }
 
-@keyframes zoominout {
-  from {background-position: top;background-size:1200px;}
-  to {background-position: -100px 0px;background-size:2000px;}
+
+
+@keyframes expandBackground {
+   from {
+ background-size: 100% auto;
+ }
+ to {
+ background-size: 120% auto;
+ }
 }
+
+
 
 .top-content {
   position: absolute;

@@ -1,4 +1,4 @@
-<header ngClass="the-header border-gradient">
+<!-- <header ngClass="the-header border-gradient">
   <section ngClass="logo">
     <a ngClass="navbar-brand" href="#">
       <img src="../../assets/images/gov-adr-inv.webp" alt="ADR Balears" title="Agència de desenvolupament regional de les Illes Balears">
@@ -58,6 +58,68 @@
         </ul>
        
     </section>
-    <!-- <app-search-the-web ngClass="search"></app-search-the-web> -->
+  </nav>
+</header> -->
+
+<header ngClass="the-header border-gradient">
+  <section ngClass="logo">
+    <a ngClass="navbar-brand" href="#">
+      <img src="../../assets/images/gov-adr-inv.webp" alt="ADR Balears" title="Agència de desenvolupament regional de les Illes Balears">
+    </a>
+  </section>  
+  <section ngClass="language-select">
+        <a #langSelect (click)="switchLanguage('es-ES')">es</a>
+        <a #langSelect (click)="switchLanguage('en-EN')">en</a>
+        <a #langSelect (click)="switchLanguage('ca-ES')">ca</a>
+  </section>
+  <nav ngClass="navbar navbar-expand-lg main-menu">
+    <button ngClass="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span  ngClass="navbar-toggler-icon"></span>
+    </button>
+    <section ngClass="menu-align-right collapse navbar-collapse mobile-invest-menu" id="navbarSupportedContent">
+        <ul ngClass="navbar-nav ml-auto">
+          <li ngClass="nav-item">
+            <a ngClass="nav-link" aria-current="page" *ngIf="currentLang === 'es-ES'" routerLink="quienes-somos/369" cdkMenuItem>Quienes somos</a>
+            <a ngClass="nav-link" aria-current="page" *ngIf="currentLang === 'ca-ES'" routerLink="qui-som/371">Qui som</a>
+            <a ngClass="nav-link" aria-current="page" *ngIf="currentLang === 'en-EN'" routerLink="who-we-are/373">Who we are</a>
+          </li>
+          <li ngClass="nav-item">
+            <a ngClass="nav-link" aria-current="page" *ngIf="currentLang === 'es-ES'" routerLink="por-que-invertir-en-baleares/401">Por qué invertir</a>
+            <a ngClass="nav-link" aria-current="page" *ngIf="currentLang === 'ca-ES'" routerLink="per-que-invertir-a-balears/319">Per qué invertir</a>
+            <a ngClass="nav-link" aria-current="page" *ngIf="currentLang === 'en-EN'" routerLink="why-invest-in-balears/321">Why invest</a>
+          </li>
+          <li ngClass="nav-item">
+            <a ngClass="nav-link" *ngIf="currentLang === 'es-ES'" routerLink="ecosistema-inversor/109">Ecosistema inversor</a>
+            <a ngClass="nav-link" *ngIf="currentLang === 'ca-ES'" routerLink="ecosistema-inversor-cat/357">Ecosistema inversor</a>
+            <a ngClass="nav-link" *ngIf="currentLang === 'en-EN'" routerLink="investment-ecosystem/355">Investment ecosystem</a>         
+          </li>
+          <li ngClass="nav-item">
+            <a ngClass="nav-link" *ngIf="currentLang === 'es-ES'" routerLink="servicios-al-inversor-y-al-emprendedor/111">Servicios</a>
+            <a ngClass="nav-link" *ngIf="currentLang === 'ca-ES'" routerLink="serveis-a-linversor-i-a-lemprenedor/359">Serveis</a>
+            <a ngClass="nav-link" *ngIf="currentLang === 'en-EN'" routerLink="investor-and-entrepreneur-services/361">Services</a>         
+          </li>
+          <li ngClass="nav-item">
+            <a ngClass="nav-link" *ngIf="currentLang === 'es-ES'" routerLink="sectores-e-industrias/113">Sectores</a>
+            <a ngClass="nav-link" *ngIf="currentLang === 'ca-ES'" routerLink="sectors-i-industries/366">Sectors</a>
+            <a ngClass="nav-link" *ngIf="currentLang === 'en-EN'" routerLink="sectors-and-industries/364">Sectors</a>         
+          </li>
+          <li ngClass="nav-item">
+            <a ngClass="nav-link" *ngIf="currentLang === 'es-ES'" routerLink="clusteres/529">Clústeres</a>
+            <a ngClass="nav-link" *ngIf="currentLang === 'ca-ES'" routerLink="clusters-ca/532">Clusters</a>
+            <a ngClass="nav-link" *ngIf="currentLang === 'en-EN'" routerLink="clusters/534">Clusters</a>         
+          </li>          
+          <li ngClass="nav-item">
+            <a ngClass="nav-link" *ngIf="currentLang === 'es-ES'" routerLink="talento/115">Talento</a>
+            <a ngClass="nav-link" *ngIf="currentLang === 'ca-ES'" routerLink="talent/308">Talent</a>
+            <a ngClass="nav-link" *ngIf="currentLang === 'en-EN'" routerLink="talent-eng/310">Talent</a>         
+          </li>
+          <li ngClass="nav-item">
+            <a ngClass="nav-link" *ngIf="currentLang === 'es-ES'" routerLink="ayudas-y-subvenciones/835">{{'Ayudas y subvenciones' | translate}}</a>
+            <a ngClass="nav-link" *ngIf="currentLang === 'ca-ES'" routerLink="ajuts-i-subvencions/844">{{'Ajudes i subvencions' | translate}}</a>
+            <a ngClass="nav-link" *ngIf="currentLang === 'en-EN'" routerLink="grants-and-subsidies/842">{{'Grants and subsidies' | translate}}</a>         
+          </li>
+        </ul>
+       
+    </section>
   </nav>
 </header>

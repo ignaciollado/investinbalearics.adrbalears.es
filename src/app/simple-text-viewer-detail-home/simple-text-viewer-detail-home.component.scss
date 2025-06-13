@@ -29,6 +29,7 @@
   width: $standard-width;
   display: grid;
   grid-template-areas: "title" "body" "buttonend";
+  padding-left: 1rem;
 }
 
 .content-detail__figure {
@@ -58,9 +59,9 @@
   border: 1px solid black;
 }
 
-h2, .btn {
+/* h2, .btn {
   margin-left: -6px;
-}
+} */
 
 .btn {
   border: 1px solid #fff;
