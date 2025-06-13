@@ -5,6 +5,15 @@
   @return ($target/$vw-context) * 1vw;
 }
 
+.content-detail-full {
+
+ h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+  margin-top: .5rem;
+  margin-bottom: .5rem;
+  margin-left: 0;
+ }
+}
+
 .content-detail {
   border-radius: 0;
   animation: 2s ease-out 0s 1 slideInFromLeft;
@@ -98,8 +107,14 @@ img {
   .content-detail {
     grid-template-areas: "figure" "text";
     margin-top: 1rem;
-    padding-bottom: 1rem;
     padding: 0;
+    .content-detail__figure {
+      width: 100%;
+    }
+    h1, h2, article {
+      padding: 1rem;
+    }
+
   }
 
   .content-detail__text {
