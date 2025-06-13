@@ -8,17 +8,11 @@
   background-position: center;
   animation: expandBackground 10s forwards;
   padding-top: 36px;
-
-  .top-content {
- 
-  }
 }
 
 article, section {
   margin-bottom: 36px;
 }
-
-
 
 @keyframes expandBackground {
    from {
@@ -29,11 +23,9 @@ article, section {
  }
 }
 
-
-
 .top-content {
   position: absolute;
-  top: 50%;
+  top: 54%;
   left: 50%;
   transform: translate(-50%, -50%);
   display: grid;
