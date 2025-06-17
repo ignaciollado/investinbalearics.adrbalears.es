@@ -1,5 +1,5 @@
-<section class="simple-content" *ngIf="contenido">
-  <article class="text-container">
+<section ngClass="simple-content" *ngIf="contenido">
+  <article ngClass="text-container">
     <h1 [innerHTML]="contenido.title.rendered"></h1>
     <section [innerHTML]="contenido.content.rendered"></section>
   </article>

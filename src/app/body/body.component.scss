@@ -80,7 +80,6 @@ button {
 }
 
 article:nth-child(2) {
-  /* background-image: linear-gradient(to right, #c75765, rgba(255, 255, 255, 0.5)), url("../../assets/images/home-invest-in-03.webp"); */
   background-image: url("../../assets/images/home-invest-in-03.webp");
   background-repeat: no-repeat; 
   background-position-x: right;       
@@ -90,7 +89,6 @@ article:nth-child(2) {
   }
 }
 article:nth-child(4) {
- /*  background-image: linear-gradient(to right, #3d4e97, rgba(255, 255, 255, 0.5)), url("../../assets/images/empresa-industrial-baleares.jpg"); */
   background-image: url("../../assets/images/home-invest-in-05.webp");
   background-repeat: no-repeat; 
   background-position-x: right;          
@@ -162,19 +160,22 @@ article:nth-child(4) {
 @media screen and (max-width: 992px) {
   .section {
     height: 100%;
+    background-image: none;
     grid-template-columns: 100%;
-    padding: 1rem;
+    color: #000;
+    padding-top: 0;
   }
+
   .top-content {
-  position: inherit;
-  grid-template-areas: "texto" "formulario";
-  top: inherit;
-  left: inherit;
-  transform: translate(0, 0);
-  grid-template-columns: 100%;
-  width: 100%;
-  padding-left: 0;
-  padding-right: 0;
+    position: inherit;
+    grid-template-areas: "texto" "formulario";
+    top: inherit;
+    left: inherit;
+    transform: translate(0, 0);
+    grid-template-columns: 100%;
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
   }
 
   app-simple-text-viewer {

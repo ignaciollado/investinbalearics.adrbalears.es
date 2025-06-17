@@ -11,6 +11,10 @@
 }
 
 @media screen and (max-width: 992px) {
+  .simple-content {
+    background-image: url('../../assets/images/home-invest-in-01.webp');
+    padding: 0 1rem;
+  }
   .text-container {
     position: relative;
     width: 100%;

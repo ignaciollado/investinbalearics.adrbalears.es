@@ -19,7 +19,6 @@ export class BodyComponent {
   homeIntroPage_3: number = 361
   homeIntroPage_4: number = 364
   homeIntroPage_5: number = 310
-
   animationDone: boolean = false
   currentLang: string
   currentWPLang: number
@@ -28,7 +27,7 @@ export class BodyComponent {
     private wpPage: wpPageService,
     private sharedService: SharedService ) { }
 
-ngOnInit(): void {
+  ngOnInit(): void {
     this.currentLang = localStorage.getItem('preferredLang')
     switch (this.currentLang) {
         case 'cat':
@@ -41,7 +40,7 @@ ngOnInit(): void {
           this.homeIntroPage_4 = 366
           this.homeIntroPage_5 = 308
           this.welcomeString = "Benvingut a la plataforma Invest In Balerics de la ADR Balears"
-        break
+          break
         case 'es':
         case 'es-ES':
           this.currentWPLang = 43
@@ -52,7 +51,7 @@ ngOnInit(): void {
           this.homeIntroPage_4 = 113
           this.homeIntroPage_5 = 115
           this.welcomeString = "Bienvenido a la plataforma Invest In Balerics de la ADR Baleares"
-        break
+          break
         case 'en':
         case 'en-EN':
           this.currentWPLang = 44
@@ -63,7 +62,7 @@ ngOnInit(): void {
           this.homeIntroPage_4 = 364
           this.homeIntroPage_5 = 310
           this.welcomeString = "Welcome to the Invest In Balearics platform from the ADR Balears"
-        break
+          break
         default:
           this.currentWPLang = 44
           this.homeIntroPage = 351
@@ -75,7 +74,7 @@ ngOnInit(): void {
       }
     console.log (this.welcomeString)
     this.loadPages()
-}
+  }
 
 private loadPages(): void {
   let errorResponse: any
