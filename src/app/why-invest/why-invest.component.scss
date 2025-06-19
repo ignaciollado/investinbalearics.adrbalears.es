@@ -41,49 +41,51 @@
 }
 
 .wp-block-group:nth-child(3) {
-  padding-top: 2rem;
+  padding-top: 2rem!important;
+  padding-bottom: 2rem!important;
   padding: 0 20%;
+  .wp-block-gallery figure {
+    display: inline-block;
+    margin: 0; // elimina márgenes por defecto del figure
+    text-align: center;
+
+  img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+  }
+
+  figcaption {
+    margin-top: 0.5rem;
+    font-weight: bold;
+    text-align: center;
+    position: relative;
+    top: -50%;
+    color: #fff;
+  }
+
+  img:hover {
+    opacity: inherit;
+    filter: none;
+  }
 }
 
-/* .wp-block-group:nth-child(3) {
-  padding-top: 2rem;
-  padding-bottom: 2rem;
-  padding: 0 20%;
-  margin: auto;
-  .wp-block-columns:nth-child(2) {
-    display: grid;
-    grid-template-columns: 66% 33%;
-    gap: 1rem;
-     .wp-element-caption {
-      position: absolute;
-      line-height: 3rem;
-      top: 50%;
-      left: 71%;
-      transform: translate(-50%, -71%);
-      color: #fff;
-      text-align: center;
-    } 
-  }
-  .wp-block-columns:nth-child(3), .wp-block-columns:nth-child(4), .wp-block-columns:nth-child(5) {
-    border: 1px solid green;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 1rem;
+}
 
-  }
-  .wp-block-columns:nth-child(3) {
-    .wp-element-caption {
-      position: absolute;
-      line-height: 3rem;
-      top: 60%;
-      left: 50%;
-      transform: translate(-60%, -60%);
-      color: green;
-      text-align: center;
-    } 
-  }
+.wp-block-gallery:nth-child(2) {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  max-width: 100%;
+  margin: 0 auto;
 
-} */
+  // Selecciona el primer elemento hijo (la primera imagen, por ejemplo)
+  > *:nth-child(1) {
+    grid-column: span 2;
+  }
+}
+
 
 .wp-block-image img {
   width: 100%;
@@ -136,10 +138,15 @@
   border-right: none;
   padding-left: 0;
 }
-.wp-block-group:nth-child(3) {
-    padding-top: 2rem;
-    padding-bottom: 2rem;
-    width: 100%;
-    margin: auto;
-}
+  .wp-block-group:nth-child(3) { 
+    padding: 0 10%;
+    .wp-block-gallery {
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
+  }
+
+  .wp-block-group:nth-child(3) .wp-block-gallery > :nth-child(1) {
+    grid-column: inherit;
+  }
 }
