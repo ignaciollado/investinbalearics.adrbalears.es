@@ -13,12 +13,18 @@ import { finalize } from 'rxjs';
 export class BodyComponent {
   welcomeString:string = ""
   wpPages: WpPage[] = []
-  homeIntroPage: number = 351
-  homeIntroPage_1: number = 317
-  homeIntroPage_2: number = 355
-  homeIntroPage_3: number = 361
-  homeIntroPage_4: number = 364
-  homeIntroPage_5: number = 310
+  homeIntroPage: number
+  homeIntroPage_1: number
+  homeDetailPage_1: number
+  homeIntroPage_2: number
+  homeDetailPage_2: number
+  homeIntroPage_3: number
+  homeDetailPage_3: number
+  homeIntroPage_4: number
+  homeDetailPage_4: number
+  homeIntroPage_5: number
+  homeDetailPage_5: number
+
   animationDone: boolean = false
   currentLang: string
   currentWPLang: number
@@ -34,43 +40,63 @@ export class BodyComponent {
         case 'ca-ES':
           this.currentWPLang = 42
           this.homeIntroPage = 349
-          this.homeIntroPage_1 = 319
-          this.homeIntroPage_2 = 357
-          this.homeIntroPage_3 = 359
-          this.homeIntroPage_4 = 366
-          this.homeIntroPage_5 = 308
+          this.homeIntroPage_1 = 992 /* 319 */
+          this.homeDetailPage_1 = 319
+          this.homeIntroPage_2 = 994 /* 357 */
+          this.homeDetailPage_2 = 357
+          this.homeIntroPage_3 = 997 /* 359 */
+          this.homeDetailPage_3 = 359
+          this.homeIntroPage_4 = 999 /* 366 */
+          this.homeDetailPage_4 = 366
+          this.homeIntroPage_5 = 1001 /* 308 */
+          this.homeDetailPage_5 = 308 
           this.welcomeString = "Benvingut a la plataforma Invest In Balerics de la ADR Balears"
           break
         case 'es':
         case 'es-ES':
           this.currentWPLang = 43
           this.homeIntroPage = 105
-          this.homeIntroPage_1 = 212
-          this.homeIntroPage_2 = 109
-          this.homeIntroPage_3 = 111
-          this.homeIntroPage_4 = 113
-          this.homeIntroPage_5 = 115
+          this.homeIntroPage_1 = 919  /* 401 */
+          this.homeDetailPage_1 = 401
+          this.homeIntroPage_2 = 982  /* 109 */
+          this.homeDetailPage_2 = 109
+          this.homeIntroPage_3 = 984  /* 111 */
+          this.homeDetailPage_3 = 111
+          this.homeIntroPage_4 = 987  /* 113 */
+          this.homeDetailPage_4 = 113
+          this.homeIntroPage_5 = 989  /* 115 */
+          this.homeDetailPage_5 = 115
           this.welcomeString = "Bienvenido a la plataforma Invest In Balerics de la ADR Baleares"
           break
         case 'en':
         case 'en-EN':
           this.currentWPLang = 44
           this.homeIntroPage = 351
-          this.homeIntroPage_1 = 321
-          this.homeIntroPage_2 = 355
-          this.homeIntroPage_3 = 361
-          this.homeIntroPage_4 = 364
-          this.homeIntroPage_5 = 310
+          this.homeIntroPage_1 = 1003 /* 321 */
+          this.homeDetailPage_1 = 321
+          this.homeIntroPage_2 = 1005 /* 355 */
+          this.homeDetailPage_2 = 355
+          this.homeIntroPage_3 = 1007 /* 361 */
+          this.homeDetailPage_3 = 361
+          this.homeIntroPage_4 = 1010 /* 364 */
+          this.homeDetailPage_4 = 364
+          this.homeIntroPage_5 = 1012 /* 310 */
+          this.homeDetailPage_5 = 310
           this.welcomeString = "Welcome to the Invest In Balearics platform from the ADR Balears"
           break
         default:
           this.currentWPLang = 44
           this.homeIntroPage = 351
-          this.homeIntroPage_1 = 321
-          this.homeIntroPage_2 = 355
-          this.homeIntroPage_3 = 361
-          this.homeIntroPage_4 = 364
-          this.homeIntroPage_5 = 310
+          this.homeIntroPage_1 = 1003 /* 321 */
+          this.homeDetailPage_1 = 321
+          this.homeIntroPage_2 = 1005 /* 355 */
+          this.homeDetailPage_2 = 355
+          this.homeIntroPage_3 = 1007 /* 361 */
+          this.homeDetailPage_3 = 361
+          this.homeIntroPage_4 = 1010 /* 364 */
+          this.homeDetailPage_4 = 364
+          this.homeIntroPage_5 = 1012 /* 310 */
+          this.homeDetailPage_5 = 310
       }
     console.log (this.welcomeString)
     this.loadPages()

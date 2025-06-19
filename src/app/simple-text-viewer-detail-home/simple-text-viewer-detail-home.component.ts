@@ -15,15 +15,18 @@ export class SimpleTextViewerDetailHomeComponent {
   public contenido: WpPage | undefined 
   public contenidoMedia: WpPageFeaturedMedia
   
-  @Input() wpPageDetailID: number = 0;
+  @Input() wpPageHomeID: number;
+  @Input() wpPageDetailID: number;
+
   @Input() adjustContent: boolean = false; /* 0:normal, 1:gradient */
 
 
   constructor( public translateService: TranslateService, 
-    private wpPageService: wpPageService, 
-    private route: ActivatedRoute,
-    private router: Router ) { }
-
+    private wpPageService: wpPageService,
+    private router: Router ) {
+       console.log ("wpPageDetailID", this.wpPageDetailID)
+     }
+   
     ngOnInit(): void {
       switch (localStorage.getItem('preferredLang')) {
         case 'ca-ES':
@@ -38,7 +41,7 @@ export class SimpleTextViewerDetailHomeComponent {
         default:
           this.currentWPLang = 44
       }
-      this.getContent(this.wpPageDetailID)
+      this.getContent(this.wpPageHomeID)
     }
 
     getContent (id: number) {
@@ -62,55 +65,56 @@ export class SimpleTextViewerDetailHomeComponent {
 
     showDetail(id) {
       switch (id)  {
+        //Por qué invertir
+        case 401:
+          this.router.navigate(['/por-que-invertir-en-baleares',401])  
+          break
+        case 321:
+          this.router.navigate(['/por-que-invertir-en-baleares',321]) 
+          break
+        case 319:
+          this.router.navigate(['/por-que-invertir-en-baleares',319])
+          break
+        //Ecosistema inversor
+        case 109:
+          this.router.navigate(['/ecosistema-inversor',109])
+          break
+        case 355:
+          this.router.navigate(['/ecosistema-inversor',355])
+          break
+        case 357:
+          this.router.navigate(['/ecosistema-inversor',357])
+          break
+        // Servicios
+        case 111:
+          this.router.navigate(['/servicios-al-inversor-y-al-emprendedor',111])
+          break
+        case 361:
+          this.router.navigate(['/servicios-al-inversor-y-al-emprendedor',361])
+          break
+        case 359:
+          this.router.navigate(['/servicios-al-inversor-y-al-emprendedor',359])
+          break
+        // Sectores e industrias
         case 113:
           this.router.navigate(['/sectores-e-industrias',113])
-          break
-        case 366:
-          this.router.navigate(['/sectores-e-industrias',366])
           break
         case 364:
           this.router.navigate(['/sectores-e-industrias',364])
           break
-//Por qué invertir
-       /*  case 212:
-          this.router.navigate(['/por-que-invertir-en-baleares',212])  
+        case 366:
+          this.router.navigate(['/sectores-e-industrias',366])
           break
-          case 315:
-          this.router.navigate(['/por-que-invertir-en-baleares',315]) 
-          break
-        case 317:
-          this.router.navigate(['/por-que-invertir-en-baleares',317])
-          break*/
-//ecosistema inversor
-        case 212:
-          this.router.navigate(['/ecosistema-inversor',109])
-          break
-        case 315:
-          this.router.navigate(['/ecosistema-inversor',357])
-          break
-        case 317:
-          this.router.navigate(['/ecosistema-inversor',355])
-          break
-
-        case 111:
-          this.router.navigate(['/ecosistema-inversor',111])
-          break
-        case 359:
-          this.router.navigate(['/ecosistema-inversor',359])
-          break
-        case 361:
-          this.router.navigate(['/ecosistema-inversor',361])
-          break
-
+        // Talento
         case 115:
-          this.router.navigate(['/ecosistema-inversor',115])
+          this.router.navigate(['/talento',115])
           break
         case 310:
-          this.router.navigate(['/ecosistema-inversor',310])
+          this.router.navigate(['/talento',310])
           break
         case 308:
-          this.router.navigate(['/ecosistema-inversor',308])
-          break          
+          this.router.navigate(['/talento',308])
+          break                        
       }
     }
 }
