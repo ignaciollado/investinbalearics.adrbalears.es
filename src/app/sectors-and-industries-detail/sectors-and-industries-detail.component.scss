@@ -1,15 +1,37 @@
-.entry-content {
+.wp-block-columns {
   display: grid;
-  grid-template-areas:  "titulo imagen" 
-                        "contenido imagen";
-}
+  grid-template-columns: 1fr 1fr;
 
-.detail-title {
-  grid-area: titulo;
-}
-.content {
-  grid-area: contenido;
-}
-.image {
-  grid-area: imagen;
+  .wp-block-column:nth-child(1) {
+    padding-right: 2rem;
+  }
+
+  .wp-block-cover {
+    position: relative; // Necesario para posicionar el contenido centrado
+
+    .wp-block-cover__image-background {
+      border: 1px solid green;
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+
+    .wp-block-cover__inner-container {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: #fff;
+      text-align: center;
+      padding: 1rem;
+      .has-small-font-size {
+        font-size: 2rem;
+        line-height: 2rem;
+      }
+      .has-x-large-font-size {
+        font-size: 3rem;
+        padding: 1rem;
+      }
+    }
+  }
 }

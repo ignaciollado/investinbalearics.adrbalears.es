@@ -45,7 +45,7 @@
   padding: 0 15%;
 }
 
-@media screen and (max-width: 992px) { 
+@media screen and (max-width: 992px) {
   .wp-block-column, .wp-block-group {
     h1,h2, p {
     padding-left: 1.25rem;
@@ -77,5 +77,11 @@
     width: 100%;
     height: auto;
   }
-}  
+}
+.wp-block-columns:nth-child(1) .wp-block-column {
+  padding-right: 0;
+}
+.contact-form-area {
+  margin-bottom: 2rem;
+}
 }

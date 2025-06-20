@@ -17,9 +17,17 @@
   }
 }
 
+  .wp-block-image img {
+    width: 100%;
+    height: auto;
+  }
+
 .wp-block-group:nth-child(2) {
   background-color: #3d4e97;
   color: #fff;
+  a {
+    color: #fff!important;
+  }
   padding: 0 20%;
   .wp-block-group {
     padding-top: 2rem;
@@ -36,48 +44,7 @@
     }
   }
 }
-/* .wp-block-group:nth-child(3) {
-  margin: 2rem 0;
-  .wp-block-gallery {
-    border: 1px red solid;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1rem;
-    max-width: 100%;
-    margin: 0 auto;
-    // Selecciona el primer elemento hijo (la primera imagen, por ejemplo)
-    :nth-child(1) {
-      grid-column: span 2;
-    }
 
-    figure {
-      display: inline-block;
-      margin: 0; // elimina márgenes por defecto del figure
-      text-align: center;
-
-    img {
-      display: block;
-      max-width: 100%;
-      height: auto;
-      margin: 0 auto;
-    }
-
-    figcaption {
-      margin-top: 0.5rem;
-      font-weight: bold;
-      text-align: center;
-      position: relative;
-      top: -50%;
-      color: #fff;
-    }
-
-    img:hover {
-    opacity: inherit;
-    filter: none;
-    }
-  }
-  }
-} */
 
 .wp-block-gallery {
   display: grid;
@@ -85,11 +52,6 @@
   gap: 1rem;
   max-width: 100%;
   margin: 0 auto;
-
-  // El primer figure dentro de cada galería ocupará 2 columnas
-/*   > .wp-block-image:first-of-type {
-    grid-column: span 2;
-  } */
 
   .wp-block-image {
     display: inline-block;
@@ -120,7 +82,7 @@
 }
 
 .wp-block-group:nth-of-type(3) {
-  margin: 2rem 0;
+  /* margin: 2rem 0; */
   .wp-block-gallery {
     // este será el primer .wp-block-gallery dentro del tercer grupo
     &:first-of-type {
@@ -128,6 +90,9 @@
         grid-column: span 2;
       }
     }
+    figure {
+  margin-bottom: 0!important;
+}
   }
 }
 
@@ -138,12 +103,14 @@
 
 .wp-block-group:nth-child(3) {
   padding: 0 20%;
+  padding-top: 2rem !important;
+  padding-bottom: 2rem !important;
 }
 
 .wp-block-image {
   img {
-    width: 100%;
-    height: auto;
+    /* width: 100%; */
+    /* height: auto; */
   }
 }
 
@@ -176,14 +143,36 @@
   }
 
   .wp-block-group:nth-child(3) {
-    /* border: 1px solid blue; */
     padding: 0 10%;
   .wp-block-gallery {
-/*     border: 1px solid red; */
     grid-template-columns: 1fr;
   }
   }
 .wp-block-group:nth-child(3) .wp-block-gallery > :nth-child(1) {
   grid-column: inherit;
+}
+
+.wp-block-group:nth-of-type(3) {
+ 
+  .wp-block-gallery {
+    // este será el primer .wp-block-gallery dentro del tercer grupo
+    &:first-of-type {
+      > .wp-block-image:first-of-type {
+        grid-column: span 1;
+      }
+    }
+    figure {
+      margin-bottom: 0!important;
+    }
+  }
+  }
+
+  .wp-block-columns:nth-child(1) .wp-block-column:nth-child(1) {
+    padding-right: 0;
+  }
+.wp-block-group:nth-child(3) {
+  padding: 0 ;
+  padding-top: 2rem !important;
+  padding-bottom: 0 !important;
 }
 }

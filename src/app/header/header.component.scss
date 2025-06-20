@@ -69,6 +69,9 @@
 h5 {
   margin-bottom:0;
 }
+a {
+  color: #000!important;
+}
 
 @media screen and (max-width: 1215px) {
   .nav-link {
@@ -77,7 +80,7 @@ h5 {
 }
 }
 
-@media screen and (max-width: 991px) { /* para hacerlo coincidir con el punto de ruptura de bootstrap 'ng' */
+@media screen and (max-width: 992px) { /* para hacerlo coincidir con el punto de ruptura de bootstrap 'ng' */
   .the-header {
     grid-template-areas: "logo" "language" "mainmenu";
     row-gap: 1rem;
@@ -88,7 +91,7 @@ h5 {
   }
   .logo {
     img {
-    width: 95%;
+    width: 100%;
     margin: auto;
     }
   }

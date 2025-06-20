@@ -73,7 +73,7 @@
   .wp-element-caption {
     position: absolute;
     line-height: 3rem;
-    top: 65%;
+    top: 55%;
     left: 50%;
     transform: translate(-50%, -50%);
     color: white; // Puedes ajustar el color según tus necesidades
@@ -93,6 +93,7 @@
     width: 100%;
   }
   .wp-block-group {
+    margin-top: 2rem;
     padding-left: 1.25rem;
     padding-right: 1.25rem;
   }
@@ -101,7 +102,7 @@
     .wp-block-image .wp-element-caption {
       position: absolute;
       line-height: 3rem;
-      top: 60%;
+      top: 55%;
       left: 50%;
       font-size: 2.5rem;
       transform: translate(-50%, -60%);
@@ -109,7 +110,11 @@
       text-align: center;
     } 
   }
-    .entry-content {
+  .entry-content {
     padding: 0;
   }
+  .wp-block-columns {
+    margin-bottom: 2rem;
+  }
+
 }

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ViewEncapsulation } from '@angular/core';
 import { ActivatedRoute  } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
 import { wpPageService } from '../services/wp-page.service';
@@ -8,7 +8,8 @@ import { WpPageFeaturedMedia } from '../Models/wp-page-featured-media.dto';
 @Component({
   selector: 'app-sectors-and-industries-detail',
   templateUrl: './sectors-and-industries-detail.component.html',
-  styleUrl: './sectors-and-industries-detail.component.scss'
+  styleUrl: './sectors-and-industries-detail.component.scss',
+    encapsulation: ViewEncapsulation.None
 })
 
 export class SectorsAndIndustriesDetailComponent {
