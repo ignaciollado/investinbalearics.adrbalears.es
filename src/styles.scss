@@ -72,13 +72,14 @@ a {
 
   &:hover {
     color: #aa0043!important;
+    text-decoration: underline;
     text-shadow: 0 2px 10px rgb(170, 0, 67, .4);
   }
 }
 
-p a {
+/* p a {
   color: #3b4697 !important;
-}
+} */
 
 figure {
   margin-bottom: 0!important;
@@ -254,11 +255,9 @@ h6 {
     grid-template-columns: 1fr;
   }
 
-}
+/*   p a {
+    color: #fff!important;
+  } */
 
-@media (max-width: 400px) {
-/* .entry-content {
-  padding: 2rem 0;
-} */
 }
 

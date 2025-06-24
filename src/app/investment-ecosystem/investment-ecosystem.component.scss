@@ -47,11 +47,6 @@
 
 
 .wp-block-gallery {
-/*   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1rem;
-  max-width: 100%;
-  margin: 0 auto; */
 
   .wp-block-image {
     display: inline-block;
@@ -61,16 +56,13 @@
     img {
       display: block;
       max-width: 100%;
-      /* height: auto; */
       margin: 0 auto;
     }
 
     figcaption {
-      /* margin-top: 0.5rem; */
-      /* font-weight: bold; */
       text-align: center;
       position: relative;
-      top: -55%;
+      bottom: 20%;
       color: #fff;
     }
 
@@ -82,7 +74,6 @@
 }
 
 .wp-block-group:nth-of-type(3) {
-  /* margin: 2rem 0; */
   .wp-block-gallery {
     // este será el primer .wp-block-gallery dentro del tercer grupo
     &:first-of-type {

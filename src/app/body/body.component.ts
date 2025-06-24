@@ -56,7 +56,7 @@ export class BodyComponent {
         case 'es-ES':
           this.currentWPLang = 43
           this.homeIntroPage = 105
-          this.homeIntroPage_1 = 919  /* 401 */
+          this.homeIntroPage_1 = 976  /* 401 */
           this.homeDetailPage_1 = 401
           this.homeIntroPage_2 = 982  /* 109 */
           this.homeDetailPage_2 = 109

@@ -81,17 +81,20 @@ button {
 
 article:nth-child(2) {
   background-image: url("../../assets/images/home-invest-in-03.webp");
-  background-repeat: no-repeat; 
-  background-position-x: right;       
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-size: cover;
+
   button {
     border: none;
-    color: #000;
+    color: #001170;
   }
 }
 article:nth-child(4) {
   background-image: url("../../assets/images/home-invest-in-05.webp");
   background-repeat: no-repeat; 
-  background-position-x: right;          
+  background-position-x: center;
+  background-size: cover;     
   button {
     border: none;
     color: #000;
@@ -162,8 +165,6 @@ article:nth-child(4) {
     height: 100%;
     background-image: none;
     grid-template-columns: 100%;
-    color: #000;
-    padding-top: 0;
   }
 
   .top-content {
