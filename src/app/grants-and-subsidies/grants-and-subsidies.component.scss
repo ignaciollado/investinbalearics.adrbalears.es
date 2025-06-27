@@ -13,6 +13,10 @@
   }
 }
 
+a {
+  color: #cb0a3d!important;
+}
+
 .wp-block-columns:nth-child(2), .wp-block-columns:nth-child(4) {
   display: grid;
   grid-template-columns: 1fr 1fr;
