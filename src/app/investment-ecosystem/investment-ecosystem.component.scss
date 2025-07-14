@@ -17,10 +17,10 @@
   }
 }
 
-  .wp-block-image img {
-    width: 100%;
-    height: 100%;
-  }
+.wp-block-image img {
+  width: 100%;
+  height: 100%;
+}
 
 .wp-block-group:nth-child(2) {
   background-color: #3d4e97;
@@ -45,6 +45,12 @@
   }
 }
 
+.wp-block-group:nth-child(4) {
+  a {
+    color: #cb0a3d!important;
+  }
+}
+
 
 .wp-block-gallery {
 
@@ -59,12 +65,15 @@
       margin: 0 auto;
     }
 
-    figcaption {
-      text-align: center;
+/*     figcaption {
+      text-align: left;
+      font-size: 1.5rem;
+      line-height: 1.7rem!important;
       position: relative;
-      bottom: 20%;
+      left: 5%;
+      bottom: 80%;
       color: #fff;
-    }
+    } */
 
     img:hover {
       opacity: inherit;

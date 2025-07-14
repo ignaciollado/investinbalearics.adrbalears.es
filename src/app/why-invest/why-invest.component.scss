@@ -53,17 +53,7 @@
   img {
     display: block;
     max-width: 100%;
-    /* height: auto; */
     margin: 0 auto;
-  }
-
-  figcaption {
-    /* margin-top: 0.5rem; */
-    /* font-weight: bold; */
-    text-align: center;
-    position: relative;
-    bottom: 20%;
-    color: #fff;
   }
 
   img:hover {
@@ -81,7 +71,6 @@
   max-width: 100%;
   margin: 2rem auto;
 
-  // Selecciona el primer elemento hijo (la primera imagen, por ejemplo)
   > *:nth-child(1) {
     grid-column: span 2;
   }
@@ -90,6 +79,15 @@
 
 .wp-block-image img {
   width: 100%;
+}
+
+
+// Grande (laptops)
+@media (max-width: 1200px) {
+  .wp-block-columns:nth-child(1) {
+    grid-template-columns: 1fr;
+      padding: 0 10%;
+  }
 }
 
 @media screen and (max-width: 992px) {
@@ -101,7 +99,7 @@
   padding-left: 1.25rem;
   padding-right: 1.25rem; 
   }
-}
+  }
 
   .wp-block-columns:nth-child(1) {
     grid-template-columns: 1fr;

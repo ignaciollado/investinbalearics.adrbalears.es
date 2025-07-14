@@ -77,9 +77,23 @@ a {
   }
 }
 
-/* p a {
-  color: #3b4697 !important;
-} */
+  figcaption {
+    text-align: left;
+    position: relative;
+    left: 5%;
+    bottom: 80%;
+    font-size: 1.5rem;
+    line-height: 1.7rem;
+    
+    width: 100%;
+    padding: 0.5em;
+    color: #fff;
+   
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
+    box-sizing: border-box;
+  }
 
 figure {
   margin-bottom: 0!important;
@@ -245,19 +259,28 @@ h6 {
   animation-timing-function: ease-out;
 }
 
-
 @media (max-width: 992px) {
+  .logo {
+    width: inherit;
+    margin: auto;
+  }
+
   .entry-content {
     padding: 0;
-  } 
+    h1, h2, p {
+      padding-left: 0;
+      padding-right: 1.25rem;
+    }
+  }
 
   .wp-block-columns {
     grid-template-columns: 1fr;
   }
 
-/*   p a {
-    color: #fff!important;
-  } */
-
+  figcaption {
+    bottom: 75%;
+    font-size: 3rem;
+    line-height: 3.5rem;
+  }
 }
 
