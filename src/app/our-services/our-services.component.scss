@@ -30,12 +30,12 @@
 
 .wp-block-group:nth-child(2) {
   background-image: url('../../assets/images/servicios-02.webp');
-  background-position: center;
+  background-size: cover;
 }
 
 .wp-block-group:nth-child(4) {
   background-image: url('../../assets/images/servicios-04.webp');
-  background-size: auto;
+  background-size: cover;
 }
 
 .contact-form-area {
