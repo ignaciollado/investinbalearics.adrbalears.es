@@ -43,3 +43,10 @@ button {
 a {
   color: #000!important;
 }
+
+@media screen and (max-width: 992px) {
+.form {
+ display: grid;
+ grid-template-columns: 1fr;
+}
+}

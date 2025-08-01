@@ -41,8 +41,8 @@ export class ContactFormComponent {
       contactName:  ['', [Validators.required, Validators.minLength(5), Validators.maxLength(50)]],
       contactEmail: ['', [Validators.required, Validators.email]],
       contactPhone: ['', [Validators.minLength(9), Validators.maxLength(9)]],
-      corporation :['', [Validators.minLength(10), Validators.maxLength(250)]],
-      country :['', [Validators.minLength(10), Validators.maxLength(250)]],
+      corporation :['', [Validators.minLength(3), Validators.maxLength(250)]],
+      country :['', [Validators.minLength(3), Validators.maxLength(250)]],
       body: ['', [Validators.required, Validators.minLength(10), Validators.maxLength(250)]],
       acceptTerms: [false, [Validators.requiredTrue]]
     })

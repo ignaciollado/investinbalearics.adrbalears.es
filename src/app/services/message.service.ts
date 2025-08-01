@@ -4,7 +4,7 @@ import { Observable, of } from 'rxjs';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { catchError } from 'rxjs/operators';
 
-const URL_API_SEND = 'https://tramits.idi.es/public/assets/utils/enviaCorreoElectronicoANGULAR.php'
+const URL_API_SEND = 'https://tramits.idi.es/public/assets/utils/enviaCorreoElectronicoINVESTINBALEARICS.php'
 
 const httpOptions = {
   headers: new HttpHeaders({
