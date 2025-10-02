@@ -1,4 +1,24 @@
-
+<section ngClass="video-intro">
+  <video #introVideo
+    width="100%"
+    height="auto"
+    autoplay
+    muted
+    loop
+    playsinline controls
+  >
+    <source src="../../assets/videos/INVEST IN BALEARICS V7.mp4" type="video/mp4">
+    Tu navegador no soporta la reproducción de video.
+  </video>
+</section>
+<!-- 
+<section ngClass="video-intro">
+  <video width="100%" height="auto" autoplay muted playsinline controls>
+    <source src="../../assets/videos/INVEST IN BALEARICS V7.mp4" type="video/mp4">
+    Tu navegador no soporta la reproducción de video.
+  </video>
+</section>
+ -->
 <section ngClass="section">
     <article ngClass="top-content">
       <app-simple-text-viewer [wpPageID] = 'homeIntroPage'></app-simple-text-viewer>

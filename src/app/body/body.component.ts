@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
 import { wpPageService } from '../services/wp-page.service';
 import { HttpErrorResponse } from '@angular/common/http';
 import { SharedService } from '../services/shared.service';
@@ -10,7 +10,17 @@ import { finalize } from 'rxjs';
   templateUrl: './body.component.html',
   styleUrl: './body.component.scss'
 })
-export class BodyComponent {
+export class BodyComponent implements AfterViewInit {
+   @ViewChild('introVideo') introVideo!: ElementRef<HTMLVideoElement>;
+
+     ngAfterViewInit() {
+    const video = this.introVideo.nativeElement;
+    video.muted = true;
+    video.play().catch(err => {
+      console.warn('Autoplay bloqueado por el navegador:', err);
+    });
+  }
+
   welcomeString:string = ""
   wpPages: WpPage[] = []
   homeIntroPage: number
