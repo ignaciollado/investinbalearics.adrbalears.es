@@ -1,7 +1,44 @@
-.video-intro video {
+/* Opción todo el ancho de la pantalla pero desbordado el alto */
+/* .video-intro video {
   border-radius: 0;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+} */
+
+/* Opcion visualización completa pero no ocupa todo el ancho  */
+/* .video-intro video {
+  border-radius: 0;
+  width: 100%;
   height: 92vh;
+  object-fit: contain;
+} 
+ */
+/* se desborda el height debido al alto del menú  */
+.video-intro {
+  width: 100%;
+  height:  auto; // ocupa toda la altura visible del viewport
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  video {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
+
+  // Adaptación para orientación vertical (móviles en portrait)
+  @media (orientation: portrait) {
+    video {
+      min-width: 100vh;
+      min-height: 100vw;
+    }
+  }
 }
+
 .section {
   position: relative;
   color: #f1f1f1;
