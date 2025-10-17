@@ -1,4 +1,4 @@
-<section ngClass="video-intro">
+<section ngClass="video-intro" *ngIf="currentLang === 'en-EN'">
   <video #introVideo
     width="100%"
     height="auto"
@@ -7,6 +7,32 @@
     loop
     playsinline>
     <source src="../../assets/videos/VIDEO WEB INVEST IN BALEARICS.mp4" type="video/mp4">
+    Tu navegador no soporta la reproducción de video.
+  </video>
+</section>
+
+<section ngClass="video-intro" *ngIf="currentLang === 'es-ES'">
+  <video #introVideo
+    width="100%"
+    height="auto"
+    autoplay
+    
+    loop
+    playsinline>
+    <source src="../../assets/videos/VIDEO WEB CAST.mp4" type="video/mp4">
+    Tu navegador no soporta la reproducción de video.
+  </video>
+</section>
+
+<section ngClass="video-intro" *ngIf="currentLang === 'ca-ES'">
+  <video #introVideo
+    width="100%"
+    height="auto"
+    autoplay
+    
+    loop
+    playsinline>
+    <source src="../../assets/videos/VIDEO WEB CAT.mp4" type="video/mp4">
     Tu navegador no soporta la reproducción de video.
   </video>
 </section>
